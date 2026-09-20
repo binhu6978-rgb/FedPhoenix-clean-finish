@@ -42,7 +42,7 @@ ROUND_PATTERN = re.compile(
 
 COMMON_ARGUMENTS = {
     "dataset": "cifar10",
-    "model": "resnet18",
+    "model": "vgg",
     "num_users": 100,
     "frac": 0.1,
     "local_ep": 5,
@@ -80,6 +80,12 @@ def parse_args():
         default="multiseed",
     )
     parser.add_argument("--retry_failed", action="store_true")
+    parser.add_argument(
+        "--max_retries",
+        type=int,
+        default=2,
+        help="automatic retries per failed run before continuing",
+    )
     parser.add_argument("--skip_fedphoenix_full", action="store_true")
     parser.add_argument("--dry_run", action="store_true")
     return parser.parse_args()
@@ -123,9 +129,21 @@ def sanitize_number(value):
 
 
 def run_id_for(config):
+    phase_code = {
+        "diagnostic": "d",
+        "screening": "s",
+        "promotion": "p",
+        "full": "f",
+        "multiseed": "m",
+    }.get(config["phase"], config["phase"][:3])
+    algorithm_code = {
+        "InteractionDispatch": "id",
+        "FedAvg": "avg",
+        "FedPhoenix": "fp",
+    }.get(config["algorithm"], config["algorithm"].lower()[:4])
     pieces = [
-        config["phase"],
-        config["algorithm"].lower(),
+        phase_code,
+        algorithm_code,
         f"e{config['epochs']}",
         f"s{config['seed']}",
     ]
@@ -365,7 +383,14 @@ def update_global_summary(output_dir, manifest):
     write_csv(output_dir / "summary.csv", rows)
 
 
-def run_experiment(config, cli, output_dir, manifest, manifest_path):
+def run_experiment(
+    config,
+    cli,
+    output_dir,
+    manifest,
+    manifest_path,
+    force_retry=False,
+):
     run_id = config["run_id"]
     existing = manifest["runs"].get(run_id)
     if existing and existing.get("status") in SUCCESS_STATUSES:
@@ -374,6 +399,7 @@ def run_experiment(config, cli, output_dir, manifest, manifest_path):
         existing
         and existing.get("status") in {"failed", "failed_memory"}
         and not cli.retry_failed
+        and not force_retry
     ):
         return existing
     if cli.dry_run:
@@ -385,12 +411,36 @@ def run_experiment(config, cli, output_dir, manifest, manifest_path):
     (run_directory / "metrics").mkdir(parents=True, exist_ok=True)
     logs_directory = output_dir / "logs"
     logs_directory.mkdir(parents=True, exist_ok=True)
-    stdout_path = logs_directory / f"{run_id}.stdout.log"
-    stderr_path = logs_directory / f"{run_id}.stderr.log"
+    attempt = int(existing.get("attempt", 0)) + 1 if existing else 1
+    stdout_path = logs_directory / f"{run_id}.attempt{attempt}.stdout.log"
+    stderr_path = logs_directory / f"{run_id}.attempt{attempt}.stderr.log"
     command = build_command(config, cli, run_directory)
+    attempt_history = list(existing.get("attempt_history", [])) if existing else []
+    if existing and existing.get("status") in {
+        "failed",
+        "failed_memory",
+        "interrupted",
+    }:
+        attempt_history.append(
+            {
+                key: existing.get(key)
+                for key in (
+                    "attempt",
+                    "status",
+                    "return_code",
+                    "runtime_seconds",
+                    "completed_rounds",
+                    "stdout_log",
+                    "stderr_log",
+                    "finished_at",
+                )
+            }
+        )
     entry = {
         **config,
         "status": "running",
+        "attempt": attempt,
+        "attempt_history": attempt_history,
         "command": command,
         "started_at": utc_now(),
         "stdout_log": str(stdout_path),
@@ -468,6 +518,53 @@ def run_experiment(config, cli, output_dir, manifest, manifest_path):
     manifest["updated_at"] = utc_now()
     atomic_json(manifest_path, manifest)
     update_global_summary(output_dir, manifest)
+    return entry
+
+
+def run_with_retries(config, cli, output_dir, manifest, manifest_path):
+    if cli.max_retries < 0:
+        raise ValueError("max_retries must be non-negative")
+
+    def invoke(force_retry=False):
+        try:
+            return run_experiment(
+                config,
+                cli,
+                output_dir,
+                manifest,
+                manifest_path,
+                force_retry=force_retry,
+            )
+        except Exception as error:
+            entry = manifest["runs"].get(config["run_id"], dict(config))
+            entry["status"] = "interrupted"
+            entry["exception"] = repr(error)
+            entry["finished_at"] = utc_now()
+            manifest["runs"][config["run_id"]] = entry
+            manifest["updated_at"] = utc_now()
+            atomic_json(manifest_path, manifest)
+            update_global_summary(output_dir, manifest)
+            print(
+                f"ERROR run_id={config['run_id']} exception={error!r}",
+                flush=True,
+            )
+            return entry
+
+    entry = invoke()
+    retries = 0
+    while (
+        not cli.dry_run
+        and entry.get("status") in {"failed", "failed_memory", "interrupted"}
+        and retries < cli.max_retries
+    ):
+        retries += 1
+        print(
+            f"RETRY run_id={config['run_id']} retry={retries}/"
+            f"{cli.max_retries} previous_status={entry.get('status')}",
+            flush=True,
+        )
+        time.sleep(5)
+        entry = invoke(force_retry=True)
     return entry
 
 
@@ -574,7 +671,7 @@ def main():
     diagnostic_config = make_config(
         "diagnostic", "InteractionDispatch", 120, 1, 0.0, 0.1
     )
-    diagnostic_entry = run_experiment(
+    diagnostic_entry = run_with_retries(
         diagnostic_config, cli, output_dir, manifest, manifest_path
     )
     if cli.dry_run:
@@ -638,7 +735,7 @@ def main():
                 )
             )
     for config in screening_configs:
-        run_experiment(config, cli, output_dir, manifest, manifest_path)
+        run_with_retries(config, cli, output_dir, manifest, manifest_path)
     write_stage_summary(
         output_dir, manifest, "screening", "screening_summary.csv"
     )
@@ -684,7 +781,7 @@ def main():
         for row in promoted
     )
     for config in promotion_configs:
-        run_experiment(config, cli, output_dir, manifest, manifest_path)
+        run_with_retries(config, cli, output_dir, manifest, manifest_path)
     write_stage_summary(
         output_dir, manifest, "promotion", "promotion_summary.csv"
     )
@@ -723,7 +820,7 @@ def main():
     if existing_fedphoenix is None and not cli.skip_fedphoenix_full:
         full_configs.append(make_config("full", "FedPhoenix", 1200, 1))
     for config in full_configs:
-        run_experiment(config, cli, output_dir, manifest, manifest_path)
+        run_with_retries(config, cli, output_dir, manifest, manifest_path)
     write_stage_summary(output_dir, manifest, "full", "full_summary.csv")
     if cli.stop_after_phase == "full":
         return
@@ -746,7 +843,7 @@ def main():
                 row["id_tau"],
                 row["id_max_step_ratio"],
             )
-            run_experiment(config, cli, output_dir, manifest, manifest_path)
+            run_with_retries(config, cli, output_dir, manifest, manifest_path)
 
     multi_rows = [
         row

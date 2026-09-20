@@ -12,7 +12,7 @@ __pycache__/
 
 # InteractionDispatch overnight-search raw outputs stay local. Compact
 # manifest/summary files at the search root remain eligible for versioning.
-/results/interaction_dispatch_peak_search/logs/
-/results/interaction_dispatch_peak_search/runs/
+/results/interaction_dispatch_peak_search*/logs/
+/results/interaction_dispatch_peak_search*/runs/
 /results/interaction_dispatch_degeneration_regression/*.stdout.log
 /results/interaction_dispatch_degeneration_regression/metrics/
