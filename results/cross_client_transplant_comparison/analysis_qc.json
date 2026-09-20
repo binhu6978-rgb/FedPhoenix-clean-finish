@@ -1,0 +1,27 @@
+{
+  "stderr_empty": {
+    "probe_0.2": true,
+    "probe_0.5": true
+  },
+  "pure_fedavg_stderr_empty": true,
+  "round_counts": {
+    "probe_0.2": 500,
+    "probe_0.5": 500
+  },
+  "pure_fedavg_round_count": 500,
+  "probe_event_counts": {
+    "probe_0.2": 1000,
+    "probe_0.5": 2500
+  },
+  "target_ne_donor": {
+    "probe_0.2": true,
+    "probe_0.5": true
+  },
+  "all_metric_values_finite": {
+    "probe_0.2": true,
+    "probe_0.5": true
+  },
+  "transplant_accuracy_exact_match": true,
+  "transplant_accuracy_max_abs_difference": 0.0,
+  "passed": true
+}

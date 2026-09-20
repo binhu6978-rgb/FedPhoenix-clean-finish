@@ -1,0 +1,1561 @@
+Client partition: 100 clients, min=30, max=1447, mean=500.00, std=220.72
+Evaluation protocol: full server test set evaluated every round (10000 samples).
+VGG16(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (7): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): ReLU(inplace=True)
+    (10): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (12): ReLU(inplace=True)
+    (13): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (14): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (16): ReLU(inplace=True)
+    (17): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (18): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (19): ReLU(inplace=True)
+    (20): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (21): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (22): ReLU(inplace=True)
+    (23): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (24): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (25): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (26): ReLU(inplace=True)
+    (27): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (28): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (32): ReLU(inplace=True)
+    (33): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (36): ReLU(inplace=True)
+    (37): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (38): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (39): ReLU(inplace=True)
+    (40): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (41): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (42): ReLU(inplace=True)
+    (43): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (44): AdaptiveAvgPool2d(output_size=(1, 1))
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=512, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+  )
+  (fc): Linear(in_features=4096, out_features=10, bias=True)
+)
+********************************************************************************
+Round   0
+ROUND_ACCURACY method=FedAvg round=1 accuracy=10.100000
+********************************************************************************
+Round   1
+ROUND_ACCURACY method=FedAvg round=2 accuracy=12.740000
+********************************************************************************
+Round   2
+ROUND_ACCURACY method=FedAvg round=3 accuracy=14.130000
+********************************************************************************
+Round   3
+ROUND_ACCURACY method=FedAvg round=4 accuracy=21.100000
+********************************************************************************
+Round   4
+ROUND_ACCURACY method=FedAvg round=5 accuracy=39.200001
+********************************************************************************
+Round   5
+ROUND_ACCURACY method=FedAvg round=6 accuracy=25.530001
+********************************************************************************
+Round   6
+ROUND_ACCURACY method=FedAvg round=7 accuracy=35.860001
+********************************************************************************
+Round   7
+ROUND_ACCURACY method=FedAvg round=8 accuracy=27.450001
+********************************************************************************
+Round   8
+ROUND_ACCURACY method=FedAvg round=9 accuracy=37.450001
+********************************************************************************
+Round   9
+ROUND_ACCURACY method=FedAvg round=10 accuracy=33.250000
+********************************************************************************
+Round  10
+ROUND_ACCURACY method=FedAvg round=11 accuracy=45.340000
+********************************************************************************
+Round  11
+ROUND_ACCURACY method=FedAvg round=12 accuracy=40.439999
+********************************************************************************
+Round  12
+ROUND_ACCURACY method=FedAvg round=13 accuracy=44.630001
+********************************************************************************
+Round  13
+ROUND_ACCURACY method=FedAvg round=14 accuracy=48.480000
+********************************************************************************
+Round  14
+ROUND_ACCURACY method=FedAvg round=15 accuracy=47.860001
+********************************************************************************
+Round  15
+ROUND_ACCURACY method=FedAvg round=16 accuracy=51.560001
+********************************************************************************
+Round  16
+ROUND_ACCURACY method=FedAvg round=17 accuracy=50.029999
+********************************************************************************
+Round  17
+ROUND_ACCURACY method=FedAvg round=18 accuracy=39.619999
+********************************************************************************
+Round  18
+ROUND_ACCURACY method=FedAvg round=19 accuracy=47.450001
+********************************************************************************
+Round  19
+ROUND_ACCURACY method=FedAvg round=20 accuracy=46.130001
+********************************************************************************
+Round  20
+ROUND_ACCURACY method=FedAvg round=21 accuracy=52.900002
+********************************************************************************
+Round  21
+ROUND_ACCURACY method=FedAvg round=22 accuracy=59.590000
+********************************************************************************
+Round  22
+ROUND_ACCURACY method=FedAvg round=23 accuracy=50.730000
+********************************************************************************
+Round  23
+ROUND_ACCURACY method=FedAvg round=24 accuracy=55.380001
+********************************************************************************
+Round  24
+ROUND_ACCURACY method=FedAvg round=25 accuracy=57.349998
+********************************************************************************
+Round  25
+ROUND_ACCURACY method=FedAvg round=26 accuracy=54.709999
+********************************************************************************
+Round  26
+ROUND_ACCURACY method=FedAvg round=27 accuracy=55.590000
+********************************************************************************
+Round  27
+ROUND_ACCURACY method=FedAvg round=28 accuracy=54.580002
+********************************************************************************
+Round  28
+ROUND_ACCURACY method=FedAvg round=29 accuracy=51.380001
+********************************************************************************
+Round  29
+ROUND_ACCURACY method=FedAvg round=30 accuracy=57.099998
+********************************************************************************
+Round  30
+ROUND_ACCURACY method=FedAvg round=31 accuracy=59.209999
+********************************************************************************
+Round  31
+ROUND_ACCURACY method=FedAvg round=32 accuracy=61.259998
+********************************************************************************
+Round  32
+ROUND_ACCURACY method=FedAvg round=33 accuracy=58.990002
+********************************************************************************
+Round  33
+ROUND_ACCURACY method=FedAvg round=34 accuracy=66.949997
+********************************************************************************
+Round  34
+ROUND_ACCURACY method=FedAvg round=35 accuracy=56.439999
+********************************************************************************
+Round  35
+ROUND_ACCURACY method=FedAvg round=36 accuracy=57.320000
+********************************************************************************
+Round  36
+ROUND_ACCURACY method=FedAvg round=37 accuracy=64.279999
+********************************************************************************
+Round  37
+ROUND_ACCURACY method=FedAvg round=38 accuracy=60.810001
+********************************************************************************
+Round  38
+ROUND_ACCURACY method=FedAvg round=39 accuracy=59.299999
+********************************************************************************
+Round  39
+ROUND_ACCURACY method=FedAvg round=40 accuracy=66.279999
+********************************************************************************
+Round  40
+ROUND_ACCURACY method=FedAvg round=41 accuracy=67.559998
+********************************************************************************
+Round  41
+ROUND_ACCURACY method=FedAvg round=42 accuracy=60.830002
+********************************************************************************
+Round  42
+ROUND_ACCURACY method=FedAvg round=43 accuracy=61.240002
+********************************************************************************
+Round  43
+ROUND_ACCURACY method=FedAvg round=44 accuracy=60.610001
+********************************************************************************
+Round  44
+ROUND_ACCURACY method=FedAvg round=45 accuracy=57.310001
+********************************************************************************
+Round  45
+ROUND_ACCURACY method=FedAvg round=46 accuracy=66.220001
+********************************************************************************
+Round  46
+ROUND_ACCURACY method=FedAvg round=47 accuracy=62.959999
+********************************************************************************
+Round  47
+ROUND_ACCURACY method=FedAvg round=48 accuracy=63.680000
+********************************************************************************
+Round  48
+ROUND_ACCURACY method=FedAvg round=49 accuracy=61.099998
+********************************************************************************
+Round  49
+ROUND_ACCURACY method=FedAvg round=50 accuracy=62.910000
+********************************************************************************
+Round  50
+ROUND_ACCURACY method=FedAvg round=51 accuracy=60.389999
+********************************************************************************
+Round  51
+ROUND_ACCURACY method=FedAvg round=52 accuracy=64.129997
+********************************************************************************
+Round  52
+ROUND_ACCURACY method=FedAvg round=53 accuracy=63.689999
+********************************************************************************
+Round  53
+ROUND_ACCURACY method=FedAvg round=54 accuracy=53.990002
+********************************************************************************
+Round  54
+ROUND_ACCURACY method=FedAvg round=55 accuracy=66.779999
+********************************************************************************
+Round  55
+ROUND_ACCURACY method=FedAvg round=56 accuracy=65.800003
+********************************************************************************
+Round  56
+ROUND_ACCURACY method=FedAvg round=57 accuracy=62.220001
+********************************************************************************
+Round  57
+ROUND_ACCURACY method=FedAvg round=58 accuracy=49.759998
+********************************************************************************
+Round  58
+ROUND_ACCURACY method=FedAvg round=59 accuracy=63.470001
+********************************************************************************
+Round  59
+ROUND_ACCURACY method=FedAvg round=60 accuracy=67.059998
+********************************************************************************
+Round  60
+ROUND_ACCURACY method=FedAvg round=61 accuracy=67.239998
+********************************************************************************
+Round  61
+ROUND_ACCURACY method=FedAvg round=62 accuracy=66.099998
+********************************************************************************
+Round  62
+ROUND_ACCURACY method=FedAvg round=63 accuracy=66.260002
+********************************************************************************
+Round  63
+ROUND_ACCURACY method=FedAvg round=64 accuracy=64.800003
+********************************************************************************
+Round  64
+ROUND_ACCURACY method=FedAvg round=65 accuracy=65.279999
+********************************************************************************
+Round  65
+ROUND_ACCURACY method=FedAvg round=66 accuracy=66.309998
+********************************************************************************
+Round  66
+ROUND_ACCURACY method=FedAvg round=67 accuracy=64.410004
+********************************************************************************
+Round  67
+ROUND_ACCURACY method=FedAvg round=68 accuracy=58.860001
+********************************************************************************
+Round  68
+ROUND_ACCURACY method=FedAvg round=69 accuracy=69.050003
+********************************************************************************
+Round  69
+ROUND_ACCURACY method=FedAvg round=70 accuracy=62.830002
+********************************************************************************
+Round  70
+ROUND_ACCURACY method=FedAvg round=71 accuracy=61.630001
+********************************************************************************
+Round  71
+ROUND_ACCURACY method=FedAvg round=72 accuracy=66.099998
+********************************************************************************
+Round  72
+ROUND_ACCURACY method=FedAvg round=73 accuracy=66.980003
+********************************************************************************
+Round  73
+ROUND_ACCURACY method=FedAvg round=74 accuracy=66.099998
+********************************************************************************
+Round  74
+ROUND_ACCURACY method=FedAvg round=75 accuracy=71.260002
+********************************************************************************
+Round  75
+ROUND_ACCURACY method=FedAvg round=76 accuracy=61.540001
+********************************************************************************
+Round  76
+ROUND_ACCURACY method=FedAvg round=77 accuracy=65.019997
+********************************************************************************
+Round  77
+ROUND_ACCURACY method=FedAvg round=78 accuracy=67.150002
+********************************************************************************
+Round  78
+ROUND_ACCURACY method=FedAvg round=79 accuracy=66.650002
+********************************************************************************
+Round  79
+ROUND_ACCURACY method=FedAvg round=80 accuracy=68.160004
+********************************************************************************
+Round  80
+ROUND_ACCURACY method=FedAvg round=81 accuracy=65.290001
+********************************************************************************
+Round  81
+ROUND_ACCURACY method=FedAvg round=82 accuracy=66.760002
+********************************************************************************
+Round  82
+ROUND_ACCURACY method=FedAvg round=83 accuracy=67.410004
+********************************************************************************
+Round  83
+ROUND_ACCURACY method=FedAvg round=84 accuracy=64.449997
+********************************************************************************
+Round  84
+ROUND_ACCURACY method=FedAvg round=85 accuracy=66.650002
+********************************************************************************
+Round  85
+ROUND_ACCURACY method=FedAvg round=86 accuracy=66.860001
+********************************************************************************
+Round  86
+ROUND_ACCURACY method=FedAvg round=87 accuracy=66.279999
+********************************************************************************
+Round  87
+ROUND_ACCURACY method=FedAvg round=88 accuracy=70.349998
+********************************************************************************
+Round  88
+ROUND_ACCURACY method=FedAvg round=89 accuracy=71.480003
+********************************************************************************
+Round  89
+ROUND_ACCURACY method=FedAvg round=90 accuracy=68.889999
+********************************************************************************
+Round  90
+ROUND_ACCURACY method=FedAvg round=91 accuracy=68.199997
+********************************************************************************
+Round  91
+ROUND_ACCURACY method=FedAvg round=92 accuracy=68.199997
+********************************************************************************
+Round  92
+ROUND_ACCURACY method=FedAvg round=93 accuracy=64.110001
+********************************************************************************
+Round  93
+ROUND_ACCURACY method=FedAvg round=94 accuracy=68.699997
+********************************************************************************
+Round  94
+ROUND_ACCURACY method=FedAvg round=95 accuracy=68.970001
+********************************************************************************
+Round  95
+ROUND_ACCURACY method=FedAvg round=96 accuracy=68.000000
+********************************************************************************
+Round  96
+ROUND_ACCURACY method=FedAvg round=97 accuracy=66.870003
+********************************************************************************
+Round  97
+ROUND_ACCURACY method=FedAvg round=98 accuracy=64.690002
+********************************************************************************
+Round  98
+ROUND_ACCURACY method=FedAvg round=99 accuracy=64.730003
+********************************************************************************
+Round  99
+ROUND_ACCURACY method=FedAvg round=100 accuracy=62.970001
+********************************************************************************
+Round 100
+ROUND_ACCURACY method=FedAvg round=101 accuracy=66.849998
+********************************************************************************
+Round 101
+ROUND_ACCURACY method=FedAvg round=102 accuracy=70.879997
+********************************************************************************
+Round 102
+ROUND_ACCURACY method=FedAvg round=103 accuracy=71.800003
+********************************************************************************
+Round 103
+ROUND_ACCURACY method=FedAvg round=104 accuracy=70.500000
+********************************************************************************
+Round 104
+ROUND_ACCURACY method=FedAvg round=105 accuracy=70.260002
+********************************************************************************
+Round 105
+ROUND_ACCURACY method=FedAvg round=106 accuracy=67.570000
+********************************************************************************
+Round 106
+ROUND_ACCURACY method=FedAvg round=107 accuracy=58.630001
+********************************************************************************
+Round 107
+ROUND_ACCURACY method=FedAvg round=108 accuracy=69.400002
+********************************************************************************
+Round 108
+ROUND_ACCURACY method=FedAvg round=109 accuracy=70.870003
+********************************************************************************
+Round 109
+ROUND_ACCURACY method=FedAvg round=110 accuracy=71.010002
+********************************************************************************
+Round 110
+ROUND_ACCURACY method=FedAvg round=111 accuracy=71.209999
+********************************************************************************
+Round 111
+ROUND_ACCURACY method=FedAvg round=112 accuracy=70.589996
+********************************************************************************
+Round 112
+ROUND_ACCURACY method=FedAvg round=113 accuracy=69.959999
+********************************************************************************
+Round 113
+ROUND_ACCURACY method=FedAvg round=114 accuracy=67.610001
+********************************************************************************
+Round 114
+ROUND_ACCURACY method=FedAvg round=115 accuracy=64.610001
+********************************************************************************
+Round 115
+ROUND_ACCURACY method=FedAvg round=116 accuracy=70.709999
+********************************************************************************
+Round 116
+ROUND_ACCURACY method=FedAvg round=117 accuracy=64.199997
+********************************************************************************
+Round 117
+ROUND_ACCURACY method=FedAvg round=118 accuracy=68.720001
+********************************************************************************
+Round 118
+ROUND_ACCURACY method=FedAvg round=119 accuracy=64.879997
+********************************************************************************
+Round 119
+ROUND_ACCURACY method=FedAvg round=120 accuracy=68.669998
+********************************************************************************
+Round 120
+ROUND_ACCURACY method=FedAvg round=121 accuracy=72.500000
+********************************************************************************
+Round 121
+ROUND_ACCURACY method=FedAvg round=122 accuracy=67.000000
+********************************************************************************
+Round 122
+ROUND_ACCURACY method=FedAvg round=123 accuracy=69.730003
+********************************************************************************
+Round 123
+ROUND_ACCURACY method=FedAvg round=124 accuracy=61.790001
+********************************************************************************
+Round 124
+ROUND_ACCURACY method=FedAvg round=125 accuracy=62.459999
+********************************************************************************
+Round 125
+ROUND_ACCURACY method=FedAvg round=126 accuracy=64.239998
+********************************************************************************
+Round 126
+ROUND_ACCURACY method=FedAvg round=127 accuracy=70.360001
+********************************************************************************
+Round 127
+ROUND_ACCURACY method=FedAvg round=128 accuracy=68.919998
+********************************************************************************
+Round 128
+ROUND_ACCURACY method=FedAvg round=129 accuracy=72.279999
+********************************************************************************
+Round 129
+ROUND_ACCURACY method=FedAvg round=130 accuracy=67.419998
+********************************************************************************
+Round 130
+ROUND_ACCURACY method=FedAvg round=131 accuracy=66.190002
+********************************************************************************
+Round 131
+ROUND_ACCURACY method=FedAvg round=132 accuracy=72.269997
+********************************************************************************
+Round 132
+ROUND_ACCURACY method=FedAvg round=133 accuracy=67.949997
+********************************************************************************
+Round 133
+ROUND_ACCURACY method=FedAvg round=134 accuracy=71.330002
+********************************************************************************
+Round 134
+ROUND_ACCURACY method=FedAvg round=135 accuracy=67.660004
+********************************************************************************
+Round 135
+ROUND_ACCURACY method=FedAvg round=136 accuracy=63.730000
+********************************************************************************
+Round 136
+ROUND_ACCURACY method=FedAvg round=137 accuracy=71.540001
+********************************************************************************
+Round 137
+ROUND_ACCURACY method=FedAvg round=138 accuracy=73.099998
+********************************************************************************
+Round 138
+ROUND_ACCURACY method=FedAvg round=139 accuracy=70.839996
+********************************************************************************
+Round 139
+ROUND_ACCURACY method=FedAvg round=140 accuracy=71.510002
+********************************************************************************
+Round 140
+ROUND_ACCURACY method=FedAvg round=141 accuracy=72.019997
+********************************************************************************
+Round 141
+ROUND_ACCURACY method=FedAvg round=142 accuracy=63.930000
+********************************************************************************
+Round 142
+ROUND_ACCURACY method=FedAvg round=143 accuracy=61.660000
+********************************************************************************
+Round 143
+ROUND_ACCURACY method=FedAvg round=144 accuracy=72.199997
+********************************************************************************
+Round 144
+ROUND_ACCURACY method=FedAvg round=145 accuracy=67.970001
+********************************************************************************
+Round 145
+ROUND_ACCURACY method=FedAvg round=146 accuracy=62.799999
+********************************************************************************
+Round 146
+ROUND_ACCURACY method=FedAvg round=147 accuracy=71.290001
+********************************************************************************
+Round 147
+ROUND_ACCURACY method=FedAvg round=148 accuracy=71.599998
+********************************************************************************
+Round 148
+ROUND_ACCURACY method=FedAvg round=149 accuracy=68.830002
+********************************************************************************
+Round 149
+ROUND_ACCURACY method=FedAvg round=150 accuracy=72.519997
+********************************************************************************
+Round 150
+ROUND_ACCURACY method=FedAvg round=151 accuracy=63.939999
+********************************************************************************
+Round 151
+ROUND_ACCURACY method=FedAvg round=152 accuracy=63.580002
+********************************************************************************
+Round 152
+ROUND_ACCURACY method=FedAvg round=153 accuracy=71.709999
+********************************************************************************
+Round 153
+ROUND_ACCURACY method=FedAvg round=154 accuracy=73.120003
+********************************************************************************
+Round 154
+ROUND_ACCURACY method=FedAvg round=155 accuracy=70.760002
+********************************************************************************
+Round 155
+ROUND_ACCURACY method=FedAvg round=156 accuracy=70.849998
+********************************************************************************
+Round 156
+ROUND_ACCURACY method=FedAvg round=157 accuracy=63.369999
+********************************************************************************
+Round 157
+ROUND_ACCURACY method=FedAvg round=158 accuracy=70.910004
+********************************************************************************
+Round 158
+ROUND_ACCURACY method=FedAvg round=159 accuracy=70.209999
+********************************************************************************
+Round 159
+ROUND_ACCURACY method=FedAvg round=160 accuracy=70.510002
+********************************************************************************
+Round 160
+ROUND_ACCURACY method=FedAvg round=161 accuracy=72.440002
+********************************************************************************
+Round 161
+ROUND_ACCURACY method=FedAvg round=162 accuracy=70.739998
+********************************************************************************
+Round 162
+ROUND_ACCURACY method=FedAvg round=163 accuracy=66.540001
+********************************************************************************
+Round 163
+ROUND_ACCURACY method=FedAvg round=164 accuracy=70.050003
+********************************************************************************
+Round 164
+ROUND_ACCURACY method=FedAvg round=165 accuracy=72.559998
+********************************************************************************
+Round 165
+ROUND_ACCURACY method=FedAvg round=166 accuracy=71.360001
+********************************************************************************
+Round 166
+ROUND_ACCURACY method=FedAvg round=167 accuracy=67.849998
+********************************************************************************
+Round 167
+ROUND_ACCURACY method=FedAvg round=168 accuracy=70.599998
+********************************************************************************
+Round 168
+ROUND_ACCURACY method=FedAvg round=169 accuracy=71.690002
+********************************************************************************
+Round 169
+ROUND_ACCURACY method=FedAvg round=170 accuracy=70.779999
+********************************************************************************
+Round 170
+ROUND_ACCURACY method=FedAvg round=171 accuracy=66.269997
+********************************************************************************
+Round 171
+ROUND_ACCURACY method=FedAvg round=172 accuracy=68.680000
+********************************************************************************
+Round 172
+ROUND_ACCURACY method=FedAvg round=173 accuracy=67.309998
+********************************************************************************
+Round 173
+ROUND_ACCURACY method=FedAvg round=174 accuracy=67.250000
+********************************************************************************
+Round 174
+ROUND_ACCURACY method=FedAvg round=175 accuracy=71.080002
+********************************************************************************
+Round 175
+ROUND_ACCURACY method=FedAvg round=176 accuracy=71.300003
+********************************************************************************
+Round 176
+ROUND_ACCURACY method=FedAvg round=177 accuracy=67.989998
+********************************************************************************
+Round 177
+ROUND_ACCURACY method=FedAvg round=178 accuracy=69.029999
+********************************************************************************
+Round 178
+ROUND_ACCURACY method=FedAvg round=179 accuracy=72.970001
+********************************************************************************
+Round 179
+ROUND_ACCURACY method=FedAvg round=180 accuracy=72.029999
+********************************************************************************
+Round 180
+ROUND_ACCURACY method=FedAvg round=181 accuracy=70.860001
+********************************************************************************
+Round 181
+ROUND_ACCURACY method=FedAvg round=182 accuracy=65.599998
+********************************************************************************
+Round 182
+ROUND_ACCURACY method=FedAvg round=183 accuracy=73.419998
+********************************************************************************
+Round 183
+ROUND_ACCURACY method=FedAvg round=184 accuracy=71.599998
+********************************************************************************
+Round 184
+ROUND_ACCURACY method=FedAvg round=185 accuracy=70.769997
+********************************************************************************
+Round 185
+ROUND_ACCURACY method=FedAvg round=186 accuracy=68.949997
+********************************************************************************
+Round 186
+ROUND_ACCURACY method=FedAvg round=187 accuracy=66.559998
+********************************************************************************
+Round 187
+ROUND_ACCURACY method=FedAvg round=188 accuracy=72.370003
+********************************************************************************
+Round 188
+ROUND_ACCURACY method=FedAvg round=189 accuracy=65.849998
+********************************************************************************
+Round 189
+ROUND_ACCURACY method=FedAvg round=190 accuracy=68.680000
+********************************************************************************
+Round 190
+ROUND_ACCURACY method=FedAvg round=191 accuracy=62.209999
+********************************************************************************
+Round 191
+ROUND_ACCURACY method=FedAvg round=192 accuracy=68.800003
+********************************************************************************
+Round 192
+ROUND_ACCURACY method=FedAvg round=193 accuracy=72.779999
+********************************************************************************
+Round 193
+ROUND_ACCURACY method=FedAvg round=194 accuracy=69.589996
+********************************************************************************
+Round 194
+ROUND_ACCURACY method=FedAvg round=195 accuracy=71.879997
+********************************************************************************
+Round 195
+ROUND_ACCURACY method=FedAvg round=196 accuracy=73.559998
+********************************************************************************
+Round 196
+ROUND_ACCURACY method=FedAvg round=197 accuracy=66.519997
+********************************************************************************
+Round 197
+ROUND_ACCURACY method=FedAvg round=198 accuracy=69.419998
+********************************************************************************
+Round 198
+ROUND_ACCURACY method=FedAvg round=199 accuracy=63.759998
+********************************************************************************
+Round 199
+ROUND_ACCURACY method=FedAvg round=200 accuracy=56.740002
+********************************************************************************
+Round 200
+ROUND_ACCURACY method=FedAvg round=201 accuracy=68.610001
+********************************************************************************
+Round 201
+ROUND_ACCURACY method=FedAvg round=202 accuracy=71.129997
+********************************************************************************
+Round 202
+ROUND_ACCURACY method=FedAvg round=203 accuracy=62.740002
+********************************************************************************
+Round 203
+ROUND_ACCURACY method=FedAvg round=204 accuracy=71.010002
+********************************************************************************
+Round 204
+ROUND_ACCURACY method=FedAvg round=205 accuracy=67.809998
+********************************************************************************
+Round 205
+ROUND_ACCURACY method=FedAvg round=206 accuracy=72.209999
+********************************************************************************
+Round 206
+ROUND_ACCURACY method=FedAvg round=207 accuracy=67.800003
+********************************************************************************
+Round 207
+ROUND_ACCURACY method=FedAvg round=208 accuracy=66.290001
+********************************************************************************
+Round 208
+ROUND_ACCURACY method=FedAvg round=209 accuracy=71.980003
+********************************************************************************
+Round 209
+ROUND_ACCURACY method=FedAvg round=210 accuracy=71.879997
+********************************************************************************
+Round 210
+ROUND_ACCURACY method=FedAvg round=211 accuracy=67.349998
+********************************************************************************
+Round 211
+ROUND_ACCURACY method=FedAvg round=212 accuracy=75.139999
+********************************************************************************
+Round 212
+ROUND_ACCURACY method=FedAvg round=213 accuracy=72.739998
+********************************************************************************
+Round 213
+ROUND_ACCURACY method=FedAvg round=214 accuracy=73.330002
+********************************************************************************
+Round 214
+ROUND_ACCURACY method=FedAvg round=215 accuracy=73.480003
+********************************************************************************
+Round 215
+ROUND_ACCURACY method=FedAvg round=216 accuracy=72.339996
+********************************************************************************
+Round 216
+ROUND_ACCURACY method=FedAvg round=217 accuracy=61.560001
+********************************************************************************
+Round 217
+ROUND_ACCURACY method=FedAvg round=218 accuracy=72.550003
+********************************************************************************
+Round 218
+ROUND_ACCURACY method=FedAvg round=219 accuracy=70.529999
+********************************************************************************
+Round 219
+ROUND_ACCURACY method=FedAvg round=220 accuracy=71.410004
+********************************************************************************
+Round 220
+ROUND_ACCURACY method=FedAvg round=221 accuracy=69.120003
+********************************************************************************
+Round 221
+ROUND_ACCURACY method=FedAvg round=222 accuracy=63.259998
+********************************************************************************
+Round 222
+ROUND_ACCURACY method=FedAvg round=223 accuracy=74.019997
+********************************************************************************
+Round 223
+ROUND_ACCURACY method=FedAvg round=224 accuracy=72.900002
+********************************************************************************
+Round 224
+ROUND_ACCURACY method=FedAvg round=225 accuracy=64.809998
+********************************************************************************
+Round 225
+ROUND_ACCURACY method=FedAvg round=226 accuracy=66.860001
+********************************************************************************
+Round 226
+ROUND_ACCURACY method=FedAvg round=227 accuracy=70.190002
+********************************************************************************
+Round 227
+ROUND_ACCURACY method=FedAvg round=228 accuracy=59.630001
+********************************************************************************
+Round 228
+ROUND_ACCURACY method=FedAvg round=229 accuracy=68.190002
+********************************************************************************
+Round 229
+ROUND_ACCURACY method=FedAvg round=230 accuracy=72.970001
+********************************************************************************
+Round 230
+ROUND_ACCURACY method=FedAvg round=231 accuracy=70.800003
+********************************************************************************
+Round 231
+ROUND_ACCURACY method=FedAvg round=232 accuracy=72.980003
+********************************************************************************
+Round 232
+ROUND_ACCURACY method=FedAvg round=233 accuracy=69.930000
+********************************************************************************
+Round 233
+ROUND_ACCURACY method=FedAvg round=234 accuracy=69.570000
+********************************************************************************
+Round 234
+ROUND_ACCURACY method=FedAvg round=235 accuracy=64.050003
+********************************************************************************
+Round 235
+ROUND_ACCURACY method=FedAvg round=236 accuracy=73.910004
+********************************************************************************
+Round 236
+ROUND_ACCURACY method=FedAvg round=237 accuracy=70.150002
+********************************************************************************
+Round 237
+ROUND_ACCURACY method=FedAvg round=238 accuracy=69.839996
+********************************************************************************
+Round 238
+ROUND_ACCURACY method=FedAvg round=239 accuracy=72.699997
+********************************************************************************
+Round 239
+ROUND_ACCURACY method=FedAvg round=240 accuracy=64.489998
+********************************************************************************
+Round 240
+ROUND_ACCURACY method=FedAvg round=241 accuracy=70.639999
+********************************************************************************
+Round 241
+ROUND_ACCURACY method=FedAvg round=242 accuracy=73.169998
+********************************************************************************
+Round 242
+ROUND_ACCURACY method=FedAvg round=243 accuracy=70.290001
+********************************************************************************
+Round 243
+ROUND_ACCURACY method=FedAvg round=244 accuracy=70.120003
+********************************************************************************
+Round 244
+ROUND_ACCURACY method=FedAvg round=245 accuracy=74.269997
+********************************************************************************
+Round 245
+ROUND_ACCURACY method=FedAvg round=246 accuracy=73.680000
+********************************************************************************
+Round 246
+ROUND_ACCURACY method=FedAvg round=247 accuracy=48.860001
+********************************************************************************
+Round 247
+ROUND_ACCURACY method=FedAvg round=248 accuracy=68.050003
+********************************************************************************
+Round 248
+ROUND_ACCURACY method=FedAvg round=249 accuracy=67.550003
+********************************************************************************
+Round 249
+ROUND_ACCURACY method=FedAvg round=250 accuracy=71.110001
+********************************************************************************
+Round 250
+ROUND_ACCURACY method=FedAvg round=251 accuracy=72.309998
+********************************************************************************
+Round 251
+ROUND_ACCURACY method=FedAvg round=252 accuracy=70.269997
+********************************************************************************
+Round 252
+ROUND_ACCURACY method=FedAvg round=253 accuracy=66.580002
+********************************************************************************
+Round 253
+ROUND_ACCURACY method=FedAvg round=254 accuracy=66.750000
+********************************************************************************
+Round 254
+ROUND_ACCURACY method=FedAvg round=255 accuracy=74.160004
+********************************************************************************
+Round 255
+ROUND_ACCURACY method=FedAvg round=256 accuracy=69.050003
+********************************************************************************
+Round 256
+ROUND_ACCURACY method=FedAvg round=257 accuracy=69.010002
+********************************************************************************
+Round 257
+ROUND_ACCURACY method=FedAvg round=258 accuracy=69.629997
+********************************************************************************
+Round 258
+ROUND_ACCURACY method=FedAvg round=259 accuracy=69.940002
+********************************************************************************
+Round 259
+ROUND_ACCURACY method=FedAvg round=260 accuracy=73.269997
+********************************************************************************
+Round 260
+ROUND_ACCURACY method=FedAvg round=261 accuracy=72.120003
+********************************************************************************
+Round 261
+ROUND_ACCURACY method=FedAvg round=262 accuracy=74.389999
+********************************************************************************
+Round 262
+ROUND_ACCURACY method=FedAvg round=263 accuracy=69.239998
+********************************************************************************
+Round 263
+ROUND_ACCURACY method=FedAvg round=264 accuracy=71.500000
+********************************************************************************
+Round 264
+ROUND_ACCURACY method=FedAvg round=265 accuracy=71.110001
+********************************************************************************
+Round 265
+ROUND_ACCURACY method=FedAvg round=266 accuracy=71.180000
+********************************************************************************
+Round 266
+ROUND_ACCURACY method=FedAvg round=267 accuracy=70.110001
+********************************************************************************
+Round 267
+ROUND_ACCURACY method=FedAvg round=268 accuracy=61.160000
+********************************************************************************
+Round 268
+ROUND_ACCURACY method=FedAvg round=269 accuracy=69.430000
+********************************************************************************
+Round 269
+ROUND_ACCURACY method=FedAvg round=270 accuracy=63.970001
+********************************************************************************
+Round 270
+ROUND_ACCURACY method=FedAvg round=271 accuracy=66.980003
+********************************************************************************
+Round 271
+ROUND_ACCURACY method=FedAvg round=272 accuracy=65.879997
+********************************************************************************
+Round 272
+ROUND_ACCURACY method=FedAvg round=273 accuracy=60.590000
+********************************************************************************
+Round 273
+ROUND_ACCURACY method=FedAvg round=274 accuracy=59.160000
+********************************************************************************
+Round 274
+ROUND_ACCURACY method=FedAvg round=275 accuracy=71.410004
+********************************************************************************
+Round 275
+ROUND_ACCURACY method=FedAvg round=276 accuracy=65.139999
+********************************************************************************
+Round 276
+ROUND_ACCURACY method=FedAvg round=277 accuracy=73.470001
+********************************************************************************
+Round 277
+ROUND_ACCURACY method=FedAvg round=278 accuracy=70.239998
+********************************************************************************
+Round 278
+ROUND_ACCURACY method=FedAvg round=279 accuracy=74.120003
+********************************************************************************
+Round 279
+ROUND_ACCURACY method=FedAvg round=280 accuracy=72.529999
+********************************************************************************
+Round 280
+ROUND_ACCURACY method=FedAvg round=281 accuracy=71.529999
+********************************************************************************
+Round 281
+ROUND_ACCURACY method=FedAvg round=282 accuracy=68.629997
+********************************************************************************
+Round 282
+ROUND_ACCURACY method=FedAvg round=283 accuracy=72.970001
+********************************************************************************
+Round 283
+ROUND_ACCURACY method=FedAvg round=284 accuracy=72.989998
+********************************************************************************
+Round 284
+ROUND_ACCURACY method=FedAvg round=285 accuracy=73.860001
+********************************************************************************
+Round 285
+ROUND_ACCURACY method=FedAvg round=286 accuracy=69.019997
+********************************************************************************
+Round 286
+ROUND_ACCURACY method=FedAvg round=287 accuracy=71.879997
+********************************************************************************
+Round 287
+ROUND_ACCURACY method=FedAvg round=288 accuracy=72.820000
+********************************************************************************
+Round 288
+ROUND_ACCURACY method=FedAvg round=289 accuracy=70.570000
+********************************************************************************
+Round 289
+ROUND_ACCURACY method=FedAvg round=290 accuracy=74.629997
+********************************************************************************
+Round 290
+ROUND_ACCURACY method=FedAvg round=291 accuracy=72.309998
+********************************************************************************
+Round 291
+ROUND_ACCURACY method=FedAvg round=292 accuracy=71.830002
+********************************************************************************
+Round 292
+ROUND_ACCURACY method=FedAvg round=293 accuracy=70.459999
+********************************************************************************
+Round 293
+ROUND_ACCURACY method=FedAvg round=294 accuracy=68.940002
+********************************************************************************
+Round 294
+ROUND_ACCURACY method=FedAvg round=295 accuracy=54.820000
+********************************************************************************
+Round 295
+ROUND_ACCURACY method=FedAvg round=296 accuracy=70.680000
+********************************************************************************
+Round 296
+ROUND_ACCURACY method=FedAvg round=297 accuracy=73.620003
+********************************************************************************
+Round 297
+ROUND_ACCURACY method=FedAvg round=298 accuracy=67.860001
+********************************************************************************
+Round 298
+ROUND_ACCURACY method=FedAvg round=299 accuracy=69.349998
+********************************************************************************
+Round 299
+ROUND_ACCURACY method=FedAvg round=300 accuracy=73.120003
+********************************************************************************
+Round 300
+ROUND_ACCURACY method=FedAvg round=301 accuracy=73.660004
+********************************************************************************
+Round 301
+ROUND_ACCURACY method=FedAvg round=302 accuracy=63.730000
+********************************************************************************
+Round 302
+ROUND_ACCURACY method=FedAvg round=303 accuracy=70.769997
+********************************************************************************
+Round 303
+ROUND_ACCURACY method=FedAvg round=304 accuracy=69.930000
+********************************************************************************
+Round 304
+ROUND_ACCURACY method=FedAvg round=305 accuracy=73.449997
+********************************************************************************
+Round 305
+ROUND_ACCURACY method=FedAvg round=306 accuracy=70.760002
+********************************************************************************
+Round 306
+ROUND_ACCURACY method=FedAvg round=307 accuracy=68.099998
+********************************************************************************
+Round 307
+ROUND_ACCURACY method=FedAvg round=308 accuracy=68.699997
+********************************************************************************
+Round 308
+ROUND_ACCURACY method=FedAvg round=309 accuracy=71.160004
+********************************************************************************
+Round 309
+ROUND_ACCURACY method=FedAvg round=310 accuracy=75.099998
+********************************************************************************
+Round 310
+ROUND_ACCURACY method=FedAvg round=311 accuracy=74.800003
+********************************************************************************
+Round 311
+ROUND_ACCURACY method=FedAvg round=312 accuracy=70.860001
+********************************************************************************
+Round 312
+ROUND_ACCURACY method=FedAvg round=313 accuracy=73.879997
+********************************************************************************
+Round 313
+ROUND_ACCURACY method=FedAvg round=314 accuracy=74.559998
+********************************************************************************
+Round 314
+ROUND_ACCURACY method=FedAvg round=315 accuracy=71.860001
+********************************************************************************
+Round 315
+ROUND_ACCURACY method=FedAvg round=316 accuracy=72.510002
+********************************************************************************
+Round 316
+ROUND_ACCURACY method=FedAvg round=317 accuracy=71.010002
+********************************************************************************
+Round 317
+ROUND_ACCURACY method=FedAvg round=318 accuracy=66.919998
+********************************************************************************
+Round 318
+ROUND_ACCURACY method=FedAvg round=319 accuracy=59.820000
+********************************************************************************
+Round 319
+ROUND_ACCURACY method=FedAvg round=320 accuracy=64.599998
+********************************************************************************
+Round 320
+ROUND_ACCURACY method=FedAvg round=321 accuracy=65.669998
+********************************************************************************
+Round 321
+ROUND_ACCURACY method=FedAvg round=322 accuracy=72.250000
+********************************************************************************
+Round 322
+ROUND_ACCURACY method=FedAvg round=323 accuracy=71.489998
+********************************************************************************
+Round 323
+ROUND_ACCURACY method=FedAvg round=324 accuracy=71.800003
+********************************************************************************
+Round 324
+ROUND_ACCURACY method=FedAvg round=325 accuracy=74.250000
+********************************************************************************
+Round 325
+ROUND_ACCURACY method=FedAvg round=326 accuracy=73.709999
+********************************************************************************
+Round 326
+ROUND_ACCURACY method=FedAvg round=327 accuracy=73.790001
+********************************************************************************
+Round 327
+ROUND_ACCURACY method=FedAvg round=328 accuracy=73.040001
+********************************************************************************
+Round 328
+ROUND_ACCURACY method=FedAvg round=329 accuracy=74.610001
+********************************************************************************
+Round 329
+ROUND_ACCURACY method=FedAvg round=330 accuracy=73.900002
+********************************************************************************
+Round 330
+ROUND_ACCURACY method=FedAvg round=331 accuracy=67.870003
+********************************************************************************
+Round 331
+ROUND_ACCURACY method=FedAvg round=332 accuracy=71.209999
+********************************************************************************
+Round 332
+ROUND_ACCURACY method=FedAvg round=333 accuracy=72.709999
+********************************************************************************
+Round 333
+ROUND_ACCURACY method=FedAvg round=334 accuracy=73.540001
+********************************************************************************
+Round 334
+ROUND_ACCURACY method=FedAvg round=335 accuracy=74.360001
+********************************************************************************
+Round 335
+ROUND_ACCURACY method=FedAvg round=336 accuracy=74.730003
+********************************************************************************
+Round 336
+ROUND_ACCURACY method=FedAvg round=337 accuracy=74.489998
+********************************************************************************
+Round 337
+ROUND_ACCURACY method=FedAvg round=338 accuracy=74.779999
+********************************************************************************
+Round 338
+ROUND_ACCURACY method=FedAvg round=339 accuracy=71.529999
+********************************************************************************
+Round 339
+ROUND_ACCURACY method=FedAvg round=340 accuracy=73.980003
+********************************************************************************
+Round 340
+ROUND_ACCURACY method=FedAvg round=341 accuracy=71.500000
+********************************************************************************
+Round 341
+ROUND_ACCURACY method=FedAvg round=342 accuracy=73.559998
+********************************************************************************
+Round 342
+ROUND_ACCURACY method=FedAvg round=343 accuracy=61.270000
+********************************************************************************
+Round 343
+ROUND_ACCURACY method=FedAvg round=344 accuracy=69.070000
+********************************************************************************
+Round 344
+ROUND_ACCURACY method=FedAvg round=345 accuracy=70.239998
+********************************************************************************
+Round 345
+ROUND_ACCURACY method=FedAvg round=346 accuracy=74.650002
+********************************************************************************
+Round 346
+ROUND_ACCURACY method=FedAvg round=347 accuracy=68.199997
+********************************************************************************
+Round 347
+ROUND_ACCURACY method=FedAvg round=348 accuracy=68.309998
+********************************************************************************
+Round 348
+ROUND_ACCURACY method=FedAvg round=349 accuracy=74.690002
+********************************************************************************
+Round 349
+ROUND_ACCURACY method=FedAvg round=350 accuracy=75.120003
+********************************************************************************
+Round 350
+ROUND_ACCURACY method=FedAvg round=351 accuracy=69.080002
+********************************************************************************
+Round 351
+ROUND_ACCURACY method=FedAvg round=352 accuracy=74.169998
+********************************************************************************
+Round 352
+ROUND_ACCURACY method=FedAvg round=353 accuracy=73.169998
+********************************************************************************
+Round 353
+ROUND_ACCURACY method=FedAvg round=354 accuracy=74.500000
+********************************************************************************
+Round 354
+ROUND_ACCURACY method=FedAvg round=355 accuracy=64.110001
+********************************************************************************
+Round 355
+ROUND_ACCURACY method=FedAvg round=356 accuracy=69.750000
+********************************************************************************
+Round 356
+ROUND_ACCURACY method=FedAvg round=357 accuracy=71.250000
+********************************************************************************
+Round 357
+ROUND_ACCURACY method=FedAvg round=358 accuracy=72.669998
+********************************************************************************
+Round 358
+ROUND_ACCURACY method=FedAvg round=359 accuracy=65.669998
+********************************************************************************
+Round 359
+ROUND_ACCURACY method=FedAvg round=360 accuracy=69.629997
+********************************************************************************
+Round 360
+ROUND_ACCURACY method=FedAvg round=361 accuracy=69.529999
+********************************************************************************
+Round 361
+ROUND_ACCURACY method=FedAvg round=362 accuracy=69.300003
+********************************************************************************
+Round 362
+ROUND_ACCURACY method=FedAvg round=363 accuracy=69.849998
+********************************************************************************
+Round 363
+ROUND_ACCURACY method=FedAvg round=364 accuracy=67.699997
+********************************************************************************
+Round 364
+ROUND_ACCURACY method=FedAvg round=365 accuracy=65.779999
+********************************************************************************
+Round 365
+ROUND_ACCURACY method=FedAvg round=366 accuracy=68.099998
+********************************************************************************
+Round 366
+ROUND_ACCURACY method=FedAvg round=367 accuracy=70.449997
+********************************************************************************
+Round 367
+ROUND_ACCURACY method=FedAvg round=368 accuracy=74.029999
+********************************************************************************
+Round 368
+ROUND_ACCURACY method=FedAvg round=369 accuracy=71.500000
+********************************************************************************
+Round 369
+ROUND_ACCURACY method=FedAvg round=370 accuracy=69.089996
+********************************************************************************
+Round 370
+ROUND_ACCURACY method=FedAvg round=371 accuracy=74.410004
+********************************************************************************
+Round 371
+ROUND_ACCURACY method=FedAvg round=372 accuracy=72.449997
+********************************************************************************
+Round 372
+ROUND_ACCURACY method=FedAvg round=373 accuracy=69.489998
+********************************************************************************
+Round 373
+ROUND_ACCURACY method=FedAvg round=374 accuracy=69.550003
+********************************************************************************
+Round 374
+ROUND_ACCURACY method=FedAvg round=375 accuracy=68.489998
+********************************************************************************
+Round 375
+ROUND_ACCURACY method=FedAvg round=376 accuracy=73.199997
+********************************************************************************
+Round 376
+ROUND_ACCURACY method=FedAvg round=377 accuracy=67.440002
+********************************************************************************
+Round 377
+ROUND_ACCURACY method=FedAvg round=378 accuracy=72.809998
+********************************************************************************
+Round 378
+ROUND_ACCURACY method=FedAvg round=379 accuracy=72.669998
+********************************************************************************
+Round 379
+ROUND_ACCURACY method=FedAvg round=380 accuracy=75.160004
+********************************************************************************
+Round 380
+ROUND_ACCURACY method=FedAvg round=381 accuracy=74.900002
+********************************************************************************
+Round 381
+ROUND_ACCURACY method=FedAvg round=382 accuracy=74.430000
+********************************************************************************
+Round 382
+ROUND_ACCURACY method=FedAvg round=383 accuracy=68.250000
+********************************************************************************
+Round 383
+ROUND_ACCURACY method=FedAvg round=384 accuracy=73.449997
+********************************************************************************
+Round 384
+ROUND_ACCURACY method=FedAvg round=385 accuracy=72.519997
+********************************************************************************
+Round 385
+ROUND_ACCURACY method=FedAvg round=386 accuracy=74.419998
+********************************************************************************
+Round 386
+ROUND_ACCURACY method=FedAvg round=387 accuracy=74.889999
+********************************************************************************
+Round 387
+ROUND_ACCURACY method=FedAvg round=388 accuracy=74.500000
+********************************************************************************
+Round 388
+ROUND_ACCURACY method=FedAvg round=389 accuracy=75.139999
+********************************************************************************
+Round 389
+ROUND_ACCURACY method=FedAvg round=390 accuracy=71.980003
+********************************************************************************
+Round 390
+ROUND_ACCURACY method=FedAvg round=391 accuracy=72.410004
+********************************************************************************
+Round 391
+ROUND_ACCURACY method=FedAvg round=392 accuracy=65.949997
+********************************************************************************
+Round 392
+ROUND_ACCURACY method=FedAvg round=393 accuracy=72.070000
+********************************************************************************
+Round 393
+ROUND_ACCURACY method=FedAvg round=394 accuracy=68.180000
+********************************************************************************
+Round 394
+ROUND_ACCURACY method=FedAvg round=395 accuracy=70.320000
+********************************************************************************
+Round 395
+ROUND_ACCURACY method=FedAvg round=396 accuracy=65.690002
+********************************************************************************
+Round 396
+ROUND_ACCURACY method=FedAvg round=397 accuracy=74.430000
+********************************************************************************
+Round 397
+ROUND_ACCURACY method=FedAvg round=398 accuracy=73.010002
+********************************************************************************
+Round 398
+ROUND_ACCURACY method=FedAvg round=399 accuracy=63.509998
+********************************************************************************
+Round 399
+ROUND_ACCURACY method=FedAvg round=400 accuracy=69.150002
+********************************************************************************
+Round 400
+ROUND_ACCURACY method=FedAvg round=401 accuracy=72.410004
+********************************************************************************
+Round 401
+ROUND_ACCURACY method=FedAvg round=402 accuracy=67.720001
+********************************************************************************
+Round 402
+ROUND_ACCURACY method=FedAvg round=403 accuracy=56.889999
+********************************************************************************
+Round 403
+ROUND_ACCURACY method=FedAvg round=404 accuracy=70.570000
+********************************************************************************
+Round 404
+ROUND_ACCURACY method=FedAvg round=405 accuracy=70.849998
+********************************************************************************
+Round 405
+ROUND_ACCURACY method=FedAvg round=406 accuracy=71.029999
+********************************************************************************
+Round 406
+ROUND_ACCURACY method=FedAvg round=407 accuracy=68.599998
+********************************************************************************
+Round 407
+ROUND_ACCURACY method=FedAvg round=408 accuracy=73.860001
+********************************************************************************
+Round 408
+ROUND_ACCURACY method=FedAvg round=409 accuracy=74.930000
+********************************************************************************
+Round 409
+ROUND_ACCURACY method=FedAvg round=410 accuracy=67.720001
+********************************************************************************
+Round 410
+ROUND_ACCURACY method=FedAvg round=411 accuracy=73.379997
+********************************************************************************
+Round 411
+ROUND_ACCURACY method=FedAvg round=412 accuracy=65.970001
+********************************************************************************
+Round 412
+ROUND_ACCURACY method=FedAvg round=413 accuracy=73.360001
+********************************************************************************
+Round 413
+ROUND_ACCURACY method=FedAvg round=414 accuracy=75.510002
+********************************************************************************
+Round 414
+ROUND_ACCURACY method=FedAvg round=415 accuracy=74.669998
+********************************************************************************
+Round 415
+ROUND_ACCURACY method=FedAvg round=416 accuracy=70.029999
+********************************************************************************
+Round 416
+ROUND_ACCURACY method=FedAvg round=417 accuracy=74.550003
+********************************************************************************
+Round 417
+ROUND_ACCURACY method=FedAvg round=418 accuracy=71.900002
+********************************************************************************
+Round 418
+ROUND_ACCURACY method=FedAvg round=419 accuracy=73.760002
+********************************************************************************
+Round 419
+ROUND_ACCURACY method=FedAvg round=420 accuracy=75.180000
+********************************************************************************
+Round 420
+ROUND_ACCURACY method=FedAvg round=421 accuracy=73.930000
+********************************************************************************
+Round 421
+ROUND_ACCURACY method=FedAvg round=422 accuracy=72.750000
+********************************************************************************
+Round 422
+ROUND_ACCURACY method=FedAvg round=423 accuracy=73.970001
+********************************************************************************
+Round 423
+ROUND_ACCURACY method=FedAvg round=424 accuracy=74.389999
+********************************************************************************
+Round 424
+ROUND_ACCURACY method=FedAvg round=425 accuracy=75.410004
+********************************************************************************
+Round 425
+ROUND_ACCURACY method=FedAvg round=426 accuracy=69.360001
+********************************************************************************
+Round 426
+ROUND_ACCURACY method=FedAvg round=427 accuracy=73.430000
+********************************************************************************
+Round 427
+ROUND_ACCURACY method=FedAvg round=428 accuracy=73.620003
+********************************************************************************
+Round 428
+ROUND_ACCURACY method=FedAvg round=429 accuracy=71.680000
+********************************************************************************
+Round 429
+ROUND_ACCURACY method=FedAvg round=430 accuracy=74.870003
+********************************************************************************
+Round 430
+ROUND_ACCURACY method=FedAvg round=431 accuracy=75.269997
+********************************************************************************
+Round 431
+ROUND_ACCURACY method=FedAvg round=432 accuracy=74.610001
+********************************************************************************
+Round 432
+ROUND_ACCURACY method=FedAvg round=433 accuracy=75.120003
+********************************************************************************
+Round 433
+ROUND_ACCURACY method=FedAvg round=434 accuracy=73.980003
+********************************************************************************
+Round 434
+ROUND_ACCURACY method=FedAvg round=435 accuracy=74.529999
+********************************************************************************
+Round 435
+ROUND_ACCURACY method=FedAvg round=436 accuracy=71.580002
+********************************************************************************
+Round 436
+ROUND_ACCURACY method=FedAvg round=437 accuracy=75.559998
+********************************************************************************
+Round 437
+ROUND_ACCURACY method=FedAvg round=438 accuracy=75.800003
+********************************************************************************
+Round 438
+ROUND_ACCURACY method=FedAvg round=439 accuracy=75.459999
+********************************************************************************
+Round 439
+ROUND_ACCURACY method=FedAvg round=440 accuracy=72.639999
+********************************************************************************
+Round 440
+ROUND_ACCURACY method=FedAvg round=441 accuracy=73.889999
+********************************************************************************
+Round 441
+ROUND_ACCURACY method=FedAvg round=442 accuracy=75.089996
+********************************************************************************
+Round 442
+ROUND_ACCURACY method=FedAvg round=443 accuracy=73.500000
+********************************************************************************
+Round 443
+ROUND_ACCURACY method=FedAvg round=444 accuracy=68.349998
+********************************************************************************
+Round 444
+ROUND_ACCURACY method=FedAvg round=445 accuracy=72.830002
+********************************************************************************
+Round 445
+ROUND_ACCURACY method=FedAvg round=446 accuracy=74.300003
+********************************************************************************
+Round 446
+ROUND_ACCURACY method=FedAvg round=447 accuracy=73.199997
+********************************************************************************
+Round 447
+ROUND_ACCURACY method=FedAvg round=448 accuracy=74.769997
+********************************************************************************
+Round 448
+ROUND_ACCURACY method=FedAvg round=449 accuracy=70.260002
+********************************************************************************
+Round 449
+ROUND_ACCURACY method=FedAvg round=450 accuracy=76.070000
+********************************************************************************
+Round 450
+ROUND_ACCURACY method=FedAvg round=451 accuracy=74.239998
+********************************************************************************
+Round 451
+ROUND_ACCURACY method=FedAvg round=452 accuracy=76.139999
+********************************************************************************
+Round 452
+ROUND_ACCURACY method=FedAvg round=453 accuracy=75.669998
+********************************************************************************
+Round 453
+ROUND_ACCURACY method=FedAvg round=454 accuracy=68.470001
+********************************************************************************
+Round 454
+ROUND_ACCURACY method=FedAvg round=455 accuracy=74.550003
+********************************************************************************
+Round 455
+ROUND_ACCURACY method=FedAvg round=456 accuracy=73.599998
+********************************************************************************
+Round 456
+ROUND_ACCURACY method=FedAvg round=457 accuracy=75.610001
+********************************************************************************
+Round 457
+ROUND_ACCURACY method=FedAvg round=458 accuracy=73.449997
+********************************************************************************
+Round 458
+ROUND_ACCURACY method=FedAvg round=459 accuracy=76.190002
+********************************************************************************
+Round 459
+ROUND_ACCURACY method=FedAvg round=460 accuracy=72.239998
+********************************************************************************
+Round 460
+ROUND_ACCURACY method=FedAvg round=461 accuracy=75.510002
+********************************************************************************
+Round 461
+ROUND_ACCURACY method=FedAvg round=462 accuracy=75.639999
+********************************************************************************
+Round 462
+ROUND_ACCURACY method=FedAvg round=463 accuracy=76.089996
+********************************************************************************
+Round 463
+ROUND_ACCURACY method=FedAvg round=464 accuracy=69.510002
+********************************************************************************
+Round 464
+ROUND_ACCURACY method=FedAvg round=465 accuracy=71.190002
+********************************************************************************
+Round 465
+ROUND_ACCURACY method=FedAvg round=466 accuracy=75.680000
+********************************************************************************
+Round 466
+ROUND_ACCURACY method=FedAvg round=467 accuracy=71.889999
+********************************************************************************
+Round 467
+ROUND_ACCURACY method=FedAvg round=468 accuracy=65.830002
+********************************************************************************
+Round 468
+ROUND_ACCURACY method=FedAvg round=469 accuracy=68.180000
+********************************************************************************
+Round 469
+ROUND_ACCURACY method=FedAvg round=470 accuracy=72.620003
+********************************************************************************
+Round 470
+ROUND_ACCURACY method=FedAvg round=471 accuracy=70.180000
+********************************************************************************
+Round 471
+ROUND_ACCURACY method=FedAvg round=472 accuracy=74.639999
+********************************************************************************
+Round 472
+ROUND_ACCURACY method=FedAvg round=473 accuracy=74.190002
+********************************************************************************
+Round 473
+ROUND_ACCURACY method=FedAvg round=474 accuracy=73.989998
+********************************************************************************
+Round 474
+ROUND_ACCURACY method=FedAvg round=475 accuracy=72.300003
+********************************************************************************
+Round 475
+ROUND_ACCURACY method=FedAvg round=476 accuracy=75.139999
+********************************************************************************
+Round 476
+ROUND_ACCURACY method=FedAvg round=477 accuracy=75.290001
+********************************************************************************
+Round 477
+ROUND_ACCURACY method=FedAvg round=478 accuracy=72.669998
+********************************************************************************
+Round 478
+ROUND_ACCURACY method=FedAvg round=479 accuracy=75.349998
+********************************************************************************
+Round 479
+ROUND_ACCURACY method=FedAvg round=480 accuracy=72.260002
+********************************************************************************
+Round 480
+ROUND_ACCURACY method=FedAvg round=481 accuracy=74.820000
+********************************************************************************
+Round 481
+ROUND_ACCURACY method=FedAvg round=482 accuracy=70.440002
+********************************************************************************
+Round 482
+ROUND_ACCURACY method=FedAvg round=483 accuracy=71.739998
+********************************************************************************
+Round 483
+ROUND_ACCURACY method=FedAvg round=484 accuracy=74.440002
+********************************************************************************
+Round 484
+ROUND_ACCURACY method=FedAvg round=485 accuracy=74.559998
+********************************************************************************
+Round 485
+ROUND_ACCURACY method=FedAvg round=486 accuracy=72.089996
+********************************************************************************
+Round 486
+ROUND_ACCURACY method=FedAvg round=487 accuracy=74.139999
+********************************************************************************
+Round 487
+ROUND_ACCURACY method=FedAvg round=488 accuracy=75.510002
+********************************************************************************
+Round 488
+ROUND_ACCURACY method=FedAvg round=489 accuracy=75.750000
+********************************************************************************
+Round 489
+ROUND_ACCURACY method=FedAvg round=490 accuracy=75.160004
+********************************************************************************
+Round 490
+ROUND_ACCURACY method=FedAvg round=491 accuracy=73.180000
+********************************************************************************
+Round 491
+ROUND_ACCURACY method=FedAvg round=492 accuracy=75.830002
+********************************************************************************
+Round 492
+ROUND_ACCURACY method=FedAvg round=493 accuracy=75.980003
+********************************************************************************
+Round 493
+ROUND_ACCURACY method=FedAvg round=494 accuracy=71.830002
+********************************************************************************
+Round 494
+ROUND_ACCURACY method=FedAvg round=495 accuracy=74.690002
+********************************************************************************
+Round 495
+ROUND_ACCURACY method=FedAvg round=496 accuracy=74.269997
+********************************************************************************
+Round 496
+ROUND_ACCURACY method=FedAvg round=497 accuracy=65.949997
+********************************************************************************
+Round 497
+ROUND_ACCURACY method=FedAvg round=498 accuracy=67.470001
+********************************************************************************
+Round 498
+ROUND_ACCURACY method=FedAvg round=499 accuracy=62.220001
+********************************************************************************
+Round 499
+ROUND_ACCURACY method=FedAvg round=500 accuracy=73.610001
+PEAK_ACCURACY method=FedAvg round=459 accuracy=76.190002

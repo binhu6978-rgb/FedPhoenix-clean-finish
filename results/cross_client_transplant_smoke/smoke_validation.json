@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": {
+    "exactly_two_probes_per_round": true,
+    "target_and_donor_always_different": true,
+    "all_requested_metrics_finite": true,
+    "one_accuracy_per_round": true,
+    "aggregate_unchanged_by_shadow": true,
+    "global_equals_normal_only_aggregate": true,
+    "cuda_device_used": true,
+    "probe_csv_exists": true,
+    "accuracy_csv_exists": true
+  }
+}

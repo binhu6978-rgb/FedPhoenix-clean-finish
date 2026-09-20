@@ -1,0 +1,331 @@
+{
+  "status": "completed",
+  "completed_rounds": 5,
+  "probe_events": 10,
+  "expected_probe_events": 10,
+  "final_test_accuracy": 39.68000030517578,
+  "best_test_accuracy": 39.68000030517578,
+  "wall_time_seconds": 60.21507024765015,
+  "aggregation_isolation_verified": true,
+  "analysis": {
+    "definitions": {
+      "same_donor_type": "same dominant class in the donor client's fixed local label distribution",
+      "transformation_signature": [
+        "recovery_pull_score_all",
+        "cos_WBA_minus_WB__WA_minus_Wt_all",
+        "cos_WBA_minus_WB__WB_minus_Wt_all",
+        "cos_WBA_minus_Wt__WA_minus_Wt_all",
+        "cos_WBA_minus_Wt__WB_minus_Wt_all"
+      ],
+      "variance_note": "Between variance is variance of target means; within variance is pooled event residual variance within target.",
+      "partial_r2_note": "Target fixed-effect partial R^2 controls for donor dominant class and the three prespecified stages; descriptive, not causal."
+    },
+    "q1_same_target_across_donors": {
+      "variance_decomposition": [
+        {
+          "metric": "recovery_pull_score_all",
+          "clients": 10,
+          "between_client_variance_of_means": 0.003882003403321629,
+          "pooled_within_client_variance": null,
+          "between_to_within_ratio": null,
+          "descriptive_icc": null
+        },
+        {
+          "metric": "cos_WBA_minus_WB__WA_minus_Wt_all",
+          "clients": 10,
+          "between_client_variance_of_means": 0.0015045488395081666,
+          "pooled_within_client_variance": null,
+          "between_to_within_ratio": null,
+          "descriptive_icc": null
+        },
+        {
+          "metric": "cos_WBA_minus_WB__WB_minus_Wt_all",
+          "clients": 10,
+          "between_client_variance_of_means": 0.0020239547135059415,
+          "pooled_within_client_variance": null,
+          "between_to_within_ratio": null,
+          "descriptive_icc": null
+        },
+        {
+          "metric": "cos_WBA_minus_Wt__WA_minus_Wt_all",
+          "clients": 10,
+          "between_client_variance_of_means": 0.0017342047075303594,
+          "pooled_within_client_variance": null,
+          "between_to_within_ratio": null,
+          "descriptive_icc": null
+        },
+        {
+          "metric": "cos_WBA_minus_Wt__WB_minus_Wt_all",
+          "clients": 10,
+          "between_client_variance_of_means": 0.017172891074659836,
+          "pooled_within_client_variance": null,
+          "between_to_within_ratio": null,
+          "descriptive_icc": null
+        }
+      ],
+      "target_identity_partial_r2": [
+        {
+          "metric": "recovery_pull_score_all",
+          "n": 10,
+          "target_partial_r2_controlling_donor_class_and_stage": 1.0,
+          "sse_reduced": 0.010429768919220803,
+          "sse_full": 0.0
+        },
+        {
+          "metric": "cos_WBA_minus_WB__WA_minus_Wt_all",
+          "n": 10,
+          "target_partial_r2_controlling_donor_class_and_stage": 1.0,
+          "sse_reduced": 0.006666587547228906,
+          "sse_full": 0.0
+        },
+        {
+          "metric": "cos_WBA_minus_WB__WB_minus_Wt_all",
+          "n": 10,
+          "target_partial_r2_controlling_donor_class_and_stage": 1.0,
+          "sse_reduced": 0.007882701858277422,
+          "sse_full": 6.770847460736376e-36
+        },
+        {
+          "metric": "cos_WBA_minus_Wt__WA_minus_Wt_all",
+          "n": 10,
+          "target_partial_r2_controlling_donor_class_and_stage": 1.0,
+          "sse_reduced": 0.012015220994800607,
+          "sse_full": 3.851859888774472e-34
+        },
+        {
+          "metric": "cos_WBA_minus_Wt__WB_minus_Wt_all",
+          "n": 10,
+          "target_partial_r2_controlling_donor_class_and_stage": 1.0,
+          "sse_reduced": 0.07975641715997196,
+          "sse_full": 0.0
+        }
+      ]
+    },
+    "q2_different_targets_same_donor_type": {
+      "target_identity_partial_r2_controlling_donor_type_and_stage": [
+        {
+          "metric": "recovery_pull_score_all",
+          "n": 10,
+          "target_partial_r2_controlling_donor_class_and_stage": 1.0,
+          "sse_reduced": 0.010429768919220803,
+          "sse_full": 0.0
+        },
+        {
+          "metric": "cos_WBA_minus_WB__WA_minus_Wt_all",
+          "n": 10,
+          "target_partial_r2_controlling_donor_class_and_stage": 1.0,
+          "sse_reduced": 0.006666587547228906,
+          "sse_full": 0.0
+        },
+        {
+          "metric": "cos_WBA_minus_WB__WB_minus_Wt_all",
+          "n": 10,
+          "target_partial_r2_controlling_donor_class_and_stage": 1.0,
+          "sse_reduced": 0.007882701858277422,
+          "sse_full": 6.770847460736376e-36
+        },
+        {
+          "metric": "cos_WBA_minus_Wt__WA_minus_Wt_all",
+          "n": 10,
+          "target_partial_r2_controlling_donor_class_and_stage": 1.0,
+          "sse_reduced": 0.012015220994800607,
+          "sse_full": 3.851859888774472e-34
+        },
+        {
+          "metric": "cos_WBA_minus_Wt__WB_minus_Wt_all",
+          "n": 10,
+          "target_partial_r2_controlling_donor_class_and_stage": 1.0,
+          "sse_reduced": 0.07975641715997196,
+          "sse_full": 0.0
+        }
+      ]
+    },
+    "q3_target_response_stage_stability": [
+      {
+        "metric": "recovery_pull_score_all",
+        "stage_left": "rounds_1_150",
+        "stage_right": "rounds_151_300",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "recovery_pull_score_all",
+        "stage_left": "rounds_1_150",
+        "stage_right": "rounds_301_500",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "recovery_pull_score_all",
+        "stage_left": "rounds_151_300",
+        "stage_right": "rounds_301_500",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_WB__WA_minus_Wt_all",
+        "stage_left": "rounds_1_150",
+        "stage_right": "rounds_151_300",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_WB__WA_minus_Wt_all",
+        "stage_left": "rounds_1_150",
+        "stage_right": "rounds_301_500",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_WB__WA_minus_Wt_all",
+        "stage_left": "rounds_151_300",
+        "stage_right": "rounds_301_500",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_WB__WB_minus_Wt_all",
+        "stage_left": "rounds_1_150",
+        "stage_right": "rounds_151_300",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_WB__WB_minus_Wt_all",
+        "stage_left": "rounds_1_150",
+        "stage_right": "rounds_301_500",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_WB__WB_minus_Wt_all",
+        "stage_left": "rounds_151_300",
+        "stage_right": "rounds_301_500",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_Wt__WA_minus_Wt_all",
+        "stage_left": "rounds_1_150",
+        "stage_right": "rounds_151_300",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_Wt__WA_minus_Wt_all",
+        "stage_left": "rounds_1_150",
+        "stage_right": "rounds_301_500",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_Wt__WA_minus_Wt_all",
+        "stage_left": "rounds_151_300",
+        "stage_right": "rounds_301_500",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_Wt__WB_minus_Wt_all",
+        "stage_left": "rounds_1_150",
+        "stage_right": "rounds_151_300",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_Wt__WB_minus_Wt_all",
+        "stage_left": "rounds_1_150",
+        "stage_right": "rounds_301_500",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      },
+      {
+        "metric": "cos_WBA_minus_Wt__WB_minus_Wt_all",
+        "stage_left": "rounds_151_300",
+        "stage_right": "rounds_301_500",
+        "common_clients": 0,
+        "pearson_correlation_of_target_means": null
+      }
+    ],
+    "q4_between_vs_within_client_variance": [
+      {
+        "metric": "recovery_pull_score_all",
+        "clients": 10,
+        "between_client_variance_of_means": 0.003882003403321629,
+        "pooled_within_client_variance": null,
+        "between_to_within_ratio": null,
+        "descriptive_icc": null
+      },
+      {
+        "metric": "cos_WBA_minus_WB__WA_minus_Wt_all",
+        "clients": 10,
+        "between_client_variance_of_means": 0.0015045488395081666,
+        "pooled_within_client_variance": null,
+        "between_to_within_ratio": null,
+        "descriptive_icc": null
+      },
+      {
+        "metric": "cos_WBA_minus_WB__WB_minus_Wt_all",
+        "clients": 10,
+        "between_client_variance_of_means": 0.0020239547135059415,
+        "pooled_within_client_variance": null,
+        "between_to_within_ratio": null,
+        "descriptive_icc": null
+      },
+      {
+        "metric": "cos_WBA_minus_Wt__WA_minus_Wt_all",
+        "clients": 10,
+        "between_client_variance_of_means": 0.0017342047075303594,
+        "pooled_within_client_variance": null,
+        "between_to_within_ratio": null,
+        "descriptive_icc": null
+      },
+      {
+        "metric": "cos_WBA_minus_Wt__WB_minus_Wt_all",
+        "clients": 10,
+        "between_client_variance_of_means": 0.017172891074659836,
+        "pooled_within_client_variance": null,
+        "between_to_within_ratio": null,
+        "descriptive_icc": null
+      }
+    ],
+    "q5_recovery_systematically_nonzero": {
+      "all": {
+        "count": 10,
+        "mean": -0.12878425113805758,
+        "std": 0.062305725285254715,
+        "sem": 0.01970280031701491,
+        "ci95_low": -0.1674017397594068,
+        "ci95_high": -0.09016676251670835,
+        "positive_fraction": 0.0
+      },
+      "conv": {
+        "count": 10,
+        "mean": -0.17009287068187645,
+        "std": 0.0702231063651628,
+        "sem": 0.022206496048618223,
+        "ci95_low": -0.21361760293716817,
+        "ci95_high": -0.12656813842658474,
+        "positive_fraction": 0.0
+      },
+      "classifier": {
+        "count": 10,
+        "mean": 0.14370487367932297,
+        "std": 0.08496486313401976,
+        "sem": 0.026868248858797458,
+        "ci95_low": 0.09104310591607995,
+        "ci95_high": 0.196366641442566,
+        "positive_fraction": 1.0
+      }
+    }
+  },
+  "outputs": {
+    "probe_events": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\cross_client_transplant_smoke\\probe_events.csv",
+    "per_client_summary": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\cross_client_transplant_smoke\\per_client_summary.csv",
+    "stage_summary": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\cross_client_transplant_smoke\\stage_summary.csv",
+    "accuracy_csv": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\cross_client_transplant_smoke\\fedavg_accuracy_curve.csv",
+    "accuracy_plot": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\cross_client_transplant_smoke\\fedavg_accuracy_curve.png",
+    "isolation_audit": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\cross_client_transplant_smoke\\aggregation_isolation_audit.csv",
+    "final_global_model": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\cross_client_transplant_smoke\\final_global_model.pt"
+  }
+}

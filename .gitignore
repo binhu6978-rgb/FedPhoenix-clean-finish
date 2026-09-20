@@ -6,3 +6,6 @@
 __pycache__/
 *.py[cod]
 *.tmp
+
+# Generated model checkpoint exceeds GitHub's regular-file size limit.
+/results/**/final_global_model.pt

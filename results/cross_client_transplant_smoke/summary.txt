@@ -1,0 +1,25 @@
+Cross-client weight transplantation prestudy
+==============================================
+Completed rounds: 5
+Probe events: 10
+Final FedAvg accuracy: 39.680000%
+Best FedAvg accuracy: 39.680000%
+Aggregation isolation verified: True
+
+Primary interpretation is intentionally deferred to the measured statistics.
+Positive recovery means B->A ends closer to A's normal endpoint than B was.
+
+Recovery / pull score:
+  all: mean=-0.12878425, std=0.062305725, 95% CI=[-0.16740174, -0.090166763], positive_fraction=0, n=10
+  conv: mean=-0.17009287, std=0.070223106, 95% CI=[-0.2136176, -0.12656814], positive_fraction=0, n=10
+  classifier: mean=0.14370487, std=0.084964863, 95% CI=[0.091043106, 0.19636664], positive_fraction=1, n=10
+
+Between-target / within-target variance ratios:
+  recovery_pull_score_all: nan
+  cos_WBA_minus_WB__WA_minus_Wt_all: nan
+  cos_WBA_minus_WB__WB_minus_Wt_all: nan
+  cos_WBA_minus_Wt__WA_minus_Wt_all: nan
+  cos_WBA_minus_Wt__WB_minus_Wt_all: nan
+
+See summary.json for stage correlations, target partial R^2, exact definitions,
+and all five requested question-oriented diagnostics.
