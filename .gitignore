@@ -1,0 +1,8 @@
+# Keep only dataset partition metadata; raw datasets are reproducible downloads.
+/data/*
+!/data/*.json
+
+# Python bytecode and temporary files
+__pycache__/
+*.py[cod]
+*.tmp
