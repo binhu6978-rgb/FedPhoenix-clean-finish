@@ -1,0 +1,189 @@
+{
+  "status": "passed",
+  "protocol": {
+    "dataset": "cifar10",
+    "model": "cnn",
+    "num_users": 100,
+    "frac": 0.1,
+    "local_ep": 5,
+    "local_bs": 50,
+    "bs": 256,
+    "optimizer": "sgd",
+    "lr": 0.01,
+    "momentum": 0.5,
+    "weight_decay": 0.0,
+    "iid": 0,
+    "noniid_case": 5,
+    "data_beta": 0.3,
+    "generate_data": 0,
+    "num_classes": 10,
+    "num_channels": 3,
+    "seed": 1,
+    "gpu": 0,
+    "num_workers": 0,
+    "verbose": false,
+    "epochs": 5,
+    "id_tau": 0.0,
+    "id_max_step_ratio": 0.0,
+    "metrics_log_dir": "results\\interaction_dispatch_degeneration_regression\\metrics",
+    "run_name": "degeneration",
+    "algorithm": "InteractionDispatch",
+    "device": "cuda:0"
+  },
+  "checks": {
+    "five_rounds_recorded": true,
+    "client_selections_identical": true,
+    "active_interventions_all_zero": true,
+    "accuracies_identical": true,
+    "final_states_allclose": true
+  },
+  "fedavg_accuracies": [
+    10.0,
+    10.69,
+    16.51,
+    16.719999,
+    15.73
+  ],
+  "interaction_dispatch_accuracies": [
+    10.0,
+    10.69,
+    16.51,
+    16.719999,
+    15.73
+  ],
+  "maximum_accuracy_difference": 0.0,
+  "maximum_final_state_absolute_difference": 0.0,
+  "non_allclose_state_keys": [],
+  "fedavg_client_selections": [
+    [
+      80,
+      84,
+      33,
+      81,
+      93,
+      17,
+      36,
+      82,
+      69,
+      65
+    ],
+    [
+      44,
+      96,
+      1,
+      35,
+      26,
+      11,
+      38,
+      82,
+      87,
+      3
+    ],
+    [
+      95,
+      67,
+      96,
+      71,
+      1,
+      80,
+      99,
+      45,
+      52,
+      27
+    ],
+    [
+      40,
+      10,
+      96,
+      66,
+      89,
+      32,
+      95,
+      55,
+      25,
+      5
+    ],
+    [
+      89,
+      99,
+      45,
+      96,
+      72,
+      9,
+      74,
+      88,
+      1,
+      38
+    ]
+  ],
+  "interaction_dispatch_client_selections": [
+    [
+      80,
+      84,
+      33,
+      81,
+      93,
+      17,
+      36,
+      82,
+      69,
+      65
+    ],
+    [
+      44,
+      96,
+      1,
+      35,
+      26,
+      11,
+      38,
+      82,
+      87,
+      3
+    ],
+    [
+      95,
+      67,
+      96,
+      71,
+      1,
+      80,
+      99,
+      45,
+      52,
+      27
+    ],
+    [
+      40,
+      10,
+      96,
+      66,
+      89,
+      32,
+      95,
+      55,
+      25,
+      5
+    ],
+    [
+      89,
+      99,
+      45,
+      96,
+      72,
+      9,
+      74,
+      88,
+      1,
+      38
+    ]
+  ],
+  "active_interventions_per_round": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "interaction_metrics_csv": "results\\interaction_dispatch_degeneration_regression\\metrics\\cifar10_cnn_InteractionDispatch_seed1_degeneration.csv"
+}

@@ -24,9 +24,9 @@ class TinyModel(nn.Module):
 
 
 class VectorModel(nn.Module):
-    def __init__(self):
+    def __init__(self, size=2):
         super().__init__()
-        self.vector = nn.Parameter(torch.zeros(2))
+        self.vector = nn.Parameter(torch.zeros(size))
 
 
 class InteractionDispatchTests(unittest.TestCase):
@@ -56,7 +56,7 @@ class InteractionDispatchTests(unittest.TestCase):
         expected = Aggregation(returned_states, [2, 3])
         actual = Aggregation(corrected_states, [2, 3])
         for name in controller.param_names:
-            self.assertTrue(torch.allclose(actual[name], expected[name]))
+            self.assertTrue(torch.equal(actual[name], expected[name]))
 
     def test_server_action_isolation(self):
         model = TinyModel()
@@ -87,7 +87,7 @@ class InteractionDispatchTests(unittest.TestCase):
             )
         )
 
-    def test_cold_start_timing_and_half_cpu_history(self):
+    def test_cold_start_timing_and_history_precision(self):
         controller = InteractionDispatchController(
             VectorModel(), tau=0.0, max_step_ratio=1.0
         )
@@ -106,12 +106,10 @@ class InteractionDispatchTests(unittest.TestCase):
         controller.record_interaction(5, x2, u2, round_idx=1)
         state = controller.client_states[5]
         self.assertEqual(state["num_visits"], 2)
-        for key in (
-            "last_dispatch",
-            "last_update",
-            "obs_direction",
-            "obs_response",
-        ):
+        for key in ("last_dispatch", "last_update"):
+            self.assertEqual(state[key].device.type, "cpu")
+            self.assertEqual(state[key].dtype, torch.float32)
+        for key in ("obs_direction", "obs_response"):
             self.assertEqual(state[key].device.type, "cpu")
             self.assertEqual(state[key].dtype, torch.float16)
 
@@ -156,6 +154,38 @@ class InteractionDispatchTests(unittest.TestCase):
         self.assertEqual(info["reason"], "no_support")
         self.assertLess(info["support"], 0.0)
         self.assertEqual(info["alpha"], 0.0)
+
+    def test_direction_is_renormalized_after_float16_storage(self):
+        size = 257
+        controller = InteractionDispatchController(
+            VectorModel(size), tau=0.0, max_step_ratio=0.25
+        )
+        direction = torch.linspace(0.001, 1.0, size, dtype=torch.float32)
+        direction = direction / torch.linalg.vector_norm(direction)
+        stored_direction = direction.to(dtype=torch.float16)
+        restored_norm = float(
+            torch.linalg.vector_norm(stored_direction.float()).item()
+        )
+        self.assertGreater(abs(restored_norm - 1.0), 1e-7)
+
+        controller.client_states[3] = {
+            "num_visits": 2,
+            "last_dispatch": torch.zeros(size, dtype=torch.float32),
+            "last_update": -direction.clone(),
+            "obs_direction": stored_direction.clone(),
+            "obs_response": direction.to(dtype=torch.float16),
+            "obs_input_norm": 2.0,
+            "last_round": 1,
+        }
+        delta, info = controller.make_dispatch_delta(3, direction)
+        self.assertEqual(info["reason"], "active")
+        delta_norm = float(torch.linalg.vector_norm(delta).item())
+        tolerance = 1e-6
+        self.assertLessEqual(abs(delta_norm - info["alpha"]), tolerance)
+        self.assertLessEqual(
+            delta_norm,
+            controller.max_step_ratio * info["obs_input_norm"] + tolerance,
+        )
 
     def test_flatten_uses_parameters_only_and_state_helpers_do_not_alias(self):
         model = TinyModel()

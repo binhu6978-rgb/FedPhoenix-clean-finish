@@ -1,0 +1,2 @@
+round,algorithm,seed,test_accuracy,round_train_seconds,matching_seconds,selected_clients,assignments,task_seeds
+1,FedPhoenix,1,10.289999961853027,0.2185631999745965,0.0,[80],"[{""client_id"": 80, ""task_id"": 0}]",[200001]

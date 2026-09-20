@@ -48,7 +48,7 @@ def add_flat_delta_to_state(
 ):
     """Return an independent state with ``delta`` added to parameters only."""
     delta = delta.detach().to(device="cpu", dtype=torch.float32).reshape(-1)
-    expected = sum(int(math.prod(param_shapes[name])) for name in param_names)
+    expected = param_offsets[param_names[-1]][1] if param_names else 0
     if delta.numel() != expected:
         raise ValueError(
             f"Dispatch delta has {delta.numel()} elements; expected {expected}"
@@ -83,6 +83,11 @@ def build_corrected_local_state(
     for name in param_names:
         if name not in global_state or name not in dispatch_state or name not in result:
             raise KeyError(f"Missing trainable parameter key: {name}")
+        # Preserve exact FedAvg degeneration when no server action touched this
+        # parameter.  Evaluating global + returned - global in float32 would be
+        # algebraically correct but introduces avoidable cancellation rounding.
+        if torch.equal(global_state[name], dispatch_state[name]):
+            continue
         returned_tensor = result[name]
         corrected = (
             global_state[name].detach().to(device="cpu", dtype=torch.float32)
@@ -187,6 +192,11 @@ class InteractionDispatchController:
             return None, info
 
         direction = state["obs_direction"].to(dtype=torch.float32)
+        direction_norm = float(torch.linalg.vector_norm(direction).item())
+        if not math.isfinite(direction_norm) or direction_norm <= self.eps:
+            info["reason"] = "no_support"
+            return None, info
+        direction = direction / direction_norm
         delta = alpha * direction
         if not bool(torch.isfinite(delta).all()):
             info["reason"] = "no_support"
@@ -197,7 +207,14 @@ class InteractionDispatchController:
         return delta, info
 
     @staticmethod
-    def _history_half(vector, label):
+    def _history_float(vector, label):
+        stored = vector.detach().to(device="cpu", dtype=torch.float32).clone()
+        if not bool(torch.isfinite(stored).all()):
+            raise ValueError(f"{label} contains non-finite values")
+        return stored
+
+    @staticmethod
+    def _observation_half(vector, label):
         stored = vector.detach().to(device="cpu", dtype=torch.float16).clone()
         if not bool(torch.isfinite(stored).all()):
             raise OverflowError(f"{label} cannot be represented in CPU float16")
@@ -229,10 +246,10 @@ class InteractionDispatchController:
         if state is None:
             self.client_states[client_id] = {
                 "num_visits": 1,
-                "last_dispatch": self._history_half(
+                "last_dispatch": self._history_float(
                     dispatch_vector, "dispatch_vector"
                 ),
-                "last_update": self._history_half(
+                "last_update": self._history_float(
                     client_update_vector, "client_update_vector"
                 ),
                 "obs_direction": None,
@@ -262,17 +279,21 @@ class InteractionDispatchController:
                 if bool(torch.isfinite(direction_half).all()) and bool(
                     torch.isfinite(response_half).all()
                 ):
-                    obs_direction = direction_half.cpu().clone()
-                    obs_response = response_half.cpu().clone()
+                    obs_direction = self._observation_half(
+                        direction_float, "obs_direction"
+                    )
+                    obs_response = self._observation_half(
+                        response_float, "obs_response"
+                    )
                     obs_input_norm = input_norm
 
         state.update(
             {
                 "num_visits": int(state["num_visits"]) + 1,
-                "last_dispatch": self._history_half(
+                "last_dispatch": self._history_float(
                     dispatch_vector, "dispatch_vector"
                 ),
-                "last_update": self._history_half(
+                "last_update": self._history_float(
                     client_update_vector, "client_update_vector"
                 ),
                 "obs_direction": obs_direction,

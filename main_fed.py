@@ -640,6 +640,7 @@ def InteractionDispatch(
         max_step_ratio=args.id_max_step_ratio,
     )
     previous_global_vector = None
+    first_active_diagnostic_done = False
 
     for iter in range(args.epochs):
         round_start = time.perf_counter()
@@ -684,7 +685,43 @@ def InteractionDispatch(
                     controller.param_shapes,
                     controller.param_offsets,
                 )
-                dispatch_vector = current_global_vector + delta
+                dispatch_vector = flatten_trainable_state(
+                    dispatch_state, controller.param_names
+                )
+                if not first_active_diagnostic_done:
+                    actual_delta = dispatch_vector - current_global_vector
+                    actual_delta_norm = float(
+                        torch.linalg.vector_norm(actual_delta).item()
+                    )
+                    alpha = float(dispatch_info["alpha"])
+                    tolerance = max(1e-6, 1e-3 * abs(alpha))
+                    alpha_max = (
+                        controller.max_step_ratio
+                        * float(dispatch_info["obs_input_norm"])
+                    )
+                    if not math.isfinite(actual_delta_norm):
+                        raise AssertionError(
+                            "Active dispatch produced a non-finite actual delta norm"
+                        )
+                    if actual_delta_norm <= 0.0:
+                        raise AssertionError(
+                            "Active dispatch did not change the actual dispatched state"
+                        )
+                    if abs(actual_delta_norm - alpha) > tolerance:
+                        raise AssertionError(
+                            "Actual dispatch norm does not match active alpha: "
+                            f"norm={actual_delta_norm}, alpha={alpha}, "
+                            f"tolerance={tolerance}"
+                        )
+                    if actual_delta_norm > alpha_max + tolerance:
+                        raise AssertionError(
+                            "Actual dispatch exceeds the experienced-direction bound: "
+                            f"norm={actual_delta_norm}, bound={alpha_max}, "
+                            f"tolerance={tolerance}"
+                        )
+                    dispatch_info["actual_delta_norm"] = actual_delta_norm
+                    dispatch_info["active_assertion_tolerance"] = tolerance
+                    first_active_diagnostic_done = True
                 active_alphas.append(float(dispatch_info["alpha"]))
 
             net_local = copy.deepcopy(net_glob)
@@ -708,7 +745,11 @@ def InteractionDispatch(
                 returned_state,
                 controller.param_names,
             )
-            w_locals.append(corrected_state)
+            # Match the original FedAvg aggregation device and arithmetic.
+            # This keeps the zero-action path numerically identical while the
+            # corrected parameters still remove any active server dispatch.
+            net_local.load_state_dict(corrected_state)
+            w_locals.append(copy.deepcopy(net_local.state_dict()))
             lens.append(len(dict_users[client_id]))
             controller.record_interaction(
                 client_id,
@@ -723,6 +764,7 @@ def InteractionDispatch(
                 returned_state,
                 returned_vector,
                 client_update_vector,
+                corrected_state,
                 dispatch_state,
                 dispatch_vector,
                 net_local,
