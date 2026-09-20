@@ -1,0 +1,30 @@
+{
+  "event_count": 2500,
+  "scopes": {
+    "all": {
+      "negative_q_squared_count": 0,
+      "zero_q_count": 0,
+      "max_e_identity_absolute_error": 1.562428053603071e-08,
+      "max_e_identity_relative_error": 1.382214455771394e-09,
+      "mean_e_identity_relative_error": 3.397467521937423e-11,
+      "all_derived_metrics_finite": true
+    },
+    "conv": {
+      "negative_q_squared_count": 0,
+      "zero_q_count": 0,
+      "max_e_identity_absolute_error": 1.4189851071932935e-08,
+      "max_e_identity_relative_error": 1.3497955914856489e-09,
+      "mean_e_identity_relative_error": 3.270661742997851e-11,
+      "all_derived_metrics_finite": true
+    },
+    "classifier": {
+      "negative_q_squared_count": 0,
+      "zero_q_count": 0,
+      "max_e_identity_absolute_error": 2.982643465543333e-09,
+      "max_e_identity_relative_error": 2.0778881695130266e-08,
+      "mean_e_identity_relative_error": 2.0930252914460862e-10,
+      "all_derived_metrics_finite": true
+    }
+  },
+  "passed": true
+}
