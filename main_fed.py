@@ -32,6 +32,13 @@ from utils.utils import save_result,save_model
 from Algorithm.Training_FedGen import FedGen
 
 from Algorithm.Training_FedMut import FedMut
+from Algorithm.InteractionDispatch import (
+    InteractionDispatchController,
+    add_flat_delta_to_state,
+    build_corrected_local_state,
+    clone_state_to_cpu,
+    flatten_trainable_state,
+)
 from Algorithm.RecoveryAware import (
     build_recovery_score_matrix,
     confidence_gate_assignment,
@@ -614,6 +621,165 @@ def FedPhoenixRecovery(
     _write_training_metrics(args, metrics_rows)
     print(f"Recovery matching diagnostics saved to {log_path}")
 
+
+def InteractionDispatch(
+    net_glob,
+    dataset_train,
+    dataset_validation,
+    dataset_test,
+    dict_users,
+):
+    """FedAvg local training with repeated-interaction-informed dispatches."""
+    del dataset_validation  # Reserved for the common training-function interface.
+    net_glob.train()
+    accuracies = []
+    metrics_rows = []
+    controller = InteractionDispatchController(
+        net_glob,
+        tau=args.id_tau,
+        max_step_ratio=args.id_max_step_ratio,
+    )
+    previous_global_vector = None
+
+    for iter in range(args.epochs):
+        round_start = time.perf_counter()
+        print('*' * 80)
+        print('Round {:3d}'.format(iter))
+
+        current_global_state = clone_state_to_cpu(net_glob.state_dict())
+        current_global_vector = flatten_trainable_state(
+            current_global_state, controller.param_names
+        )
+        global_direction_unit = None
+        if previous_global_vector is not None:
+            global_change = current_global_vector - previous_global_vector
+            global_change_norm = float(
+                torch.linalg.vector_norm(global_change).item()
+            )
+            if math.isfinite(global_change_norm) and global_change_norm > 1e-12:
+                global_direction_unit = global_change / global_change_norm
+
+        w_locals = []
+        lens = []
+        dispatch_events = []
+        active_alphas = []
+        m = max(int(args.frac * args.num_users), 1)
+        idxs_users = np.random.choice(
+            range(args.num_users), m, replace=False
+        )
+
+        for idx in idxs_users:
+            client_id = int(idx)
+            delta, dispatch_info = controller.make_dispatch_delta(
+                client_id, global_direction_unit
+            )
+            if delta is None:
+                dispatch_state = clone_state_to_cpu(current_global_state)
+                dispatch_vector = current_global_vector.clone()
+            else:
+                dispatch_state = add_flat_delta_to_state(
+                    current_global_state,
+                    delta,
+                    controller.param_names,
+                    controller.param_shapes,
+                    controller.param_offsets,
+                )
+                dispatch_vector = current_global_vector + delta
+                active_alphas.append(float(dispatch_info["alpha"]))
+
+            net_local = copy.deepcopy(net_glob)
+            net_local.load_state_dict(dispatch_state)
+            net_local.to(args.device)
+            local = LocalUpdate_FedAvg(
+                args=args,
+                dataset=dataset_train,
+                idxs=dict_users[client_id],
+                dataset_test=dataset_test,
+            )
+            local_weights = local.train(net=net_local)
+            returned_state = clone_state_to_cpu(local_weights)
+            returned_vector = flatten_trainable_state(
+                returned_state, controller.param_names
+            )
+            client_update_vector = returned_vector - dispatch_vector
+            corrected_state = build_corrected_local_state(
+                current_global_state,
+                dispatch_state,
+                returned_state,
+                controller.param_names,
+            )
+            w_locals.append(corrected_state)
+            lens.append(len(dict_users[client_id]))
+            controller.record_interaction(
+                client_id,
+                dispatch_vector,
+                client_update_vector,
+                iter,
+            )
+            dispatch_events.append(dispatch_info)
+
+            del (
+                local_weights,
+                returned_state,
+                returned_vector,
+                client_update_vector,
+                dispatch_state,
+                dispatch_vector,
+                net_local,
+                local,
+            )
+
+        w_glob = Aggregation(w_locals, lens)
+        net_glob.load_state_dict(w_glob)
+        previous_global_vector = current_global_vector
+        round_train_seconds = time.perf_counter() - round_start
+
+        item_acc = evaluate_round_accuracy(
+            net_glob, dataset_test, args, iter + 1
+        )
+        accuracies.append(item_acc)
+        active_interventions = len(active_alphas)
+        event_json = json.dumps(dispatch_events)
+        metrics_rows.append(
+            {
+                "round": int(iter + 1),
+                "algorithm": args.algorithm,
+                "seed": int(args.seed),
+                "test_accuracy": item_acc,
+                "round_train_seconds": float(round_train_seconds),
+                "selected_clients": json.dumps(
+                    [int(item) for item in idxs_users.tolist()]
+                ),
+                "active_interventions": int(active_interventions),
+                "num_clients_with_observation": int(
+                    controller.num_clients_with_observation()
+                ),
+                "mean_alpha": float(
+                    np.mean(active_alphas) if active_alphas else 0.0
+                ),
+                "max_alpha": float(
+                    max(active_alphas) if active_alphas else 0.0
+                ),
+                "history_memory_bytes": int(
+                    controller.history_memory_bytes()
+                ),
+                "dispatch_events": event_json,
+            }
+        )
+        print(
+            "InteractionDispatch diagnostics: "
+            f"round={iter + 1} active={active_interventions} "
+            "clients_with_observation="
+            f"{controller.num_clients_with_observation()} "
+            f"dispatch_events={event_json}"
+        )
+        del w_locals, w_glob
+        if args.device.type == "cuda":
+            torch.cuda.empty_cache()
+
+    print_peak_accuracy(accuracies, args.algorithm)
+    _write_training_metrics(args, metrics_rows)
+
 def FedAvg(net_glob, dataset_train, dataset_test, dict_users):
     
     net_glob.train()
@@ -828,6 +994,10 @@ if __name__ == '__main__':
         raise ValueError("recovery_assignment_inertia must be non-negative")
     if args.recovery_probe_steps < 1:
         raise ValueError("recovery_probe_steps must be at least one")
+    if args.id_tau < 0:
+        raise ValueError("id_tau must be non-negative")
+    if args.id_max_step_ratio < 0:
+        raise ValueError("id_max_step_ratio must be non-negative")
     set_random_seed(args.seed)
     device_index = args.gpu
     torch.cuda.set_device(device_index)
@@ -908,6 +1078,14 @@ if __name__ == '__main__':
         )
     elif args.algorithm == 'FedPhoenixRecovery':
         FedPhoenixRecovery(
+            net_glob,
+            dataset_train,
+            dataset_validation,
+            dataset_final_test,
+            dict_users,
+        )
+    elif args.algorithm == 'InteractionDispatch':
+        InteractionDispatch(
             net_glob,
             dataset_train,
             dataset_validation,

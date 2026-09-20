@@ -84,6 +84,23 @@ def args_parser():
     parser.add_argument("--reset", type=float, default=0.015625)
     parser.add_argument("--remethod", type=str, default='ori_normal',help='Convolution kernel sampling method')
 
+    # InteractionDispatch
+    parser.add_argument(
+        "--id_tau",
+        type=float,
+        default=0.0,
+        help="opposing-component tolerance for InteractionDispatch",
+    )
+    parser.add_argument(
+        "--id_max_step_ratio",
+        type=float,
+        default=0.1,
+        help=(
+            "maximum dispatch step as a fraction of the latest experienced "
+            "input displacement"
+        ),
+    )
+
     # Recovery-aware FedPhoenix
     parser.add_argument("--recovery_pool_multiplier", type=float, default=3.0,
                         help="candidate pool size as a multiple of participating clients")
