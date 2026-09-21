@@ -73,6 +73,14 @@ def _metrics_stem(args):
     )
 
 
+def _openable_path(path):
+    """Use the Windows extended-length prefix for absolute output paths."""
+    absolute = os.path.abspath(path)
+    if os.name == "nt" and not absolute.startswith("\\\\?\\"):
+        return "\\\\?\\" + absolute
+    return absolute
+
+
 def _build_fedphoenix_tasks(net_glob, round_idx, task_count, args):
     """Build a deterministic task bank shared by baseline and proposed method."""
     task_models = []
@@ -108,11 +116,13 @@ def _write_training_metrics(args, rows):
         os.path.join(args.metrics_log_dir, f"{stem}_config.json")
     )
     if rows:
-        with open(csv_path, "w", newline="", encoding="utf-8") as handle:
+        with open(
+            _openable_path(csv_path), "w", newline="", encoding="utf-8"
+        ) as handle:
             writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()))
             writer.writeheader()
             writer.writerows(rows)
-    with open(config_path, "w", encoding="utf-8") as handle:
+    with open(_openable_path(config_path), "w", encoding="utf-8") as handle:
         json.dump(vars(args), handle, ensure_ascii=False, indent=2, default=str)
     print(f"Unified training metrics saved to {csv_path}")
     return csv_path
@@ -197,7 +207,7 @@ class _EvaluationTracker:
                 key: value.detach().cpu().clone()
                 for key, value in model.state_dict().items()
             }
-            torch.save(cpu_state, self.checkpoint_path)
+            torch.save(cpu_state, _openable_path(self.checkpoint_path))
 
         if test_accuracy > self.peak_test_accuracy:
             self.peak_test_accuracy = test_accuracy
@@ -234,7 +244,9 @@ class _EvaluationTracker:
             "evaluations": int(evaluated_rows),
             "best_checkpoint": self.checkpoint_path,
         }
-        with open(self.summary_path, "w", encoding="utf-8") as handle:
+        with open(
+            _openable_path(self.summary_path), "w", encoding="utf-8"
+        ) as handle:
             json.dump(summary, handle, ensure_ascii=False, indent=2)
         print(f"Run summary saved to {self.summary_path}")
         print(
