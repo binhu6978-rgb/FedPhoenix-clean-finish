@@ -1,0 +1,23 @@
+ROUND_ACCURACY method=FedAvg round=1 accuracy=10.100000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=1 events=2 history_gib=0.627
+ROUND_ACCURACY method=FedAvg round=2 accuracy=12.740000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=2 events=3 history_gib=1.128
+ROUND_ACCURACY method=FedAvg round=3 accuracy=14.130000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=3 events=5 history_gib=1.379
+ROUND_ACCURACY method=FedAvg round=4 accuracy=21.100000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=4 events=6 history_gib=1.379
+ROUND_ACCURACY method=FedAvg round=5 accuracy=39.200001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=5 events=8 history_gib=1.629
+ROUND_ACCURACY method=FedAvg round=6 accuracy=25.530001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=6 events=9 history_gib=1.880
+ROUND_ACCURACY method=FedAvg round=7 accuracy=35.860001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=7 events=9 history_gib=1.880
+ROUND_ACCURACY method=FedAvg round=8 accuracy=27.450001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=8 events=10 history_gib=2.005
+ROUND_ACCURACY method=FedAvg round=9 accuracy=37.450001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=9 events=10 history_gib=2.005
+ROUND_ACCURACY method=FedAvg round=10 accuracy=33.250000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=10 events=13 history_gib=2.632
+PEAK_ACCURACY method=FedAvg round=5 accuracy=39.200001
+Events: C:\Users\admin\Desktop\need_do\new_paper_four\FedPhoenix-clean-finish\results\fedphoenix_longitudinal_diagnostic\parity_seed1\diagnostic\fedavg_events.csv
+Summary: C:\Users\admin\Desktop\need_do\new_paper_four\FedPhoenix-clean-finish\results\fedphoenix_longitudinal_diagnostic\parity_seed1\diagnostic\fedavg_summary.json

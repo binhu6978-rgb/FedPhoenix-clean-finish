@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "tolerance": 1e-06,
+  "results": [
+    {
+      "algorithm": "FedAvg",
+      "passed": true,
+      "selected_clients_match": true,
+      "round_accuracy_match": true,
+      "max_accuracy_abs_delta": 3.896484344068085e-07,
+      "task_seeds_match": true,
+      "task_assignments_match": true,
+      "original_rounds": 10,
+      "diagnostic_rounds": 10
+    },
+    {
+      "algorithm": "FedPhoenix",
+      "passed": true,
+      "selected_clients_match": true,
+      "round_accuracy_match": true,
+      "max_accuracy_abs_delta": 4.5776367230132564e-07,
+      "task_seeds_match": true,
+      "task_assignments_match": true,
+      "original_rounds": 10,
+      "diagnostic_rounds": 10
+    }
+  ]
+}

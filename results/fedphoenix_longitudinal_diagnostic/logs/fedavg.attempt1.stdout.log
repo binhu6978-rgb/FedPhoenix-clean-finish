@@ -1,0 +1,603 @@
+ROUND_ACCURACY method=FedAvg round=1 accuracy=10.100000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=1 events=2 history_gib=0.627
+ROUND_ACCURACY method=FedAvg round=2 accuracy=12.740000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=2 events=3 history_gib=1.128
+ROUND_ACCURACY method=FedAvg round=3 accuracy=14.130000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=3 events=5 history_gib=1.379
+ROUND_ACCURACY method=FedAvg round=4 accuracy=21.100000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=4 events=6 history_gib=1.379
+ROUND_ACCURACY method=FedAvg round=5 accuracy=39.200001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=5 events=8 history_gib=1.629
+ROUND_ACCURACY method=FedAvg round=6 accuracy=25.530001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=6 events=9 history_gib=1.880
+ROUND_ACCURACY method=FedAvg round=7 accuracy=35.860001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=7 events=9 history_gib=1.880
+ROUND_ACCURACY method=FedAvg round=8 accuracy=27.450001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=8 events=10 history_gib=2.005
+ROUND_ACCURACY method=FedAvg round=9 accuracy=37.450001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=9 events=10 history_gib=2.005
+ROUND_ACCURACY method=FedAvg round=10 accuracy=33.250000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=10 events=13 history_gib=2.632
+ROUND_ACCURACY method=FedAvg round=11 accuracy=45.340000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=11 events=13 history_gib=2.632
+ROUND_ACCURACY method=FedAvg round=12 accuracy=40.439999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=12 events=14 history_gib=2.632
+ROUND_ACCURACY method=FedAvg round=13 accuracy=44.630001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=13 events=14 history_gib=2.632
+ROUND_ACCURACY method=FedAvg round=14 accuracy=48.480000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=14 events=15 history_gib=2.758
+ROUND_ACCURACY method=FedAvg round=15 accuracy=47.860001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=15 events=15 history_gib=2.758
+ROUND_ACCURACY method=FedAvg round=16 accuracy=51.560001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=16 events=16 history_gib=2.758
+ROUND_ACCURACY method=FedAvg round=17 accuracy=50.029999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=17 events=19 history_gib=3.134
+ROUND_ACCURACY method=FedAvg round=18 accuracy=39.619999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=18 events=20 history_gib=3.259
+ROUND_ACCURACY method=FedAvg round=19 accuracy=47.450001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=19 events=20 history_gib=3.259
+ROUND_ACCURACY method=FedAvg round=20 accuracy=46.130001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=20 events=20 history_gib=3.259
+ROUND_ACCURACY method=FedAvg round=21 accuracy=52.900002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=21 events=20 history_gib=3.259
+ROUND_ACCURACY method=FedAvg round=22 accuracy=59.590000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=22 events=20 history_gib=3.259
+ROUND_ACCURACY method=FedAvg round=23 accuracy=50.730000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=23 events=20 history_gib=3.259
+ROUND_ACCURACY method=FedAvg round=24 accuracy=55.380001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=24 events=20 history_gib=3.259
+ROUND_ACCURACY method=FedAvg round=25 accuracy=57.349998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=25 events=22 history_gib=3.635
+ROUND_ACCURACY method=FedAvg round=26 accuracy=54.709999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=26 events=24 history_gib=3.635
+ROUND_ACCURACY method=FedAvg round=27 accuracy=55.590000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=27 events=27 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=28 accuracy=54.580002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=28 events=29 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=29 accuracy=51.380001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=29 events=31 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=30 accuracy=57.099998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=30 events=32 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=31 accuracy=59.209999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=31 events=33 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=32 accuracy=61.259998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=32 events=33 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=33 accuracy=58.990002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=33 events=36 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=34 accuracy=66.949997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=34 events=37 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=35 accuracy=56.439999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=35 events=38 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=36 accuracy=57.320000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=36 events=40 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=37 accuracy=64.279999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=37 events=41 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=38 accuracy=60.810001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=38 events=42 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=39 accuracy=59.299999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=39 events=42 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=40 accuracy=66.279999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=40 events=43 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=41 accuracy=67.559998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=41 events=45 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=42 accuracy=60.830002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=42 events=46 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=43 accuracy=61.240002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=43 events=47 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=44 accuracy=60.610001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=44 events=47 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=45 accuracy=57.310001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=45 events=48 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=46 accuracy=66.220001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=46 events=49 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=47 accuracy=62.959999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=47 events=50 history_gib=3.760
+ROUND_ACCURACY method=FedAvg round=48 accuracy=63.680000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=48 events=53 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=49 accuracy=61.099998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=49 events=54 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=50 accuracy=62.910000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=50 events=55 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=51 accuracy=60.389999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=51 events=58 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=52 accuracy=64.129997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=52 events=59 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=53 accuracy=63.689999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=53 events=61 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=54 accuracy=53.990002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=54 events=62 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=55 accuracy=66.779999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=55 events=64 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=56 accuracy=65.800003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=56 events=66 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=57 accuracy=62.220001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=57 events=67 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=58 accuracy=49.759998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=58 events=68 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=59 accuracy=63.470001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=59 events=69 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=60 accuracy=67.059998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=60 events=69 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=61 accuracy=67.239998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=61 events=70 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=62 accuracy=66.099998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=62 events=70 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=63 accuracy=66.260002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=63 events=72 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=64 accuracy=64.800003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=64 events=72 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=65 accuracy=65.279999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=65 events=73 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=66 accuracy=66.309998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=66 events=75 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=67 accuracy=64.410004
+DIAGNOSTIC_ROUND algorithm=FedAvg round=67 events=76 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=68 accuracy=58.860001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=68 events=76 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=69 accuracy=69.050003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=69 events=76 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=70 accuracy=62.830002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=70 events=76 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=71 accuracy=61.630001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=71 events=78 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=72 accuracy=66.099998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=72 events=78 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=73 accuracy=66.980003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=73 events=78 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=74 accuracy=66.099998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=74 events=80 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=75 accuracy=71.260002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=75 events=81 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=76 accuracy=61.540001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=76 events=81 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=77 accuracy=65.019997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=77 events=82 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=78 accuracy=67.150002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=78 events=84 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=79 accuracy=66.650002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=79 events=85 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=80 accuracy=68.160004
+DIAGNOSTIC_ROUND algorithm=FedAvg round=80 events=87 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=81 accuracy=65.290001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=81 events=89 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=82 accuracy=66.760002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=82 events=89 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=83 accuracy=67.410004
+DIAGNOSTIC_ROUND algorithm=FedAvg round=83 events=90 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=84 accuracy=64.449997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=84 events=90 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=85 accuracy=66.650002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=85 events=90 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=86 accuracy=66.860001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=86 events=91 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=87 accuracy=66.279999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=87 events=91 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=88 accuracy=70.349998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=88 events=92 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=89 accuracy=71.480003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=89 events=93 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=90 accuracy=68.889999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=90 events=94 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=91 accuracy=68.199997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=91 events=94 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=92 accuracy=68.199997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=92 events=96 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=93 accuracy=64.110001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=93 events=96 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=94 accuracy=68.699997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=94 events=96 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=95 accuracy=68.970001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=95 events=97 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=96 accuracy=68.000000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=96 events=98 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=97 accuracy=66.870003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=97 events=99 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=98 accuracy=64.690002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=98 events=101 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=99 accuracy=64.730003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=99 events=102 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=100 accuracy=62.970001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=100 events=103 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=101 accuracy=66.849998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=101 events=103 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=102 accuracy=70.879997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=102 events=104 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=103 accuracy=71.800003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=103 events=106 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=104 accuracy=70.500000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=104 events=107 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=105 accuracy=70.260002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=105 events=107 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=106 accuracy=67.570000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=106 events=108 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=107 accuracy=58.630001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=107 events=109 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=108 accuracy=69.400002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=108 events=110 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=109 accuracy=70.870003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=109 events=111 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=110 accuracy=71.010002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=110 events=113 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=111 accuracy=71.209999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=111 events=114 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=112 accuracy=70.589996
+DIAGNOSTIC_ROUND algorithm=FedAvg round=112 events=115 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=113 accuracy=69.959999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=113 events=117 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=114 accuracy=67.610001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=114 events=117 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=115 accuracy=64.610001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=115 events=120 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=116 accuracy=70.709999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=116 events=120 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=117 accuracy=64.199997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=117 events=121 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=118 accuracy=68.720001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=118 events=123 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=119 accuracy=64.879997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=119 events=124 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=120 accuracy=68.669998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=120 events=127 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=121 accuracy=72.500000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=121 events=127 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=122 accuracy=67.000000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=122 events=128 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=123 accuracy=69.730003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=123 events=130 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=124 accuracy=61.790001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=124 events=131 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=125 accuracy=62.459999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=125 events=133 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=126 accuracy=64.239998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=126 events=134 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=127 accuracy=70.360001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=127 events=134 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=128 accuracy=68.919998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=128 events=134 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=129 accuracy=72.279999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=129 events=135 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=130 accuracy=67.419998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=130 events=136 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=131 accuracy=66.190002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=131 events=137 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=132 accuracy=72.269997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=132 events=137 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=133 accuracy=67.949997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=133 events=137 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=134 accuracy=71.330002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=134 events=138 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=135 accuracy=67.660004
+DIAGNOSTIC_ROUND algorithm=FedAvg round=135 events=140 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=136 accuracy=63.730000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=136 events=140 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=137 accuracy=71.540001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=137 events=141 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=138 accuracy=73.099998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=138 events=141 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=139 accuracy=70.839996
+DIAGNOSTIC_ROUND algorithm=FedAvg round=139 events=141 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=140 accuracy=71.510002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=140 events=142 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=141 accuracy=72.019997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=141 events=142 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=142 accuracy=63.930000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=142 events=144 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=143 accuracy=61.660000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=143 events=145 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=144 accuracy=72.199997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=144 events=146 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=145 accuracy=67.970001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=145 events=149 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=146 accuracy=62.799999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=146 events=150 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=147 accuracy=71.290001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=147 events=152 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=148 accuracy=71.599998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=148 events=152 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=149 accuracy=68.830002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=149 events=153 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=150 accuracy=72.519997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=150 events=153 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=151 accuracy=63.939999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=151 events=154 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=152 accuracy=63.580002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=152 events=154 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=153 accuracy=71.709999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=153 events=156 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=154 accuracy=73.120003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=154 events=156 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=155 accuracy=70.760002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=155 events=157 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=156 accuracy=70.849998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=156 events=157 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=157 accuracy=63.369999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=157 events=159 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=158 accuracy=70.910004
+DIAGNOSTIC_ROUND algorithm=FedAvg round=158 events=160 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=159 accuracy=70.209999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=159 events=162 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=160 accuracy=70.510002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=160 events=163 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=161 accuracy=72.440002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=161 events=165 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=162 accuracy=70.739998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=162 events=165 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=163 accuracy=66.540001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=163 events=165 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=164 accuracy=70.050003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=164 events=167 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=165 accuracy=72.559998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=165 events=167 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=166 accuracy=71.360001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=166 events=168 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=167 accuracy=67.849998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=167 events=169 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=168 accuracy=70.599998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=168 events=170 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=169 accuracy=71.690002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=169 events=171 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=170 accuracy=70.779999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=170 events=174 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=171 accuracy=66.269997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=171 events=174 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=172 accuracy=68.680000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=172 events=174 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=173 accuracy=67.309998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=173 events=175 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=174 accuracy=67.250000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=174 events=176 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=175 accuracy=71.080002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=175 events=176 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=176 accuracy=71.300003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=176 events=178 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=177 accuracy=67.989998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=177 events=180 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=178 accuracy=69.029999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=178 events=182 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=179 accuracy=72.970001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=179 events=183 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=180 accuracy=72.029999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=180 events=184 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=181 accuracy=70.860001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=181 events=185 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=182 accuracy=65.599998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=182 events=185 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=183 accuracy=73.419998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=183 events=186 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=184 accuracy=71.599998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=184 events=186 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=185 accuracy=70.769997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=185 events=188 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=186 accuracy=68.949997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=186 events=189 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=187 accuracy=66.559998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=187 events=190 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=188 accuracy=72.370003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=188 events=190 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=189 accuracy=65.849998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=189 events=192 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=190 accuracy=68.680000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=190 events=192 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=191 accuracy=62.209999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=191 events=194 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=192 accuracy=68.800003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=192 events=195 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=193 accuracy=72.779999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=193 events=195 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=194 accuracy=69.589996
+DIAGNOSTIC_ROUND algorithm=FedAvg round=194 events=196 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=195 accuracy=71.879997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=195 events=197 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=196 accuracy=73.559998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=196 events=198 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=197 accuracy=66.519997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=197 events=201 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=198 accuracy=69.419998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=198 events=203 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=199 accuracy=63.759998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=199 events=203 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=200 accuracy=56.740002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=200 events=203 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=201 accuracy=68.610001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=201 events=203 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=202 accuracy=71.129997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=202 events=204 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=203 accuracy=62.740002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=203 events=205 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=204 accuracy=71.010002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=204 events=205 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=205 accuracy=67.809998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=205 events=205 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=206 accuracy=72.209999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=206 events=206 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=207 accuracy=67.800003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=207 events=206 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=208 accuracy=66.290001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=208 events=206 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=209 accuracy=71.980003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=209 events=209 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=210 accuracy=71.879997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=210 events=210 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=211 accuracy=67.349998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=211 events=211 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=212 accuracy=75.139999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=212 events=212 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=213 accuracy=72.739998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=213 events=213 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=214 accuracy=73.330002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=214 events=214 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=215 accuracy=73.480003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=215 events=217 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=216 accuracy=72.339996
+DIAGNOSTIC_ROUND algorithm=FedAvg round=216 events=217 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=217 accuracy=61.560001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=217 events=219 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=218 accuracy=72.550003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=218 events=219 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=219 accuracy=70.529999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=219 events=220 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=220 accuracy=71.410004
+DIAGNOSTIC_ROUND algorithm=FedAvg round=220 events=222 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=221 accuracy=69.120003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=221 events=223 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=222 accuracy=63.259998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=222 events=223 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=223 accuracy=74.019997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=223 events=224 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=224 accuracy=72.900002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=224 events=225 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=225 accuracy=64.809998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=225 events=226 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=226 accuracy=66.860001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=226 events=230 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=227 accuracy=70.190002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=227 events=231 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=228 accuracy=59.630001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=228 events=231 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=229 accuracy=68.190002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=229 events=235 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=230 accuracy=72.970001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=230 events=238 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=231 accuracy=70.800003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=231 events=240 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=232 accuracy=72.980003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=232 events=242 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=233 accuracy=69.930000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=233 events=243 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=234 accuracy=69.570000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=234 events=243 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=235 accuracy=64.050003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=235 events=244 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=236 accuracy=73.910004
+DIAGNOSTIC_ROUND algorithm=FedAvg round=236 events=244 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=237 accuracy=70.150002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=237 events=245 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=238 accuracy=69.839996
+DIAGNOSTIC_ROUND algorithm=FedAvg round=238 events=245 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=239 accuracy=72.699997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=239 events=247 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=240 accuracy=64.489998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=240 events=248 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=241 accuracy=70.639999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=241 events=249 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=242 accuracy=73.169998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=242 events=249 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=243 accuracy=70.290001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=243 events=250 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=244 accuracy=70.120003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=244 events=251 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=245 accuracy=74.269997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=245 events=252 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=246 accuracy=73.680000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=246 events=254 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=247 accuracy=48.860001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=247 events=257 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=248 accuracy=68.050003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=248 events=258 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=249 accuracy=67.550003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=249 events=259 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=250 accuracy=71.110001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=250 events=259 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=251 accuracy=72.309998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=251 events=260 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=252 accuracy=70.269997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=252 events=261 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=253 accuracy=66.580002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=253 events=262 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=254 accuracy=66.750000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=254 events=264 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=255 accuracy=74.160004
+DIAGNOSTIC_ROUND algorithm=FedAvg round=255 events=265 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=256 accuracy=69.050003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=256 events=265 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=257 accuracy=69.010002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=257 events=267 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=258 accuracy=69.629997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=258 events=268 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=259 accuracy=69.940002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=259 events=268 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=260 accuracy=73.269997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=260 events=269 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=261 accuracy=72.120003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=261 events=269 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=262 accuracy=74.389999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=262 events=271 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=263 accuracy=69.239998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=263 events=271 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=264 accuracy=71.500000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=264 events=271 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=265 accuracy=71.110001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=265 events=271 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=266 accuracy=71.180000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=266 events=273 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=267 accuracy=70.110001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=267 events=274 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=268 accuracy=61.160000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=268 events=275 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=269 accuracy=69.430000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=269 events=277 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=270 accuracy=63.970001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=270 events=277 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=271 accuracy=66.980003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=271 events=278 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=272 accuracy=65.879997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=272 events=279 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=273 accuracy=60.590000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=273 events=280 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=274 accuracy=59.160000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=274 events=281 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=275 accuracy=71.410004
+DIAGNOSTIC_ROUND algorithm=FedAvg round=275 events=283 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=276 accuracy=65.139999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=276 events=285 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=277 accuracy=73.470001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=277 events=285 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=278 accuracy=70.239998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=278 events=287 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=279 accuracy=74.120003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=279 events=289 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=280 accuracy=72.529999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=280 events=290 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=281 accuracy=71.529999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=281 events=291 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=282 accuracy=68.629997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=282 events=293 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=283 accuracy=72.970001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=283 events=294 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=284 accuracy=72.989998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=284 events=295 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=285 accuracy=73.860001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=285 events=295 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=286 accuracy=69.019997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=286 events=295 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=287 accuracy=71.879997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=287 events=296 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=288 accuracy=72.820000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=288 events=298 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=289 accuracy=70.570000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=289 events=298 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=290 accuracy=74.629997
+DIAGNOSTIC_ROUND algorithm=FedAvg round=290 events=298 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=291 accuracy=72.309998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=291 events=298 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=292 accuracy=71.830002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=292 events=298 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=293 accuracy=70.459999
+DIAGNOSTIC_ROUND algorithm=FedAvg round=293 events=300 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=294 accuracy=68.940002
+DIAGNOSTIC_ROUND algorithm=FedAvg round=294 events=300 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=295 accuracy=54.820000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=295 events=300 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=296 accuracy=70.680000
+DIAGNOSTIC_ROUND algorithm=FedAvg round=296 events=303 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=297 accuracy=73.620003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=297 events=304 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=298 accuracy=67.860001
+DIAGNOSTIC_ROUND algorithm=FedAvg round=298 events=305 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=299 accuracy=69.349998
+DIAGNOSTIC_ROUND algorithm=FedAvg round=299 events=306 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=300 accuracy=73.120003
+DIAGNOSTIC_ROUND algorithm=FedAvg round=300 events=307 history_gib=4.136
+PEAK_ACCURACY method=FedAvg round=212 accuracy=75.139999
+Events: C:\Users\admin\Desktop\need_do\new_paper_four\FedPhoenix-clean-finish\results\fedphoenix_longitudinal_diagnostic\seed1\fedavg_events.csv
+Summary: C:\Users\admin\Desktop\need_do\new_paper_four\FedPhoenix-clean-finish\results\fedphoenix_longitudinal_diagnostic\seed1\fedavg_summary.json

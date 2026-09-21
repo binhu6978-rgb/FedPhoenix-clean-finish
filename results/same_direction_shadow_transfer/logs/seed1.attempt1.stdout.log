@@ -1,0 +1,602 @@
+ROUND_ACCURACY method=FedAvg round=1 accuracy=10.100000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=1 events=0 history_gib=0.376
+ROUND_ACCURACY method=FedAvg round=2 accuracy=12.740000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=2 events=0 history_gib=0.877
+ROUND_ACCURACY method=FedAvg round=3 accuracy=14.130000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=3 events=0 history_gib=1.128
+ROUND_ACCURACY method=FedAvg round=4 accuracy=21.100000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=4 events=0 history_gib=1.379
+ROUND_ACCURACY method=FedAvg round=5 accuracy=39.200001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=5 events=0 history_gib=1.629
+ROUND_ACCURACY method=FedAvg round=6 accuracy=25.530001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=6 events=0 history_gib=2.131
+ROUND_ACCURACY method=FedAvg round=7 accuracy=35.860001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=7 events=0 history_gib=2.382
+ROUND_ACCURACY method=FedAvg round=8 accuracy=27.450001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=8 events=5 history_gib=2.382
+ROUND_ACCURACY method=FedAvg round=9 accuracy=37.450001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=9 events=10 history_gib=2.382
+ROUND_ACCURACY method=FedAvg round=10 accuracy=33.250000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=10 events=10 history_gib=2.507
+ROUND_ACCURACY method=FedAvg round=11 accuracy=45.340000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=11 events=10 history_gib=2.632
+ROUND_ACCURACY method=FedAvg round=12 accuracy=40.439999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=12 events=15 history_gib=2.758
+ROUND_ACCURACY method=FedAvg round=13 accuracy=44.630001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=13 events=15 history_gib=2.883
+ROUND_ACCURACY method=FedAvg round=14 accuracy=48.480000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=14 events=25 history_gib=2.883
+ROUND_ACCURACY method=FedAvg round=15 accuracy=47.860001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=15 events=25 history_gib=2.883
+ROUND_ACCURACY method=FedAvg round=16 accuracy=51.560001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=16 events=25 history_gib=3.008
+ROUND_ACCURACY method=FedAvg round=17 accuracy=50.029999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=17 events=30 history_gib=3.259
+ROUND_ACCURACY method=FedAvg round=18 accuracy=39.619999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=18 events=35 history_gib=3.510
+ROUND_ACCURACY method=FedAvg round=19 accuracy=47.450001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=19 events=35 history_gib=3.510
+ROUND_ACCURACY method=FedAvg round=20 accuracy=46.130001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=20 events=35 history_gib=3.510
+ROUND_ACCURACY method=FedAvg round=21 accuracy=52.900002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=21 events=40 history_gib=3.510
+ROUND_ACCURACY method=FedAvg round=22 accuracy=59.590000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=22 events=40 history_gib=3.635
+ROUND_ACCURACY method=FedAvg round=23 accuracy=50.730000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=23 events=40 history_gib=3.886
+ROUND_ACCURACY method=FedAvg round=24 accuracy=55.380001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=24 events=40 history_gib=4.011
+ROUND_ACCURACY method=FedAvg round=25 accuracy=57.349998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=25 events=50 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=26 accuracy=54.709999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=26 events=55 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=27 accuracy=55.590000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=27 events=60 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=28 accuracy=54.580002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=28 events=70 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=29 accuracy=51.380001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=29 events=70 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=30 accuracy=57.099998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=30 events=70 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=31 accuracy=59.209999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=31 events=70 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=32 accuracy=61.259998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=32 events=75 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=33 accuracy=58.990002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=33 events=85 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=34 accuracy=66.949997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=34 events=95 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=35 accuracy=56.439999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=35 events=95 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=36 accuracy=57.320000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=36 events=95 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=37 accuracy=64.279999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=37 events=95 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=38 accuracy=60.810001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=38 events=100 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=39 accuracy=59.299999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=39 events=105 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=40 accuracy=66.279999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=40 events=120 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=41 accuracy=67.559998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=41 events=120 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=42 accuracy=60.830002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=42 events=130 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=43 accuracy=61.240002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=43 events=135 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=44 accuracy=60.610001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=44 events=135 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=45 accuracy=57.310001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=45 events=140 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=46 accuracy=66.220001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=46 events=140 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=47 accuracy=62.959999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=47 events=140 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=48 accuracy=63.680000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=48 events=140 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=49 accuracy=61.099998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=49 events=145 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=50 accuracy=62.910000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=50 events=150 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=51 accuracy=60.389999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=51 events=165 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=52 accuracy=64.129997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=52 events=170 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=53 accuracy=63.689999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=53 events=175 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=54 accuracy=53.990002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=54 events=185 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=55 accuracy=66.779999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=55 events=195 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=56 accuracy=65.800003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=56 events=205 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=57 accuracy=62.220001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=57 events=210 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=58 accuracy=49.759998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=58 events=215 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=59 accuracy=63.470001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=59 events=215 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=60 accuracy=67.059998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=60 events=215 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=61 accuracy=67.239998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=61 events=215 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=62 accuracy=66.099998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=62 events=220 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=63 accuracy=66.260002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=63 events=225 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=64 accuracy=64.800003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=64 events=235 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=65 accuracy=65.279999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=65 events=235 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=66 accuracy=66.309998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=66 events=240 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=67 accuracy=64.410004
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=67 events=245 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=68 accuracy=58.860001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=68 events=250 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=69 accuracy=69.050003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=69 events=255 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=70 accuracy=62.830002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=70 events=260 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=71 accuracy=61.630001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=71 events=265 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=72 accuracy=66.099998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=72 events=265 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=73 accuracy=66.980003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=73 events=275 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=74 accuracy=66.099998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=74 events=280 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=75 accuracy=71.260002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=75 events=290 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=76 accuracy=61.540001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=76 events=300 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=77 accuracy=65.019997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=77 events=305 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=78 accuracy=67.150002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=78 events=320 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=79 accuracy=66.650002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=79 events=325 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=80 accuracy=68.160004
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=80 events=330 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=81 accuracy=65.290001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=81 events=330 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=82 accuracy=66.760002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=82 events=335 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=83 accuracy=67.410004
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=83 events=335 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=84 accuracy=64.449997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=84 events=350 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=85 accuracy=66.650002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=85 events=350 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=86 accuracy=66.860001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=86 events=360 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=87 accuracy=66.279999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=87 events=365 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=88 accuracy=70.349998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=88 events=365 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=89 accuracy=71.480003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=89 events=370 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=90 accuracy=68.889999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=90 events=375 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=91 accuracy=68.199997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=91 events=385 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=92 accuracy=68.199997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=92 events=385 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=93 accuracy=64.110001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=93 events=385 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=94 accuracy=68.699997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=94 events=395 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=95 accuracy=68.970001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=95 events=400 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=96 accuracy=68.000000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=96 events=410 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=97 accuracy=66.870003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=97 events=410 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=98 accuracy=64.690002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=98 events=415 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=99 accuracy=64.730003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=99 events=420 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=100 accuracy=62.970001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=100 events=425 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=101 accuracy=66.849998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=101 events=430 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=102 accuracy=70.879997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=102 events=435 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=103 accuracy=71.800003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=103 events=435 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=104 accuracy=70.500000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=104 events=440 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=105 accuracy=70.260002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=105 events=445 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=106 accuracy=67.570000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=106 events=455 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=107 accuracy=58.630001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=107 events=460 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=108 accuracy=69.400002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=108 events=470 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=109 accuracy=70.870003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=109 events=475 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=110 accuracy=71.010002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=110 events=490 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=111 accuracy=71.209999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=111 events=495 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=112 accuracy=70.589996
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=112 events=505 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=113 accuracy=69.959999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=113 events=510 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=114 accuracy=67.610001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=114 events=515 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=115 accuracy=64.610001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=115 events=525 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=116 accuracy=70.709999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=116 events=530 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=117 accuracy=64.199997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=117 events=530 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=118 accuracy=68.720001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=118 events=535 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=119 accuracy=64.879997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=119 events=535 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=120 accuracy=68.669998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=120 events=535 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=121 accuracy=72.500000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=121 events=545 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=122 accuracy=67.000000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=122 events=545 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=123 accuracy=69.730003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=123 events=545 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=124 accuracy=61.790001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=124 events=550 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=125 accuracy=62.459999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=125 events=555 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=126 accuracy=64.239998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=126 events=560 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=127 accuracy=70.360001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=127 events=560 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=128 accuracy=68.919998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=128 events=570 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=129 accuracy=72.279999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=129 events=575 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=130 accuracy=67.419998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=130 events=575 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=131 accuracy=66.190002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=131 events=580 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=132 accuracy=72.269997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=132 events=585 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=133 accuracy=67.949997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=133 events=595 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=134 accuracy=71.330002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=134 events=605 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=135 accuracy=67.660004
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=135 events=630 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=136 accuracy=63.730000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=136 events=635 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=137 accuracy=71.540001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=137 events=640 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=138 accuracy=73.099998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=138 events=640 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=139 accuracy=70.839996
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=139 events=645 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=140 accuracy=71.510002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=140 events=650 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=141 accuracy=72.019997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=141 events=650 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=142 accuracy=63.930000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=142 events=655 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=143 accuracy=61.660000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=143 events=660 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=144 accuracy=72.199997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=144 events=665 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=145 accuracy=67.970001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=145 events=665 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=146 accuracy=62.799999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=146 events=670 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=147 accuracy=71.290001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=147 events=670 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=148 accuracy=71.599998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=148 events=675 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=149 accuracy=68.830002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=149 events=680 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=150 accuracy=72.519997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=150 events=685 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=151 accuracy=63.939999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=151 events=695 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=152 accuracy=63.580002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=152 events=705 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=153 accuracy=71.709999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=153 events=710 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=154 accuracy=73.120003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=154 events=710 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=155 accuracy=70.760002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=155 events=710 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=156 accuracy=70.849998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=156 events=720 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=157 accuracy=63.369999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=157 events=720 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=158 accuracy=70.910004
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=158 events=730 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=159 accuracy=70.209999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=159 events=735 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=160 accuracy=70.510002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=160 events=740 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=161 accuracy=72.440002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=161 events=755 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=162 accuracy=70.739998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=162 events=760 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=163 accuracy=66.540001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=163 events=760 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=164 accuracy=70.050003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=164 events=775 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=165 accuracy=72.559998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=165 events=780 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=166 accuracy=71.360001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=166 events=790 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=167 accuracy=67.849998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=167 events=795 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=168 accuracy=70.599998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=168 events=805 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=169 accuracy=71.690002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=169 events=805 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=170 accuracy=70.779999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=170 events=810 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=171 accuracy=66.269997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=171 events=810 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=172 accuracy=68.680000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=172 events=815 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=173 accuracy=67.309998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=173 events=820 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=174 accuracy=67.250000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=174 events=820 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=175 accuracy=71.080002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=175 events=835 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=176 accuracy=71.300003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=176 events=855 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=177 accuracy=67.989998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=177 events=860 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=178 accuracy=69.029999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=178 events=870 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=179 accuracy=72.970001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=179 events=880 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=180 accuracy=72.029999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=180 events=885 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=181 accuracy=70.860001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=181 events=890 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=182 accuracy=65.599998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=182 events=895 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=183 accuracy=73.419998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=183 events=905 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=184 accuracy=71.599998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=184 events=910 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=185 accuracy=70.769997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=185 events=915 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=186 accuracy=68.949997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=186 events=915 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=187 accuracy=66.559998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=187 events=915 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=188 accuracy=72.370003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=188 events=925 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=189 accuracy=65.849998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=189 events=930 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=190 accuracy=68.680000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=190 events=935 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=191 accuracy=62.209999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=191 events=935 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=192 accuracy=68.800003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=192 events=945 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=193 accuracy=72.779999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=193 events=950 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=194 accuracy=69.589996
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=194 events=950 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=195 accuracy=71.879997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=195 events=950 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=196 accuracy=73.559998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=196 events=955 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=197 accuracy=66.519997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=197 events=955 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=198 accuracy=69.419998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=198 events=965 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=199 accuracy=63.759998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=199 events=965 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=200 accuracy=56.740002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=200 events=965 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=201 accuracy=68.610001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=201 events=965 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=202 accuracy=71.129997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=202 events=965 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=203 accuracy=62.740002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=203 events=975 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=204 accuracy=71.010002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=204 events=995 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=205 accuracy=67.809998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=205 events=995 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=206 accuracy=72.209999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=206 events=1000 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=207 accuracy=67.800003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=207 events=1005 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=208 accuracy=66.290001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=208 events=1005 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=209 accuracy=71.980003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=209 events=1005 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=210 accuracy=71.879997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=210 events=1005 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=211 accuracy=67.349998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=211 events=1010 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=212 accuracy=75.139999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=212 events=1010 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=213 accuracy=72.739998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=213 events=1010 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=214 accuracy=73.330002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=214 events=1015 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=215 accuracy=73.480003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=215 events=1020 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=216 accuracy=72.339996
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=216 events=1020 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=217 accuracy=61.560001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=217 events=1020 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=218 accuracy=72.550003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=218 events=1020 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=219 accuracy=70.529999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=219 events=1030 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=220 accuracy=71.410004
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=220 events=1030 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=221 accuracy=69.120003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=221 events=1040 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=222 accuracy=63.259998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=222 events=1045 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=223 accuracy=74.019997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=223 events=1045 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=224 accuracy=72.900002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=224 events=1045 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=225 accuracy=64.809998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=225 events=1050 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=226 accuracy=66.860001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=226 events=1055 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=227 accuracy=70.190002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=227 events=1055 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=228 accuracy=59.630001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=228 events=1055 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=229 accuracy=68.190002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=229 events=1055 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=230 accuracy=72.970001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=230 events=1060 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=231 accuracy=70.800003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=231 events=1060 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=232 accuracy=72.980003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=232 events=1060 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=233 accuracy=69.930000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=233 events=1070 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=234 accuracy=69.570000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=234 events=1075 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=235 accuracy=64.050003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=235 events=1080 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=236 accuracy=73.910004
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=236 events=1080 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=237 accuracy=70.150002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=237 events=1090 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=238 accuracy=69.839996
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=238 events=1095 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=239 accuracy=72.699997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=239 events=1100 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=240 accuracy=64.489998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=240 events=1105 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=241 accuracy=70.639999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=241 events=1105 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=242 accuracy=73.169998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=242 events=1115 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=243 accuracy=70.290001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=243 events=1115 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=244 accuracy=70.120003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=244 events=1120 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=245 accuracy=74.269997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=245 events=1130 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=246 accuracy=73.680000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=246 events=1130 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=247 accuracy=48.860001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=247 events=1135 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=248 accuracy=68.050003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=248 events=1135 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=249 accuracy=67.550003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=249 events=1145 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=250 accuracy=71.110001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=250 events=1150 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=251 accuracy=72.309998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=251 events=1155 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=252 accuracy=70.269997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=252 events=1155 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=253 accuracy=66.580002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=253 events=1160 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=254 accuracy=66.750000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=254 events=1160 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=255 accuracy=74.160004
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=255 events=1160 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=256 accuracy=69.050003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=256 events=1160 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=257 accuracy=69.010002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=257 events=1160 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=258 accuracy=69.629997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=258 events=1160 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=259 accuracy=69.940002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=259 events=1165 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=260 accuracy=73.269997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=260 events=1175 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=261 accuracy=72.120003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=261 events=1175 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=262 accuracy=74.389999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=262 events=1175 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=263 accuracy=69.239998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=263 events=1175 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=264 accuracy=71.500000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=264 events=1180 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=265 accuracy=71.110001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=265 events=1180 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=266 accuracy=71.180000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=266 events=1185 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=267 accuracy=70.110001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=267 events=1190 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=268 accuracy=61.160000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=268 events=1200 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=269 accuracy=69.430000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=269 events=1200 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=270 accuracy=63.970001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=270 events=1200 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=271 accuracy=66.980003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=271 events=1205 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=272 accuracy=65.879997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=272 events=1210 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=273 accuracy=60.590000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=273 events=1210 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=274 accuracy=59.160000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=274 events=1215 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=275 accuracy=71.410004
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=275 events=1230 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=276 accuracy=65.139999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=276 events=1235 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=277 accuracy=73.470001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=277 events=1235 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=278 accuracy=70.239998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=278 events=1235 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=279 accuracy=74.120003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=279 events=1235 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=280 accuracy=72.529999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=280 events=1240 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=281 accuracy=71.529999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=281 events=1245 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=282 accuracy=68.629997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=282 events=1250 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=283 accuracy=72.970001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=283 events=1255 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=284 accuracy=72.989998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=284 events=1260 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=285 accuracy=73.860001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=285 events=1260 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=286 accuracy=69.019997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=286 events=1260 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=287 accuracy=71.879997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=287 events=1275 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=288 accuracy=72.820000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=288 events=1285 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=289 accuracy=70.570000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=289 events=1285 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=290 accuracy=74.629997
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=290 events=1290 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=291 accuracy=72.309998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=291 events=1305 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=292 accuracy=71.830002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=292 events=1315 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=293 accuracy=70.459999
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=293 events=1315 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=294 accuracy=68.940002
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=294 events=1320 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=295 accuracy=54.820000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=295 events=1330 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=296 accuracy=70.680000
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=296 events=1340 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=297 accuracy=73.620003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=297 events=1345 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=298 accuracy=67.860001
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=298 events=1360 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=299 accuracy=69.349998
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=299 events=1365 history_gib=4.136
+ROUND_ACCURACY method=FedAvg round=300 accuracy=73.120003
+SHADOW_DIAGNOSTIC_ROUND seed=1 round=300 events=1365 history_gib=4.136
+PEAK_ACCURACY method=FedAvg round=212 accuracy=75.139999
+Completed seed 1: C:\Users\admin\Desktop\need_do\new_paper_four\FedPhoenix-clean-finish\results\same_direction_shadow_transfer\seed1

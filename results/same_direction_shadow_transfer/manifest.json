@@ -1,0 +1,14 @@
+{
+  "seed": 1,
+  "epochs": 300,
+  "runs": {
+    "seed1": {
+      "status": "completed",
+      "attempt": 1,
+      "pid": 23780,
+      "returncode": 0
+    }
+  },
+  "status": "completed",
+  "updated_at_unix": 1789966168.3226812
+}

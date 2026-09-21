@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "seed": 1,
+  "rounds": 10,
+  "selected_clients_match": true,
+  "round_accuracy_match": true,
+  "max_accuracy_abs_delta": 3.896484344068085e-07,
+  "global_state_sha256_match": true,
+  "shadow_event_count": 10,
+  "tolerance": 1e-06
+}

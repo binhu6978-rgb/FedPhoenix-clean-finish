@@ -1,0 +1,266 @@
+{
+  "seed": 1,
+  "algorithms": {
+    "FedAvg": {
+      "accuracy": {
+        "rounds": 300,
+        "final": 73.12000274658203,
+        "best": 75.13999938964844,
+        "best_round": 212
+      },
+      "event_count": 307,
+      "transfer_event_count": 287,
+      "max_diagnostic_cpu_history_bytes": 4441359912,
+      "input_change_norm": {
+        "count": 297,
+        "mean": 1.1910405735977572,
+        "median": 1.0892685651779175,
+        "q25": 0.7974763512611389,
+        "q75": 1.5092647075653076
+      },
+      "dispatch_minus_global_norm": {
+        "count": 307,
+        "mean": 0.0,
+        "median": 0.0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "response_change_norm": {
+        "count": 297,
+        "mean": 1.513837800884889,
+        "median": 1.4103096723556519,
+        "q25": 1.0888851881027222,
+        "q75": 1.860256314277649
+      },
+      "response_change_ratio": {
+        "count": 297,
+        "mean": 0.6615820565049537,
+        "median": 0.6579021840078274,
+        "q25": 0.6341876753979867,
+        "q75": 0.6845471214462575
+      },
+      "secant_gain": {
+        "count": 297,
+        "mean": 1.53040722892487,
+        "median": 1.2709788667280817,
+        "q25": 0.9349042808128507,
+        "q75": 1.847085092039368
+      }
+    },
+    "FedPhoenix": {
+      "accuracy": {
+        "rounds": 300,
+        "final": 73.93000030517578,
+        "best": 78.3499984741211,
+        "best_round": 218
+      },
+      "event_count": 307,
+      "transfer_event_count": 287,
+      "max_diagnostic_cpu_history_bytes": 4441359912,
+      "input_change_norm": {
+        "count": 297,
+        "mean": 3.7356099239503493,
+        "median": 2.5002264976501465,
+        "q25": 2.012817144393921,
+        "q75": 4.734517574310303
+      },
+      "dispatch_minus_global_norm": {
+        "count": 307,
+        "mean": 2.00196253903914,
+        "median": 1.2310831546783447,
+        "q25": 0.9352017641067505,
+        "q75": 2.704120635986328
+      },
+      "response_change_norm": {
+        "count": 297,
+        "mean": 1.599175623972408,
+        "median": 1.5864015817642212,
+        "q25": 1.2213716506958008,
+        "q75": 1.8997811079025269
+      },
+      "response_change_ratio": {
+        "count": 297,
+        "mean": 0.6249330379087645,
+        "median": 0.6271911917456146,
+        "q25": 0.6053796551017847,
+        "q75": 0.647457785866944
+      },
+      "secant_gain": {
+        "count": 297,
+        "mean": 0.5816906034534369,
+        "median": 0.5418450781307986,
+        "q25": 0.32742760656831343,
+        "q75": 0.7672824460683485
+      }
+    }
+  },
+  "critical_subsets": {
+    "input_cos_ge_0_5": {
+      "FedAvg": {
+        "count": 0,
+        "insufficient_count": true,
+        "response_direction_cosine_median": null,
+        "response_prediction_nre_median": null,
+        "response_norm_ratio_median": null,
+        "support_sign_agreement_rate": null,
+        "support_pearson": null,
+        "support_spearman": null
+      },
+      "FedPhoenix": {
+        "count": 0,
+        "insufficient_count": true,
+        "response_direction_cosine_median": null,
+        "response_prediction_nre_median": null,
+        "response_norm_ratio_median": null,
+        "support_sign_agreement_rate": null,
+        "support_pearson": null,
+        "support_spearman": null
+      }
+    },
+    "input_cos_ge_0_7": {
+      "FedAvg": {
+        "count": 0,
+        "insufficient_count": true,
+        "response_direction_cosine_median": null,
+        "response_prediction_nre_median": null,
+        "response_norm_ratio_median": null,
+        "support_sign_agreement_rate": null,
+        "support_pearson": null,
+        "support_spearman": null
+      },
+      "FedPhoenix": {
+        "count": 0,
+        "insufficient_count": true,
+        "response_direction_cosine_median": null,
+        "response_prediction_nre_median": null,
+        "response_norm_ratio_median": null,
+        "support_sign_agreement_rate": null,
+        "support_pearson": null,
+        "support_spearman": null
+      }
+    }
+  },
+  "context_subsets": {
+    "all": {
+      "FedAvg": {
+        "count": 287,
+        "insufficient_count": false,
+        "response_direction_cosine_median": -0.4860462788655297,
+        "response_prediction_nre_median": 0.8726060839717912,
+        "response_norm_ratio_median": 0.9891589729083474,
+        "support_sign_agreement_rate": 0.4355400696864111,
+        "support_pearson": -0.9099863997296679,
+        "support_spearman": -0.517561198963638,
+        "input_direction_cosine_mean": -0.03019066268804553,
+        "input_direction_cosine_median": -0.04166857660889627
+      },
+      "FedPhoenix": {
+        "count": 287,
+        "insufficient_count": false,
+        "response_direction_cosine_median": -0.4913629659455502,
+        "response_prediction_nre_median": 0.8643256822378079,
+        "response_norm_ratio_median": 1.0154311876306004,
+        "support_sign_agreement_rate": 0.46689895470383275,
+        "support_pearson": -0.9730587546607214,
+        "support_spearman": -0.4153630921923605,
+        "input_direction_cosine_mean": -0.2352734862599097,
+        "input_direction_cosine_median": -0.25404274590353043
+      }
+    },
+    "input_cos_gt_0": {
+      "FedAvg": {
+        "count": 48,
+        "insufficient_count": false,
+        "response_direction_cosine_median": -0.484408253261009,
+        "response_prediction_nre_median": 0.872545368823406,
+        "response_norm_ratio_median": 0.9371486322278629,
+        "support_sign_agreement_rate": 0.5,
+        "support_pearson": -0.6968295843491646,
+        "support_spearman": -0.4291141988710378,
+        "input_direction_cosine_mean": 0.06921660527918562,
+        "input_direction_cosine_median": 0.04856650814532208
+      },
+      "FedPhoenix": {
+        "count": 14,
+        "insufficient_count": false,
+        "response_direction_cosine_median": -0.49710744122674094,
+        "response_prediction_nre_median": 0.8712346124943331,
+        "response_norm_ratio_median": 1.1157256919147622,
+        "support_sign_agreement_rate": 0.5714285714285714,
+        "support_pearson": 0.42097885372610716,
+        "support_spearman": 0.13846153846153847,
+        "input_direction_cosine_mean": 0.09947958489521924,
+        "input_direction_cosine_median": 0.08651074926858748
+      }
+    }
+  },
+  "gap_bins": {
+    "gap_le_5": {
+      "FedAvg": {
+        "count": 126,
+        "response_direction_cosine_median": -0.4951328496419857,
+        "response_prediction_nre_median": 0.8800499626970384,
+        "support_sign_agreement_rate": 0.3968253968253968
+      },
+      "FedPhoenix": {
+        "count": 126,
+        "response_direction_cosine_median": -0.46066230779213047,
+        "response_prediction_nre_median": 0.8616254451075291,
+        "support_sign_agreement_rate": 0.42063492063492064
+      }
+    },
+    "gap_6_10": {
+      "FedAvg": {
+        "count": 56,
+        "response_direction_cosine_median": -0.5058709173968199,
+        "response_prediction_nre_median": 0.869794715843736,
+        "support_sign_agreement_rate": 0.4107142857142857
+      },
+      "FedPhoenix": {
+        "count": 56,
+        "response_direction_cosine_median": -0.5022551684353052,
+        "response_prediction_nre_median": 0.866746059660616,
+        "support_sign_agreement_rate": 0.48214285714285715
+      }
+    },
+    "gap_11_20": {
+      "FedAvg": {
+        "count": 84,
+        "response_direction_cosine_median": -0.4393716924332406,
+        "response_prediction_nre_median": 0.8656413089207191,
+        "support_sign_agreement_rate": 0.4880952380952381
+      },
+      "FedPhoenix": {
+        "count": 84,
+        "response_direction_cosine_median": -0.4932687061242512,
+        "response_prediction_nre_median": 0.8649214602697596,
+        "support_sign_agreement_rate": 0.5
+      }
+    },
+    "gap_gt_20": {
+      "FedAvg": {
+        "count": 21,
+        "response_direction_cosine_median": -0.4489575885239067,
+        "response_prediction_nre_median": 0.8726315097074201,
+        "support_sign_agreement_rate": 0.5238095238095238
+      },
+      "FedPhoenix": {
+        "count": 21,
+        "response_direction_cosine_median": -0.509768363072173,
+        "response_prediction_nre_median": 0.8771943895000389,
+        "support_sign_agreement_rate": 0.5714285714285714
+      }
+    }
+  },
+  "derived": {
+    "input_change_median_ratio_fedphoenix_over_fedavg": 2.2953260358172254,
+    "response_change_ratio_median_ratio_fedphoenix_over_fedavg": 0.9533198201666899,
+    "critical_subsets_sufficient": false,
+    "transfer_criterion_wins": 0,
+    "transfer_criterion_comparisons": 0
+  },
+  "decision": {
+    "category": "C",
+    "rationale": "Critical similar-input subsets do not all contain at least 10 events."
+  }
+}

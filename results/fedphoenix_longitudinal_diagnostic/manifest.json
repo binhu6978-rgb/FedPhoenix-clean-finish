@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "seed": 1,
+  "epochs": 300,
+  "parallel_algorithms": true,
+  "runs": {
+    "FedAvg": {
+      "status": "completed",
+      "attempt": 1,
+      "pid": 18372,
+      "returncode": 0
+    },
+    "FedPhoenix": {
+      "status": "completed",
+      "attempt": 1,
+      "pid": 996,
+      "returncode": 0
+    }
+  },
+  "updated_at_unix": 1789955965.169566
+}

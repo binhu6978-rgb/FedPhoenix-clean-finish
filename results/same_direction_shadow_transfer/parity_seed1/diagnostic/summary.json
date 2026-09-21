@@ -1,0 +1,2065 @@
+{
+  "seed": 1,
+  "monitored_clients": [
+    24,
+    29,
+    30,
+    36,
+    38,
+    40,
+    42,
+    45,
+    58,
+    86
+  ],
+  "parameter_numel": 33646666,
+  "event_count": 10,
+  "valid_event_count": 10,
+  "max_diagnostic_cpu_history_bytes": 2691733280,
+  "max_diagnostic_cpu_history_gib": 2.5068719685077667,
+  "accuracy": {
+    "rounds": 10,
+    "final": 33.25,
+    "best": 39.20000076293945,
+    "best_round": 5
+  },
+  "ratio_summaries": {
+    "0.02": {
+      "event_count": 2,
+      "attempted_count": 2,
+      "skipped_count": 0,
+      "response_cosine": {
+        "count": 2,
+        "mean": 0.004640971881561609,
+        "median": 0.004640971881561609,
+        "q25": 0.00405775647759539,
+        "q75": 0.005224187285527829
+      },
+      "response_nre": {
+        "count": 2,
+        "mean": 0.966589183294985,
+        "median": 0.966589183294985,
+        "q25": 0.9664147307333071,
+        "q75": 0.9667636358566629
+      },
+      "response_norm_ratio": {
+        "count": 2,
+        "mean": 28.552842178221837,
+        "median": 28.552842178221837,
+        "q25": 28.414607398844634,
+        "q75": 28.691076957599044
+      },
+      "actual_delta_update_norm": {
+        "count": 2,
+        "mean": 0.766822338104248,
+        "median": 0.766822338104248,
+        "q25": 0.76462721824646,
+        "q75": 0.7690174579620361
+      },
+      "predicted_delta_update_norm": {
+        "count": 2,
+        "mean": 0.026864887302936753,
+        "median": 0.026864887302936753,
+        "q25": 0.02665820451867582,
+        "q75": 0.027071570087197686
+      },
+      "realized_support": {
+        "count": 2,
+        "mean": 0.01419054577127099,
+        "median": 0.01419054577127099,
+        "q25": 0.0010069513227790594,
+        "q75": 0.02737414021976292
+      },
+      "alignment_change": {
+        "count": 2,
+        "mean": 0.00029791565611958504,
+        "median": 0.00029791565611958504,
+        "q25": 1.7801998183131218e-05,
+        "q75": 0.0005780293140560389
+      },
+      "alignment_identity_abs_error": {
+        "count": 2,
+        "mean": 9.244153448224662e-09,
+        "median": 9.244153448224662e-09,
+        "q25": 8.485974313773349e-09,
+        "q75": 1.0002332582675975e-08
+      },
+      "epsilon_geometry_abs_error": {
+        "count": 2,
+        "mean": 7.213503122330961e-06,
+        "median": 7.213503122330961e-06,
+        "q25": 6.1635300517091235e-06,
+        "q75": 8.263476192952798e-06
+      },
+      "response_identity_abs_error": {
+        "count": 2,
+        "mean": 2.158315837164082e-08,
+        "median": 2.158315837164082e-08,
+        "q25": 2.1560983221036167e-08,
+        "q75": 2.1605333522245473e-08
+      },
+      "support_pair_count": 2,
+      "support_pearson": 1.0,
+      "support_spearman": 1.0,
+      "support_sign_agreement": 1.0,
+      "predicted_active_count": 0,
+      "predicted_active_helpful_fraction": null
+    },
+    "0.05": {
+      "event_count": 2,
+      "attempted_count": 2,
+      "skipped_count": 0,
+      "response_cosine": {
+        "count": 2,
+        "mean": 0.0023364139289154804,
+        "median": 0.0023364139289154804,
+        "q25": 0.0019171230988990723,
+        "q75": 0.0027557047589318886
+      },
+      "response_nre": {
+        "count": 2,
+        "mean": 0.9281620828519122,
+        "median": 0.9281620828519122,
+        "q25": 0.9276359729309368,
+        "q75": 0.9286881927728876
+      },
+      "response_norm_ratio": {
+        "count": 2,
+        "mean": 12.394245526866248,
+        "median": 12.394245526866248,
+        "q25": 12.2858201617837,
+        "q75": 12.502670891948796
+      },
+      "actual_delta_update_norm": {
+        "count": 2,
+        "mean": 0.831171989440918,
+        "median": 0.831171989440918,
+        "q25": 0.8303066492080688,
+        "q75": 0.8320373296737671
+      },
+      "predicted_delta_update_norm": {
+        "count": 2,
+        "mean": 0.06716221825734188,
+        "median": 0.06716221825734188,
+        "q25": 0.06664551129668955,
+        "q75": 0.0676789252179942
+      },
+      "realized_support": {
+        "count": 2,
+        "mean": -0.007572293281555176,
+        "median": -0.007572293281555176,
+        "q25": -0.039478324353694916,
+        "q75": 0.024333737790584564
+      },
+      "alignment_change": {
+        "count": 2,
+        "mean": -0.00043484941124916077,
+        "median": -0.00043484941124916077,
+        "q25": -0.002139698714017868,
+        "q75": 0.0012699998915195465
+      },
+      "alignment_identity_abs_error": {
+        "count": 2,
+        "mean": 5.635247557434983e-09,
+        "median": 5.635247557434983e-09,
+        "q25": 5.35566098143047e-09,
+        "q75": 5.914834133439496e-09
+      },
+      "epsilon_geometry_abs_error": {
+        "count": 2,
+        "mean": 7.988475263118883e-05,
+        "median": 7.988475263118883e-05,
+        "q25": 7.742512971162935e-05,
+        "q75": 8.23443755507483e-05
+      },
+      "response_identity_abs_error": {
+        "count": 2,
+        "mean": 1.6597176077937092e-08,
+        "median": 1.6597176077937092e-08,
+        "q25": 1.635698110291628e-08,
+        "q75": 1.6837371052957906e-08
+      },
+      "support_pair_count": 2,
+      "support_pearson": 1.0,
+      "support_spearman": 1.0,
+      "support_sign_agreement": 1.0,
+      "predicted_active_count": 0,
+      "predicted_active_helpful_fraction": null
+    },
+    "0.1": {
+      "event_count": 2,
+      "attempted_count": 2,
+      "skipped_count": 0,
+      "response_cosine": {
+        "count": 2,
+        "mean": 0.005724523493677722,
+        "median": 0.005724523493677722,
+        "q25": 0.0033577792960197174,
+        "q75": 0.008091267691335727
+      },
+      "response_nre": {
+        "count": 2,
+        "mean": 0.8804289760459326,
+        "median": 0.8804289760459326,
+        "q25": 0.8792623270209299,
+        "q75": 0.8815956250709354
+      },
+      "response_norm_ratio": {
+        "count": 2,
+        "mean": 6.808440777005666,
+        "median": 6.808440777005666,
+        "q25": 6.746887802676612,
+        "q75": 6.869993751334721
+      },
+      "actual_delta_update_norm": {
+        "count": 2,
+        "mean": 0.9154738485813141,
+        "median": 0.9154738485813141,
+        "q25": 0.9142746478319168,
+        "q75": 0.9166730493307114
+      },
+      "predicted_delta_update_norm": {
+        "count": 2,
+        "mean": 0.13432443651468376,
+        "median": 0.13432443651468376,
+        "q25": 0.1332910225933791,
+        "q75": 0.1353578504359884
+      },
+      "realized_support": {
+        "count": 2,
+        "mean": -0.008729482535272837,
+        "median": -0.008729482535272837,
+        "q25": -0.019923477666452527,
+        "q75": 0.0024645125959068537
+      },
+      "alignment_change": {
+        "count": 2,
+        "mean": -0.0009534182026982307,
+        "median": -0.0009534182026982307,
+        "q25": -0.0021526035852730274,
+        "q75": 0.00024576717987656593
+      },
+      "alignment_identity_abs_error": {
+        "count": 2,
+        "mean": 2.1070809930840914e-09,
+        "median": 2.1070809930840914e-09,
+        "q25": 1.3564511875383857e-09,
+        "q75": 2.857710798629797e-09
+      },
+      "epsilon_geometry_abs_error": {
+        "count": 2,
+        "mean": 0.00016021281480789462,
+        "median": 0.00016021281480789462,
+        "q25": 0.00015505701303482333,
+        "q75": 0.0001653686165809659
+      },
+      "response_identity_abs_error": {
+        "count": 2,
+        "mean": 1.8270771562356458e-08,
+        "median": 1.8270771562356458e-08,
+        "q25": 1.800912041716174e-08,
+        "q75": 1.8532422707551177e-08
+      },
+      "support_pair_count": 2,
+      "support_pearson": 1.0,
+      "support_spearman": 1.0,
+      "support_sign_agreement": 1.0,
+      "predicted_active_count": 0,
+      "predicted_active_helpful_fraction": null
+    },
+    "0.2": {
+      "event_count": 2,
+      "attempted_count": 2,
+      "skipped_count": 0,
+      "response_cosine": {
+        "count": 2,
+        "mean": 0.01599096563174493,
+        "median": 0.01599096563174493,
+        "q25": 0.01575375212134293,
+        "q75": 0.01622817914214693
+      },
+      "response_nre": {
+        "count": 2,
+        "mean": 0.8118219274593563,
+        "median": 0.8118219274593563,
+        "q25": 0.8109442494697378,
+        "q75": 0.812699605448975
+      },
+      "response_norm_ratio": {
+        "count": 2,
+        "mean": 3.688382956905615,
+        "median": 3.688382956905615,
+        "q25": 3.6603326994247647,
+        "q75": 3.716433214386466
+      },
+      "actual_delta_update_norm": {
+        "count": 2,
+        "mean": 0.9921679496765137,
+        "median": 0.9921679496765137,
+        "q25": 0.9920209646224976,
+        "q75": 0.9923149347305298
+      },
+      "predicted_delta_update_norm": {
+        "count": 2,
+        "mean": 0.2686488730293675,
+        "median": 0.2686488730293675,
+        "q25": 0.2665820451867582,
+        "q75": 0.2707157008719768
+      },
+      "realized_support": {
+        "count": 2,
+        "mean": 0.006578428670763969,
+        "median": 0.006578428670763969,
+        "q25": -0.004679621197283268,
+        "q75": 0.017836478538811207
+      },
+      "alignment_change": {
+        "count": 2,
+        "mean": 0.0013612504117190838,
+        "median": 0.0013612504117190838,
+        "q25": -0.0010360812302678823,
+        "q75": 0.00375858205370605
+      },
+      "alignment_identity_abs_error": {
+        "count": 2,
+        "mean": 1.1343516215104113e-08,
+        "median": 1.1343516215104113e-08,
+        "q25": 1.0532395910826421e-08,
+        "q75": 1.2154636519381805e-08
+      },
+      "epsilon_geometry_abs_error": {
+        "count": 2,
+        "mean": 0.00032086521387100775,
+        "median": 0.00032086521387100775,
+        "q25": 0.00031031891703606207,
+        "q75": 0.0003314115107059534
+      },
+      "response_identity_abs_error": {
+        "count": 2,
+        "mean": 1.9734724077125065e-08,
+        "median": 1.9734724077125065e-08,
+        "q25": 1.9493629821454306e-08,
+        "q75": 1.9975818332795825e-08
+      },
+      "support_pair_count": 2,
+      "support_pearson": 1.0,
+      "support_spearman": 1.0,
+      "support_sign_agreement": 1.0,
+      "predicted_active_count": 0,
+      "predicted_active_helpful_fraction": null
+    },
+    "0.4": {
+      "event_count": 2,
+      "attempted_count": 2,
+      "skipped_count": 0,
+      "response_cosine": {
+        "count": 2,
+        "mean": 0.01980382186592588,
+        "median": 0.01980382186592588,
+        "q25": 0.0182748929571398,
+        "q75": 0.02133275077471196
+      },
+      "response_nre": {
+        "count": 2,
+        "mean": 0.7435843868901233,
+        "median": 0.7435843868901233,
+        "q25": 0.7431003892373249,
+        "q75": 0.7440683845429218
+      },
+      "response_norm_ratio": {
+        "count": 2,
+        "mean": 2.103554933491785,
+        "median": 2.103554933491785,
+        "q25": 2.083750172283193,
+        "q75": 2.1233596947003774
+      },
+      "actual_delta_update_norm": {
+        "count": 2,
+        "mean": 1.1284199953079224,
+        "median": 1.1284199953079224,
+        "q25": 1.1264804005622864,
+        "q75": 1.1303595900535583
+      },
+      "predicted_delta_update_norm": {
+        "count": 2,
+        "mean": 0.537297746058735,
+        "median": 0.537297746058735,
+        "q25": 0.5331640903735164,
+        "q75": 0.5414314017439537
+      },
+      "realized_support": {
+        "count": 2,
+        "mean": 0.005614935420453548,
+        "median": 0.005614935420453548,
+        "q25": -0.0020946445874869823,
+        "q75": 0.01332451542839408
+      },
+      "alignment_change": {
+        "count": 2,
+        "mean": 0.002338348072953522,
+        "median": 0.002338348072953522,
+        "q25": -0.0009429322672076523,
+        "q75": 0.005619628413114697
+      },
+      "alignment_identity_abs_error": {
+        "count": 2,
+        "mean": 1.4273872305479995e-09,
+        "median": 1.4273872305479995e-09,
+        "q25": 7.277954903236322e-10,
+        "q75": 2.126978970772367e-09
+      },
+      "epsilon_geometry_abs_error": {
+        "count": 2,
+        "mean": 0.0006432354450225941,
+        "median": 0.0006432354450225941,
+        "q25": 0.0006214201450348011,
+        "q75": 0.0006650507450103871
+      },
+      "response_identity_abs_error": {
+        "count": 2,
+        "mean": 2.2449896164289385e-08,
+        "median": 2.2449896164289385e-08,
+        "q25": 2.2106297237201034e-08,
+        "q75": 2.2793495091377736e-08
+      },
+      "support_pair_count": 2,
+      "support_pearson": 1.0,
+      "support_spearman": 1.0,
+      "support_sign_agreement": 1.0,
+      "predicted_active_count": 0,
+      "predicted_active_helpful_fraction": null
+    }
+  },
+  "gap_summaries": {
+    "0.02": {
+      "gap_le_5": {
+        "event_count": 2,
+        "attempted_count": 2,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 2,
+          "mean": 0.004640971881561609,
+          "median": 0.004640971881561609,
+          "q25": 0.00405775647759539,
+          "q75": 0.005224187285527829
+        },
+        "response_nre": {
+          "count": 2,
+          "mean": 0.966589183294985,
+          "median": 0.966589183294985,
+          "q25": 0.9664147307333071,
+          "q75": 0.9667636358566629
+        },
+        "response_norm_ratio": {
+          "count": 2,
+          "mean": 28.552842178221837,
+          "median": 28.552842178221837,
+          "q25": 28.414607398844634,
+          "q75": 28.691076957599044
+        },
+        "actual_delta_update_norm": {
+          "count": 2,
+          "mean": 0.766822338104248,
+          "median": 0.766822338104248,
+          "q25": 0.76462721824646,
+          "q75": 0.7690174579620361
+        },
+        "predicted_delta_update_norm": {
+          "count": 2,
+          "mean": 0.026864887302936753,
+          "median": 0.026864887302936753,
+          "q25": 0.02665820451867582,
+          "q75": 0.027071570087197686
+        },
+        "realized_support": {
+          "count": 2,
+          "mean": 0.01419054577127099,
+          "median": 0.01419054577127099,
+          "q25": 0.0010069513227790594,
+          "q75": 0.02737414021976292
+        },
+        "alignment_change": {
+          "count": 2,
+          "mean": 0.00029791565611958504,
+          "median": 0.00029791565611958504,
+          "q25": 1.7801998183131218e-05,
+          "q75": 0.0005780293140560389
+        },
+        "alignment_identity_abs_error": {
+          "count": 2,
+          "mean": 9.244153448224662e-09,
+          "median": 9.244153448224662e-09,
+          "q25": 8.485974313773349e-09,
+          "q75": 1.0002332582675975e-08
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 2,
+          "mean": 7.213503122330961e-06,
+          "median": 7.213503122330961e-06,
+          "q25": 6.1635300517091235e-06,
+          "q75": 8.263476192952798e-06
+        },
+        "response_identity_abs_error": {
+          "count": 2,
+          "mean": 2.158315837164082e-08,
+          "median": 2.158315837164082e-08,
+          "q25": 2.1560983221036167e-08,
+          "q75": 2.1605333522245473e-08
+        },
+        "support_pair_count": 2,
+        "support_pearson": 1.0,
+        "support_spearman": 1.0,
+        "support_sign_agreement": 1.0,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_6_10": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_11_20": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_gt_20": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      }
+    },
+    "0.05": {
+      "gap_le_5": {
+        "event_count": 2,
+        "attempted_count": 2,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 2,
+          "mean": 0.0023364139289154804,
+          "median": 0.0023364139289154804,
+          "q25": 0.0019171230988990723,
+          "q75": 0.0027557047589318886
+        },
+        "response_nre": {
+          "count": 2,
+          "mean": 0.9281620828519122,
+          "median": 0.9281620828519122,
+          "q25": 0.9276359729309368,
+          "q75": 0.9286881927728876
+        },
+        "response_norm_ratio": {
+          "count": 2,
+          "mean": 12.394245526866248,
+          "median": 12.394245526866248,
+          "q25": 12.2858201617837,
+          "q75": 12.502670891948796
+        },
+        "actual_delta_update_norm": {
+          "count": 2,
+          "mean": 0.831171989440918,
+          "median": 0.831171989440918,
+          "q25": 0.8303066492080688,
+          "q75": 0.8320373296737671
+        },
+        "predicted_delta_update_norm": {
+          "count": 2,
+          "mean": 0.06716221825734188,
+          "median": 0.06716221825734188,
+          "q25": 0.06664551129668955,
+          "q75": 0.0676789252179942
+        },
+        "realized_support": {
+          "count": 2,
+          "mean": -0.007572293281555176,
+          "median": -0.007572293281555176,
+          "q25": -0.039478324353694916,
+          "q75": 0.024333737790584564
+        },
+        "alignment_change": {
+          "count": 2,
+          "mean": -0.00043484941124916077,
+          "median": -0.00043484941124916077,
+          "q25": -0.002139698714017868,
+          "q75": 0.0012699998915195465
+        },
+        "alignment_identity_abs_error": {
+          "count": 2,
+          "mean": 5.635247557434983e-09,
+          "median": 5.635247557434983e-09,
+          "q25": 5.35566098143047e-09,
+          "q75": 5.914834133439496e-09
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 2,
+          "mean": 7.988475263118883e-05,
+          "median": 7.988475263118883e-05,
+          "q25": 7.742512971162935e-05,
+          "q75": 8.23443755507483e-05
+        },
+        "response_identity_abs_error": {
+          "count": 2,
+          "mean": 1.6597176077937092e-08,
+          "median": 1.6597176077937092e-08,
+          "q25": 1.635698110291628e-08,
+          "q75": 1.6837371052957906e-08
+        },
+        "support_pair_count": 2,
+        "support_pearson": 1.0,
+        "support_spearman": 1.0,
+        "support_sign_agreement": 1.0,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_6_10": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_11_20": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_gt_20": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      }
+    },
+    "0.1": {
+      "gap_le_5": {
+        "event_count": 2,
+        "attempted_count": 2,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 2,
+          "mean": 0.005724523493677722,
+          "median": 0.005724523493677722,
+          "q25": 0.0033577792960197174,
+          "q75": 0.008091267691335727
+        },
+        "response_nre": {
+          "count": 2,
+          "mean": 0.8804289760459326,
+          "median": 0.8804289760459326,
+          "q25": 0.8792623270209299,
+          "q75": 0.8815956250709354
+        },
+        "response_norm_ratio": {
+          "count": 2,
+          "mean": 6.808440777005666,
+          "median": 6.808440777005666,
+          "q25": 6.746887802676612,
+          "q75": 6.869993751334721
+        },
+        "actual_delta_update_norm": {
+          "count": 2,
+          "mean": 0.9154738485813141,
+          "median": 0.9154738485813141,
+          "q25": 0.9142746478319168,
+          "q75": 0.9166730493307114
+        },
+        "predicted_delta_update_norm": {
+          "count": 2,
+          "mean": 0.13432443651468376,
+          "median": 0.13432443651468376,
+          "q25": 0.1332910225933791,
+          "q75": 0.1353578504359884
+        },
+        "realized_support": {
+          "count": 2,
+          "mean": -0.008729482535272837,
+          "median": -0.008729482535272837,
+          "q25": -0.019923477666452527,
+          "q75": 0.0024645125959068537
+        },
+        "alignment_change": {
+          "count": 2,
+          "mean": -0.0009534182026982307,
+          "median": -0.0009534182026982307,
+          "q25": -0.0021526035852730274,
+          "q75": 0.00024576717987656593
+        },
+        "alignment_identity_abs_error": {
+          "count": 2,
+          "mean": 2.1070809930840914e-09,
+          "median": 2.1070809930840914e-09,
+          "q25": 1.3564511875383857e-09,
+          "q75": 2.857710798629797e-09
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 2,
+          "mean": 0.00016021281480789462,
+          "median": 0.00016021281480789462,
+          "q25": 0.00015505701303482333,
+          "q75": 0.0001653686165809659
+        },
+        "response_identity_abs_error": {
+          "count": 2,
+          "mean": 1.8270771562356458e-08,
+          "median": 1.8270771562356458e-08,
+          "q25": 1.800912041716174e-08,
+          "q75": 1.8532422707551177e-08
+        },
+        "support_pair_count": 2,
+        "support_pearson": 1.0,
+        "support_spearman": 1.0,
+        "support_sign_agreement": 1.0,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_6_10": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_11_20": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_gt_20": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      }
+    },
+    "0.2": {
+      "gap_le_5": {
+        "event_count": 2,
+        "attempted_count": 2,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 2,
+          "mean": 0.01599096563174493,
+          "median": 0.01599096563174493,
+          "q25": 0.01575375212134293,
+          "q75": 0.01622817914214693
+        },
+        "response_nre": {
+          "count": 2,
+          "mean": 0.8118219274593563,
+          "median": 0.8118219274593563,
+          "q25": 0.8109442494697378,
+          "q75": 0.812699605448975
+        },
+        "response_norm_ratio": {
+          "count": 2,
+          "mean": 3.688382956905615,
+          "median": 3.688382956905615,
+          "q25": 3.6603326994247647,
+          "q75": 3.716433214386466
+        },
+        "actual_delta_update_norm": {
+          "count": 2,
+          "mean": 0.9921679496765137,
+          "median": 0.9921679496765137,
+          "q25": 0.9920209646224976,
+          "q75": 0.9923149347305298
+        },
+        "predicted_delta_update_norm": {
+          "count": 2,
+          "mean": 0.2686488730293675,
+          "median": 0.2686488730293675,
+          "q25": 0.2665820451867582,
+          "q75": 0.2707157008719768
+        },
+        "realized_support": {
+          "count": 2,
+          "mean": 0.006578428670763969,
+          "median": 0.006578428670763969,
+          "q25": -0.004679621197283268,
+          "q75": 0.017836478538811207
+        },
+        "alignment_change": {
+          "count": 2,
+          "mean": 0.0013612504117190838,
+          "median": 0.0013612504117190838,
+          "q25": -0.0010360812302678823,
+          "q75": 0.00375858205370605
+        },
+        "alignment_identity_abs_error": {
+          "count": 2,
+          "mean": 1.1343516215104113e-08,
+          "median": 1.1343516215104113e-08,
+          "q25": 1.0532395910826421e-08,
+          "q75": 1.2154636519381805e-08
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 2,
+          "mean": 0.00032086521387100775,
+          "median": 0.00032086521387100775,
+          "q25": 0.00031031891703606207,
+          "q75": 0.0003314115107059534
+        },
+        "response_identity_abs_error": {
+          "count": 2,
+          "mean": 1.9734724077125065e-08,
+          "median": 1.9734724077125065e-08,
+          "q25": 1.9493629821454306e-08,
+          "q75": 1.9975818332795825e-08
+        },
+        "support_pair_count": 2,
+        "support_pearson": 1.0,
+        "support_spearman": 1.0,
+        "support_sign_agreement": 1.0,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_6_10": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_11_20": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_gt_20": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      }
+    },
+    "0.4": {
+      "gap_le_5": {
+        "event_count": 2,
+        "attempted_count": 2,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 2,
+          "mean": 0.01980382186592588,
+          "median": 0.01980382186592588,
+          "q25": 0.0182748929571398,
+          "q75": 0.02133275077471196
+        },
+        "response_nre": {
+          "count": 2,
+          "mean": 0.7435843868901233,
+          "median": 0.7435843868901233,
+          "q25": 0.7431003892373249,
+          "q75": 0.7440683845429218
+        },
+        "response_norm_ratio": {
+          "count": 2,
+          "mean": 2.103554933491785,
+          "median": 2.103554933491785,
+          "q25": 2.083750172283193,
+          "q75": 2.1233596947003774
+        },
+        "actual_delta_update_norm": {
+          "count": 2,
+          "mean": 1.1284199953079224,
+          "median": 1.1284199953079224,
+          "q25": 1.1264804005622864,
+          "q75": 1.1303595900535583
+        },
+        "predicted_delta_update_norm": {
+          "count": 2,
+          "mean": 0.537297746058735,
+          "median": 0.537297746058735,
+          "q25": 0.5331640903735164,
+          "q75": 0.5414314017439537
+        },
+        "realized_support": {
+          "count": 2,
+          "mean": 0.005614935420453548,
+          "median": 0.005614935420453548,
+          "q25": -0.0020946445874869823,
+          "q75": 0.01332451542839408
+        },
+        "alignment_change": {
+          "count": 2,
+          "mean": 0.002338348072953522,
+          "median": 0.002338348072953522,
+          "q25": -0.0009429322672076523,
+          "q75": 0.005619628413114697
+        },
+        "alignment_identity_abs_error": {
+          "count": 2,
+          "mean": 1.4273872305479995e-09,
+          "median": 1.4273872305479995e-09,
+          "q25": 7.277954903236322e-10,
+          "q75": 2.126978970772367e-09
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 2,
+          "mean": 0.0006432354450225941,
+          "median": 0.0006432354450225941,
+          "q25": 0.0006214201450348011,
+          "q75": 0.0006650507450103871
+        },
+        "response_identity_abs_error": {
+          "count": 2,
+          "mean": 2.2449896164289385e-08,
+          "median": 2.2449896164289385e-08,
+          "q25": 2.2106297237201034e-08,
+          "q75": 2.2793495091377736e-08
+        },
+        "support_pair_count": 2,
+        "support_pearson": 1.0,
+        "support_spearman": 1.0,
+        "support_sign_agreement": 1.0,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_6_10": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_11_20": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      },
+      "gap_gt_20": {
+        "event_count": 0,
+        "attempted_count": 0,
+        "skipped_count": 0,
+        "response_cosine": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_nre": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_norm_ratio": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "actual_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "predicted_delta_update_norm": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "realized_support": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_change": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "alignment_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "epsilon_geometry_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "response_identity_abs_error": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "q25": null,
+          "q75": null
+        },
+        "support_pair_count": 0,
+        "support_pearson": null,
+        "support_spearman": null,
+        "support_sign_agreement": null,
+        "predicted_active_count": 0,
+        "predicted_active_helpful_fraction": null
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "seed": 1,
+  "decision": {
+    "category": "NOT SUPPORTED",
+    "reason": "Neither fixed small ratio satisfies even the pre-registered limited-support combination of response, support, helpfulness, and count criteria."
+  },
+  "parity": {
+    "passed": true,
+    "seed": 1,
+    "rounds": 10,
+    "selected_clients_match": true,
+    "round_accuracy_match": true,
+    "max_accuracy_abs_delta": 3.896484344068085e-07,
+    "global_state_sha256_match": true,
+    "shadow_event_count": 10,
+    "tolerance": 1e-06
+  },
+  "max_diagnostic_cpu_history_gib": 4.136338748037815,
+  "event_count": 1365,
+  "valid_event_count": 1365
+}

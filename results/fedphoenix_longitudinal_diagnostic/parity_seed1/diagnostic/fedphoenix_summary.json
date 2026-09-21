@@ -1,0 +1,418 @@
+{
+  "source_algorithm": "FedPhoenix",
+  "seed": 1,
+  "monitored_clients": [
+    16,
+    18,
+    42,
+    62,
+    64,
+    65,
+    80,
+    88,
+    96,
+    98
+  ],
+  "monitored_client_visits": {
+    "16": 1,
+    "18": 0,
+    "42": 0,
+    "62": 1,
+    "64": 1,
+    "65": 2,
+    "80": 2,
+    "88": 2,
+    "96": 4,
+    "98": 0
+  },
+  "event_count": 13,
+  "transfer_event_count": 2,
+  "parameter_numel": 33646666,
+  "max_diagnostic_cpu_history_bytes": 2826319944,
+  "max_diagnostic_cpu_history_gib": 2.632215566933155,
+  "accuracy": {
+    "rounds": 10,
+    "final": 29.729999542236328,
+    "best": 32.41999816894531,
+    "best_round": 5
+  },
+  "metrics": {
+    "local_update_norm": {
+      "count": 13,
+      "mean": 1.6524883692081158,
+      "median": 1.4306814670562744,
+      "q25": 1.1414204835891724,
+      "q75": 2.060925006866455
+    },
+    "dispatch_minus_global_norm": {
+      "count": 13,
+      "mean": 6.27645048728356,
+      "median": 6.272400379180908,
+      "q25": 6.053503036499023,
+      "q75": 6.464497089385986
+    },
+    "input_change_norm": {
+      "count": 6,
+      "mean": 9.53863779703776,
+      "median": 9.207627296447754,
+      "q25": 9.145086765289307,
+      "q75": 9.342095375061035
+    },
+    "response_change_norm": {
+      "count": 6,
+      "mean": 2.060436765352885,
+      "median": 1.6779226064682007,
+      "q25": 1.4678901731967926,
+      "q75": 2.6645258963108063
+    },
+    "secant_gain": {
+      "count": 6,
+      "mean": 0.21373128385684267,
+      "median": 0.18317937561226072,
+      "q25": 0.1593824448768144,
+      "q75": 0.24551471469897074
+    },
+    "response_change_ratio": {
+      "count": 6,
+      "mean": 0.6713098082683673,
+      "median": 0.6694111501789253,
+      "q25": 0.6599169142485952,
+      "q75": 0.6852083218344599
+    },
+    "h_norm": {
+      "count": 6,
+      "mean": 0.21376517911752066,
+      "median": 0.18313805013895035,
+      "q25": 0.15938103571534157,
+      "q75": 0.24543587118387222
+    }
+  },
+  "similarity_subsets": {
+    "all": {
+      "count": 2,
+      "insufficient_count": true,
+      "input_direction_cosine": {
+        "count": 2,
+        "mean": -0.47006358123574726,
+        "median": -0.47006358123574726,
+        "q25": -0.4726202857275812,
+        "q75": -0.46750687674391334
+      },
+      "response_direction_cosine": {
+        "count": 2,
+        "mean": -0.49164670916176967,
+        "median": -0.49164670916176967,
+        "q25": -0.4961723785880379,
+        "q75": -0.48712103973550147
+      },
+      "response_prediction_nre": {
+        "count": 2,
+        "mean": 0.8611311054000319,
+        "median": 0.8611311054000319,
+        "q25": 0.8598577945853638,
+        "q75": 0.8624044162147001
+      },
+      "response_norm_ratio": {
+        "count": 2,
+        "mean": 0.9868623674572874,
+        "median": 0.9868623674572874,
+        "q25": 0.9809619464804874,
+        "q75": 0.9927627884340873
+      },
+      "support_pair_count": 2,
+      "support_pearson": 1.0,
+      "support_spearman": 1.0,
+      "support_sign_agreement_rate": 0.0
+    },
+    "input_cos_gt_0": {
+      "count": 0,
+      "insufficient_count": true,
+      "input_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_prediction_nre": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_norm_ratio": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "support_pair_count": 0,
+      "support_pearson": null,
+      "support_spearman": null,
+      "support_sign_agreement_rate": null
+    },
+    "input_cos_ge_0_5": {
+      "count": 0,
+      "insufficient_count": true,
+      "input_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_prediction_nre": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_norm_ratio": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "support_pair_count": 0,
+      "support_pearson": null,
+      "support_spearman": null,
+      "support_sign_agreement_rate": null
+    },
+    "input_cos_ge_0_7": {
+      "count": 0,
+      "insufficient_count": true,
+      "input_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_prediction_nre": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_norm_ratio": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "support_pair_count": 0,
+      "support_pearson": null,
+      "support_spearman": null,
+      "support_sign_agreement_rate": null
+    },
+    "input_cos_ge_0_9": {
+      "count": 0,
+      "insufficient_count": true,
+      "input_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_prediction_nre": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_norm_ratio": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "support_pair_count": 0,
+      "support_pearson": null,
+      "support_spearman": null,
+      "support_sign_agreement_rate": null
+    }
+  },
+  "participation_gap_bins": {
+    "gap_le_5": {
+      "count": 2,
+      "insufficient_count": true,
+      "input_direction_cosine": {
+        "count": 2,
+        "mean": -0.47006358123574726,
+        "median": -0.47006358123574726,
+        "q25": -0.4726202857275812,
+        "q75": -0.46750687674391334
+      },
+      "response_direction_cosine": {
+        "count": 2,
+        "mean": -0.49164670916176967,
+        "median": -0.49164670916176967,
+        "q25": -0.4961723785880379,
+        "q75": -0.48712103973550147
+      },
+      "response_prediction_nre": {
+        "count": 2,
+        "mean": 0.8611311054000319,
+        "median": 0.8611311054000319,
+        "q25": 0.8598577945853638,
+        "q75": 0.8624044162147001
+      },
+      "response_norm_ratio": {
+        "count": 2,
+        "mean": 0.9868623674572874,
+        "median": 0.9868623674572874,
+        "q25": 0.9809619464804874,
+        "q75": 0.9927627884340873
+      },
+      "support_pair_count": 2,
+      "support_pearson": 1.0,
+      "support_spearman": 1.0,
+      "support_sign_agreement_rate": 0.0
+    },
+    "gap_6_10": {
+      "count": 0,
+      "insufficient_count": true,
+      "input_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_prediction_nre": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_norm_ratio": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "support_pair_count": 0,
+      "support_pearson": null,
+      "support_spearman": null,
+      "support_sign_agreement_rate": null
+    },
+    "gap_11_20": {
+      "count": 0,
+      "insufficient_count": true,
+      "input_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_prediction_nre": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_norm_ratio": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "support_pair_count": 0,
+      "support_pearson": null,
+      "support_spearman": null,
+      "support_sign_agreement_rate": null
+    },
+    "gap_gt_20": {
+      "count": 0,
+      "insufficient_count": true,
+      "input_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_direction_cosine": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_prediction_nre": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "response_norm_ratio": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "q25": null,
+        "q75": null
+      },
+      "support_pair_count": 0,
+      "support_pearson": null,
+      "support_spearman": null,
+      "support_sign_agreement_rate": null
+    }
+  }
+}
