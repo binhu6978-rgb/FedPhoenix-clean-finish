@@ -97,6 +97,24 @@ def args_parser():
         default=20,
         help="maximum participation gap eligible for TargetedFedPhoenix history",
     )
+    parser.add_argument(
+        "--tfp_score_type",
+        choices=["update_norm", "residual"],
+        default="update_norm",
+        help="history score used for TargetedFedPhoenix kernel selection",
+    )
+    parser.add_argument(
+        "--tfp_target_layers",
+        type=str,
+        default="all",
+        help="all or comma-separated exact Conv2d module names eligible for targeting",
+    )
+    parser.add_argument(
+        "--tfp_start_round",
+        type=int,
+        default=1,
+        help="one-indexed first round where history-informed targeting is allowed",
+    )
 
     # InteractionDispatch
     parser.add_argument(

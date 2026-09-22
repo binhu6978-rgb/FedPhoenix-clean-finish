@@ -261,9 +261,14 @@ class FedPhoenixHistoryObserver:
                 current[client_id][layer_name] = {
                     "scores": score_values,
                     "validity": score_validity,
+                    "own_clean": own_clean.detach().clone(),
                     "reset_eligible_now": bool(item["reset_eligible"][layer_name]),
                 }
         return current
+
+    def score_current_round(self, interactions):
+        """Public, side-effect-free clean leave-one-out score computation."""
+        return self._score_current_round(interactions)
 
     def _cross_comparisons(
         self, client_id, layer_name, score_type, current_score, current_valid, reset_budget, round_idx

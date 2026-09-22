@@ -7,6 +7,7 @@ import torch
 from torch import nn
 
 from Algorithm.FedPhoenixHistoryObserver import (
+    FedPhoenixHistoryObserver,
     capture_global_rng_state,
     global_rng_state_equal,
 )
@@ -103,6 +104,32 @@ def wide_fixture(task_seed):
         "num_reset_kernels": 8,
     }
     return global_model, task, trace
+
+
+def observer_interaction(observer, model, client_id, client_weight, updates, resets):
+    dispatch = copy.deepcopy(model.state_dict())
+    returned = copy.deepcopy(dispatch)
+    for layer_name, values in updates.items():
+        parameter_name = f"{layer_name}.weight"
+        for kernel_index, value in enumerate(values):
+            returned[parameter_name][kernel_index].add_(float(value))
+    trace_layers = []
+    for layer_name, indices in resets.items():
+        module = getattr(model, layer_name)
+        trace_layers.append(
+            {
+                "name": layer_name,
+                "num_kernels": int(module.weight.shape[0]),
+                "reset_indices": list(indices),
+            }
+        )
+    return observer.build_interaction(
+        client_id,
+        client_weight,
+        dispatch,
+        returned,
+        {"seed": 100 + client_id, "layers": trace_layers},
+    )
 
 
 class TargetedFedPhoenixTests(unittest.TestCase):
@@ -396,6 +423,133 @@ class TargetedFedPhoenixTests(unittest.TestCase):
             set(layer["baseline_reset_indices"]) - set(layer["final_reset_indices"]),
         )
         self.assertEqual(layer["donor_pairing_policy"], "sha256_private_priority")
+
+    def test_34_non_target_layer_is_exact_baseline(self):
+        global_model, task, trace = baseline_fixture(active_layer="conv1")
+        before = copy.deepcopy(task.state_dict())
+        controller = TargetedFedPhoenixController(
+            global_model, 0.5, 20, target_layers="conv2"
+        )
+        add_history(controller, [1, 2, 3, 100], layer="conv1")
+        _, final = controller.retarget_task(global_model, task, trace, 3, 2)
+        self.assertTrue(state_equal(before, task.state_dict()))
+        self.assertEqual(final["layers"][0]["fallback_reason"], "non_target_layer")
+
+    def test_35_start_round_is_exact_baseline_until_enabled(self):
+        global_model, task, trace = baseline_fixture()
+        before = copy.deepcopy(task.state_dict())
+        controller = TargetedFedPhoenixController(
+            global_model, 0.5, 20, start_round=151
+        )
+        add_history(controller, [1, 2, 3, 100], round_number=149)
+        _, final = controller.retarget_task(global_model, task, trace, 3, 150)
+        self.assertTrue(state_equal(before, task.state_dict()))
+        self.assertEqual(final["layers"][0]["fallback_reason"], "before_start_round")
+
+    def test_36_update_norm_default_compatibility(self):
+        outputs = []
+        for explicit in (False, True):
+            global_model, task, trace = baseline_fixture()
+            kwargs = (
+                {"score_type": "update_norm", "target_layers": "all", "start_round": 1}
+                if explicit
+                else {}
+            )
+            controller = TargetedFedPhoenixController(global_model, 0.5, 20, **kwargs)
+            add_history(controller, [1, 2, 3, 100])
+            _, final = controller.retarget_task(global_model, task, trace, 3, 2)
+            outputs.append((task.state_dict(), final["layers"][0]))
+        self.assertTrue(state_equal(outputs[0][0], outputs[1][0]))
+        for field in (
+            "targeted_indices", "random_kept_indices", "final_reset_indices",
+            "donor_mapping", "fallback_reason",
+        ):
+            self.assertEqual(outputs[0][1][field], outputs[1][1][field])
+
+    def _residual_scores(self):
+        model = TinyConvNet()
+        observer = FedPhoenixHistoryObserver(model, reset_ratio=0.5)
+        interactions = [
+            observer_interaction(
+                observer, model, 0, 1, {"conv1": [1, 1, 1, 1]}, {"conv1": [0]}
+            ),
+            observer_interaction(
+                observer, model, 1, 2, {"conv1": [3, 3, 3, 3]}, {"conv1": [1]}
+            ),
+            observer_interaction(
+                observer, model, 2, 1, {"conv1": [9, 9, 9, 9]}, {"conv1": []}
+            ),
+        ]
+        return model, observer, observer.score_current_round(interactions)
+
+    def test_37_residual_own_reset_is_invalid(self):
+        _, _, current = self._residual_scores()
+        self.assertFalse(bool(current[0]["conv1"]["validity"]["residual"][0]))
+
+    def test_38_residual_peer_reset_is_excluded(self):
+        _, _, current = self._residual_scores()
+        # Client 1 is reset at kernel 1, so client 0's only clean peer is client 2.
+        self.assertAlmostEqual(
+            float(current[0]["conv1"]["scores"]["residual"][1]), 8.0
+        )
+
+    def test_39_residual_is_leave_one_out_and_data_size_weighted(self):
+        _, _, current = self._residual_scores()
+        # Excluding client 0 gives peer consensus (2*3 + 1*9) / 3 = 5.
+        self.assertAlmostEqual(
+            float(current[0]["conv1"]["scores"]["residual"][2]), 4.0
+        )
+
+    def test_40_residual_no_clean_peer_is_invalid(self):
+        model = TinyConvNet()
+        observer = FedPhoenixHistoryObserver(model, reset_ratio=0.5)
+        interaction = observer_interaction(
+            observer, model, 0, 1, {"conv1": [1, 1, 1, 1]}, {"conv1": []}
+        )
+        current = observer.score_current_round([interaction])
+        self.assertFalse(bool(current[0]["conv1"]["validity"]["residual"].any()))
+
+    def test_41_residual_round_commit_is_cpu_scalar_history(self):
+        model, _, current = self._residual_scores()
+        controller = TargetedFedPhoenixController(model, score_type="residual")
+        stats = controller.observe_residual_round(current, 1)
+        self.assertGreater(stats["valid_kernels"], 0)
+        self.assertGreater(stats["own_reset_invalid"], 0)
+        inventory = controller.history_inventory()
+        self.assertTrue(inventory["all_cpu"])
+        self.assertTrue(inventory["scalar_kernel_arrays_only"])
+
+    def test_42_residual_current_round_cannot_leak_into_dispatch(self):
+        global_model, task, trace = baseline_fixture()
+        controller = TargetedFedPhoenixController(
+            global_model, 0.5, 20, score_type="residual"
+        )
+        add_history(controller, [1, 2, 3, 100], round_number=1)
+        _, before_commit = controller.retarget_task(
+            global_model, task, trace, 3, 2
+        )
+        self.assertEqual(before_commit["layers"][0]["targeted_indices"], [3])
+        model, _, current = self._residual_scores()
+        residual_controller = TargetedFedPhoenixController(
+            model, 0.5, 20, score_type="residual"
+        )
+        self.assertEqual(residual_controller.history, {})
+        residual_controller.observe_residual_round(current, 2)
+        self.assertTrue(all(entry["last_round"] == 2 for entry in residual_controller.history.values()))
+
+    def test_43_residual_score_and_commit_preserve_global_rng(self):
+        model = TinyConvNet()
+        observer = FedPhoenixHistoryObserver(model, reset_ratio=0.5)
+        interactions = [
+            observer_interaction(observer, model, 0, 1, {}, {}),
+            observer_interaction(observer, model, 1, 1, {}, {}),
+        ]
+        controller = TargetedFedPhoenixController(model, score_type="residual")
+        before = capture_global_rng_state()
+        current = observer.score_current_round(interactions)
+        controller.observe_residual_round(current, 1)
+        after = capture_global_rng_state()
+        self.assertTrue(global_rng_state_equal(before, after))
 
 
 if __name__ == "__main__":

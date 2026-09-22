@@ -14,6 +14,7 @@ import numpy as np
 import torch
 
 from Algorithm.FedPhoenixHistoryObserver import (
+    FedPhoenixHistoryObserver,
     capture_global_rng_state,
     global_rng_state_equal,
 )
@@ -24,15 +25,20 @@ from models.Update import LocalUpdate_FedAvg
 
 ROUND_FIELDS = [
     "round", "algorithm", "seed", "tfp_target_ratio", "tfp_max_history_gap",
+    "tfp_score_type", "tfp_target_layers", "tfp_start_round",
     "test_accuracy", "round_train_seconds", "selected_clients", "task_seeds",
     "global_state_sha256", "clients_with_history", "clients_history_eligible",
     "clients_targeted", "clients_dispatch_changed", "clients_cold_start",
     "clients_stale", "clients_no_valid_history", "clients_no_target_slots",
+    "clients_before_start_round",
     "total_reset_slots", "targeted_reset_slots", "random_reset_slots",
     "actual_target_fraction", "baseline_random_overlap_slots",
     "baseline_random_overlap_rate", "replaced_reset_slots",
     "mean_history_gap_for_targeted", "history_memory_bytes",
     "controller_rng_unchanged", "failed_client_updates",
+    "residual_total_kernels", "residual_valid_kernels",
+    "residual_valid_fraction", "residual_own_reset_invalid",
+    "residual_no_clean_peer_invalid",
 ]
 
 LAYER_FIELDS = [
@@ -40,6 +46,7 @@ LAYER_FIELDS = [
     "random_slots", "targeted_clients", "baseline_random_overlap_slots",
     "replaced_reset_slots", "cold_start_count", "stale_history_count",
     "no_target_slots_count", "no_valid_history_count", "targeted_count",
+    "before_start_round_count", "non_target_layer_count",
 ]
 
 
@@ -128,6 +135,10 @@ def _client_round_counts(traces):
         and all(layer["fallback_reason"] == "no_target_slots" for layer in trace["layers"])
         for trace in traces
     )
+    before_start = sum(
+        any(layer["fallback_reason"] == "before_start_round" for layer in trace["layers"])
+        for trace in traces
+    )
     return {
         "clients_with_history": int(clients_with_history),
         "clients_history_eligible": int(eligible),
@@ -137,6 +148,7 @@ def _client_round_counts(traces):
         "clients_stale": int(stale),
         "clients_no_valid_history": int(no_valid),
         "clients_no_target_slots": int(no_slots),
+        "clients_before_start_round": int(before_start),
     }
 
 
@@ -154,6 +166,9 @@ def _summarize(paths, args, accuracies, controller, runtime_seconds, failed_clie
             "clients_no_valid_history", "clients_no_target_slots", "total_reset_slots",
             "targeted_reset_slots", "random_reset_slots",
             "baseline_random_overlap_slots", "replaced_reset_slots",
+            "clients_before_start_round", "residual_total_kernels",
+            "residual_valid_kernels", "residual_own_reset_invalid",
+            "residual_no_clean_peer_invalid",
         ):
             totals[key] += int(row[key])
     layer_totals = defaultdict(Counter)
@@ -181,12 +196,29 @@ def _summarize(paths, args, accuracies, controller, runtime_seconds, failed_clie
         "algorithm": args.algorithm,
         "tfp_target_ratio": float(args.tfp_target_ratio),
         "tfp_max_history_gap": int(args.tfp_max_history_gap),
+        "tfp_score_type": str(args.tfp_score_type),
+        "tfp_target_layers": str(args.tfp_target_layers),
+        "tfp_start_round": int(args.tfp_start_round),
         "seed": int(args.seed),
         "completed_rounds": len(accuracies),
         "peak_accuracy": float(max(accuracies)),
         "peak_round": int(np.argmax(accuracies)) + 1,
         "final_accuracy": float(accuracies[-1]),
         "last20_mean": float(np.mean(accuracies[-20:])),
+        "last50_mean": float(np.mean(accuracies[-50:])),
+        "rounds201_300_mean": (
+            float(np.mean(accuracies[200:300])) if len(accuracies) >= 300 else None
+        ),
+        "best_rolling5_mean": float(
+            max(np.mean(accuracies[index - 4:index + 1]) for index in range(4, len(accuracies)))
+        ),
+        "best_rolling5_end_round": int(
+            max(
+                range(4, len(accuracies)),
+                key=lambda index: np.mean(accuracies[index - 4:index + 1]),
+            )
+            + 1
+        ),
         "runtime_seconds": float(runtime_seconds),
         "client_statistics": dict(totals),
         "returning_history_target_rate": (
@@ -220,6 +252,14 @@ def _summarize(paths, args, accuracies, controller, runtime_seconds, failed_clie
             row["controller_rng_unchanged"].lower() == "true" for row in rounds
         ),
         "failed_client_updates": int(failed_clients),
+        "valid_residual_history_fraction": (
+            float(totals["residual_valid_kernels"] / totals["residual_total_kernels"])
+            if totals["residual_total_kernels"]
+            else None
+        ),
+        "residual_no_clean_peer_invalid_count": int(
+            totals["residual_no_clean_peer_invalid"]
+        ),
         "output_files": paths,
     }
     _json_dump(paths["summary"], summary)
@@ -243,6 +283,14 @@ def train_targeted_fedphoenix(
         net_glob,
         target_ratio=args.tfp_target_ratio,
         max_history_gap=args.tfp_max_history_gap,
+        score_type=args.tfp_score_type,
+        target_layers=args.tfp_target_layers,
+        start_round=args.tfp_start_round,
+    )
+    residual_observer = (
+        FedPhoenixHistoryObserver(net_glob, reset_ratio=args.reset)
+        if args.tfp_score_type == "residual"
+        else None
     )
     accuracies = []
     failed_clients = 0
@@ -274,6 +322,7 @@ def train_targeted_fedphoenix(
             w_locals = []
             lens = []
             final_traces = []
+            residual_interactions = []
 
             for task_id, selected_id in enumerate(selected):
                 client_id = int(selected_id)
@@ -307,13 +356,25 @@ def train_targeted_fedphoenix(
                 lens.append(len(dict_users[client_id]))
 
                 rng_before = capture_global_rng_state()
-                controller.observe(
-                    client_id=client_id,
-                    current_round=round_number,
-                    actual_dispatch_state=task_model.state_dict(),
-                    returned_state=returned_state,
-                    final_trace=final_trace,
-                )
+                if residual_observer is None:
+                    controller.observe(
+                        client_id=client_id,
+                        current_round=round_number,
+                        actual_dispatch_state=task_model.state_dict(),
+                        returned_state=returned_state,
+                        final_trace=final_trace,
+                    )
+                else:
+                    residual_interactions.append(
+                        residual_observer.build_interaction(
+                            client_id=client_id,
+                            client_weight=len(dict_users[client_id]),
+                            dispatch_state=task_model.state_dict(),
+                            returned_state=returned_state,
+                            task_trace=final_trace,
+                            task_id=task_id,
+                        )
+                    )
                 rng_after = capture_global_rng_state()
                 unchanged = global_rng_state_equal(rng_before, rng_after)
                 rng_unchanged = rng_unchanged and unchanged
@@ -334,6 +395,27 @@ def train_targeted_fedphoenix(
                     + "\n"
                 )
                 del net_local, local, returned_state
+
+            residual_statistics = {
+                "total_kernels": 0,
+                "valid_kernels": 0,
+                "valid_fraction": None,
+                "own_reset_invalid": 0,
+                "no_clean_peer_invalid": 0,
+            }
+            if residual_observer is not None:
+                rng_before = capture_global_rng_state()
+                current_scores = residual_observer.score_current_round(
+                    residual_interactions
+                )
+                residual_statistics = controller.observe_residual_round(
+                    current_scores, round_number
+                )
+                rng_after = capture_global_rng_state()
+                unchanged = global_rng_state_equal(rng_before, rng_after)
+                rng_unchanged = rng_unchanged and unchanged
+                if not unchanged:
+                    raise AssertionError("residual history observation changed global RNG state")
 
             trace_handle.flush()
             w_glob = Aggregation(w_locals, lens)
@@ -367,6 +449,9 @@ def train_targeted_fedphoenix(
                     "seed": int(args.seed),
                     "tfp_target_ratio": float(args.tfp_target_ratio),
                     "tfp_max_history_gap": int(args.tfp_max_history_gap),
+                    "tfp_score_type": str(args.tfp_score_type),
+                    "tfp_target_layers": str(args.tfp_target_layers),
+                    "tfp_start_round": int(args.tfp_start_round),
                     "test_accuracy": accuracy,
                     "round_train_seconds": float(train_seconds),
                     "selected_clients": json.dumps(
@@ -394,6 +479,15 @@ def train_targeted_fedphoenix(
                     "history_memory_bytes": controller.history_memory_bytes(),
                     "controller_rng_unchanged": bool(rng_unchanged),
                     "failed_client_updates": int(failed_clients),
+                    "residual_total_kernels": int(residual_statistics["total_kernels"]),
+                    "residual_valid_kernels": int(residual_statistics["valid_kernels"]),
+                    "residual_valid_fraction": residual_statistics["valid_fraction"],
+                    "residual_own_reset_invalid": int(
+                        residual_statistics["own_reset_invalid"]
+                    ),
+                    "residual_no_clean_peer_invalid": int(
+                        residual_statistics["no_clean_peer_invalid"]
+                    ),
                 }
             )
             layer_writer.writerows(_layer_round_rows(round_number, final_traces))
@@ -406,6 +500,7 @@ def train_targeted_fedphoenix(
                 f"replaced_slots={replaced_slots} history_bytes={controller.history_memory_bytes()}"
             )
             del task_models, baseline_traces, final_traces, w_locals, w_glob
+            del residual_interactions
             if args.device.type == "cuda":
                 torch.cuda.empty_cache()
 

@@ -1,0 +1,18 @@
+{
+  "rounds": 10,
+  "target_ratio": 0.0,
+  "selected_clients_exact": true,
+  "task_count": 100,
+  "task_seeds_exact": true,
+  "baseline_reset_masks_exact": true,
+  "final_reset_masks_exact": true,
+  "baseline_task_traces_exact": true,
+  "accuracy_exact_within_1e-6": true,
+  "maximum_accuracy_difference": 0.0,
+  "all_round_hashes_exact": true,
+  "targeted_metrics_hashes_exact": true,
+  "final_global_sha256_exact": true,
+  "baseline_final_sha256": "ef68434933199d80bb34ae08584a2e009f046e61f3635c49204e19e80e496515",
+  "targeted_final_sha256": "ef68434933199d80bb34ae08584a2e009f046e61f3635c49204e19e80e496515",
+  "passed": true
+}

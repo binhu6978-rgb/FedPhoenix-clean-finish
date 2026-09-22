@@ -74,15 +74,51 @@ def _priority_order(indices, task_seed, layer_name, namespace):
 class TargetedFedPhoenixController:
     """Latest-interaction client history plus deterministic task retargeting."""
 
-    def __init__(self, model, target_ratio=0.25, max_history_gap=20):
+    def __init__(
+        self,
+        model,
+        target_ratio=0.25,
+        max_history_gap=20,
+        score_type="update_norm",
+        target_layers="all",
+        start_round=1,
+    ):
         if not 0.0 <= float(target_ratio) <= 1.0:
             raise ValueError("target_ratio must be between zero and one")
         if int(max_history_gap) < 0:
             raise ValueError("max_history_gap must be non-negative")
+        if str(score_type) not in {"update_norm", "residual"}:
+            raise ValueError("score_type must be update_norm or residual")
+        if int(start_round) < 1:
+            raise ValueError("start_round must be one-indexed and positive")
         self.geometry = ConvKernelGeometry(model)
         self.target_ratio = float(target_ratio)
         self.max_history_gap = int(max_history_gap)
+        self.score_type = str(score_type)
+        self.start_round = int(start_round)
+        if isinstance(target_layers, str):
+            target_layers = target_layers.strip()
+            if target_layers == "all":
+                parsed_layers = None
+            else:
+                parsed_layers = {
+                    value.strip()
+                    for value in target_layers.split(",")
+                    if value.strip()
+                }
+                if not parsed_layers:
+                    raise ValueError("target_layers must be all or exact layer names")
+        else:
+            parsed_layers = {str(value) for value in target_layers}
+        if parsed_layers is not None:
+            unknown = sorted(parsed_layers.difference(self.geometry.by_name))
+            if unknown:
+                raise ValueError(f"unknown target convolution layers: {unknown}")
+        self.target_layers = parsed_layers
         self.history = {}
+
+    def _layer_is_targetable(self, layer_name):
+        return self.target_layers is None or layer_name in self.target_layers
 
     def _history_status(self, client_id, current_round):
         entry = self.history.get(int(client_id))
@@ -118,6 +154,11 @@ class TargetedFedPhoenixController:
         final_trace["history_gap"] = history_gap
         final_trace["target_ratio"] = self.target_ratio
         final_trace["max_history_gap"] = self.max_history_gap
+        final_trace["score_type"] = self.score_type
+        final_trace["target_layers"] = (
+            "all" if self.target_layers is None else sorted(self.target_layers)
+        )
+        final_trace["start_round"] = self.start_round
 
         baseline_state = baseline_task_model.state_dict()
         global_state = global_model.state_dict()
@@ -135,7 +176,11 @@ class TargetedFedPhoenixController:
             requested = int(math.floor(self.target_ratio * reset_count))
             targeted = []
 
-            if client_fallback is not None:
+            if int(current_round) < self.start_round:
+                fallback_reason = "before_start_round"
+            elif not self._layer_is_targetable(layer_name):
+                fallback_reason = "non_target_layer"
+            elif client_fallback is not None:
                 fallback_reason = client_fallback
             elif requested <= 0:
                 fallback_reason = "no_target_slots"
@@ -305,6 +350,57 @@ class TargetedFedPhoenixController:
             "last_round": int(current_round),
             "layers": layers,
         }
+
+    def observe_residual_round(self, current_scores, current_round):
+        """Commit one full round of observer-computed residual scalar history.
+
+        ``current_scores`` is the result of
+        :meth:`FedPhoenixHistoryObserver.score_current_round`.  The caller must
+        finish every dispatch/local update in the round before invoking this
+        method, so current-round values cannot influence current-round tasks.
+        """
+        statistics = {
+            "total_kernels": 0,
+            "valid_kernels": 0,
+            "own_reset_invalid": 0,
+            "no_clean_peer_invalid": 0,
+        }
+        for client_id, client_layers in current_scores.items():
+            layers = OrderedDict()
+            for geometry in self.geometry.layers:
+                layer_name = geometry["layer_name"]
+                current_layer = client_layers[layer_name]
+                score = current_layer["scores"]["residual"].detach().to(
+                    device="cpu", dtype=torch.float32
+                ).clone()
+                validity = current_layer["validity"]["residual"].detach().to(
+                    device="cpu", dtype=torch.bool
+                ).clone()
+                own_clean = current_layer["own_clean"].detach().to(
+                    device="cpu", dtype=torch.bool
+                )
+                total = int(validity.numel())
+                valid = int(validity.sum().item())
+                own_reset = int((~own_clean).sum().item())
+                statistics["total_kernels"] += total
+                statistics["valid_kernels"] += valid
+                statistics["own_reset_invalid"] += own_reset
+                statistics["no_clean_peer_invalid"] += total - valid - own_reset
+                layers[layer_name] = {
+                    "score": score,
+                    "validity": validity,
+                }
+            self.history[int(client_id)] = {
+                "last_round": int(current_round),
+                "layers": layers,
+            }
+        denominator = statistics["total_kernels"]
+        statistics["valid_fraction"] = (
+            float(statistics["valid_kernels"] / denominator)
+            if denominator
+            else None
+        )
+        return statistics
 
     def history_memory_bytes(self):
         total = 0
