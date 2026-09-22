@@ -1058,6 +1058,8 @@ if __name__ == '__main__':
         raise ValueError("id_tau must be non-negative")
     if args.id_max_step_ratio < 0:
         raise ValueError("id_max_step_ratio must be non-negative")
+    if args.id2_step_ratio < 0:
+        raise ValueError("id2_step_ratio must be non-negative")
     set_random_seed(args.seed)
     device_index = args.gpu
     torch.cuda.set_device(device_index)
@@ -1151,6 +1153,19 @@ if __name__ == '__main__':
             dataset_validation,
             dataset_final_test,
             dict_users,
+        )
+    elif args.algorithm == 'InteractionDispatchV2':
+        from Algorithm.Training_InteractionDispatchV2 import (
+            train_interaction_dispatch_v2,
+        )
+        train_interaction_dispatch_v2(
+            args,
+            net_glob,
+            dataset_train,
+            dataset_final_test,
+            dict_users,
+            evaluate_round_accuracy,
+            print_peak_accuracy,
         )
 
     elif args.algorithm == 'test':

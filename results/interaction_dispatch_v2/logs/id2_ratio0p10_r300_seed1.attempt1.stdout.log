@@ -1,0 +1,1261 @@
+Client partition: 100 clients, min=30, max=1447, mean=500.00, std=220.72
+Evaluation protocol: full server test set evaluated every round (10000 samples).
+VGG16(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (7): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): ReLU(inplace=True)
+    (10): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (12): ReLU(inplace=True)
+    (13): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (14): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (16): ReLU(inplace=True)
+    (17): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (18): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (19): ReLU(inplace=True)
+    (20): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (21): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (22): ReLU(inplace=True)
+    (23): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (24): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (25): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (26): ReLU(inplace=True)
+    (27): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (28): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (32): ReLU(inplace=True)
+    (33): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (36): ReLU(inplace=True)
+    (37): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (38): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (39): ReLU(inplace=True)
+    (40): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (41): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (42): ReLU(inplace=True)
+    (43): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (44): AdaptiveAvgPool2d(output_size=(1, 1))
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=512, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+  )
+  (fc): Linear(in_features=4096, out_features=10, bias=True)
+)
+********************************************************************************
+Round   0
+ROUND_ACCURACY method=InteractionDispatchV2 round=1 accuracy=10.100000
+InteractionDispatchV2 diagnostics: round=1 active=0 seen=10 observed=0 history_bytes=2691733280
+********************************************************************************
+Round   1
+ROUND_ACCURACY method=InteractionDispatchV2 round=2 accuracy=12.740000
+InteractionDispatchV2 diagnostics: round=2 active=0 seen=19 observed=1 history_bytes=5248879896
+********************************************************************************
+Round   2
+ROUND_ACCURACY method=InteractionDispatchV2 round=3 accuracy=14.130000
+InteractionDispatchV2 diagnostics: round=3 active=0 seen=26 observed=4 history_bytes=7536853184
+********************************************************************************
+Round   3
+ROUND_ACCURACY method=InteractionDispatchV2 round=4 accuracy=21.100000
+InteractionDispatchV2 diagnostics: round=4 active=0 seen=34 observed=5 history_bytes=9824826472
+********************************************************************************
+Round   4
+ROUND_ACCURACY method=InteractionDispatchV2 round=5 accuracy=39.200001
+InteractionDispatchV2 diagnostics: round=5 active=0 seen=38 observed=9 history_bytes=11439866440
+********************************************************************************
+Round   5
+ROUND_ACCURACY method=InteractionDispatchV2 round=6 accuracy=25.530001
+InteractionDispatchV2 diagnostics: round=6 active=0 seen=45 observed=11 history_bytes=13593253064
+********************************************************************************
+Round   6
+ROUND_ACCURACY method=InteractionDispatchV2 round=7 accuracy=35.860001
+InteractionDispatchV2 diagnostics: round=7 active=0 seen=54 observed=12 history_bytes=16150399680
+********************************************************************************
+Round   7
+ROUND_ACCURACY method=InteractionDispatchV2 round=8 accuracy=27.450001
+InteractionDispatchV2 diagnostics: round=8 active=0 seen=56 observed=19 history_bytes=17630852984
+********************************************************************************
+Round   8
+ROUND_ACCURACY method=InteractionDispatchV2 round=9 accuracy=37.450001
+InteractionDispatchV2 diagnostics: round=9 active=0 seen=59 observed=24 history_bytes=19111306288
+********************************************************************************
+Round   9
+ROUND_ACCURACY method=InteractionDispatchV2 round=10 accuracy=33.250000
+InteractionDispatchV2 diagnostics: round=10 active=0 seen=63 observed=28 history_bytes=20726346256
+********************************************************************************
+Round  10
+ROUND_ACCURACY method=InteractionDispatchV2 round=11 accuracy=45.340000
+InteractionDispatchV2 diagnostics: round=11 active=0 seen=67 observed=31 history_bytes=22206799560
+********************************************************************************
+Round  11
+ROUND_ACCURACY method=InteractionDispatchV2 round=12 accuracy=40.560001
+InteractionDispatchV2 diagnostics: round=12 active=2 seen=68 observed=35 history_bytes=23014319544
+********************************************************************************
+Round  12
+ROUND_ACCURACY method=InteractionDispatchV2 round=13 accuracy=43.270000
+InteractionDispatchV2 diagnostics: round=13 active=0 seen=71 observed=38 history_bytes=24225599520
+********************************************************************************
+Round  13
+ROUND_ACCURACY method=InteractionDispatchV2 round=14 accuracy=48.270000
+InteractionDispatchV2 diagnostics: round=14 active=3 seen=73 observed=42 history_bytes=25302292832
+********************************************************************************
+Round  14
+ROUND_ACCURACY method=InteractionDispatchV2 round=15 accuracy=48.080002
+InteractionDispatchV2 diagnostics: round=15 active=0 seen=75 observed=47 history_bytes=26513572808
+********************************************************************************
+Round  15
+ROUND_ACCURACY method=InteractionDispatchV2 round=16 accuracy=51.160000
+InteractionDispatchV2 diagnostics: round=16 active=0 seen=76 observed=52 history_bytes=27455679456
+********************************************************************************
+Round  16
+ROUND_ACCURACY method=InteractionDispatchV2 round=17 accuracy=53.810001
+InteractionDispatchV2 diagnostics: round=17 active=0 seen=77 observed=55 history_bytes=28128612776
+********************************************************************************
+Round  17
+ROUND_ACCURACY method=InteractionDispatchV2 round=18 accuracy=39.950001
+InteractionDispatchV2 diagnostics: round=18 active=0 seen=81 observed=58 history_bytes=29609066080
+********************************************************************************
+Round  18
+ROUND_ACCURACY method=InteractionDispatchV2 round=19 accuracy=48.509998
+InteractionDispatchV2 diagnostics: round=19 active=0 seen=84 observed=61 history_bytes=30820346056
+********************************************************************************
+Round  19
+ROUND_ACCURACY method=InteractionDispatchV2 round=20 accuracy=43.040001
+InteractionDispatchV2 diagnostics: round=20 active=2 seen=86 observed=61 history_bytes=31358692712
+********************************************************************************
+Round  20
+ROUND_ACCURACY method=InteractionDispatchV2 round=21 accuracy=52.560001
+InteractionDispatchV2 diagnostics: round=21 active=0 seen=87 observed=62 history_bytes=31762452704
+********************************************************************************
+Round  21
+ROUND_ACCURACY method=InteractionDispatchV2 round=22 accuracy=58.990002
+InteractionDispatchV2 diagnostics: round=22 active=2 seen=87 observed=65 history_bytes=32166212696
+********************************************************************************
+Round  22
+ROUND_ACCURACY method=InteractionDispatchV2 round=23 accuracy=50.270000
+InteractionDispatchV2 diagnostics: round=23 active=1 seen=88 observed=67 history_bytes=32704559352
+********************************************************************************
+Round  23
+ROUND_ACCURACY method=InteractionDispatchV2 round=24 accuracy=55.369999
+InteractionDispatchV2 diagnostics: round=24 active=0 seen=89 observed=69 history_bytes=33242906008
+********************************************************************************
+Round  24
+ROUND_ACCURACY method=InteractionDispatchV2 round=25 accuracy=57.320000
+InteractionDispatchV2 diagnostics: round=25 active=2 seen=90 observed=71 history_bytes=33781252664
+********************************************************************************
+Round  25
+ROUND_ACCURACY method=InteractionDispatchV2 round=26 accuracy=54.660000
+InteractionDispatchV2 diagnostics: round=26 active=1 seen=91 observed=72 history_bytes=34185012656
+********************************************************************************
+Round  26
+ROUND_ACCURACY method=InteractionDispatchV2 round=27 accuracy=56.139999
+InteractionDispatchV2 diagnostics: round=27 active=1 seen=91 observed=75 history_bytes=34588772648
+********************************************************************************
+Round  27
+ROUND_ACCURACY method=InteractionDispatchV2 round=28 accuracy=55.959999
+InteractionDispatchV2 diagnostics: round=28 active=1 seen=91 observed=76 history_bytes=34723359312
+********************************************************************************
+Round  28
+ROUND_ACCURACY method=InteractionDispatchV2 round=29 accuracy=50.660000
+InteractionDispatchV2 diagnostics: round=29 active=2 seen=92 observed=79 history_bytes=35396292632
+********************************************************************************
+Round  29
+ROUND_ACCURACY method=InteractionDispatchV2 round=30 accuracy=56.849998
+InteractionDispatchV2 diagnostics: round=30 active=2 seen=92 observed=81 history_bytes=35665465960
+********************************************************************************
+Round  30
+ROUND_ACCURACY method=InteractionDispatchV2 round=31 accuracy=59.020000
+InteractionDispatchV2 diagnostics: round=31 active=0 seen=94 observed=83 history_bytes=36472985944
+********************************************************************************
+Round  31
+ROUND_ACCURACY method=InteractionDispatchV2 round=32 accuracy=58.880001
+InteractionDispatchV2 diagnostics: round=32 active=1 seen=95 observed=84 history_bytes=36876745936
+********************************************************************************
+Round  32
+ROUND_ACCURACY method=InteractionDispatchV2 round=33 accuracy=59.430000
+InteractionDispatchV2 diagnostics: round=33 active=3 seen=96 observed=84 history_bytes=37145919264
+********************************************************************************
+Round  33
+ROUND_ACCURACY method=InteractionDispatchV2 round=34 accuracy=66.309998
+InteractionDispatchV2 diagnostics: round=34 active=1 seen=96 observed=87 history_bytes=37549679256
+********************************************************************************
+Round  34
+ROUND_ACCURACY method=InteractionDispatchV2 round=35 accuracy=54.970001
+InteractionDispatchV2 diagnostics: round=35 active=0 seen=96 observed=89 history_bytes=37818852584
+********************************************************************************
+Round  35
+ROUND_ACCURACY method=InteractionDispatchV2 round=36 accuracy=56.400002
+InteractionDispatchV2 diagnostics: round=36 active=3 seen=96 observed=89 history_bytes=37818852584
+********************************************************************************
+Round  36
+ROUND_ACCURACY method=InteractionDispatchV2 round=37 accuracy=63.980000
+InteractionDispatchV2 diagnostics: round=37 active=3 seen=96 observed=89 history_bytes=37818852584
+********************************************************************************
+Round  37
+ROUND_ACCURACY method=InteractionDispatchV2 round=38 accuracy=61.430000
+InteractionDispatchV2 diagnostics: round=38 active=1 seen=96 observed=91 history_bytes=38088025912
+********************************************************************************
+Round  38
+ROUND_ACCURACY method=InteractionDispatchV2 round=39 accuracy=59.330002
+InteractionDispatchV2 diagnostics: round=39 active=0 seen=96 observed=91 history_bytes=38088025912
+********************************************************************************
+Round  39
+ROUND_ACCURACY method=InteractionDispatchV2 round=40 accuracy=65.919998
+InteractionDispatchV2 diagnostics: round=40 active=2 seen=96 observed=91 history_bytes=38088025912
+********************************************************************************
+Round  40
+ROUND_ACCURACY method=InteractionDispatchV2 round=41 accuracy=67.660004
+InteractionDispatchV2 diagnostics: round=41 active=0 seen=96 observed=91 history_bytes=38088025912
+********************************************************************************
+Round  41
+ROUND_ACCURACY method=InteractionDispatchV2 round=42 accuracy=60.290001
+InteractionDispatchV2 diagnostics: round=42 active=0 seen=96 observed=91 history_bytes=38088025912
+********************************************************************************
+Round  42
+ROUND_ACCURACY method=InteractionDispatchV2 round=43 accuracy=59.790001
+InteractionDispatchV2 diagnostics: round=43 active=0 seen=97 observed=92 history_bytes=38491785904
+********************************************************************************
+Round  43
+ROUND_ACCURACY method=InteractionDispatchV2 round=44 accuracy=63.160000
+InteractionDispatchV2 diagnostics: round=44 active=3 seen=97 observed=92 history_bytes=38491785904
+********************************************************************************
+Round  44
+ROUND_ACCURACY method=InteractionDispatchV2 round=45 accuracy=53.950001
+InteractionDispatchV2 diagnostics: round=45 active=3 seen=97 observed=92 history_bytes=38491785904
+********************************************************************************
+Round  45
+ROUND_ACCURACY method=InteractionDispatchV2 round=46 accuracy=65.910004
+InteractionDispatchV2 diagnostics: round=46 active=0 seen=97 observed=92 history_bytes=38491785904
+********************************************************************************
+Round  46
+ROUND_ACCURACY method=InteractionDispatchV2 round=47 accuracy=63.509998
+InteractionDispatchV2 diagnostics: round=47 active=3 seen=98 observed=92 history_bytes=38760959232
+********************************************************************************
+Round  47
+ROUND_ACCURACY method=InteractionDispatchV2 round=48 accuracy=61.599998
+InteractionDispatchV2 diagnostics: round=48 active=2 seen=100 observed=92 history_bytes=39299305888
+********************************************************************************
+Round  48
+ROUND_ACCURACY method=InteractionDispatchV2 round=49 accuracy=62.270000
+InteractionDispatchV2 diagnostics: round=49 active=0 seen=100 observed=92 history_bytes=39299305888
+********************************************************************************
+Round  49
+ROUND_ACCURACY method=InteractionDispatchV2 round=50 accuracy=64.300003
+InteractionDispatchV2 diagnostics: round=50 active=3 seen=100 observed=93 history_bytes=39433892552
+********************************************************************************
+Round  50
+ROUND_ACCURACY method=InteractionDispatchV2 round=51 accuracy=60.410000
+InteractionDispatchV2 diagnostics: round=51 active=1 seen=100 observed=93 history_bytes=39433892552
+********************************************************************************
+Round  51
+ROUND_ACCURACY method=InteractionDispatchV2 round=52 accuracy=65.440002
+InteractionDispatchV2 diagnostics: round=52 active=3 seen=100 observed=93 history_bytes=39433892552
+********************************************************************************
+Round  52
+ROUND_ACCURACY method=InteractionDispatchV2 round=53 accuracy=63.139999
+InteractionDispatchV2 diagnostics: round=53 active=2 seen=100 observed=93 history_bytes=39433892552
+********************************************************************************
+Round  53
+ROUND_ACCURACY method=InteractionDispatchV2 round=54 accuracy=54.459999
+InteractionDispatchV2 diagnostics: round=54 active=3 seen=100 observed=94 history_bytes=39568479216
+********************************************************************************
+Round  54
+ROUND_ACCURACY method=InteractionDispatchV2 round=55 accuracy=67.019997
+InteractionDispatchV2 diagnostics: round=55 active=1 seen=100 observed=94 history_bytes=39568479216
+********************************************************************************
+Round  55
+ROUND_ACCURACY method=InteractionDispatchV2 round=56 accuracy=65.599998
+InteractionDispatchV2 diagnostics: round=56 active=1 seen=100 observed=94 history_bytes=39568479216
+********************************************************************************
+Round  56
+ROUND_ACCURACY method=InteractionDispatchV2 round=57 accuracy=63.560001
+InteractionDispatchV2 diagnostics: round=57 active=3 seen=100 observed=95 history_bytes=39703065880
+********************************************************************************
+Round  57
+ROUND_ACCURACY method=InteractionDispatchV2 round=58 accuracy=52.369999
+InteractionDispatchV2 diagnostics: round=58 active=1 seen=100 observed=95 history_bytes=39703065880
+********************************************************************************
+Round  58
+ROUND_ACCURACY method=InteractionDispatchV2 round=59 accuracy=62.380001
+InteractionDispatchV2 diagnostics: round=59 active=3 seen=100 observed=95 history_bytes=39703065880
+********************************************************************************
+Round  59
+ROUND_ACCURACY method=InteractionDispatchV2 round=60 accuracy=66.459999
+InteractionDispatchV2 diagnostics: round=60 active=0 seen=100 observed=95 history_bytes=39703065880
+********************************************************************************
+Round  60
+ROUND_ACCURACY method=InteractionDispatchV2 round=61 accuracy=68.050003
+InteractionDispatchV2 diagnostics: round=61 active=1 seen=100 observed=96 history_bytes=39837652544
+********************************************************************************
+Round  61
+ROUND_ACCURACY method=InteractionDispatchV2 round=62 accuracy=65.360001
+InteractionDispatchV2 diagnostics: round=62 active=2 seen=100 observed=98 history_bytes=40106825872
+********************************************************************************
+Round  62
+ROUND_ACCURACY method=InteractionDispatchV2 round=63 accuracy=66.540001
+InteractionDispatchV2 diagnostics: round=63 active=2 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  63
+ROUND_ACCURACY method=InteractionDispatchV2 round=64 accuracy=63.529999
+InteractionDispatchV2 diagnostics: round=64 active=1 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  64
+ROUND_ACCURACY method=InteractionDispatchV2 round=65 accuracy=64.650002
+InteractionDispatchV2 diagnostics: round=65 active=2 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  65
+ROUND_ACCURACY method=InteractionDispatchV2 round=66 accuracy=65.900002
+InteractionDispatchV2 diagnostics: round=66 active=3 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  66
+ROUND_ACCURACY method=InteractionDispatchV2 round=67 accuracy=64.940002
+InteractionDispatchV2 diagnostics: round=67 active=1 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  67
+ROUND_ACCURACY method=InteractionDispatchV2 round=68 accuracy=58.570000
+InteractionDispatchV2 diagnostics: round=68 active=0 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  68
+ROUND_ACCURACY method=InteractionDispatchV2 round=69 accuracy=69.739998
+InteractionDispatchV2 diagnostics: round=69 active=2 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  69
+ROUND_ACCURACY method=InteractionDispatchV2 round=70 accuracy=61.779999
+InteractionDispatchV2 diagnostics: round=70 active=0 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  70
+ROUND_ACCURACY method=InteractionDispatchV2 round=71 accuracy=61.930000
+InteractionDispatchV2 diagnostics: round=71 active=0 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  71
+ROUND_ACCURACY method=InteractionDispatchV2 round=72 accuracy=66.029999
+InteractionDispatchV2 diagnostics: round=72 active=2 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  72
+ROUND_ACCURACY method=InteractionDispatchV2 round=73 accuracy=66.769997
+InteractionDispatchV2 diagnostics: round=73 active=2 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  73
+ROUND_ACCURACY method=InteractionDispatchV2 round=74 accuracy=67.040001
+InteractionDispatchV2 diagnostics: round=74 active=2 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  74
+ROUND_ACCURACY method=InteractionDispatchV2 round=75 accuracy=71.760002
+InteractionDispatchV2 diagnostics: round=75 active=1 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  75
+ROUND_ACCURACY method=InteractionDispatchV2 round=76 accuracy=61.240002
+InteractionDispatchV2 diagnostics: round=76 active=0 seen=100 observed=99 history_bytes=40241412536
+********************************************************************************
+Round  76
+ROUND_ACCURACY method=InteractionDispatchV2 round=77 accuracy=65.610001
+InteractionDispatchV2 diagnostics: round=77 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  77
+ROUND_ACCURACY method=InteractionDispatchV2 round=78 accuracy=66.769997
+InteractionDispatchV2 diagnostics: round=78 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  78
+ROUND_ACCURACY method=InteractionDispatchV2 round=79 accuracy=67.449997
+InteractionDispatchV2 diagnostics: round=79 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  79
+ROUND_ACCURACY method=InteractionDispatchV2 round=80 accuracy=67.849998
+InteractionDispatchV2 diagnostics: round=80 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  80
+ROUND_ACCURACY method=InteractionDispatchV2 round=81 accuracy=66.180000
+InteractionDispatchV2 diagnostics: round=81 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  81
+ROUND_ACCURACY method=InteractionDispatchV2 round=82 accuracy=67.620003
+InteractionDispatchV2 diagnostics: round=82 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  82
+ROUND_ACCURACY method=InteractionDispatchV2 round=83 accuracy=68.290001
+InteractionDispatchV2 diagnostics: round=83 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  83
+ROUND_ACCURACY method=InteractionDispatchV2 round=84 accuracy=65.120003
+InteractionDispatchV2 diagnostics: round=84 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  84
+ROUND_ACCURACY method=InteractionDispatchV2 round=85 accuracy=66.480003
+InteractionDispatchV2 diagnostics: round=85 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  85
+ROUND_ACCURACY method=InteractionDispatchV2 round=86 accuracy=65.510002
+InteractionDispatchV2 diagnostics: round=86 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  86
+ROUND_ACCURACY method=InteractionDispatchV2 round=87 accuracy=66.489998
+InteractionDispatchV2 diagnostics: round=87 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  87
+ROUND_ACCURACY method=InteractionDispatchV2 round=88 accuracy=69.040001
+InteractionDispatchV2 diagnostics: round=88 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  88
+ROUND_ACCURACY method=InteractionDispatchV2 round=89 accuracy=72.059998
+InteractionDispatchV2 diagnostics: round=89 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  89
+ROUND_ACCURACY method=InteractionDispatchV2 round=90 accuracy=66.790001
+InteractionDispatchV2 diagnostics: round=90 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  90
+ROUND_ACCURACY method=InteractionDispatchV2 round=91 accuracy=68.720001
+InteractionDispatchV2 diagnostics: round=91 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  91
+ROUND_ACCURACY method=InteractionDispatchV2 round=92 accuracy=68.769997
+InteractionDispatchV2 diagnostics: round=92 active=5 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  92
+ROUND_ACCURACY method=InteractionDispatchV2 round=93 accuracy=66.809998
+InteractionDispatchV2 diagnostics: round=93 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  93
+ROUND_ACCURACY method=InteractionDispatchV2 round=94 accuracy=69.830002
+InteractionDispatchV2 diagnostics: round=94 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  94
+ROUND_ACCURACY method=InteractionDispatchV2 round=95 accuracy=69.300003
+InteractionDispatchV2 diagnostics: round=95 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  95
+ROUND_ACCURACY method=InteractionDispatchV2 round=96 accuracy=69.150002
+InteractionDispatchV2 diagnostics: round=96 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  96
+ROUND_ACCURACY method=InteractionDispatchV2 round=97 accuracy=66.279999
+InteractionDispatchV2 diagnostics: round=97 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  97
+ROUND_ACCURACY method=InteractionDispatchV2 round=98 accuracy=65.900002
+InteractionDispatchV2 diagnostics: round=98 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  98
+ROUND_ACCURACY method=InteractionDispatchV2 round=99 accuracy=64.809998
+InteractionDispatchV2 diagnostics: round=99 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round  99
+ROUND_ACCURACY method=InteractionDispatchV2 round=100 accuracy=63.660000
+InteractionDispatchV2 diagnostics: round=100 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 100
+ROUND_ACCURACY method=InteractionDispatchV2 round=101 accuracy=68.330002
+InteractionDispatchV2 diagnostics: round=101 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 101
+ROUND_ACCURACY method=InteractionDispatchV2 round=102 accuracy=71.480003
+InteractionDispatchV2 diagnostics: round=102 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 102
+ROUND_ACCURACY method=InteractionDispatchV2 round=103 accuracy=71.720001
+InteractionDispatchV2 diagnostics: round=103 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 103
+ROUND_ACCURACY method=InteractionDispatchV2 round=104 accuracy=69.980003
+InteractionDispatchV2 diagnostics: round=104 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 104
+ROUND_ACCURACY method=InteractionDispatchV2 round=105 accuracy=69.050003
+InteractionDispatchV2 diagnostics: round=105 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 105
+ROUND_ACCURACY method=InteractionDispatchV2 round=106 accuracy=68.230003
+InteractionDispatchV2 diagnostics: round=106 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 106
+ROUND_ACCURACY method=InteractionDispatchV2 round=107 accuracy=54.110001
+InteractionDispatchV2 diagnostics: round=107 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 107
+ROUND_ACCURACY method=InteractionDispatchV2 round=108 accuracy=70.519997
+InteractionDispatchV2 diagnostics: round=108 active=5 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 108
+ROUND_ACCURACY method=InteractionDispatchV2 round=109 accuracy=71.639999
+InteractionDispatchV2 diagnostics: round=109 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 109
+ROUND_ACCURACY method=InteractionDispatchV2 round=110 accuracy=70.889999
+InteractionDispatchV2 diagnostics: round=110 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 110
+ROUND_ACCURACY method=InteractionDispatchV2 round=111 accuracy=69.529999
+InteractionDispatchV2 diagnostics: round=111 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 111
+ROUND_ACCURACY method=InteractionDispatchV2 round=112 accuracy=71.080002
+InteractionDispatchV2 diagnostics: round=112 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 112
+ROUND_ACCURACY method=InteractionDispatchV2 round=113 accuracy=70.820000
+InteractionDispatchV2 diagnostics: round=113 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 113
+ROUND_ACCURACY method=InteractionDispatchV2 round=114 accuracy=68.059998
+InteractionDispatchV2 diagnostics: round=114 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 114
+ROUND_ACCURACY method=InteractionDispatchV2 round=115 accuracy=64.349998
+InteractionDispatchV2 diagnostics: round=115 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 115
+ROUND_ACCURACY method=InteractionDispatchV2 round=116 accuracy=70.970001
+InteractionDispatchV2 diagnostics: round=116 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 116
+ROUND_ACCURACY method=InteractionDispatchV2 round=117 accuracy=64.180000
+InteractionDispatchV2 diagnostics: round=117 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 117
+ROUND_ACCURACY method=InteractionDispatchV2 round=118 accuracy=68.339996
+InteractionDispatchV2 diagnostics: round=118 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 118
+ROUND_ACCURACY method=InteractionDispatchV2 round=119 accuracy=66.339996
+InteractionDispatchV2 diagnostics: round=119 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 119
+ROUND_ACCURACY method=InteractionDispatchV2 round=120 accuracy=65.599998
+InteractionDispatchV2 diagnostics: round=120 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 120
+ROUND_ACCURACY method=InteractionDispatchV2 round=121 accuracy=72.449997
+InteractionDispatchV2 diagnostics: round=121 active=5 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 121
+ROUND_ACCURACY method=InteractionDispatchV2 round=122 accuracy=67.760002
+InteractionDispatchV2 diagnostics: round=122 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 122
+ROUND_ACCURACY method=InteractionDispatchV2 round=123 accuracy=71.349998
+InteractionDispatchV2 diagnostics: round=123 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 123
+ROUND_ACCURACY method=InteractionDispatchV2 round=124 accuracy=63.950001
+InteractionDispatchV2 diagnostics: round=124 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 124
+ROUND_ACCURACY method=InteractionDispatchV2 round=125 accuracy=63.119999
+InteractionDispatchV2 diagnostics: round=125 active=5 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 125
+ROUND_ACCURACY method=InteractionDispatchV2 round=126 accuracy=63.380001
+InteractionDispatchV2 diagnostics: round=126 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 126
+ROUND_ACCURACY method=InteractionDispatchV2 round=127 accuracy=69.779999
+InteractionDispatchV2 diagnostics: round=127 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 127
+ROUND_ACCURACY method=InteractionDispatchV2 round=128 accuracy=67.050003
+InteractionDispatchV2 diagnostics: round=128 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 128
+ROUND_ACCURACY method=InteractionDispatchV2 round=129 accuracy=71.809998
+InteractionDispatchV2 diagnostics: round=129 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 129
+ROUND_ACCURACY method=InteractionDispatchV2 round=130 accuracy=66.949997
+InteractionDispatchV2 diagnostics: round=130 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 130
+ROUND_ACCURACY method=InteractionDispatchV2 round=131 accuracy=65.160004
+InteractionDispatchV2 diagnostics: round=131 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 131
+ROUND_ACCURACY method=InteractionDispatchV2 round=132 accuracy=73.360001
+InteractionDispatchV2 diagnostics: round=132 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 132
+ROUND_ACCURACY method=InteractionDispatchV2 round=133 accuracy=67.589996
+InteractionDispatchV2 diagnostics: round=133 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 133
+ROUND_ACCURACY method=InteractionDispatchV2 round=134 accuracy=71.349998
+InteractionDispatchV2 diagnostics: round=134 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 134
+ROUND_ACCURACY method=InteractionDispatchV2 round=135 accuracy=68.790001
+InteractionDispatchV2 diagnostics: round=135 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 135
+ROUND_ACCURACY method=InteractionDispatchV2 round=136 accuracy=64.760002
+InteractionDispatchV2 diagnostics: round=136 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 136
+ROUND_ACCURACY method=InteractionDispatchV2 round=137 accuracy=70.470001
+InteractionDispatchV2 diagnostics: round=137 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 137
+ROUND_ACCURACY method=InteractionDispatchV2 round=138 accuracy=72.720001
+InteractionDispatchV2 diagnostics: round=138 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 138
+ROUND_ACCURACY method=InteractionDispatchV2 round=139 accuracy=70.250000
+InteractionDispatchV2 diagnostics: round=139 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 139
+ROUND_ACCURACY method=InteractionDispatchV2 round=140 accuracy=72.550003
+InteractionDispatchV2 diagnostics: round=140 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 140
+ROUND_ACCURACY method=InteractionDispatchV2 round=141 accuracy=70.669998
+InteractionDispatchV2 diagnostics: round=141 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 141
+ROUND_ACCURACY method=InteractionDispatchV2 round=142 accuracy=63.060001
+InteractionDispatchV2 diagnostics: round=142 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 142
+ROUND_ACCURACY method=InteractionDispatchV2 round=143 accuracy=56.570000
+InteractionDispatchV2 diagnostics: round=143 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 143
+ROUND_ACCURACY method=InteractionDispatchV2 round=144 accuracy=72.379997
+InteractionDispatchV2 diagnostics: round=144 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 144
+ROUND_ACCURACY method=InteractionDispatchV2 round=145 accuracy=67.489998
+InteractionDispatchV2 diagnostics: round=145 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 145
+ROUND_ACCURACY method=InteractionDispatchV2 round=146 accuracy=61.580002
+InteractionDispatchV2 diagnostics: round=146 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 146
+ROUND_ACCURACY method=InteractionDispatchV2 round=147 accuracy=71.750000
+InteractionDispatchV2 diagnostics: round=147 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 147
+ROUND_ACCURACY method=InteractionDispatchV2 round=148 accuracy=71.000000
+InteractionDispatchV2 diagnostics: round=148 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 148
+ROUND_ACCURACY method=InteractionDispatchV2 round=149 accuracy=69.879997
+InteractionDispatchV2 diagnostics: round=149 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 149
+ROUND_ACCURACY method=InteractionDispatchV2 round=150 accuracy=72.720001
+InteractionDispatchV2 diagnostics: round=150 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 150
+ROUND_ACCURACY method=InteractionDispatchV2 round=151 accuracy=62.950001
+InteractionDispatchV2 diagnostics: round=151 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 151
+ROUND_ACCURACY method=InteractionDispatchV2 round=152 accuracy=60.250000
+InteractionDispatchV2 diagnostics: round=152 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 152
+ROUND_ACCURACY method=InteractionDispatchV2 round=153 accuracy=71.019997
+InteractionDispatchV2 diagnostics: round=153 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 153
+ROUND_ACCURACY method=InteractionDispatchV2 round=154 accuracy=72.309998
+InteractionDispatchV2 diagnostics: round=154 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 154
+ROUND_ACCURACY method=InteractionDispatchV2 round=155 accuracy=68.949997
+InteractionDispatchV2 diagnostics: round=155 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 155
+ROUND_ACCURACY method=InteractionDispatchV2 round=156 accuracy=70.690002
+InteractionDispatchV2 diagnostics: round=156 active=5 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 156
+ROUND_ACCURACY method=InteractionDispatchV2 round=157 accuracy=62.490002
+InteractionDispatchV2 diagnostics: round=157 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 157
+ROUND_ACCURACY method=InteractionDispatchV2 round=158 accuracy=69.699997
+InteractionDispatchV2 diagnostics: round=158 active=5 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 158
+ROUND_ACCURACY method=InteractionDispatchV2 round=159 accuracy=70.199997
+InteractionDispatchV2 diagnostics: round=159 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 159
+ROUND_ACCURACY method=InteractionDispatchV2 round=160 accuracy=71.349998
+InteractionDispatchV2 diagnostics: round=160 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 160
+ROUND_ACCURACY method=InteractionDispatchV2 round=161 accuracy=73.370003
+InteractionDispatchV2 diagnostics: round=161 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 161
+ROUND_ACCURACY method=InteractionDispatchV2 round=162 accuracy=71.180000
+InteractionDispatchV2 diagnostics: round=162 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 162
+ROUND_ACCURACY method=InteractionDispatchV2 round=163 accuracy=66.360001
+InteractionDispatchV2 diagnostics: round=163 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 163
+ROUND_ACCURACY method=InteractionDispatchV2 round=164 accuracy=70.059998
+InteractionDispatchV2 diagnostics: round=164 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 164
+ROUND_ACCURACY method=InteractionDispatchV2 round=165 accuracy=72.199997
+InteractionDispatchV2 diagnostics: round=165 active=6 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 165
+ROUND_ACCURACY method=InteractionDispatchV2 round=166 accuracy=71.910004
+InteractionDispatchV2 diagnostics: round=166 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 166
+ROUND_ACCURACY method=InteractionDispatchV2 round=167 accuracy=70.550003
+InteractionDispatchV2 diagnostics: round=167 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 167
+ROUND_ACCURACY method=InteractionDispatchV2 round=168 accuracy=69.570000
+InteractionDispatchV2 diagnostics: round=168 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 168
+ROUND_ACCURACY method=InteractionDispatchV2 round=169 accuracy=70.620003
+InteractionDispatchV2 diagnostics: round=169 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 169
+ROUND_ACCURACY method=InteractionDispatchV2 round=170 accuracy=67.709999
+InteractionDispatchV2 diagnostics: round=170 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 170
+ROUND_ACCURACY method=InteractionDispatchV2 round=171 accuracy=66.949997
+InteractionDispatchV2 diagnostics: round=171 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 171
+ROUND_ACCURACY method=InteractionDispatchV2 round=172 accuracy=68.879997
+InteractionDispatchV2 diagnostics: round=172 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 172
+ROUND_ACCURACY method=InteractionDispatchV2 round=173 accuracy=62.959999
+InteractionDispatchV2 diagnostics: round=173 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 173
+ROUND_ACCURACY method=InteractionDispatchV2 round=174 accuracy=67.330002
+InteractionDispatchV2 diagnostics: round=174 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 174
+ROUND_ACCURACY method=InteractionDispatchV2 round=175 accuracy=71.809998
+InteractionDispatchV2 diagnostics: round=175 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 175
+ROUND_ACCURACY method=InteractionDispatchV2 round=176 accuracy=72.540001
+InteractionDispatchV2 diagnostics: round=176 active=5 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 176
+ROUND_ACCURACY method=InteractionDispatchV2 round=177 accuracy=68.120003
+InteractionDispatchV2 diagnostics: round=177 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 177
+ROUND_ACCURACY method=InteractionDispatchV2 round=178 accuracy=69.300003
+InteractionDispatchV2 diagnostics: round=178 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 178
+ROUND_ACCURACY method=InteractionDispatchV2 round=179 accuracy=73.860001
+InteractionDispatchV2 diagnostics: round=179 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 179
+ROUND_ACCURACY method=InteractionDispatchV2 round=180 accuracy=72.930000
+InteractionDispatchV2 diagnostics: round=180 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 180
+ROUND_ACCURACY method=InteractionDispatchV2 round=181 accuracy=71.690002
+InteractionDispatchV2 diagnostics: round=181 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 181
+ROUND_ACCURACY method=InteractionDispatchV2 round=182 accuracy=62.160000
+InteractionDispatchV2 diagnostics: round=182 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 182
+ROUND_ACCURACY method=InteractionDispatchV2 round=183 accuracy=73.059998
+InteractionDispatchV2 diagnostics: round=183 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 183
+ROUND_ACCURACY method=InteractionDispatchV2 round=184 accuracy=71.059998
+InteractionDispatchV2 diagnostics: round=184 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 184
+ROUND_ACCURACY method=InteractionDispatchV2 round=185 accuracy=73.389999
+InteractionDispatchV2 diagnostics: round=185 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 185
+ROUND_ACCURACY method=InteractionDispatchV2 round=186 accuracy=67.449997
+InteractionDispatchV2 diagnostics: round=186 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 186
+ROUND_ACCURACY method=InteractionDispatchV2 round=187 accuracy=66.180000
+InteractionDispatchV2 diagnostics: round=187 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 187
+ROUND_ACCURACY method=InteractionDispatchV2 round=188 accuracy=72.610001
+InteractionDispatchV2 diagnostics: round=188 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 188
+ROUND_ACCURACY method=InteractionDispatchV2 round=189 accuracy=65.510002
+InteractionDispatchV2 diagnostics: round=189 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 189
+ROUND_ACCURACY method=InteractionDispatchV2 round=190 accuracy=69.160004
+InteractionDispatchV2 diagnostics: round=190 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 190
+ROUND_ACCURACY method=InteractionDispatchV2 round=191 accuracy=63.090000
+InteractionDispatchV2 diagnostics: round=191 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 191
+ROUND_ACCURACY method=InteractionDispatchV2 round=192 accuracy=67.970001
+InteractionDispatchV2 diagnostics: round=192 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 192
+ROUND_ACCURACY method=InteractionDispatchV2 round=193 accuracy=73.260002
+InteractionDispatchV2 diagnostics: round=193 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 193
+ROUND_ACCURACY method=InteractionDispatchV2 round=194 accuracy=71.639999
+InteractionDispatchV2 diagnostics: round=194 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 194
+ROUND_ACCURACY method=InteractionDispatchV2 round=195 accuracy=71.820000
+InteractionDispatchV2 diagnostics: round=195 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 195
+ROUND_ACCURACY method=InteractionDispatchV2 round=196 accuracy=74.500000
+InteractionDispatchV2 diagnostics: round=196 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 196
+ROUND_ACCURACY method=InteractionDispatchV2 round=197 accuracy=65.370003
+InteractionDispatchV2 diagnostics: round=197 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 197
+ROUND_ACCURACY method=InteractionDispatchV2 round=198 accuracy=70.010002
+InteractionDispatchV2 diagnostics: round=198 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 198
+ROUND_ACCURACY method=InteractionDispatchV2 round=199 accuracy=64.209999
+InteractionDispatchV2 diagnostics: round=199 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 199
+ROUND_ACCURACY method=InteractionDispatchV2 round=200 accuracy=57.049999
+InteractionDispatchV2 diagnostics: round=200 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 200
+ROUND_ACCURACY method=InteractionDispatchV2 round=201 accuracy=70.589996
+InteractionDispatchV2 diagnostics: round=201 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 201
+ROUND_ACCURACY method=InteractionDispatchV2 round=202 accuracy=71.260002
+InteractionDispatchV2 diagnostics: round=202 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 202
+ROUND_ACCURACY method=InteractionDispatchV2 round=203 accuracy=60.799999
+InteractionDispatchV2 diagnostics: round=203 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 203
+ROUND_ACCURACY method=InteractionDispatchV2 round=204 accuracy=70.129997
+InteractionDispatchV2 diagnostics: round=204 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 204
+ROUND_ACCURACY method=InteractionDispatchV2 round=205 accuracy=69.230003
+InteractionDispatchV2 diagnostics: round=205 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 205
+ROUND_ACCURACY method=InteractionDispatchV2 round=206 accuracy=72.820000
+InteractionDispatchV2 diagnostics: round=206 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 206
+ROUND_ACCURACY method=InteractionDispatchV2 round=207 accuracy=68.449997
+InteractionDispatchV2 diagnostics: round=207 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 207
+ROUND_ACCURACY method=InteractionDispatchV2 round=208 accuracy=66.669998
+InteractionDispatchV2 diagnostics: round=208 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 208
+ROUND_ACCURACY method=InteractionDispatchV2 round=209 accuracy=71.279999
+InteractionDispatchV2 diagnostics: round=209 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 209
+ROUND_ACCURACY method=InteractionDispatchV2 round=210 accuracy=72.400002
+InteractionDispatchV2 diagnostics: round=210 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 210
+ROUND_ACCURACY method=InteractionDispatchV2 round=211 accuracy=66.089996
+InteractionDispatchV2 diagnostics: round=211 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 211
+ROUND_ACCURACY method=InteractionDispatchV2 round=212 accuracy=74.900002
+InteractionDispatchV2 diagnostics: round=212 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 212
+ROUND_ACCURACY method=InteractionDispatchV2 round=213 accuracy=72.820000
+InteractionDispatchV2 diagnostics: round=213 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 213
+ROUND_ACCURACY method=InteractionDispatchV2 round=214 accuracy=73.430000
+InteractionDispatchV2 diagnostics: round=214 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 214
+ROUND_ACCURACY method=InteractionDispatchV2 round=215 accuracy=74.129997
+InteractionDispatchV2 diagnostics: round=215 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 215
+ROUND_ACCURACY method=InteractionDispatchV2 round=216 accuracy=71.849998
+InteractionDispatchV2 diagnostics: round=216 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 216
+ROUND_ACCURACY method=InteractionDispatchV2 round=217 accuracy=45.720001
+InteractionDispatchV2 diagnostics: round=217 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 217
+ROUND_ACCURACY method=InteractionDispatchV2 round=218 accuracy=73.190002
+InteractionDispatchV2 diagnostics: round=218 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 218
+ROUND_ACCURACY method=InteractionDispatchV2 round=219 accuracy=71.339996
+InteractionDispatchV2 diagnostics: round=219 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 219
+ROUND_ACCURACY method=InteractionDispatchV2 round=220 accuracy=71.510002
+InteractionDispatchV2 diagnostics: round=220 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 220
+ROUND_ACCURACY method=InteractionDispatchV2 round=221 accuracy=68.110001
+InteractionDispatchV2 diagnostics: round=221 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 221
+ROUND_ACCURACY method=InteractionDispatchV2 round=222 accuracy=65.269997
+InteractionDispatchV2 diagnostics: round=222 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 222
+ROUND_ACCURACY method=InteractionDispatchV2 round=223 accuracy=72.169998
+InteractionDispatchV2 diagnostics: round=223 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 223
+ROUND_ACCURACY method=InteractionDispatchV2 round=224 accuracy=73.400002
+InteractionDispatchV2 diagnostics: round=224 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 224
+ROUND_ACCURACY method=InteractionDispatchV2 round=225 accuracy=65.400002
+InteractionDispatchV2 diagnostics: round=225 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 225
+ROUND_ACCURACY method=InteractionDispatchV2 round=226 accuracy=66.760002
+InteractionDispatchV2 diagnostics: round=226 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 226
+ROUND_ACCURACY method=InteractionDispatchV2 round=227 accuracy=72.360001
+InteractionDispatchV2 diagnostics: round=227 active=5 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 227
+ROUND_ACCURACY method=InteractionDispatchV2 round=228 accuracy=59.130001
+InteractionDispatchV2 diagnostics: round=228 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 228
+ROUND_ACCURACY method=InteractionDispatchV2 round=229 accuracy=70.260002
+InteractionDispatchV2 diagnostics: round=229 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 229
+ROUND_ACCURACY method=InteractionDispatchV2 round=230 accuracy=73.599998
+InteractionDispatchV2 diagnostics: round=230 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 230
+ROUND_ACCURACY method=InteractionDispatchV2 round=231 accuracy=70.570000
+InteractionDispatchV2 diagnostics: round=231 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 231
+ROUND_ACCURACY method=InteractionDispatchV2 round=232 accuracy=73.959999
+InteractionDispatchV2 diagnostics: round=232 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 232
+ROUND_ACCURACY method=InteractionDispatchV2 round=233 accuracy=70.910004
+InteractionDispatchV2 diagnostics: round=233 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 233
+ROUND_ACCURACY method=InteractionDispatchV2 round=234 accuracy=64.589996
+InteractionDispatchV2 diagnostics: round=234 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 234
+ROUND_ACCURACY method=InteractionDispatchV2 round=235 accuracy=64.489998
+InteractionDispatchV2 diagnostics: round=235 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 235
+ROUND_ACCURACY method=InteractionDispatchV2 round=236 accuracy=73.379997
+InteractionDispatchV2 diagnostics: round=236 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 236
+ROUND_ACCURACY method=InteractionDispatchV2 round=237 accuracy=66.870003
+InteractionDispatchV2 diagnostics: round=237 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 237
+ROUND_ACCURACY method=InteractionDispatchV2 round=238 accuracy=69.180000
+InteractionDispatchV2 diagnostics: round=238 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 238
+ROUND_ACCURACY method=InteractionDispatchV2 round=239 accuracy=72.730003
+InteractionDispatchV2 diagnostics: round=239 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 239
+ROUND_ACCURACY method=InteractionDispatchV2 round=240 accuracy=64.980003
+InteractionDispatchV2 diagnostics: round=240 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 240
+ROUND_ACCURACY method=InteractionDispatchV2 round=241 accuracy=72.279999
+InteractionDispatchV2 diagnostics: round=241 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 241
+ROUND_ACCURACY method=InteractionDispatchV2 round=242 accuracy=72.269997
+InteractionDispatchV2 diagnostics: round=242 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 242
+ROUND_ACCURACY method=InteractionDispatchV2 round=243 accuracy=72.830002
+InteractionDispatchV2 diagnostics: round=243 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 243
+ROUND_ACCURACY method=InteractionDispatchV2 round=244 accuracy=71.400002
+InteractionDispatchV2 diagnostics: round=244 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 244
+ROUND_ACCURACY method=InteractionDispatchV2 round=245 accuracy=74.849998
+InteractionDispatchV2 diagnostics: round=245 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 245
+ROUND_ACCURACY method=InteractionDispatchV2 round=246 accuracy=74.379997
+InteractionDispatchV2 diagnostics: round=246 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 246
+ROUND_ACCURACY method=InteractionDispatchV2 round=247 accuracy=50.810001
+InteractionDispatchV2 diagnostics: round=247 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 247
+ROUND_ACCURACY method=InteractionDispatchV2 round=248 accuracy=70.669998
+InteractionDispatchV2 diagnostics: round=248 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 248
+ROUND_ACCURACY method=InteractionDispatchV2 round=249 accuracy=68.139999
+InteractionDispatchV2 diagnostics: round=249 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 249
+ROUND_ACCURACY method=InteractionDispatchV2 round=250 accuracy=72.339996
+InteractionDispatchV2 diagnostics: round=250 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 250
+ROUND_ACCURACY method=InteractionDispatchV2 round=251 accuracy=72.510002
+InteractionDispatchV2 diagnostics: round=251 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 251
+ROUND_ACCURACY method=InteractionDispatchV2 round=252 accuracy=71.559998
+InteractionDispatchV2 diagnostics: round=252 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 252
+ROUND_ACCURACY method=InteractionDispatchV2 round=253 accuracy=66.919998
+InteractionDispatchV2 diagnostics: round=253 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 253
+ROUND_ACCURACY method=InteractionDispatchV2 round=254 accuracy=68.080002
+InteractionDispatchV2 diagnostics: round=254 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 254
+ROUND_ACCURACY method=InteractionDispatchV2 round=255 accuracy=74.709999
+InteractionDispatchV2 diagnostics: round=255 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 255
+ROUND_ACCURACY method=InteractionDispatchV2 round=256 accuracy=70.050003
+InteractionDispatchV2 diagnostics: round=256 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 256
+ROUND_ACCURACY method=InteractionDispatchV2 round=257 accuracy=70.050003
+InteractionDispatchV2 diagnostics: round=257 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 257
+ROUND_ACCURACY method=InteractionDispatchV2 round=258 accuracy=71.389999
+InteractionDispatchV2 diagnostics: round=258 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 258
+ROUND_ACCURACY method=InteractionDispatchV2 round=259 accuracy=71.760002
+InteractionDispatchV2 diagnostics: round=259 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 259
+ROUND_ACCURACY method=InteractionDispatchV2 round=260 accuracy=73.910004
+InteractionDispatchV2 diagnostics: round=260 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 260
+ROUND_ACCURACY method=InteractionDispatchV2 round=261 accuracy=70.019997
+InteractionDispatchV2 diagnostics: round=261 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 261
+ROUND_ACCURACY method=InteractionDispatchV2 round=262 accuracy=72.300003
+InteractionDispatchV2 diagnostics: round=262 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 262
+ROUND_ACCURACY method=InteractionDispatchV2 round=263 accuracy=67.660004
+InteractionDispatchV2 diagnostics: round=263 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 263
+ROUND_ACCURACY method=InteractionDispatchV2 round=264 accuracy=70.290001
+InteractionDispatchV2 diagnostics: round=264 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 264
+ROUND_ACCURACY method=InteractionDispatchV2 round=265 accuracy=71.290001
+InteractionDispatchV2 diagnostics: round=265 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 265
+ROUND_ACCURACY method=InteractionDispatchV2 round=266 accuracy=72.690002
+InteractionDispatchV2 diagnostics: round=266 active=5 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 266
+ROUND_ACCURACY method=InteractionDispatchV2 round=267 accuracy=73.339996
+InteractionDispatchV2 diagnostics: round=267 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 267
+ROUND_ACCURACY method=InteractionDispatchV2 round=268 accuracy=63.130001
+InteractionDispatchV2 diagnostics: round=268 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 268
+ROUND_ACCURACY method=InteractionDispatchV2 round=269 accuracy=72.540001
+InteractionDispatchV2 diagnostics: round=269 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 269
+ROUND_ACCURACY method=InteractionDispatchV2 round=270 accuracy=66.459999
+InteractionDispatchV2 diagnostics: round=270 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 270
+ROUND_ACCURACY method=InteractionDispatchV2 round=271 accuracy=64.680000
+InteractionDispatchV2 diagnostics: round=271 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 271
+ROUND_ACCURACY method=InteractionDispatchV2 round=272 accuracy=55.240002
+InteractionDispatchV2 diagnostics: round=272 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 272
+ROUND_ACCURACY method=InteractionDispatchV2 round=273 accuracy=64.110001
+InteractionDispatchV2 diagnostics: round=273 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 273
+ROUND_ACCURACY method=InteractionDispatchV2 round=274 accuracy=49.259998
+InteractionDispatchV2 diagnostics: round=274 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 274
+ROUND_ACCURACY method=InteractionDispatchV2 round=275 accuracy=73.309998
+InteractionDispatchV2 diagnostics: round=275 active=5 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 275
+ROUND_ACCURACY method=InteractionDispatchV2 round=276 accuracy=69.360001
+InteractionDispatchV2 diagnostics: round=276 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 276
+ROUND_ACCURACY method=InteractionDispatchV2 round=277 accuracy=73.889999
+InteractionDispatchV2 diagnostics: round=277 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 277
+ROUND_ACCURACY method=InteractionDispatchV2 round=278 accuracy=67.419998
+InteractionDispatchV2 diagnostics: round=278 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 278
+ROUND_ACCURACY method=InteractionDispatchV2 round=279 accuracy=74.320000
+InteractionDispatchV2 diagnostics: round=279 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 279
+ROUND_ACCURACY method=InteractionDispatchV2 round=280 accuracy=72.089996
+InteractionDispatchV2 diagnostics: round=280 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 280
+ROUND_ACCURACY method=InteractionDispatchV2 round=281 accuracy=70.839996
+InteractionDispatchV2 diagnostics: round=281 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 281
+ROUND_ACCURACY method=InteractionDispatchV2 round=282 accuracy=66.949997
+InteractionDispatchV2 diagnostics: round=282 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 282
+ROUND_ACCURACY method=InteractionDispatchV2 round=283 accuracy=71.550003
+InteractionDispatchV2 diagnostics: round=283 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 283
+ROUND_ACCURACY method=InteractionDispatchV2 round=284 accuracy=68.480003
+InteractionDispatchV2 diagnostics: round=284 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 284
+ROUND_ACCURACY method=InteractionDispatchV2 round=285 accuracy=70.800003
+InteractionDispatchV2 diagnostics: round=285 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 285
+ROUND_ACCURACY method=InteractionDispatchV2 round=286 accuracy=63.290001
+InteractionDispatchV2 diagnostics: round=286 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 286
+ROUND_ACCURACY method=InteractionDispatchV2 round=287 accuracy=71.809998
+InteractionDispatchV2 diagnostics: round=287 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 287
+ROUND_ACCURACY method=InteractionDispatchV2 round=288 accuracy=71.519997
+InteractionDispatchV2 diagnostics: round=288 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 288
+ROUND_ACCURACY method=InteractionDispatchV2 round=289 accuracy=69.120003
+InteractionDispatchV2 diagnostics: round=289 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 289
+ROUND_ACCURACY method=InteractionDispatchV2 round=290 accuracy=73.889999
+InteractionDispatchV2 diagnostics: round=290 active=3 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 290
+ROUND_ACCURACY method=InteractionDispatchV2 round=291 accuracy=73.699997
+InteractionDispatchV2 diagnostics: round=291 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 291
+ROUND_ACCURACY method=InteractionDispatchV2 round=292 accuracy=70.510002
+InteractionDispatchV2 diagnostics: round=292 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 292
+ROUND_ACCURACY method=InteractionDispatchV2 round=293 accuracy=70.419998
+InteractionDispatchV2 diagnostics: round=293 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 293
+ROUND_ACCURACY method=InteractionDispatchV2 round=294 accuracy=71.519997
+InteractionDispatchV2 diagnostics: round=294 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 294
+ROUND_ACCURACY method=InteractionDispatchV2 round=295 accuracy=70.379997
+InteractionDispatchV2 diagnostics: round=295 active=2 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 295
+ROUND_ACCURACY method=InteractionDispatchV2 round=296 accuracy=71.339996
+InteractionDispatchV2 diagnostics: round=296 active=1 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 296
+ROUND_ACCURACY method=InteractionDispatchV2 round=297 accuracy=74.010002
+InteractionDispatchV2 diagnostics: round=297 active=0 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 297
+ROUND_ACCURACY method=InteractionDispatchV2 round=298 accuracy=70.370003
+InteractionDispatchV2 diagnostics: round=298 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 298
+ROUND_ACCURACY method=InteractionDispatchV2 round=299 accuracy=72.209999
+InteractionDispatchV2 diagnostics: round=299 active=4 seen=100 observed=100 history_bytes=40375999200
+********************************************************************************
+Round 299
+ROUND_ACCURACY method=InteractionDispatchV2 round=300 accuracy=73.389999
+InteractionDispatchV2 diagnostics: round=300 active=2 seen=100 observed=100 history_bytes=40375999200
+PEAK_ACCURACY method=InteractionDispatchV2 round=212 accuracy=74.900002

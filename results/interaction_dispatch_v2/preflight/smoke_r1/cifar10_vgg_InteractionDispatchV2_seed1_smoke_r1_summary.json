@@ -1,0 +1,22 @@
+{
+  "algorithm": "InteractionDispatchV2",
+  "seed": 1,
+  "epochs": 1,
+  "id2_step_ratio": 0.0,
+  "completed_rounds": 1,
+  "peak_accuracy": 10.100000381469727,
+  "peak_round": 1,
+  "final_accuracy": 10.100000381469727,
+  "last20_mean": 10.100000381469727,
+  "active_count": 0,
+  "active_rate": 0.0,
+  "reason_counts": {
+    "cold_start": 10
+  },
+  "maximum_history_memory_bytes": 2691733280,
+  "final_num_clients_seen": 10,
+  "final_num_clients_with_observation": 0,
+  "failed_client_updates": 0,
+  "metrics_csv": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\interaction_dispatch_v2\\preflight\\smoke_r1\\cifar10_vgg_InteractionDispatchV2_seed1_smoke_r1.csv",
+  "group_metrics_csv": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\interaction_dispatch_v2\\preflight\\smoke_r1\\cifar10_vgg_InteractionDispatchV2_seed1_smoke_r1_groups.csv"
+}

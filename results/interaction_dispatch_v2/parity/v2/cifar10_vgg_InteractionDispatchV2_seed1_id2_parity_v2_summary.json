@@ -1,0 +1,24 @@
+{
+  "algorithm": "InteractionDispatchV2",
+  "seed": 1,
+  "epochs": 10,
+  "id2_step_ratio": 0.0,
+  "completed_rounds": 10,
+  "peak_accuracy": 39.20000076293945,
+  "peak_round": 5,
+  "final_accuracy": 33.25,
+  "last20_mean": 25.681000423431396,
+  "active_count": 0,
+  "active_rate": 0.0,
+  "reason_counts": {
+    "cold_start": 91,
+    "no_need": 8,
+    "no_support": 1
+  },
+  "maximum_history_memory_bytes": 20726346256,
+  "final_num_clients_seen": 63,
+  "final_num_clients_with_observation": 28,
+  "failed_client_updates": 0,
+  "metrics_csv": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\interaction_dispatch_v2\\parity\\v2\\cifar10_vgg_InteractionDispatchV2_seed1_id2_parity_v2.csv",
+  "group_metrics_csv": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\interaction_dispatch_v2\\parity\\v2\\cifar10_vgg_InteractionDispatchV2_seed1_id2_parity_v2_groups.csv"
+}

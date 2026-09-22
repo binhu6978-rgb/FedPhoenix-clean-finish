@@ -100,6 +100,12 @@ def args_parser():
             "input displacement"
         ),
     )
+    parser.add_argument(
+        "--id2_step_ratio",
+        type=float,
+        default=0.2,
+        help="InteractionDispatchV2 step as a fraction of observed input displacement",
+    )
 
     # Recovery-aware FedPhoenix
     parser.add_argument("--recovery_pool_multiplier", type=float, default=3.0,

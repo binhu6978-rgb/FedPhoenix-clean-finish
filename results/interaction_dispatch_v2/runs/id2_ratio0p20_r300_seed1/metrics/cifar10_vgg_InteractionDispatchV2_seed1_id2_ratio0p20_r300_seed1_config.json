@@ -1,0 +1,21 @@
+{
+  "algorithm": "InteractionDispatchV2",
+  "dataset": "cifar10",
+  "model": "vgg",
+  "epochs": 300,
+  "num_users": 100,
+  "frac": 0.1,
+  "local_ep": 5,
+  "local_bs": 50,
+  "bs": 256,
+  "optimizer": "sgd",
+  "lr": 0.01,
+  "momentum": 0.5,
+  "weight_decay": 0.0,
+  "iid": 0,
+  "noniid_case": 5,
+  "data_beta": 0.3,
+  "seed": 1,
+  "id2_step_ratio": 0.2,
+  "num_workers": 0
+}

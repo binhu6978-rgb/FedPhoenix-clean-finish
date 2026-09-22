@@ -1,0 +1,25 @@
+{
+  "algorithm": "InteractionDispatchV2",
+  "seed": 1,
+  "epochs": 300,
+  "id2_step_ratio": 0.2,
+  "completed_rounds": 300,
+  "peak_accuracy": 75.0,
+  "peak_round": 260,
+  "final_accuracy": 72.5199966430664,
+  "last20_mean": 69.98599987030029,
+  "active_count": 531,
+  "active_rate": 0.177,
+  "reason_counts": {
+    "cold_start": 200,
+    "no_need": 1382,
+    "no_support": 887,
+    "active": 531
+  },
+  "maximum_history_memory_bytes": 40375999200,
+  "final_num_clients_seen": 100,
+  "final_num_clients_with_observation": 100,
+  "failed_client_updates": 0,
+  "metrics_csv": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\interaction_dispatch_v2\\runs\\id2_ratio0p20_r300_seed1\\metrics\\cifar10_vgg_InteractionDispatchV2_seed1_id2_ratio0p20_r300_seed1.csv",
+  "group_metrics_csv": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\interaction_dispatch_v2\\runs\\id2_ratio0p20_r300_seed1\\metrics\\cifar10_vgg_InteractionDispatchV2_seed1_id2_ratio0p20_r300_seed1_groups.csv"
+}

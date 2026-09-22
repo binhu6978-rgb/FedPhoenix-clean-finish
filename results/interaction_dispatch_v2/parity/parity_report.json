@@ -1,0 +1,6 @@
+{
+  "rounds": 10,
+  "selection_exact": true,
+  "hash_exact_rounds": 10,
+  "hash_all_exact": true
+}
