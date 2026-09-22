@@ -84,6 +84,20 @@ def args_parser():
     parser.add_argument("--reset", type=float, default=0.015625)
     parser.add_argument("--remethod", type=str, default='ori_normal',help='Convolution kernel sampling method')
 
+    # TargetedFedPhoenix V1
+    parser.add_argument(
+        "--tfp_target_ratio",
+        type=float,
+        default=0.25,
+        help="fraction of baseline FedPhoenix reset slots requested from client history",
+    )
+    parser.add_argument(
+        "--tfp_max_history_gap",
+        type=int,
+        default=20,
+        help="maximum participation gap eligible for TargetedFedPhoenix history",
+    )
+
     # InteractionDispatch
     parser.add_argument(
         "--id_tau",
