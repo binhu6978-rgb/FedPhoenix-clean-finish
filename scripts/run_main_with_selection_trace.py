@@ -39,6 +39,8 @@ def main() -> None:
     trace_path = Path(pop_option("--selection_trace", required=True)).resolve()
     hash_value = pop_option("--global_hash_trace")
     hash_path = Path(hash_value).resolve() if hash_value else None
+    task_value = pop_option("--fedphoenix_task_trace")
+    task_path = Path(task_value).resolve() if task_value else None
     if forwarded and forwarded[0] == "--":
         forwarded = forwarded[1:]
 
@@ -48,6 +50,8 @@ def main() -> None:
     trace_path.parent.mkdir(parents=True, exist_ok=True)
     if hash_path is not None:
         hash_path.parent.mkdir(parents=True, exist_ok=True)
+    if task_path is not None:
+        task_path.parent.mkdir(parents=True, exist_ok=True)
     original_choice = np.random.choice
     selection_index = 0
 
@@ -79,6 +83,27 @@ def main() -> None:
         return result
 
     np.random.choice = traced_choice
+    if task_path is not None:
+        import Algorithm.Phoenix_util as phoenix_util
+
+        original_reset = phoenix_util.reset_kernels_for_task
+        task_index = 0
+
+        def traced_reset(*args, **kwargs):
+            nonlocal task_index
+            trace = original_reset(*args, **kwargs)
+            task_index += 1
+            with task_path.open("a", encoding="utf-8") as handle:
+                handle.write(
+                    json.dumps(
+                        {"task_index": task_index, "trace": trace},
+                        separators=(",", ":"),
+                    )
+                    + "\n"
+                )
+            return trace
+
+        phoenix_util.reset_kernels_for_task = traced_reset
     if hash_path is not None:
         import models.test as test_module
 

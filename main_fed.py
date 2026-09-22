@@ -1167,6 +1167,20 @@ if __name__ == '__main__':
             evaluate_round_accuracy,
             print_peak_accuracy,
         )
+    elif args.algorithm == 'FedPhoenixHistoryDiagnostic':
+        from experiments.fedphoenix_client_specialization_diagnostic import (
+            train_fedphoenix_history_diagnostic,
+        )
+        train_fedphoenix_history_diagnostic(
+            args,
+            net_glob,
+            dataset_train,
+            dataset_final_test,
+            dict_users,
+            _build_fedphoenix_tasks,
+            evaluate_round_accuracy,
+            print_peak_accuracy,
+        )
 
     elif args.algorithm == 'test':
         test(net_glob, dataset_test , args)
