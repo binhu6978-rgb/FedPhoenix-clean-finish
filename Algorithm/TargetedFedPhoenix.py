@@ -7,6 +7,7 @@ it never samples a value or changes the number of reset slots.
 """
 
 import copy
+import hashlib
 import math
 from collections import OrderedDict
 
@@ -48,6 +49,26 @@ def _ordered_topk(scores, validity, count):
     ]
     candidates.sort(key=lambda index: (-float(scores[index]), index))
     return candidates[: int(count)]
+
+
+def deterministic_reset_priority(task_seed, layer_name, kernel_index, namespace):
+    """Return a process-independent private priority without using any RNG."""
+    payload = (
+        f"{int(task_seed)}|{str(layer_name)}|{int(kernel_index)}|{str(namespace)}"
+    ).encode("utf-8")
+    return int.from_bytes(hashlib.sha256(payload).digest(), byteorder="big")
+
+
+def _priority_order(indices, task_seed, layer_name, namespace):
+    return sorted(
+        (int(index) for index in indices),
+        key=lambda index: (
+            deterministic_reset_priority(
+                task_seed, layer_name, index, namespace
+            ),
+            index,
+        ),
+    )
 
 
 class TargetedFedPhoenixController:
@@ -134,7 +155,15 @@ class TargetedFedPhoenixController:
             random_candidates = [
                 index for index in reset_indices if index not in target_set
             ]
-            random_kept = random_candidates[: reset_count - len(targeted)]
+            retention_order = _priority_order(
+                random_candidates,
+                baseline_trace["seed"],
+                layer_name,
+                "random-retention",
+            )
+            random_kept = sorted(
+                retention_order[: reset_count - len(targeted)]
+            )
             final_indices = sorted(target_set.union(random_kept))
             if len(final_indices) != reset_count:
                 raise AssertionError("retargeting changed the reset slot count")
@@ -143,8 +172,18 @@ class TargetedFedPhoenixController:
 
             baseline_set = set(reset_indices)
             final_set = set(final_indices)
-            added = sorted(target_set - baseline_set)
-            displaced = sorted(baseline_set - final_set)
+            added = _priority_order(
+                target_set - baseline_set,
+                baseline_trace["seed"],
+                layer_name,
+                "target-pairing",
+            )
+            displaced = _priority_order(
+                baseline_set - final_set,
+                baseline_trace["seed"],
+                layer_name,
+                "donor-pairing",
+            )
             if len(added) != len(displaced):
                 raise AssertionError("target and donor counts differ")
 
@@ -177,7 +216,14 @@ class TargetedFedPhoenixController:
                 {
                     "baseline_reset_indices": reset_indices,
                     "targeted_indices": targeted,
+                    "retention_policy": "sha256_private_priority",
+                    "retention_priority_namespace": "random-retention",
+                    "donor_pairing_policy": "sha256_private_priority",
+                    "target_pairing_priority_namespace": "target-pairing",
+                    "donor_pairing_priority_namespace": "donor-pairing",
+                    "random_candidates": random_candidates,
                     "random_kept_indices": random_kept,
+                    "displaced_donor_indices": displaced,
                     "final_reset_indices": final_indices,
                     "reset_indices": final_indices,
                     "donor_mapping": donor_mapping,

@@ -1,0 +1,59 @@
+{
+  "task_seed": 41,
+  "target_ratio": 0.25,
+  "targeted_indices": [
+    0,
+    9
+  ],
+  "random_candidates": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "random_kept_indices": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "smallest_possible_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "displaced_donor_indices": [
+    2,
+    3
+  ],
+  "donor_mapping": [
+    {
+      "target_index": 0,
+      "donor_index": 2
+    },
+    {
+      "target_index": 9,
+      "donor_index": 3
+    }
+  ],
+  "checks": {
+    "targeted_slots_positive": true,
+    "private_priority_used": true,
+    "single_seed_not_prefix": true,
+    "multiple_seeds_not_always_prefix": true,
+    "multiple_seed_outcomes": true,
+    "repeat_trace_exact": true,
+    "repeat_tensor_exact": true,
+    "global_rng_unchanged": true
+  },
+  "passed": true
+}

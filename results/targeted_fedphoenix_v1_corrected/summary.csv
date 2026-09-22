@@ -1,0 +1,2 @@
+ratio,peak_accuracy,peak_round,final_accuracy,last20_mean,peak_delta_vs_fedphoenix,last20_delta_vs_fedphoenix,peak_delta_vs_biased_v1,last20_delta_vs_biased_v1,actual_target_fraction,baseline_random_overlap_rate,replaced_reset_slots,prefix_retention_fraction,runtime_seconds
+0.25,78.33000183105469,284,73.54000091552734,70.75949974060059,-0.019998168945306816,1.0944997406005825,0.06000183105469148,-1.4835002593994062,0.2003576426683253,0.015030397102574053,38074,0.1062280587699909,2679.2296564000135

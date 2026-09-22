@@ -10,7 +10,10 @@ from Algorithm.FedPhoenixHistoryObserver import (
     capture_global_rng_state,
     global_rng_state_equal,
 )
-from Algorithm.TargetedFedPhoenix import TargetedFedPhoenixController
+from Algorithm.TargetedFedPhoenix import (
+    TargetedFedPhoenixController,
+    deterministic_reset_priority,
+)
 from Algorithm.Training_TargetedFedPhoenix import (
     Aggregation as TargetedAggregation,
     LocalUpdate_FedAvg as TargetedLocalUpdate,
@@ -27,6 +30,16 @@ class TinyConvNet(nn.Module):
         with torch.no_grad():
             self.conv1.weight.copy_(torch.arange(1, 5, dtype=torch.float32).reshape(4, 1, 1, 1))
             self.conv2.weight.copy_(torch.arange(1, 17, dtype=torch.float32).reshape(4, 4, 1, 1))
+
+
+class WideTinyConvNet(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.conv = nn.Conv2d(1, 10, 1, bias=False)
+        with torch.no_grad():
+            self.conv.weight.copy_(
+                torch.arange(1, 11, dtype=torch.float32).reshape(10, 1, 1, 1)
+            )
 
 
 def baseline_fixture(active_layer="conv1"):
@@ -67,6 +80,29 @@ def add_history(controller, scores, validity=None, round_number=1, client_id=3, 
             }
         },
     }
+
+
+def wide_fixture(task_seed):
+    global_model = WideTinyConvNet()
+    task = copy.deepcopy(global_model)
+    reset_indices = list(range(1, 9))
+    with torch.no_grad():
+        for offset, index in enumerate(reset_indices, start=1):
+            task.conv.weight[index].fill_(-100.0 - offset)
+    trace = {
+        "seed": int(task_seed),
+        "layers": [
+            {
+                "name": "conv",
+                "num_kernels": 10,
+                "reset_indices": reset_indices,
+                "actual_reset_ratio": 0.8,
+            }
+        ],
+        "num_reset_layers": 1,
+        "num_reset_kernels": 8,
+    }
+    return global_model, task, trace
 
 
 class TargetedFedPhoenixTests(unittest.TestCase):
@@ -279,6 +315,87 @@ class TargetedFedPhoenixTests(unittest.TestCase):
         controller.observe(3, 1, task.state_dict(), task.state_dict(), final)
         after = capture_global_rng_state(include_cuda=False)
         self.assertTrue(global_rng_state_equal(before, after))
+
+    def test_29_sorted_reset_indices_do_not_force_prefix_retention(self):
+        kept_sets = []
+        for task_seed in range(1, 13):
+            global_model, task, trace = wide_fixture(task_seed)
+            controller = TargetedFedPhoenixController(global_model, 0.25, 20)
+            add_history(
+                controller,
+                [100, 1, 2, 3, 4, 5, 6, 7, 8, 99],
+                client_id=3,
+                layer="conv",
+            )
+            _, final = controller.retarget_task(global_model, task, trace, 3, 2)
+            layer = final["layers"][0]
+            kept_sets.append(layer["random_kept_indices"])
+            self.assertEqual(layer["retention_policy"], "sha256_private_priority")
+        self.assertTrue(any(kept != [1, 2, 3, 4, 5, 6] for kept in kept_sets))
+        self.assertGreater(len({tuple(values) for values in kept_sets}), 1)
+
+    def test_30_corrected_retarget_is_deterministic(self):
+        outputs = []
+        for _ in range(2):
+            global_model, task, trace = wide_fixture(41)
+            controller = TargetedFedPhoenixController(global_model, 0.25, 20)
+            add_history(
+                controller,
+                [100, 1, 2, 3, 4, 5, 6, 7, 8, 99],
+                client_id=3,
+                layer="conv",
+            )
+            _, final = controller.retarget_task(global_model, task, trace, 3, 2)
+            outputs.append(
+                (
+                    final["layers"][0]["random_kept_indices"],
+                    final["layers"][0]["donor_mapping"],
+                    task.conv.weight.detach().clone(),
+                )
+            )
+        self.assertEqual(outputs[0][0], outputs[1][0])
+        self.assertEqual(outputs[0][1], outputs[1][1])
+        self.assertTrue(torch.equal(outputs[0][2], outputs[1][2]))
+
+    def test_31_priority_has_fixed_process_independent_value(self):
+        self.assertEqual(
+            deterministic_reset_priority(
+                123, "features.14", 7, "random-retention"
+            ),
+            92751000886822488204589377115599076655345740921772688260799517893196794101231,
+        )
+
+    def test_32_corrected_retarget_preserves_all_global_rng_states(self):
+        global_model, task, trace = wide_fixture(91)
+        controller = TargetedFedPhoenixController(global_model, 0.25, 20)
+        add_history(
+            controller,
+            [100, 1, 2, 3, 4, 5, 6, 7, 8, 99],
+            client_id=3,
+            layer="conv",
+        )
+        before = capture_global_rng_state()
+        controller.retarget_task(global_model, task, trace, 3, 2)
+        after = capture_global_rng_state()
+        self.assertTrue(global_rng_state_equal(before, after))
+
+    def test_33_corrected_trace_records_candidates_and_displaced_donors(self):
+        global_model, task, trace = wide_fixture(19)
+        controller = TargetedFedPhoenixController(global_model, 0.25, 20)
+        add_history(
+            controller,
+            [100, 1, 2, 3, 4, 5, 6, 7, 8, 99],
+            client_id=3,
+            layer="conv",
+        )
+        _, final = controller.retarget_task(global_model, task, trace, 3, 2)
+        layer = final["layers"][0]
+        self.assertEqual(layer["random_candidates"], list(range(1, 9)))
+        self.assertEqual(
+            set(layer["displaced_donor_indices"]),
+            set(layer["baseline_reset_indices"]) - set(layer["final_reset_indices"]),
+        )
+        self.assertEqual(layer["donor_pairing_policy"], "sha256_private_priority")
 
 
 if __name__ == "__main__":

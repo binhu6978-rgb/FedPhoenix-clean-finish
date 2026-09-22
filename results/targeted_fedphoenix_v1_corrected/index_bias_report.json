@@ -1,0 +1,202 @@
+{
+  "retention_policy": "sha256_private_priority",
+  "replacement_events": 23073,
+  "prefix_retention_events": 2451,
+  "prefix_retention_fraction": 0.1062280587699909,
+  "overall_displaced_donor_normalized_index": {
+    "count": 38074,
+    "mean": 0.49698808153232776,
+    "median": 0.4931506849315068,
+    "q25": 0.2446183953033268,
+    "q75": 0.7495107632093934
+  },
+  "overall_random_kept_normalized_index": {
+    "count": 115605,
+    "mean": 0.49920767583739184,
+    "median": 0.49902152641878667,
+    "q25": 0.24853228962818003,
+    "q75": 0.7514677103718199
+  },
+  "layers": [
+    {
+      "layer": "features.14",
+      "replacement_events": 2534,
+      "displaced_donor_normalized_index": {
+        "count": 2534,
+        "mean": 0.5038395468684711,
+        "median": 0.5117647058823529,
+        "q25": 0.24313725490196078,
+        "q75": 0.7607843137254902
+      },
+      "random_kept_normalized_index": {
+        "count": 7602,
+        "mean": 0.5050549133097069,
+        "median": 0.5098039215686274,
+        "q25": 0.2549019607843137,
+        "q75": 0.7568627450980392
+      },
+      "prefix_retention_events": 635,
+      "prefix_retention_fraction": 0.2505919494869771
+    },
+    {
+      "layer": "features.17",
+      "replacement_events": 2540,
+      "displaced_donor_normalized_index": {
+        "count": 2540,
+        "mean": 0.48559981472904123,
+        "median": 0.4745098039215686,
+        "q25": 0.23137254901960785,
+        "q75": 0.7450980392156863
+      },
+      "random_kept_normalized_index": {
+        "count": 7620,
+        "mean": 0.49325150532654005,
+        "median": 0.49411764705882355,
+        "q25": 0.24313725490196078,
+        "q75": 0.7411764705882353
+      },
+      "prefix_retention_events": 607,
+      "prefix_retention_fraction": 0.2389763779527559
+    },
+    {
+      "layer": "features.20",
+      "replacement_events": 2537,
+      "displaced_donor_normalized_index": {
+        "count": 2537,
+        "mean": 0.5011910006414864,
+        "median": 0.4980392156862745,
+        "q25": 0.25882352941176473,
+        "q75": 0.7529411764705882
+      },
+      "random_kept_normalized_index": {
+        "count": 7611,
+        "mean": 0.49778159062863087,
+        "median": 0.49411764705882355,
+        "q25": 0.24313725490196078,
+        "q75": 0.7529411764705882
+      },
+      "prefix_retention_events": 636,
+      "prefix_retention_fraction": 0.25068979109184075
+    },
+    {
+      "layer": "features.24",
+      "replacement_events": 2577,
+      "displaced_donor_normalized_index": {
+        "count": 5073,
+        "mean": 0.4897938242558836,
+        "median": 0.4774951076320939,
+        "q25": 0.2328767123287671,
+        "q75": 0.7495107632093934
+      },
+      "random_kept_normalized_index": {
+        "count": 15462,
+        "mean": 0.4997023192519708,
+        "median": 0.5009784735812133,
+        "q25": 0.25048923679060664,
+        "q75": 0.7514677103718199
+      },
+      "prefix_retention_events": 98,
+      "prefix_retention_fraction": 0.03802871556072953
+    },
+    {
+      "layer": "features.27",
+      "replacement_events": 2577,
+      "displaced_donor_normalized_index": {
+        "count": 5088,
+        "mean": 0.4981761313985402,
+        "median": 0.49902152641878667,
+        "q25": 0.2446183953033268,
+        "q75": 0.7436399217221135
+      },
+      "random_kept_normalized_index": {
+        "count": 15462,
+        "mean": 0.49993418622917724,
+        "median": 0.49510763209393344,
+        "q25": 0.2465753424657534,
+        "q75": 0.7534246575342466
+      },
+      "prefix_retention_events": 85,
+      "prefix_retention_fraction": 0.03298409002716337
+    },
+    {
+      "layer": "features.30",
+      "replacement_events": 2577,
+      "displaced_donor_normalized_index": {
+        "count": 5061,
+        "mean": 0.49889972472817923,
+        "median": 0.5009784735812133,
+        "q25": 0.2465753424657534,
+        "q75": 0.7495107632093934
+      },
+      "random_kept_normalized_index": {
+        "count": 15462,
+        "mean": 0.4956537598268186,
+        "median": 0.4941291585127201,
+        "q25": 0.2465753424657534,
+        "q75": 0.7455968688845401
+      },
+      "prefix_retention_events": 99,
+      "prefix_retention_fraction": 0.03841676367869616
+    },
+    {
+      "layer": "features.34",
+      "replacement_events": 2577,
+      "displaced_donor_normalized_index": {
+        "count": 5079,
+        "mean": 0.49893367763890223,
+        "median": 0.4931506849315068,
+        "q25": 0.24853228962818003,
+        "q75": 0.7534246575342466
+      },
+      "random_kept_normalized_index": {
+        "count": 15462,
+        "mean": 0.5042124610274896,
+        "median": 0.5068493150684932,
+        "q25": 0.25244618395303325,
+        "q75": 0.7573385518590998
+      },
+      "prefix_retention_events": 96,
+      "prefix_retention_fraction": 0.037252619324796274
+    },
+    {
+      "layer": "features.37",
+      "replacement_events": 2577,
+      "displaced_donor_normalized_index": {
+        "count": 5085,
+        "mean": 0.5015214927446714,
+        "median": 0.49902152641878667,
+        "q25": 0.25048923679060664,
+        "q75": 0.7553816046966731
+      },
+      "random_kept_normalized_index": {
+        "count": 15462,
+        "mean": 0.49776562248056655,
+        "median": 0.5009784735812133,
+        "q25": 0.2465753424657534,
+        "q75": 0.7475538160469667
+      },
+      "prefix_retention_events": 98,
+      "prefix_retention_fraction": 0.03802871556072953
+    },
+    {
+      "layer": "features.40",
+      "replacement_events": 2577,
+      "displaced_donor_normalized_index": {
+        "count": 5077,
+        "mean": 0.49477113123263766,
+        "median": 0.48532289628180036,
+        "q25": 0.2446183953033268,
+        "q75": 0.7475538160469667
+      },
+      "random_kept_normalized_index": {
+        "count": 15462,
+        "mean": 0.49874017254851927,
+        "median": 0.49706457925636005,
+        "q25": 0.25048923679060664,
+        "q75": 0.7475538160469667
+      },
+      "prefix_retention_events": 97,
+      "prefix_retention_fraction": 0.037640667442762905
+    }
+  ]
+}
