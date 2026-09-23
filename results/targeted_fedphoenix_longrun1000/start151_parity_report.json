@@ -1,0 +1,9 @@
+{
+  "run_id": "L2_E5_r1000_seed1",
+  "rounds_checked": 150,
+  "selected_clients_exact": true,
+  "task_seeds_exact": true,
+  "global_state_hashes_exact": true,
+  "baseline_fallback_and_history_collection": true,
+  "reference_path": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\fedphoenix_specialization_diagnostic\\round_metrics.csv"
+}
