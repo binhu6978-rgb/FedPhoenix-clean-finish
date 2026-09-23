@@ -1,0 +1,21 @@
+{
+  "algorithm": "HistoryIdentityB0",
+  "run_name": "B0",
+  "completed_rounds": 1000,
+  "peak_accuracy": 82.73999786376953,
+  "peak_round": 953,
+  "final_accuracy": 76.13999938964844,
+  "runtime_seconds": 11647.500977599993,
+  "failed_client_updates": 0,
+  "totals": {
+    "total_reset_slots": 456530,
+    "targeted_reset_slots": 0,
+    "replaced_reset_slots": 0,
+    "targeted_clients": 0,
+    "fallback_clients": 0,
+    "fallback_client_layers": 0
+  },
+  "history_bank_policy": "B0 observer-only producer",
+  "partition_sha256": "ffa71f5432b8905bf13117d30fe3c981090aa3fa1e93e0a1c179be4f8bb5d882",
+  "matching_schedule_sha256": "4d629e2f823b5ef2642676c540a4c942a6877af85653ad1c75c0112228aa3a20"
+}

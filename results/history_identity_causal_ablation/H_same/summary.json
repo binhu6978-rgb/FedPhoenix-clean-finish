@@ -1,0 +1,21 @@
+{
+  "algorithm": "HistoryIdentitySame",
+  "run_name": "H_same",
+  "completed_rounds": 1000,
+  "peak_accuracy": 82.37999725341797,
+  "peak_round": 993,
+  "final_accuracy": 75.54000091552734,
+  "runtime_seconds": 11646.661392699985,
+  "failed_client_updates": 0,
+  "totals": {
+    "total_reset_slots": 456530,
+    "targeted_reset_slots": 23727,
+    "replaced_reset_slots": 23338,
+    "targeted_clients": 4028,
+    "fallback_clients": 2970,
+    "fallback_client_layers": 16
+  },
+  "history_bank_policy": "frozen B0 score/validity bank, never on-policy arm history",
+  "partition_sha256": "ffa71f5432b8905bf13117d30fe3c981090aa3fa1e93e0a1c179be4f8bb5d882",
+  "matching_schedule_sha256": "4d629e2f823b5ef2642676c540a4c942a6877af85653ad1c75c0112228aa3a20"
+}

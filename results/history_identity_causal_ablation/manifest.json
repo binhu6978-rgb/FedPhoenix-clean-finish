@@ -1,0 +1,297 @@
+{
+  "version": 1,
+  "created_at": "2026-09-23T08:08:49.348830+00:00",
+  "status": "stopped_by_user",
+  "fixed_runs": [
+    [
+      "B0",
+      "HistoryIdentityB0"
+    ],
+    [
+      "H_same",
+      "HistoryIdentitySame"
+    ],
+    [
+      "S_shuffled",
+      "HistoryIdentityShuffled"
+    ],
+    [
+      "P_population",
+      "HistoryIdentityPopulation"
+    ]
+  ],
+  "batch_order": [
+    [
+      "B0",
+      "H_same"
+    ],
+    [
+      "S_shuffled",
+      "P_population"
+    ]
+  ],
+  "attempts": [
+    {
+      "run_name": "B0",
+      "label": "parallel1",
+      "pid": 15968,
+      "return_code": 0,
+      "oom": false,
+      "runtime_seconds": 11656.17200000002,
+      "stdout_log": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\history_identity_causal_ablation\\logs\\B0.parallel1.stdout.log",
+      "stderr_log": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\history_identity_causal_ablation\\logs\\B0.parallel1.stderr.log",
+      "finished_at": "2026-09-23T11:35:23.118537+00:00"
+    },
+    {
+      "run_name": "H_same",
+      "label": "parallel1",
+      "pid": 36304,
+      "return_code": 0,
+      "oom": false,
+      "runtime_seconds": 11656.187999999995,
+      "stdout_log": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\history_identity_causal_ablation\\logs\\H_same.parallel1.stdout.log",
+      "stderr_log": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\history_identity_causal_ablation\\logs\\H_same.parallel1.stderr.log",
+      "finished_at": "2026-09-23T11:35:23.127536+00:00"
+    }
+  ],
+  "stopped_active_snapshot": [
+    {
+      "run_name": "S_shuffled",
+      "pid": 37504,
+      "command": [
+        "D:\\software\\minicoonda\\envs\\fd\\python.exe",
+        "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\main_fed.py",
+        "--algorithm",
+        "HistoryIdentityShuffled",
+        "--gpu",
+        "0",
+        "--run_name",
+        "S_shuffled",
+        "--metrics_log_dir",
+        "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\history_identity_causal_ablation\\S_shuffled",
+        "--dataset",
+        "cifar10",
+        "--model",
+        "vgg",
+        "--epochs",
+        "1000",
+        "--num_users",
+        "100",
+        "--frac",
+        "0.1",
+        "--local_ep",
+        "5",
+        "--local_bs",
+        "50",
+        "--bs",
+        "256",
+        "--optimizer",
+        "sgd",
+        "--lr",
+        "0.01",
+        "--momentum",
+        "0.5",
+        "--weight_decay",
+        "0",
+        "--iid",
+        "0",
+        "--noniid_case",
+        "5",
+        "--data_beta",
+        "0.3",
+        "--generate_data",
+        "0",
+        "--num_classes",
+        "10",
+        "--num_channels",
+        "3",
+        "--seed",
+        "1",
+        "--num_workers",
+        "0",
+        "--FP_conv",
+        "1000",
+        "--FP_fc",
+        "0",
+        "--reset",
+        "0.015625",
+        "--remethod",
+        "ori_normal",
+        "--tfp_score_type",
+        "update_norm",
+        "--tfp_target_ratio",
+        "0.25",
+        "--tfp_max_history_gap",
+        "10",
+        "--tfp_target_layers",
+        "features.20,features.24,features.27,features.30",
+        "--tfp_start_round",
+        "151"
+      ]
+    },
+    {
+      "run_name": "P_population",
+      "pid": 33128,
+      "command": [
+        "D:\\software\\minicoonda\\envs\\fd\\python.exe",
+        "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\main_fed.py",
+        "--algorithm",
+        "HistoryIdentityPopulation",
+        "--gpu",
+        "0",
+        "--run_name",
+        "P_population",
+        "--metrics_log_dir",
+        "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\history_identity_causal_ablation\\P_population",
+        "--dataset",
+        "cifar10",
+        "--model",
+        "vgg",
+        "--epochs",
+        "1000",
+        "--num_users",
+        "100",
+        "--frac",
+        "0.1",
+        "--local_ep",
+        "5",
+        "--local_bs",
+        "50",
+        "--bs",
+        "256",
+        "--optimizer",
+        "sgd",
+        "--lr",
+        "0.01",
+        "--momentum",
+        "0.5",
+        "--weight_decay",
+        "0",
+        "--iid",
+        "0",
+        "--noniid_case",
+        "5",
+        "--data_beta",
+        "0.3",
+        "--generate_data",
+        "0",
+        "--num_classes",
+        "10",
+        "--num_channels",
+        "3",
+        "--seed",
+        "1",
+        "--num_workers",
+        "0",
+        "--FP_conv",
+        "1000",
+        "--FP_fc",
+        "0",
+        "--reset",
+        "0.015625",
+        "--remethod",
+        "ori_normal",
+        "--tfp_score_type",
+        "update_norm",
+        "--tfp_target_ratio",
+        "0.25",
+        "--tfp_max_history_gap",
+        "10",
+        "--tfp_target_layers",
+        "features.20,features.24,features.27,features.30",
+        "--tfp_start_round",
+        "151"
+      ]
+    }
+  ],
+  "active": [],
+  "stop_reason": "User stopped the ablation after H_same improved over B0 by only 0.009543 percentage points in rounds 151-500, below the new 1-2 percentage-point criterion. S_shuffled and P_population are partial runs, not 1000-round results.",
+  "correctness": {
+    "full_regression_tests_passed": true,
+    "targeted_unit_test_count": 43,
+    "rho0_parity": {
+      "rounds": 10,
+      "target_ratio": 0.0,
+      "selected_clients_exact": true,
+      "task_count": 100,
+      "task_seeds_exact": true,
+      "baseline_reset_masks_exact": true,
+      "final_reset_masks_exact": true,
+      "baseline_task_traces_exact": true,
+      "accuracy_exact_within_1e-6": true,
+      "maximum_accuracy_difference": 0.0,
+      "all_round_hashes_exact": true,
+      "targeted_metrics_hashes_exact": true,
+      "final_global_sha256_exact": true,
+      "baseline_final_sha256": "ef68434933199d80bb34ae08584a2e009f046e61f3635c49204e19e80e496515",
+      "targeted_final_sha256": "ef68434933199d80bb34ae08584a2e009f046e61f3635c49204e19e80e496515",
+      "passed": true
+    },
+    "active_deterministic_smoke": {
+      "task_seed": 41,
+      "target_ratio": 0.25,
+      "targeted_indices": [
+        0,
+        9
+      ],
+      "random_candidates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "random_kept_indices": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "smallest_possible_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "displaced_donor_indices": [
+        2,
+        3
+      ],
+      "donor_mapping": [
+        {
+          "target_index": 0,
+          "donor_index": 2
+        },
+        {
+          "target_index": 9,
+          "donor_index": 3
+        }
+      ],
+      "checks": {
+        "targeted_slots_positive": true,
+        "private_priority_used": true,
+        "single_seed_not_prefix": true,
+        "multiple_seeds_not_always_prefix": true,
+        "multiple_seed_outcomes": true,
+        "repeat_trace_exact": true,
+        "repeat_tensor_exact": true,
+        "global_rng_unchanged": true
+      },
+      "passed": true
+    },
+    "identity_smoke": {
+      "rounds": 5,
+      "B0_vs_existing_observer": true,
+      "H_vs_B0_prefix": true,
+      "H_zero_targeted_slots": true
+    }
+  },
+  "updated_at": "2026-09-23T13:04:25+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "schedule_sha256": "4d629e2f823b5ef2642676c540a4c942a6877af85653ad1c75c0112228aa3a20",
+  "source_sha256": "06ab645bb14502719eabf969ab05999268ba34c3368bca5f8b5effe1acb5b646",
+  "eligible_client_events_151_770": 4032,
+  "exact_age_peer_events": 4028,
+  "no_exact_age_peer_events": 4,
+  "donor_never_target": true
+}

@@ -1,0 +1,6 @@
+{
+  "rounds": 5,
+  "B0_vs_existing_observer": true,
+  "H_vs_B0_prefix": true,
+  "H_zero_targeted_slots": true
+}

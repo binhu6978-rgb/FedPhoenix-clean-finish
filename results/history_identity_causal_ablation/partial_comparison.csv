@@ -1,0 +1,5 @@
+run,status,completed_rounds,mean_accuracy_rounds_1_500,mean_accuracy_rounds_151_500,mean_accuracy_rounds_151_770,mean_accuracy_rounds_901_1000,observed_peak_accuracy,observed_peak_round,round_1000_accuracy,last20_mean_at_round_1000,last50_mean_at_round_1000,last100_mean_at_round_1000
+B0,completed,1000,68.8626598854,72.4335426930,73.7030644355,79.8422999573,82.7399978638,953,76.1399993896,79.1850002289,79.6810000610,79.8422999573
+H_same,completed,1000,68.8693398438,72.4430854906,73.7126290044,79.8428999329,82.3799972534,993,75.5400009155,80.2704994202,80.0632000732,79.8428999329
+S_shuffled,stopped_by_user,466,,,,,80.1800003052,452,,,,
+P_population,stopped_by_user,448,,,,,80.3700027466,434,,,,

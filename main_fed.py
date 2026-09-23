@@ -1181,6 +1181,23 @@ if __name__ == '__main__':
             evaluate_round_accuracy,
             print_peak_accuracy,
         )
+    elif args.algorithm in {
+        'HistoryIdentityB0', 'HistoryIdentitySame',
+        'HistoryIdentityShuffled', 'HistoryIdentityPopulation',
+    }:
+        from Algorithm.Training_HistoryIdentityCausal import (
+            train_history_identity_causal,
+        )
+        train_history_identity_causal(
+            args,
+            net_glob,
+            dataset_train,
+            dataset_final_test,
+            dict_users,
+            _build_fedphoenix_tasks,
+            evaluate_round_accuracy,
+            print_peak_accuracy,
+        )
     elif args.algorithm == 'TargetedFedPhoenix':
         from Algorithm.Training_TargetedFedPhoenix import (
             train_targeted_fedphoenix,
