@@ -92,6 +92,29 @@ class InteractionFedPhoenixTests(unittest.TestCase):
         self.assertTrue(torch.equal(delta[1:], zero[1:]))
         self.assertEqual(controller.decide(7, 22, own, v)[1]["reason"], "stale")
 
+    def test_observation_span_respects_max_gap_and_recovers(self):
+        ledger = ResetLedger(self.model)
+        controller = InteractionController(self.head, ledger, max_gap=20)
+        own = ledger.from_trace(trace([]))
+        vector = torch.ones(self.head.numel)
+        for round_idx in range(106):
+            ledger.record(round_idx, [trace([])])
+            if round_idx in (0, 100, 105):
+                controller.history.record(
+                    7, round_idx, vector * round_idx,
+                    -vector * (106 - round_idx), own,
+                )
+                if round_idx == 100:
+                    item = controller.history.clients[7]
+                    self.assertEqual(item["t_latest"], 100)
+                    self.assertFalse(item["obs_valid"])
+                    self.assertIsNone(item["d"])
+                    self.assertIsNone(item["r"])
+        item = controller.history.clients[7]
+        self.assertTrue(item["obs_valid"])
+        self.assertEqual(item["t_prev"], 100)
+        self.assertEqual(item["t_latest"], 105)
+
     def test_historical_previous_current_and_ledger_masks(self):
         ledger = ResetLedger(self.model)
         controller = InteractionController(self.full, ledger, rho=0.05)

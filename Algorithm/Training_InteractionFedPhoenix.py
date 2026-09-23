@@ -5,12 +5,14 @@ import json
 import math
 import time
 from collections import Counter
+from pathlib import Path
 
 import numpy as np
 import torch
 
 from Algorithm.InteractionFedPhoenix import (
-    InteractionController, InteractionGeometry, ResetLedger, corrected_state,
+    InteractionController, InteractionGeometry, ResetLedger, _dot64, _norm64,
+    corrected_state,
 )
 from models.Fed import Aggregation
 from models.Update import LocalUpdate_FedAvg
@@ -22,6 +24,14 @@ def _weighted_responses(responses, weights):
     for response, weight in zip(responses, weights):
         result += response * (float(weight) / total)
     return result
+
+
+def _partition_path(args):
+    stem = f"{args.dataset}_{args.num_users}"
+    stem += "_iid" if args.iid else f"_noniidCase{args.noniid_case}"
+    if args.noniid_case > 4:
+        stem += f"_beta{args.data_beta}"
+    return (Path("data") / f"{stem}.json").resolve()
 
 
 def train_interaction_fedphoenix(
@@ -41,6 +51,24 @@ def train_interaction_fedphoenix(
     accuracies = []
     rows = []
     args.density_local = 0.01
+    train_transform = repr(getattr(dataset_train, "transform", None))
+    print("InteractionFedPhoenix protocol: " + json.dumps({
+        "dataset": args.dataset, "model": args.model,
+        "train_transform": train_transform,
+        "random_crop": "RandomCrop" in train_transform,
+        "random_horizontal_flip": "RandomHorizontalFlip" in train_transform,
+        "num_users": args.num_users, "frac": args.frac,
+        "data_beta": args.data_beta, "seed": args.seed,
+        "noniid_case": args.noniid_case,
+        "partition_file": str(_partition_path(args)),
+        "partition_source": "generated" if args.generate_data else "existing file",
+        "partition_total_samples": sum(len(indices) for indices in dict_users.values()),
+        "local_ep": args.local_ep, "local_bs": args.local_bs,
+        "optimizer": args.optimizer, "lr": args.lr,
+        "momentum": args.momentum, "weight_decay": args.weight_decay,
+        "FP_conv": args.FP_conv, "reset": args.reset,
+        "remethod": args.remethod,
+    }, ensure_ascii=False))
     print(f"InteractionFedPhoenix {args.ifp_space}: {geometry.numel} parameters")
     print(f"Estimated dense fp32 history for {args.num_users} clients: "
           f"{4 * geometry.numel * 4 * args.num_users / 2**30:.2f} GiB; "
@@ -89,12 +117,12 @@ def train_interaction_fedphoenix(
             actual_dispatch = geometry.flatten(net_local.state_dict())
             if materialized:
                 backbone_sq = sum(
-                    float(torch.sum(value.to(torch.float64) ** 2))
+                    _dot64(value, value)
                     for name, value in materialized.items()
                     if name in geometry.conv_by_param
                 )
                 head_sq = sum(
-                    float(torch.sum(value.to(torch.float64) ** 2))
+                    _dot64(value, value)
                     for name, value in materialized.items()
                     if name not in geometry.conv_by_param
                 )
@@ -115,6 +143,7 @@ def train_interaction_fedphoenix(
             )
             w = local.train(net=net_local)
             response = geometry.flatten(w) - actual_dispatch
+            event["current_response_norm"] = _norm64(response)
             if materialized:
                 corrected = corrected_state(w, materialized)
                 w_locals.append(corrected)
@@ -137,9 +166,13 @@ def train_interaction_fedphoenix(
                 event["materialized_delta_norm"] / event["d_norm"]
                 if event["d_norm"] and event["d_norm"] > 0 else 0.0
             )
-            event["delta_over_u"] = (
+            event["delta_over_history_u"] = (
                 event["materialized_delta_norm"] / event["u_norm"]
                 if event["u_norm"] and event["u_norm"] > 0 else 0.0
+            )
+            event["delta_over_current_response"] = (
+                event["materialized_delta_norm"] / event["current_response_norm"]
+                if event["current_response_norm"] > 0 else 0.0
             )
             events.append(event)
 

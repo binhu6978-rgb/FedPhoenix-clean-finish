@@ -12,6 +12,27 @@ from torch import nn
 
 
 EPS = 1e-12
+REDUCTION_CHUNK = 1 << 20
+
+
+def _dot64(a, b):
+    """Accumulate a dot product in fp64 without copying a full model vector."""
+    a = a.reshape(-1)
+    b = b.reshape(-1)
+    if a.numel() != b.numel():
+        raise ValueError("dot product shape mismatch")
+    total = 0.0
+    for start in range(0, a.numel(), REDUCTION_CHUNK):
+        stop = start + REDUCTION_CHUNK
+        total += float(torch.dot(
+            a[start:stop].to(torch.float64),
+            b[start:stop].to(torch.float64),
+        ))
+    return total
+
+
+def _norm64(a):
+    return math.sqrt(_dot64(a, a))
 
 
 class InteractionGeometry:
@@ -190,9 +211,10 @@ class PackedObservation:
 
 
 class ClientHistory:
-    def __init__(self, geometry, ledger):
+    def __init__(self, geometry, ledger, max_gap):
         self.geometry = geometry
         self.ledger = ledger
+        self.max_gap = int(max_gap)
         self.clients = {}
 
     def record(self, client_id, round_idx, actual_dispatch, client_update, own_reset):
@@ -220,18 +242,20 @@ class ClientHistory:
         if previous is not None:
             if round_idx <= previous["t_latest"]:
                 raise ValueError("same-client interactions must be chronological")
-            excluded = self.ledger.interval_union(previous["t_latest"], round_idx)
-            self.ledger.union_into(excluded, own_reset)
-            valid = {name: ~value for name, value in excluded.items()}
-            hist_mask = self.geometry.mask(excluded)
-            d = (item["x"] - previous["x"]) * hist_mask
-            r = (update_float - previous["u"].to(torch.float32)) * hist_mask
-            if bool(torch.isfinite(d).all()) and bool(torch.isfinite(r).all()):
-                item["d"] = PackedObservation(self.geometry, d, valid)
-                item["r"] = PackedObservation(self.geometry, r, valid)
-                item["hist_valid"] = valid
-                item["t_prev"] = previous["t_latest"]
-                item["obs_valid"] = True
+            span = round_idx - previous["t_latest"]
+            if span <= self.max_gap:
+                excluded = self.ledger.interval_union(previous["t_latest"], round_idx)
+                self.ledger.union_into(excluded, own_reset)
+                valid = {name: ~value for name, value in excluded.items()}
+                hist_mask = self.geometry.mask(excluded)
+                d = (item["x"] - previous["x"]) * hist_mask
+                r = (update_float - previous["u"].to(torch.float32)) * hist_mask
+                if bool(torch.isfinite(d).all()) and bool(torch.isfinite(r).all()):
+                    item["d"] = PackedObservation(self.geometry, d, valid)
+                    item["r"] = PackedObservation(self.geometry, r, valid)
+                    item["hist_valid"] = valid
+                    item["t_prev"] = previous["t_latest"]
+                    item["obs_valid"] = True
         self.clients[client_id] = item
 
     def bytes(self):
@@ -255,7 +279,7 @@ class InteractionController:
             raise ValueError("rho must be non-negative and max_gap positive")
         self.geometry = geometry
         self.ledger = ledger
-        self.history = ClientHistory(geometry, ledger)
+        self.history = ClientHistory(geometry, ledger, max_gap)
         self.rho = float(rho)
         self.max_gap = int(max_gap)
         self.observe_only = bool(observe_only)
@@ -297,10 +321,10 @@ class InteractionController:
         r = item["r"].unpack(self.geometry, item["hist_valid"]) * mask
         u = item["u"] * mask
         g = global_change * mask
-        d_norm = float(torch.linalg.vector_norm(d.to(torch.float64)))
-        r_norm = float(torch.linalg.vector_norm(r.to(torch.float64)))
-        u_norm = float(torch.linalg.vector_norm(u.to(torch.float64)))
-        g_norm = float(torch.linalg.vector_norm(g.to(torch.float64)))
+        d_norm = _norm64(d)
+        r_norm = _norm64(r)
+        u_norm = _norm64(u)
+        g_norm = _norm64(g)
         info.update(d_norm=d_norm, r_norm=r_norm, u_norm=u_norm, g_norm=g_norm)
         if not all(math.isfinite(v) for v in (d_norm, r_norm, u_norm, g_norm)):
             info["reason"] = "no_obs"
@@ -311,9 +335,8 @@ class InteractionController:
         if g_norm <= EPS:
             info["reason"] = "no_g"
             return None, info
-        g_hat = g.to(torch.float64) / (g_norm + EPS)
-        c = -float(torch.dot(u.to(torch.float64), g_hat))
-        q = float(torch.dot(r.to(torch.float64), g_hat))
+        c = -_dot64(u, g) / (g_norm + EPS)
+        q = _dot64(r, g) / (g_norm + EPS)
         info.update(c=c, q=q, s_raw=q / (d_norm + EPS),
                     s_cos=q / (r_norm + EPS))
         if not math.isfinite(c) or not math.isfinite(q):
@@ -332,7 +355,7 @@ class InteractionController:
         if not math.isfinite(lam) or not 0 <= lam <= self.rho:
             info["reason"] = "no_obs"
             return None, info
-        delta = (d.to(torch.float64) * lam).to(torch.float32)
+        delta = d * lam
         if not bool(torch.isfinite(delta).all()):
             info["reason"] = "no_obs"
             return None, info
@@ -340,13 +363,13 @@ class InteractionController:
         head_sq = 0.0
         for name in self.geometry.names:
             start, end, _ = self.geometry.slices[name]
-            squared = float(torch.sum(delta[start:end].to(torch.float64) ** 2))
+            squared = _dot64(delta[start:end], delta[start:end])
             if name in self.geometry.conv_by_param:
                 backbone_sq += squared
             else:
                 head_sq += squared
         info.update(reason="active", **{"lambda": lam},
-                    delta_norm=float(torch.linalg.vector_norm(delta.to(torch.float64))),
+                    delta_norm=_norm64(delta),
                     backbone_delta_norm=math.sqrt(backbone_sq),
                     head_delta_norm=math.sqrt(head_sq))
         return delta, info
