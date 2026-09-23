@@ -1060,6 +1060,8 @@ if __name__ == '__main__':
         raise ValueError("id_max_step_ratio must be non-negative")
     if args.id2_step_ratio < 0:
         raise ValueError("id2_step_ratio must be non-negative")
+    if args.ifp_rho < 0 or args.ifp_max_gap < 1 or args.ifp_check_every < 1:
+        raise ValueError("invalid InteractionFedPhoenix settings")
     set_random_seed(args.seed)
     device_index = args.gpu
     torch.cuda.set_device(device_index)
@@ -1137,6 +1139,15 @@ if __name__ == '__main__':
             dataset_validation,
             dataset_final_test,
             dict_users,
+        )
+    elif args.algorithm == 'InteractionFedPhoenix':
+        from Algorithm.Training_InteractionFedPhoenix import (
+            train_interaction_fedphoenix,
+        )
+        train_interaction_fedphoenix(
+            args, net_glob, dataset_train, dataset_final_test, dict_users,
+            _build_fedphoenix_tasks, evaluate_round_accuracy,
+            print_peak_accuracy, _write_training_metrics,
         )
     elif args.algorithm == 'FedPhoenixRecovery':
         FedPhoenixRecovery(

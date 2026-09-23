@@ -84,6 +84,14 @@ def args_parser():
     parser.add_argument("--reset", type=float, default=0.015625)
     parser.add_argument("--remethod", type=str, default='ori_normal',help='Convolution kernel sampling method')
 
+    # InteractionFedPhoenix V1
+    parser.add_argument("--ifp_rho", type=float, default=0.05)
+    parser.add_argument("--ifp_space", choices=["head", "reset_aware"],
+                        default="reset_aware")
+    parser.add_argument("--ifp_observe_only", type=int, choices=[0, 1], default=0)
+    parser.add_argument("--ifp_max_gap", type=int, default=20)
+    parser.add_argument("--ifp_check_every", type=int, default=50)
+
     # TargetedFedPhoenix V1
     parser.add_argument(
         "--tfp_target_ratio",
