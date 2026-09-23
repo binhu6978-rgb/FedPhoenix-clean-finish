@@ -1,0 +1,20 @@
+{
+  "P1_start151_gap10_ratio0125_all": {
+    "run_id": "P1_start151_gap10_ratio0125_all",
+    "rounds_checked": 150,
+    "selected_clients_exact": true,
+    "task_seeds_exact": true,
+    "global_state_hashes_exact": true,
+    "baseline_fallback_and_history_collection": true,
+    "reference_path": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\fedphoenix_specialization_diagnostic\\round_metrics.csv"
+  },
+  "P2_start151_gap10_ratio025_all": {
+    "run_id": "P2_start151_gap10_ratio025_all",
+    "rounds_checked": 150,
+    "selected_clients_exact": true,
+    "task_seeds_exact": true,
+    "global_state_hashes_exact": true,
+    "baseline_fallback_and_history_collection": true,
+    "reference_path": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\results\\fedphoenix_specialization_diagnostic\\round_metrics.csv"
+  }
+}
