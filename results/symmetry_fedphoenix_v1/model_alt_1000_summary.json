@@ -1,0 +1,207 @@
+{
+  "sources": {
+    "B0": "results\\history_identity_causal_ablation\\B0\\round_metrics.csv",
+    "alt_rounds": "results\\symmetry_fedphoenix_v1\\model_alt_1000\\cifar10_vgg_SymmetryFedPhoenix_seed1_model_alt_1000.csv",
+    "alt_events": "results\\symmetry_fedphoenix_v1\\model_alt_1000\\model_alt_1000_client_events.csv"
+  },
+  "accuracy": {
+    "B0": {
+      "peak_accuracy": 82.73999786376953,
+      "peak_round": 953,
+      "top10_mean": 82.43299865722656,
+      "round_1000_accuracy": 76.13999938964844,
+      "rounds_1_300_mean": 65.70273321151734,
+      "rounds_301_500_mean": 73.60254989624023,
+      "rounds_501_900_mean": 75.86490010261535,
+      "rounds_901_1000_mean": 79.84229995727539
+    },
+    "SymmetryFedPhoenix_alt": {
+      "peak_accuracy": 86.66000366210938,
+      "peak_round": 810,
+      "top10_mean": 86.45199966430664,
+      "round_1000_accuracy": 85.54000091552734,
+      "rounds_1_300_mean": 67.90843313852946,
+      "rounds_301_500_mean": 76.43664991378785,
+      "rounds_501_900_mean": 80.4684500837326,
+      "rounds_901_1000_mean": 83.55980041503906
+    },
+    "alt_minus_B0_pp": {
+      "peak_accuracy": 3.9200057983398438,
+      "top10_mean": 4.019001007080078,
+      "round_1000_accuracy": 9.400001525878906,
+      "rounds_1_300_mean": 2.2056999270121196,
+      "rounds_301_500_mean": 2.8341000175476125,
+      "rounds_501_900_mean": 4.603549981117254,
+      "rounds_901_1000_mean": 3.717500457763677
+    }
+  },
+  "protocol": {
+    "selected_clients_equal_B0": true,
+    "task_seeds_equal_B0": true,
+    "reported_alt_violations": 0
+  },
+  "interaction": {
+    "client_events": 10000,
+    "F_fraction": 0.5002,
+    "I_fraction": 0.4998,
+    "returning_client_rate": 0.99,
+    "visit_index_counts": {
+      "1": 100,
+      "2": 100,
+      "3": 100,
+      "4": 100,
+      "5+": 9600,
+      "10+": 9100
+    },
+    "visit_index_rates": {
+      "1": 0.01,
+      "2": 0.01,
+      "3": 0.01,
+      "4": 0.01,
+      "5+": 0.96,
+      "10+": 0.91
+    }
+  },
+  "reset_response_by_view": {
+    "I": {
+      "client_events": 4998,
+      "reset_action_norm_mean": 0.8757512527260063,
+      "reset_action_norm_median": 0.5865300927315769,
+      "reset_response_norm_mean": 0.23782185114912024,
+      "reset_response_norm_median": 0.23446121264726005,
+      "reset_recovery_coeff_mean": 0.0016015424545771325,
+      "reset_recovery_coeff_median": 0.0013010404104843484,
+      "reset_recovery_cosine_mean": 0.00530709906604333,
+      "reset_recovery_cosine_median": 0.005691660521515518,
+      "reset_residual_ratio_mean": 1.1109724546698985,
+      "reset_residual_ratio_median": 1.0751193131321237
+    },
+    "F": {
+      "client_events": 5002,
+      "reset_action_norm_mean": 0.8824650044476785,
+      "reset_action_norm_median": 0.5859481288905148,
+      "reset_response_norm_mean": 0.23829789053799136,
+      "reset_response_norm_median": 0.23568110199810838,
+      "reset_recovery_coeff_mean": 0.0015377093644301295,
+      "reset_recovery_coeff_median": 0.001395776605664466,
+      "reset_recovery_cosine_mean": 0.00514352170528911,
+      "reset_recovery_cosine_median": 0.006068095235972466,
+      "reset_residual_ratio_mean": 1.115237813192837,
+      "reset_residual_ratio_median": 1.073602157036468
+    }
+  },
+  "reset_response_by_stage_and_view": {
+    "1-300": {
+      "I": {
+        "client_events": 1498,
+        "reset_action_norm_mean": 1.9216268084713064,
+        "reset_action_norm_median": 1.2063516540118004,
+        "reset_response_norm_mean": 0.28849616006986634,
+        "reset_response_norm_median": 0.28043389783374395,
+        "reset_recovery_coeff_mean": 0.0020637934432239293,
+        "reset_recovery_coeff_median": 0.0008434309133815206,
+        "reset_recovery_cosine_mean": 0.007856139011683768,
+        "reset_recovery_cosine_median": 0.006765378385064919,
+        "reset_residual_ratio_mean": 1.0410552036689942,
+        "reset_residual_ratio_median": 1.0277148451295353
+      },
+      "F": {
+        "client_events": 1502,
+        "reset_action_norm_mean": 1.9402035459303248,
+        "reset_action_norm_median": 1.1910562868202443,
+        "reset_response_norm_mean": 0.2878633238919125,
+        "reset_response_norm_median": 0.27926490410053073,
+        "reset_recovery_coeff_mean": 0.001938041690847155,
+        "reset_recovery_coeff_median": 0.0008202837553240739,
+        "reset_recovery_cosine_mean": 0.007377425314746303,
+        "reset_recovery_cosine_median": 0.006578547613199762,
+        "reset_residual_ratio_mean": 1.040767063582508,
+        "reset_residual_ratio_median": 1.0269152207141117
+      }
+    },
+    "301-500": {
+      "I": {
+        "client_events": 998,
+        "reset_action_norm_mean": 0.6879085075690585,
+        "reset_action_norm_median": 0.677487731334019,
+        "reset_response_norm_mean": 0.32738658610749083,
+        "reset_response_norm_median": 0.3093317725589776,
+        "reset_recovery_coeff_mean": 0.0024421518261578015,
+        "reset_recovery_coeff_median": 0.0024134349008791134,
+        "reset_recovery_cosine_mean": 0.005988635287943999,
+        "reset_recovery_cosine_median": 0.005632834987289205,
+        "reset_residual_ratio_mean": 1.1125715923664286,
+        "reset_residual_ratio_median": 1.0916002966638751
+      },
+      "F": {
+        "client_events": 1002,
+        "reset_action_norm_mean": 0.688357313353306,
+        "reset_action_norm_median": 0.6763951707654337,
+        "reset_response_norm_mean": 0.32926844409283884,
+        "reset_response_norm_median": 0.3108386314022748,
+        "reset_recovery_coeff_mean": 0.0024988585149275325,
+        "reset_recovery_coeff_median": 0.0030181593204025537,
+        "reset_recovery_cosine_mean": 0.006118218335965473,
+        "reset_recovery_cosine_median": 0.007204812296516177,
+        "reset_residual_ratio_mean": 1.1138752094633964,
+        "reset_residual_ratio_median": 1.0924605722459262
+      }
+    },
+    "501-900": {
+      "I": {
+        "client_events": 1999,
+        "reset_action_norm_mean": 0.3650647222678848,
+        "reset_action_norm_median": 0.33354540389999815,
+        "reset_response_norm_mean": 0.19750103106540592,
+        "reset_response_norm_median": 0.17868663789776654,
+        "reset_recovery_coeff_mean": 0.0015148682570124785,
+        "reset_recovery_coeff_median": 0.002247607246902149,
+        "reset_recovery_cosine_mean": 0.004454953554805308,
+        "reset_recovery_cosine_median": 0.004529711105922172,
+        "reset_residual_ratio_mean": 1.1603879466141291,
+        "reset_residual_ratio_median": 1.108740171005861
+      },
+      "F": {
+        "client_events": 2001,
+        "reset_action_norm_mean": 0.3641355580172572,
+        "reset_action_norm_median": 0.33265099945495874,
+        "reset_response_norm_mean": 0.19564118303588449,
+        "reset_response_norm_median": 0.1775281637742964,
+        "reset_recovery_coeff_mean": 0.001477500694955491,
+        "reset_recovery_coeff_median": 0.002327580742218417,
+        "reset_recovery_cosine_mean": 0.004561787656452179,
+        "reset_recovery_cosine_median": 0.00516827840941259,
+        "reset_residual_ratio_mean": 1.1598675516151544,
+        "reset_residual_ratio_median": 1.1067017048758239
+      }
+    },
+    "901-1000": {
+      "I": {
+        "client_events": 503,
+        "reset_action_norm_mean": 0.1632420112666814,
+        "reset_action_norm_median": 0.15297976032007077,
+        "reset_response_norm_mean": 0.06944332052409727,
+        "reset_response_norm_median": 0.05235379584897884,
+        "reset_recovery_coeff_mean": -0.0010984941515832366,
+        "reset_recovery_coeff_median": -0.00039334334388935546,
+        "reset_recovery_cosine_mean": -0.00024995085654402877,
+        "reset_recovery_cosine_median": -0.0015352430401742152,
+        "reset_residual_ratio_mean": 1.1196375325659225,
+        "reset_residual_ratio_median": 1.054432075039086
+      },
+      "F": {
+        "client_events": 497,
+        "reset_action_norm_mean": 0.16405421868691222,
+        "reset_action_norm_median": 0.15430747184084345,
+        "reset_response_norm_mean": 0.07684174597495143,
+        "reset_response_norm_median": 0.052725634713999756,
+        "reset_recovery_coeff_mean": -0.0013675080509783593,
+        "reset_recovery_coeff_median": -0.0007880366582553663,
+        "reset_recovery_cosine_mean": -0.0012305616219135474,
+        "reset_recovery_cosine_median": -0.0032158226410327084,
+        "reset_residual_ratio_mean": 1.1633591175561309,
+        "reset_residual_ratio_median": 1.0503596508066477
+      }
+    }
+  }
+}
