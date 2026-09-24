@@ -128,15 +128,14 @@ def get_dataset(args):
             dict_users = read_record(file)
     elif args.dataset == 'cifar10':
 
-        trans_cifar10_train = transforms.Compose([
-            # transforms.RandomHorizontalFlip(),  
-            # transforms.RandomCrop(32, padding=4),  
+        train_transforms = []
+        if args.input_hflip:
+            train_transforms.append(transforms.RandomHorizontalFlip(p=0.5))
+        train_transforms.extend([
             transforms.ToTensor(),
             transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))
-            ]
-                                                  
-                                                  
-                                                  )
+        ])
+        trans_cifar10_train = transforms.Compose(train_transforms)
         trans_cifar10_val = transforms.Compose([transforms.ToTensor(),
                                                 transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
 

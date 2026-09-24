@@ -42,6 +42,8 @@ def args_parser():
     parser.add_argument('--noniid_case', type=int, default=5, help="non-i.i.d partition case")
     parser.add_argument('--data_beta', type=float, default=0.3,
                         help='The parameter for the dirichlet distribution for data partitioning')
+    parser.add_argument('--input_hflip', type=int, choices=[0, 1], default=0,
+                        help='CIFAR10 train-only RandomHorizontalFlip(p=0.5)')
     parser.add_argument('--num_classes', type=int, default=10, help="number of classes")
     parser.add_argument('--num_channels', type=int, default=3, help="number of channels of imges")
     parser.add_argument('--gpu', type=int, default=0, help="GPU ID, -1 for CPU")
@@ -83,6 +85,9 @@ def args_parser():
     parser.add_argument("--FP_fc", type=int, default=0)
     parser.add_argument("--reset", type=float, default=0.015625)
     parser.add_argument("--remethod", type=str, default='ori_normal',help='Convolution kernel sampling method')
+
+    # SymmetryFedPhoenix model view; independent of InteractionFedPhoenix V1.
+    parser.add_argument('--sym_view', choices=['none', 'rand', 'alt'], default='none')
 
     # InteractionFedPhoenix V1
     parser.add_argument("--ifp_rho", type=float, default=0.05)

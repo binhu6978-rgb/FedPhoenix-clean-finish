@@ -1072,6 +1072,11 @@ if __name__ == '__main__':
     else:
         dataset_train, dataset_test, dict_users = get_dataset(args)
 
+    if args.dataset == 'cifar10' and (
+        args.input_hflip or args.algorithm == 'SymmetryFedPhoenix'
+    ):
+        print(f"CIFAR10 train transform: {dataset_train.transform}")
+
     client_sizes = [len(dict_users[client_id]) for client_id in sorted(dict_users)]
     print(
         "Client partition: "
@@ -1145,6 +1150,13 @@ if __name__ == '__main__':
             train_interaction_fedphoenix,
         )
         train_interaction_fedphoenix(
+            args, net_glob, dataset_train, dataset_final_test, dict_users,
+            _build_fedphoenix_tasks, evaluate_round_accuracy,
+            print_peak_accuracy, _write_training_metrics,
+        )
+    elif args.algorithm == 'SymmetryFedPhoenix':
+        from Algorithm.Training_SymmetryFedPhoenix import train_symmetry_fedphoenix
+        train_symmetry_fedphoenix(
             args, net_glob, dataset_train, dataset_final_test, dict_users,
             _build_fedphoenix_tasks, evaluate_round_accuracy,
             print_peak_accuracy, _write_training_metrics,
