@@ -1,0 +1,3067 @@
+Client partition: 100 clients, min=30, max=1447, mean=500.00, std=220.72
+Evaluation protocol: full server test set evaluated every round (10000 samples).
+VGG16(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (7): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): ReLU(inplace=True)
+    (10): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (12): ReLU(inplace=True)
+    (13): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (14): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (16): ReLU(inplace=True)
+    (17): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (18): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (19): ReLU(inplace=True)
+    (20): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (21): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (22): ReLU(inplace=True)
+    (23): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (24): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (25): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (26): ReLU(inplace=True)
+    (27): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (28): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (32): ReLU(inplace=True)
+    (33): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (36): ReLU(inplace=True)
+    (37): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (38): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (39): ReLU(inplace=True)
+    (40): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (41): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (42): ReLU(inplace=True)
+    (43): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (44): AdaptiveAvgPool2d(output_size=(1, 1))
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=512, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+  )
+  (fc): Linear(in_features=4096, out_features=10, bias=True)
+)
+InteractionFedPhoenix protocol: {"dataset": "cifar10", "model": "vgg", "train_transform": "Compose(\n    ToTensor()\n    Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.201))\n)", "random_crop": false, "random_horizontal_flip": false, "num_users": 100, "frac": 0.1, "data_beta": 0.3, "seed": 1, "noniid_case": 5, "partition_file": "C:\\Users\\admin\\Desktop\\need_do\\new_paper_four\\FedPhoenix-clean-finish\\data\\cifar10_100_noniidCase5_beta0.3.json", "partition_source": "existing file", "partition_total_samples": 50000, "local_ep": 5, "local_bs": 50, "optimizer": "sgd", "lr": 0.01, "momentum": 0.5, "weight_decay": 0.0, "FP_conv": 1000, "reset": 0.015625, "remethod": "ori_normal"}
+InteractionFedPhoenix reset_aware: 33642442 parameters
+Estimated dense fp32 history for 100 clients: 50.13 GiB; observations store only reliable Conv kernels in bf16
+********************************************************************************
+Round   0
+D:\software\minicoonda\envs\fd\Lib\site-packages\torch\autograd\graph.py:824: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:233.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+ROUND_ACCURACY method=InteractionFedPhoenix round=1 accuracy=10.000000
+********************************************************************************
+Round   1
+ROUND_ACCURACY method=InteractionFedPhoenix round=2 accuracy=13.230000
+********************************************************************************
+Round   2
+ROUND_ACCURACY method=InteractionFedPhoenix round=3 accuracy=12.230000
+********************************************************************************
+Round   3
+ROUND_ACCURACY method=InteractionFedPhoenix round=4 accuracy=16.290001
+********************************************************************************
+Round   4
+ROUND_ACCURACY method=InteractionFedPhoenix round=5 accuracy=32.419998
+********************************************************************************
+Round   5
+ROUND_ACCURACY method=InteractionFedPhoenix round=6 accuracy=17.620001
+********************************************************************************
+Round   6
+ROUND_ACCURACY method=InteractionFedPhoenix round=7 accuracy=24.139999
+********************************************************************************
+Round   7
+ROUND_ACCURACY method=InteractionFedPhoenix round=8 accuracy=23.680000
+********************************************************************************
+Round   8
+ROUND_ACCURACY method=InteractionFedPhoenix round=9 accuracy=30.129999
+********************************************************************************
+Round   9
+ROUND_ACCURACY method=InteractionFedPhoenix round=10 accuracy=29.730000
+********************************************************************************
+Round  10
+ROUND_ACCURACY method=InteractionFedPhoenix round=11 accuracy=38.230000
+********************************************************************************
+Round  11
+ROUND_ACCURACY method=InteractionFedPhoenix round=12 accuracy=37.060001
+********************************************************************************
+Round  12
+ROUND_ACCURACY method=InteractionFedPhoenix round=13 accuracy=37.919998
+********************************************************************************
+Round  13
+ROUND_ACCURACY method=InteractionFedPhoenix round=14 accuracy=45.119999
+********************************************************************************
+Round  14
+ROUND_ACCURACY method=InteractionFedPhoenix round=15 accuracy=45.139999
+********************************************************************************
+Round  15
+ROUND_ACCURACY method=InteractionFedPhoenix round=16 accuracy=46.900002
+********************************************************************************
+Round  16
+ROUND_ACCURACY method=InteractionFedPhoenix round=17 accuracy=50.660000
+********************************************************************************
+Round  17
+ROUND_ACCURACY method=InteractionFedPhoenix round=18 accuracy=35.889999
+********************************************************************************
+Round  18
+ROUND_ACCURACY method=InteractionFedPhoenix round=19 accuracy=41.619999
+********************************************************************************
+Round  19
+ROUND_ACCURACY method=InteractionFedPhoenix round=20 accuracy=46.240002
+********************************************************************************
+Round  20
+ROUND_ACCURACY method=InteractionFedPhoenix round=21 accuracy=51.340000
+********************************************************************************
+Round  21
+ROUND_ACCURACY method=InteractionFedPhoenix round=22 accuracy=55.470001
+********************************************************************************
+Round  22
+ROUND_ACCURACY method=InteractionFedPhoenix round=23 accuracy=48.110001
+********************************************************************************
+Round  23
+ROUND_ACCURACY method=InteractionFedPhoenix round=24 accuracy=51.520000
+********************************************************************************
+Round  24
+ROUND_ACCURACY method=InteractionFedPhoenix round=25 accuracy=54.990002
+********************************************************************************
+Round  25
+ROUND_ACCURACY method=InteractionFedPhoenix round=26 accuracy=51.830002
+********************************************************************************
+Round  26
+ROUND_ACCURACY method=InteractionFedPhoenix round=27 accuracy=48.450001
+********************************************************************************
+Round  27
+ROUND_ACCURACY method=InteractionFedPhoenix round=28 accuracy=51.759998
+********************************************************************************
+Round  28
+ROUND_ACCURACY method=InteractionFedPhoenix round=29 accuracy=48.200001
+********************************************************************************
+Round  29
+ROUND_ACCURACY method=InteractionFedPhoenix round=30 accuracy=55.770000
+********************************************************************************
+Round  30
+ROUND_ACCURACY method=InteractionFedPhoenix round=31 accuracy=57.189999
+********************************************************************************
+Round  31
+ROUND_ACCURACY method=InteractionFedPhoenix round=32 accuracy=55.310001
+********************************************************************************
+Round  32
+ROUND_ACCURACY method=InteractionFedPhoenix round=33 accuracy=56.939999
+********************************************************************************
+Round  33
+ROUND_ACCURACY method=InteractionFedPhoenix round=34 accuracy=65.650002
+********************************************************************************
+Round  34
+ROUND_ACCURACY method=InteractionFedPhoenix round=35 accuracy=55.990002
+********************************************************************************
+Round  35
+ROUND_ACCURACY method=InteractionFedPhoenix round=36 accuracy=54.450001
+********************************************************************************
+Round  36
+ROUND_ACCURACY method=InteractionFedPhoenix round=37 accuracy=61.490002
+********************************************************************************
+Round  37
+ROUND_ACCURACY method=InteractionFedPhoenix round=38 accuracy=59.630001
+********************************************************************************
+Round  38
+ROUND_ACCURACY method=InteractionFedPhoenix round=39 accuracy=58.330002
+********************************************************************************
+Round  39
+ROUND_ACCURACY method=InteractionFedPhoenix round=40 accuracy=65.070000
+********************************************************************************
+Round  40
+ROUND_ACCURACY method=InteractionFedPhoenix round=41 accuracy=66.040001
+********************************************************************************
+Round  41
+ROUND_ACCURACY method=InteractionFedPhoenix round=42 accuracy=57.759998
+********************************************************************************
+Round  42
+ROUND_ACCURACY method=InteractionFedPhoenix round=43 accuracy=59.790001
+********************************************************************************
+Round  43
+ROUND_ACCURACY method=InteractionFedPhoenix round=44 accuracy=62.040001
+********************************************************************************
+Round  44
+ROUND_ACCURACY method=InteractionFedPhoenix round=45 accuracy=51.130001
+********************************************************************************
+Round  45
+ROUND_ACCURACY method=InteractionFedPhoenix round=46 accuracy=67.110001
+********************************************************************************
+Round  46
+ROUND_ACCURACY method=InteractionFedPhoenix round=47 accuracy=61.369999
+********************************************************************************
+Round  47
+ROUND_ACCURACY method=InteractionFedPhoenix round=48 accuracy=59.849998
+********************************************************************************
+Round  48
+ROUND_ACCURACY method=InteractionFedPhoenix round=49 accuracy=60.150002
+********************************************************************************
+Round  49
+ROUND_ACCURACY method=InteractionFedPhoenix round=50 accuracy=61.340000
+********************************************************************************
+Round  50
+ROUND_ACCURACY method=InteractionFedPhoenix round=51 accuracy=55.619999
+********************************************************************************
+Round  51
+ROUND_ACCURACY method=InteractionFedPhoenix round=52 accuracy=67.029999
+********************************************************************************
+Round  52
+ROUND_ACCURACY method=InteractionFedPhoenix round=53 accuracy=59.980000
+********************************************************************************
+Round  53
+ROUND_ACCURACY method=InteractionFedPhoenix round=54 accuracy=49.959999
+********************************************************************************
+Round  54
+ROUND_ACCURACY method=InteractionFedPhoenix round=55 accuracy=63.230000
+********************************************************************************
+Round  55
+ROUND_ACCURACY method=InteractionFedPhoenix round=56 accuracy=66.120003
+********************************************************************************
+Round  56
+ROUND_ACCURACY method=InteractionFedPhoenix round=57 accuracy=60.369999
+********************************************************************************
+Round  57
+ROUND_ACCURACY method=InteractionFedPhoenix round=58 accuracy=41.990002
+********************************************************************************
+Round  58
+ROUND_ACCURACY method=InteractionFedPhoenix round=59 accuracy=62.779999
+********************************************************************************
+Round  59
+ROUND_ACCURACY method=InteractionFedPhoenix round=60 accuracy=65.980003
+********************************************************************************
+Round  60
+ROUND_ACCURACY method=InteractionFedPhoenix round=61 accuracy=67.239998
+********************************************************************************
+Round  61
+ROUND_ACCURACY method=InteractionFedPhoenix round=62 accuracy=61.599998
+********************************************************************************
+Round  62
+ROUND_ACCURACY method=InteractionFedPhoenix round=63 accuracy=65.070000
+********************************************************************************
+Round  63
+ROUND_ACCURACY method=InteractionFedPhoenix round=64 accuracy=64.919998
+********************************************************************************
+Round  64
+ROUND_ACCURACY method=InteractionFedPhoenix round=65 accuracy=64.949997
+********************************************************************************
+Round  65
+ROUND_ACCURACY method=InteractionFedPhoenix round=66 accuracy=66.449997
+********************************************************************************
+Round  66
+ROUND_ACCURACY method=InteractionFedPhoenix round=67 accuracy=62.630001
+********************************************************************************
+Round  67
+ROUND_ACCURACY method=InteractionFedPhoenix round=68 accuracy=57.200001
+********************************************************************************
+Round  68
+ROUND_ACCURACY method=InteractionFedPhoenix round=69 accuracy=69.650002
+********************************************************************************
+Round  69
+ROUND_ACCURACY method=InteractionFedPhoenix round=70 accuracy=60.680000
+********************************************************************************
+Round  70
+ROUND_ACCURACY method=InteractionFedPhoenix round=71 accuracy=59.939999
+********************************************************************************
+Round  71
+ROUND_ACCURACY method=InteractionFedPhoenix round=72 accuracy=62.529999
+********************************************************************************
+Round  72
+ROUND_ACCURACY method=InteractionFedPhoenix round=73 accuracy=67.379997
+********************************************************************************
+Round  73
+ROUND_ACCURACY method=InteractionFedPhoenix round=74 accuracy=68.349998
+********************************************************************************
+Round  74
+ROUND_ACCURACY method=InteractionFedPhoenix round=75 accuracy=72.010002
+********************************************************************************
+Round  75
+ROUND_ACCURACY method=InteractionFedPhoenix round=76 accuracy=65.500000
+********************************************************************************
+Round  76
+ROUND_ACCURACY method=InteractionFedPhoenix round=77 accuracy=62.450001
+********************************************************************************
+Round  77
+ROUND_ACCURACY method=InteractionFedPhoenix round=78 accuracy=65.739998
+********************************************************************************
+Round  78
+ROUND_ACCURACY method=InteractionFedPhoenix round=79 accuracy=67.639999
+********************************************************************************
+Round  79
+ROUND_ACCURACY method=InteractionFedPhoenix round=80 accuracy=66.930000
+********************************************************************************
+Round  80
+ROUND_ACCURACY method=InteractionFedPhoenix round=81 accuracy=65.440002
+********************************************************************************
+Round  81
+ROUND_ACCURACY method=InteractionFedPhoenix round=82 accuracy=67.220001
+********************************************************************************
+Round  82
+ROUND_ACCURACY method=InteractionFedPhoenix round=83 accuracy=69.660004
+********************************************************************************
+Round  83
+ROUND_ACCURACY method=InteractionFedPhoenix round=84 accuracy=66.019997
+********************************************************************************
+Round  84
+ROUND_ACCURACY method=InteractionFedPhoenix round=85 accuracy=67.599998
+********************************************************************************
+Round  85
+ROUND_ACCURACY method=InteractionFedPhoenix round=86 accuracy=66.379997
+********************************************************************************
+Round  86
+ROUND_ACCURACY method=InteractionFedPhoenix round=87 accuracy=70.309998
+********************************************************************************
+Round  87
+ROUND_ACCURACY method=InteractionFedPhoenix round=88 accuracy=68.739998
+********************************************************************************
+Round  88
+ROUND_ACCURACY method=InteractionFedPhoenix round=89 accuracy=72.629997
+********************************************************************************
+Round  89
+ROUND_ACCURACY method=InteractionFedPhoenix round=90 accuracy=66.239998
+********************************************************************************
+Round  90
+ROUND_ACCURACY method=InteractionFedPhoenix round=91 accuracy=70.120003
+********************************************************************************
+Round  91
+ROUND_ACCURACY method=InteractionFedPhoenix round=92 accuracy=70.059998
+********************************************************************************
+Round  92
+ROUND_ACCURACY method=InteractionFedPhoenix round=93 accuracy=66.410004
+********************************************************************************
+Round  93
+ROUND_ACCURACY method=InteractionFedPhoenix round=94 accuracy=69.400002
+********************************************************************************
+Round  94
+ROUND_ACCURACY method=InteractionFedPhoenix round=95 accuracy=69.769997
+********************************************************************************
+Round  95
+ROUND_ACCURACY method=InteractionFedPhoenix round=96 accuracy=68.430000
+********************************************************************************
+Round  96
+ROUND_ACCURACY method=InteractionFedPhoenix round=97 accuracy=68.550003
+********************************************************************************
+Round  97
+ROUND_ACCURACY method=InteractionFedPhoenix round=98 accuracy=66.330002
+********************************************************************************
+Round  98
+ROUND_ACCURACY method=InteractionFedPhoenix round=99 accuracy=61.520000
+********************************************************************************
+Round  99
+ROUND_ACCURACY method=InteractionFedPhoenix round=100 accuracy=62.950001
+********************************************************************************
+Round 100
+ROUND_ACCURACY method=InteractionFedPhoenix round=101 accuracy=67.639999
+********************************************************************************
+Round 101
+ROUND_ACCURACY method=InteractionFedPhoenix round=102 accuracy=73.290001
+********************************************************************************
+Round 102
+ROUND_ACCURACY method=InteractionFedPhoenix round=103 accuracy=73.190002
+********************************************************************************
+Round 103
+ROUND_ACCURACY method=InteractionFedPhoenix round=104 accuracy=70.050003
+********************************************************************************
+Round 104
+ROUND_ACCURACY method=InteractionFedPhoenix round=105 accuracy=70.660004
+********************************************************************************
+Round 105
+ROUND_ACCURACY method=InteractionFedPhoenix round=106 accuracy=70.070000
+********************************************************************************
+Round 106
+ROUND_ACCURACY method=InteractionFedPhoenix round=107 accuracy=51.320000
+********************************************************************************
+Round 107
+ROUND_ACCURACY method=InteractionFedPhoenix round=108 accuracy=70.580002
+********************************************************************************
+Round 108
+ROUND_ACCURACY method=InteractionFedPhoenix round=109 accuracy=73.250000
+********************************************************************************
+Round 109
+ROUND_ACCURACY method=InteractionFedPhoenix round=110 accuracy=72.900002
+********************************************************************************
+Round 110
+ROUND_ACCURACY method=InteractionFedPhoenix round=111 accuracy=73.650002
+********************************************************************************
+Round 111
+ROUND_ACCURACY method=InteractionFedPhoenix round=112 accuracy=71.050003
+********************************************************************************
+Round 112
+ROUND_ACCURACY method=InteractionFedPhoenix round=113 accuracy=67.400002
+********************************************************************************
+Round 113
+ROUND_ACCURACY method=InteractionFedPhoenix round=114 accuracy=68.220001
+********************************************************************************
+Round 114
+ROUND_ACCURACY method=InteractionFedPhoenix round=115 accuracy=63.480000
+********************************************************************************
+Round 115
+ROUND_ACCURACY method=InteractionFedPhoenix round=116 accuracy=72.529999
+********************************************************************************
+Round 116
+ROUND_ACCURACY method=InteractionFedPhoenix round=117 accuracy=65.120003
+********************************************************************************
+Round 117
+ROUND_ACCURACY method=InteractionFedPhoenix round=118 accuracy=70.769997
+********************************************************************************
+Round 118
+ROUND_ACCURACY method=InteractionFedPhoenix round=119 accuracy=73.250000
+********************************************************************************
+Round 119
+ROUND_ACCURACY method=InteractionFedPhoenix round=120 accuracy=68.699997
+********************************************************************************
+Round 120
+ROUND_ACCURACY method=InteractionFedPhoenix round=121 accuracy=73.220001
+********************************************************************************
+Round 121
+ROUND_ACCURACY method=InteractionFedPhoenix round=122 accuracy=68.190002
+********************************************************************************
+Round 122
+ROUND_ACCURACY method=InteractionFedPhoenix round=123 accuracy=70.720001
+********************************************************************************
+Round 123
+ROUND_ACCURACY method=InteractionFedPhoenix round=124 accuracy=64.129997
+********************************************************************************
+Round 124
+ROUND_ACCURACY method=InteractionFedPhoenix round=125 accuracy=66.610001
+********************************************************************************
+Round 125
+ROUND_ACCURACY method=InteractionFedPhoenix round=126 accuracy=66.400002
+********************************************************************************
+Round 126
+ROUND_ACCURACY method=InteractionFedPhoenix round=127 accuracy=73.980003
+********************************************************************************
+Round 127
+ROUND_ACCURACY method=InteractionFedPhoenix round=128 accuracy=69.040001
+********************************************************************************
+Round 128
+ROUND_ACCURACY method=InteractionFedPhoenix round=129 accuracy=74.010002
+********************************************************************************
+Round 129
+ROUND_ACCURACY method=InteractionFedPhoenix round=130 accuracy=65.730003
+********************************************************************************
+Round 130
+ROUND_ACCURACY method=InteractionFedPhoenix round=131 accuracy=65.099998
+********************************************************************************
+Round 131
+ROUND_ACCURACY method=InteractionFedPhoenix round=132 accuracy=75.070000
+********************************************************************************
+Round 132
+ROUND_ACCURACY method=InteractionFedPhoenix round=133 accuracy=65.019997
+********************************************************************************
+Round 133
+ROUND_ACCURACY method=InteractionFedPhoenix round=134 accuracy=74.199997
+********************************************************************************
+Round 134
+ROUND_ACCURACY method=InteractionFedPhoenix round=135 accuracy=65.309998
+********************************************************************************
+Round 135
+ROUND_ACCURACY method=InteractionFedPhoenix round=136 accuracy=69.080002
+********************************************************************************
+Round 136
+ROUND_ACCURACY method=InteractionFedPhoenix round=137 accuracy=73.290001
+********************************************************************************
+Round 137
+ROUND_ACCURACY method=InteractionFedPhoenix round=138 accuracy=75.430000
+********************************************************************************
+Round 138
+ROUND_ACCURACY method=InteractionFedPhoenix round=139 accuracy=72.370003
+********************************************************************************
+Round 139
+ROUND_ACCURACY method=InteractionFedPhoenix round=140 accuracy=74.690002
+********************************************************************************
+Round 140
+ROUND_ACCURACY method=InteractionFedPhoenix round=141 accuracy=75.900002
+********************************************************************************
+Round 141
+ROUND_ACCURACY method=InteractionFedPhoenix round=142 accuracy=68.550003
+********************************************************************************
+Round 142
+ROUND_ACCURACY method=InteractionFedPhoenix round=143 accuracy=64.000000
+********************************************************************************
+Round 143
+ROUND_ACCURACY method=InteractionFedPhoenix round=144 accuracy=75.900002
+********************************************************************************
+Round 144
+ROUND_ACCURACY method=InteractionFedPhoenix round=145 accuracy=68.129997
+********************************************************************************
+Round 145
+ROUND_ACCURACY method=InteractionFedPhoenix round=146 accuracy=66.480003
+********************************************************************************
+Round 146
+ROUND_ACCURACY method=InteractionFedPhoenix round=147 accuracy=73.440002
+********************************************************************************
+Round 147
+ROUND_ACCURACY method=InteractionFedPhoenix round=148 accuracy=68.449997
+********************************************************************************
+Round 148
+ROUND_ACCURACY method=InteractionFedPhoenix round=149 accuracy=64.959999
+********************************************************************************
+Round 149
+ROUND_ACCURACY method=InteractionFedPhoenix round=150 accuracy=73.610001
+********************************************************************************
+Round 150
+ROUND_ACCURACY method=InteractionFedPhoenix round=151 accuracy=60.840000
+********************************************************************************
+Round 151
+ROUND_ACCURACY method=InteractionFedPhoenix round=152 accuracy=66.459999
+********************************************************************************
+Round 152
+ROUND_ACCURACY method=InteractionFedPhoenix round=153 accuracy=72.940002
+********************************************************************************
+Round 153
+ROUND_ACCURACY method=InteractionFedPhoenix round=154 accuracy=73.000000
+********************************************************************************
+Round 154
+ROUND_ACCURACY method=InteractionFedPhoenix round=155 accuracy=68.570000
+********************************************************************************
+Round 155
+ROUND_ACCURACY method=InteractionFedPhoenix round=156 accuracy=72.760002
+********************************************************************************
+Round 156
+ROUND_ACCURACY method=InteractionFedPhoenix round=157 accuracy=61.759998
+********************************************************************************
+Round 157
+ROUND_ACCURACY method=InteractionFedPhoenix round=158 accuracy=65.790001
+********************************************************************************
+Round 158
+ROUND_ACCURACY method=InteractionFedPhoenix round=159 accuracy=71.010002
+********************************************************************************
+Round 159
+ROUND_ACCURACY method=InteractionFedPhoenix round=160 accuracy=61.830002
+********************************************************************************
+Round 160
+ROUND_ACCURACY method=InteractionFedPhoenix round=161 accuracy=76.500000
+********************************************************************************
+Round 161
+ROUND_ACCURACY method=InteractionFedPhoenix round=162 accuracy=72.019997
+********************************************************************************
+Round 162
+ROUND_ACCURACY method=InteractionFedPhoenix round=163 accuracy=70.029999
+********************************************************************************
+Round 163
+ROUND_ACCURACY method=InteractionFedPhoenix round=164 accuracy=66.779999
+********************************************************************************
+Round 164
+ROUND_ACCURACY method=InteractionFedPhoenix round=165 accuracy=73.669998
+********************************************************************************
+Round 165
+ROUND_ACCURACY method=InteractionFedPhoenix round=166 accuracy=72.260002
+********************************************************************************
+Round 166
+ROUND_ACCURACY method=InteractionFedPhoenix round=167 accuracy=67.940002
+********************************************************************************
+Round 167
+ROUND_ACCURACY method=InteractionFedPhoenix round=168 accuracy=69.029999
+********************************************************************************
+Round 168
+ROUND_ACCURACY method=InteractionFedPhoenix round=169 accuracy=70.459999
+********************************************************************************
+Round 169
+ROUND_ACCURACY method=InteractionFedPhoenix round=170 accuracy=67.739998
+********************************************************************************
+Round 170
+ROUND_ACCURACY method=InteractionFedPhoenix round=171 accuracy=66.959999
+********************************************************************************
+Round 171
+ROUND_ACCURACY method=InteractionFedPhoenix round=172 accuracy=66.949997
+********************************************************************************
+Round 172
+ROUND_ACCURACY method=InteractionFedPhoenix round=173 accuracy=49.669998
+********************************************************************************
+Round 173
+ROUND_ACCURACY method=InteractionFedPhoenix round=174 accuracy=70.300003
+********************************************************************************
+Round 174
+ROUND_ACCURACY method=InteractionFedPhoenix round=175 accuracy=73.260002
+********************************************************************************
+Round 175
+ROUND_ACCURACY method=InteractionFedPhoenix round=176 accuracy=73.190002
+********************************************************************************
+Round 176
+ROUND_ACCURACY method=InteractionFedPhoenix round=177 accuracy=70.110001
+********************************************************************************
+Round 177
+ROUND_ACCURACY method=InteractionFedPhoenix round=178 accuracy=66.290001
+********************************************************************************
+Round 178
+ROUND_ACCURACY method=InteractionFedPhoenix round=179 accuracy=75.519997
+********************************************************************************
+Round 179
+ROUND_ACCURACY method=InteractionFedPhoenix round=180 accuracy=72.760002
+********************************************************************************
+Round 180
+ROUND_ACCURACY method=InteractionFedPhoenix round=181 accuracy=73.830002
+********************************************************************************
+Round 181
+ROUND_ACCURACY method=InteractionFedPhoenix round=182 accuracy=64.529999
+********************************************************************************
+Round 182
+ROUND_ACCURACY method=InteractionFedPhoenix round=183 accuracy=75.029999
+********************************************************************************
+Round 183
+ROUND_ACCURACY method=InteractionFedPhoenix round=184 accuracy=73.900002
+********************************************************************************
+Round 184
+ROUND_ACCURACY method=InteractionFedPhoenix round=185 accuracy=76.320000
+********************************************************************************
+Round 185
+ROUND_ACCURACY method=InteractionFedPhoenix round=186 accuracy=74.449997
+********************************************************************************
+Round 186
+ROUND_ACCURACY method=InteractionFedPhoenix round=187 accuracy=71.110001
+********************************************************************************
+Round 187
+ROUND_ACCURACY method=InteractionFedPhoenix round=188 accuracy=72.699997
+********************************************************************************
+Round 188
+ROUND_ACCURACY method=InteractionFedPhoenix round=189 accuracy=67.010002
+********************************************************************************
+Round 189
+ROUND_ACCURACY method=InteractionFedPhoenix round=190 accuracy=70.970001
+********************************************************************************
+Round 190
+ROUND_ACCURACY method=InteractionFedPhoenix round=191 accuracy=65.169998
+********************************************************************************
+Round 191
+ROUND_ACCURACY method=InteractionFedPhoenix round=192 accuracy=74.110001
+********************************************************************************
+Round 192
+ROUND_ACCURACY method=InteractionFedPhoenix round=193 accuracy=74.730003
+********************************************************************************
+Round 193
+ROUND_ACCURACY method=InteractionFedPhoenix round=194 accuracy=72.089996
+********************************************************************************
+Round 194
+ROUND_ACCURACY method=InteractionFedPhoenix round=195 accuracy=72.510002
+********************************************************************************
+Round 195
+ROUND_ACCURACY method=InteractionFedPhoenix round=196 accuracy=76.550003
+********************************************************************************
+Round 196
+ROUND_ACCURACY method=InteractionFedPhoenix round=197 accuracy=63.599998
+********************************************************************************
+Round 197
+ROUND_ACCURACY method=InteractionFedPhoenix round=198 accuracy=72.709999
+********************************************************************************
+Round 198
+ROUND_ACCURACY method=InteractionFedPhoenix round=199 accuracy=65.000000
+********************************************************************************
+Round 199
+ROUND_ACCURACY method=InteractionFedPhoenix round=200 accuracy=58.080002
+********************************************************************************
+Round 200
+ROUND_ACCURACY method=InteractionFedPhoenix round=201 accuracy=69.720001
+********************************************************************************
+Round 201
+ROUND_ACCURACY method=InteractionFedPhoenix round=202 accuracy=72.720001
+********************************************************************************
+Round 202
+ROUND_ACCURACY method=InteractionFedPhoenix round=203 accuracy=64.209999
+********************************************************************************
+Round 203
+ROUND_ACCURACY method=InteractionFedPhoenix round=204 accuracy=74.449997
+********************************************************************************
+Round 204
+ROUND_ACCURACY method=InteractionFedPhoenix round=205 accuracy=71.300003
+********************************************************************************
+Round 205
+ROUND_ACCURACY method=InteractionFedPhoenix round=206 accuracy=74.580002
+********************************************************************************
+Round 206
+ROUND_ACCURACY method=InteractionFedPhoenix round=207 accuracy=74.070000
+********************************************************************************
+Round 207
+ROUND_ACCURACY method=InteractionFedPhoenix round=208 accuracy=68.419998
+********************************************************************************
+Round 208
+ROUND_ACCURACY method=InteractionFedPhoenix round=209 accuracy=69.449997
+********************************************************************************
+Round 209
+ROUND_ACCURACY method=InteractionFedPhoenix round=210 accuracy=74.449997
+********************************************************************************
+Round 210
+ROUND_ACCURACY method=InteractionFedPhoenix round=211 accuracy=60.090000
+********************************************************************************
+Round 211
+ROUND_ACCURACY method=InteractionFedPhoenix round=212 accuracy=77.879997
+********************************************************************************
+Round 212
+ROUND_ACCURACY method=InteractionFedPhoenix round=213 accuracy=70.839996
+********************************************************************************
+Round 213
+ROUND_ACCURACY method=InteractionFedPhoenix round=214 accuracy=74.300003
+********************************************************************************
+Round 214
+ROUND_ACCURACY method=InteractionFedPhoenix round=215 accuracy=74.500000
+********************************************************************************
+Round 215
+ROUND_ACCURACY method=InteractionFedPhoenix round=216 accuracy=74.080002
+********************************************************************************
+Round 216
+ROUND_ACCURACY method=InteractionFedPhoenix round=217 accuracy=64.570000
+********************************************************************************
+Round 217
+ROUND_ACCURACY method=InteractionFedPhoenix round=218 accuracy=77.870003
+********************************************************************************
+Round 218
+ROUND_ACCURACY method=InteractionFedPhoenix round=219 accuracy=73.230003
+********************************************************************************
+Round 219
+ROUND_ACCURACY method=InteractionFedPhoenix round=220 accuracy=72.410004
+********************************************************************************
+Round 220
+ROUND_ACCURACY method=InteractionFedPhoenix round=221 accuracy=73.949997
+********************************************************************************
+Round 221
+ROUND_ACCURACY method=InteractionFedPhoenix round=222 accuracy=68.889999
+********************************************************************************
+Round 222
+ROUND_ACCURACY method=InteractionFedPhoenix round=223 accuracy=73.599998
+********************************************************************************
+Round 223
+ROUND_ACCURACY method=InteractionFedPhoenix round=224 accuracy=76.870003
+********************************************************************************
+Round 224
+ROUND_ACCURACY method=InteractionFedPhoenix round=225 accuracy=74.639999
+********************************************************************************
+Round 225
+ROUND_ACCURACY method=InteractionFedPhoenix round=226 accuracy=68.029999
+********************************************************************************
+Round 226
+ROUND_ACCURACY method=InteractionFedPhoenix round=227 accuracy=73.230003
+********************************************************************************
+Round 227
+ROUND_ACCURACY method=InteractionFedPhoenix round=228 accuracy=64.830002
+********************************************************************************
+Round 228
+ROUND_ACCURACY method=InteractionFedPhoenix round=229 accuracy=71.449997
+********************************************************************************
+Round 229
+ROUND_ACCURACY method=InteractionFedPhoenix round=230 accuracy=77.220001
+********************************************************************************
+Round 230
+ROUND_ACCURACY method=InteractionFedPhoenix round=231 accuracy=74.629997
+********************************************************************************
+Round 231
+ROUND_ACCURACY method=InteractionFedPhoenix round=232 accuracy=78.010002
+********************************************************************************
+Round 232
+ROUND_ACCURACY method=InteractionFedPhoenix round=233 accuracy=74.110001
+********************************************************************************
+Round 233
+ROUND_ACCURACY method=InteractionFedPhoenix round=234 accuracy=69.459999
+********************************************************************************
+Round 234
+ROUND_ACCURACY method=InteractionFedPhoenix round=235 accuracy=62.099998
+********************************************************************************
+Round 235
+ROUND_ACCURACY method=InteractionFedPhoenix round=236 accuracy=77.809998
+********************************************************************************
+Round 236
+ROUND_ACCURACY method=InteractionFedPhoenix round=237 accuracy=68.320000
+********************************************************************************
+Round 237
+ROUND_ACCURACY method=InteractionFedPhoenix round=238 accuracy=69.930000
+********************************************************************************
+Round 238
+ROUND_ACCURACY method=InteractionFedPhoenix round=239 accuracy=74.599998
+********************************************************************************
+Round 239
+ROUND_ACCURACY method=InteractionFedPhoenix round=240 accuracy=66.309998
+********************************************************************************
+Round 240
+ROUND_ACCURACY method=InteractionFedPhoenix round=241 accuracy=75.089996
+********************************************************************************
+Round 241
+ROUND_ACCURACY method=InteractionFedPhoenix round=242 accuracy=75.820000
+********************************************************************************
+Round 242
+ROUND_ACCURACY method=InteractionFedPhoenix round=243 accuracy=73.910004
+********************************************************************************
+Round 243
+ROUND_ACCURACY method=InteractionFedPhoenix round=244 accuracy=74.639999
+********************************************************************************
+Round 244
+ROUND_ACCURACY method=InteractionFedPhoenix round=245 accuracy=75.010002
+********************************************************************************
+Round 245
+ROUND_ACCURACY method=InteractionFedPhoenix round=246 accuracy=73.970001
+********************************************************************************
+Round 246
+ROUND_ACCURACY method=InteractionFedPhoenix round=247 accuracy=54.799999
+********************************************************************************
+Round 247
+ROUND_ACCURACY method=InteractionFedPhoenix round=248 accuracy=74.019997
+********************************************************************************
+Round 248
+ROUND_ACCURACY method=InteractionFedPhoenix round=249 accuracy=70.389999
+********************************************************************************
+Round 249
+ROUND_ACCURACY method=InteractionFedPhoenix round=250 accuracy=73.459999
+********************************************************************************
+Round 250
+ROUND_ACCURACY method=InteractionFedPhoenix round=251 accuracy=77.300003
+********************************************************************************
+Round 251
+ROUND_ACCURACY method=InteractionFedPhoenix round=252 accuracy=73.639999
+********************************************************************************
+Round 252
+ROUND_ACCURACY method=InteractionFedPhoenix round=253 accuracy=69.900002
+********************************************************************************
+Round 253
+ROUND_ACCURACY method=InteractionFedPhoenix round=254 accuracy=69.769997
+********************************************************************************
+Round 254
+ROUND_ACCURACY method=InteractionFedPhoenix round=255 accuracy=78.400002
+********************************************************************************
+Round 255
+ROUND_ACCURACY method=InteractionFedPhoenix round=256 accuracy=71.480003
+********************************************************************************
+Round 256
+ROUND_ACCURACY method=InteractionFedPhoenix round=257 accuracy=75.589996
+********************************************************************************
+Round 257
+ROUND_ACCURACY method=InteractionFedPhoenix round=258 accuracy=74.089996
+********************************************************************************
+Round 258
+ROUND_ACCURACY method=InteractionFedPhoenix round=259 accuracy=75.790001
+********************************************************************************
+Round 259
+ROUND_ACCURACY method=InteractionFedPhoenix round=260 accuracy=76.230003
+********************************************************************************
+Round 260
+ROUND_ACCURACY method=InteractionFedPhoenix round=261 accuracy=75.830002
+********************************************************************************
+Round 261
+ROUND_ACCURACY method=InteractionFedPhoenix round=262 accuracy=74.510002
+********************************************************************************
+Round 262
+ROUND_ACCURACY method=InteractionFedPhoenix round=263 accuracy=69.540001
+********************************************************************************
+Round 263
+ROUND_ACCURACY method=InteractionFedPhoenix round=264 accuracy=71.250000
+********************************************************************************
+Round 264
+ROUND_ACCURACY method=InteractionFedPhoenix round=265 accuracy=67.230003
+********************************************************************************
+Round 265
+ROUND_ACCURACY method=InteractionFedPhoenix round=266 accuracy=74.870003
+********************************************************************************
+Round 266
+ROUND_ACCURACY method=InteractionFedPhoenix round=267 accuracy=72.150002
+********************************************************************************
+Round 267
+ROUND_ACCURACY method=InteractionFedPhoenix round=268 accuracy=55.959999
+********************************************************************************
+Round 268
+ROUND_ACCURACY method=InteractionFedPhoenix round=269 accuracy=74.139999
+********************************************************************************
+Round 269
+ROUND_ACCURACY method=InteractionFedPhoenix round=270 accuracy=69.650002
+********************************************************************************
+Round 270
+ROUND_ACCURACY method=InteractionFedPhoenix round=271 accuracy=73.180000
+********************************************************************************
+Round 271
+ROUND_ACCURACY method=InteractionFedPhoenix round=272 accuracy=65.129997
+********************************************************************************
+Round 272
+ROUND_ACCURACY method=InteractionFedPhoenix round=273 accuracy=66.559998
+********************************************************************************
+Round 273
+ROUND_ACCURACY method=InteractionFedPhoenix round=274 accuracy=54.810001
+********************************************************************************
+Round 274
+ROUND_ACCURACY method=InteractionFedPhoenix round=275 accuracy=75.129997
+********************************************************************************
+Round 275
+ROUND_ACCURACY method=InteractionFedPhoenix round=276 accuracy=69.589996
+********************************************************************************
+Round 276
+ROUND_ACCURACY method=InteractionFedPhoenix round=277 accuracy=76.480003
+********************************************************************************
+Round 277
+ROUND_ACCURACY method=InteractionFedPhoenix round=278 accuracy=69.239998
+********************************************************************************
+Round 278
+ROUND_ACCURACY method=InteractionFedPhoenix round=279 accuracy=77.809998
+********************************************************************************
+Round 279
+ROUND_ACCURACY method=InteractionFedPhoenix round=280 accuracy=75.629997
+********************************************************************************
+Round 280
+ROUND_ACCURACY method=InteractionFedPhoenix round=281 accuracy=69.029999
+********************************************************************************
+Round 281
+ROUND_ACCURACY method=InteractionFedPhoenix round=282 accuracy=63.910000
+********************************************************************************
+Round 282
+ROUND_ACCURACY method=InteractionFedPhoenix round=283 accuracy=72.470001
+********************************************************************************
+Round 283
+ROUND_ACCURACY method=InteractionFedPhoenix round=284 accuracy=72.099998
+********************************************************************************
+Round 284
+ROUND_ACCURACY method=InteractionFedPhoenix round=285 accuracy=72.110001
+********************************************************************************
+Round 285
+ROUND_ACCURACY method=InteractionFedPhoenix round=286 accuracy=66.750000
+********************************************************************************
+Round 286
+ROUND_ACCURACY method=InteractionFedPhoenix round=287 accuracy=74.519997
+********************************************************************************
+Round 287
+ROUND_ACCURACY method=InteractionFedPhoenix round=288 accuracy=70.620003
+********************************************************************************
+Round 288
+ROUND_ACCURACY method=InteractionFedPhoenix round=289 accuracy=75.650002
+********************************************************************************
+Round 289
+ROUND_ACCURACY method=InteractionFedPhoenix round=290 accuracy=77.309998
+********************************************************************************
+Round 290
+ROUND_ACCURACY method=InteractionFedPhoenix round=291 accuracy=75.639999
+********************************************************************************
+Round 291
+ROUND_ACCURACY method=InteractionFedPhoenix round=292 accuracy=71.360001
+********************************************************************************
+Round 292
+ROUND_ACCURACY method=InteractionFedPhoenix round=293 accuracy=71.139999
+********************************************************************************
+Round 293
+ROUND_ACCURACY method=InteractionFedPhoenix round=294 accuracy=71.410004
+********************************************************************************
+Round 294
+ROUND_ACCURACY method=InteractionFedPhoenix round=295 accuracy=71.660004
+********************************************************************************
+Round 295
+ROUND_ACCURACY method=InteractionFedPhoenix round=296 accuracy=73.730003
+********************************************************************************
+Round 296
+ROUND_ACCURACY method=InteractionFedPhoenix round=297 accuracy=76.120003
+********************************************************************************
+Round 297
+ROUND_ACCURACY method=InteractionFedPhoenix round=298 accuracy=51.119999
+********************************************************************************
+Round 298
+ROUND_ACCURACY method=InteractionFedPhoenix round=299 accuracy=70.660004
+********************************************************************************
+Round 299
+ROUND_ACCURACY method=InteractionFedPhoenix round=300 accuracy=73.570000
+********************************************************************************
+Round 300
+ROUND_ACCURACY method=InteractionFedPhoenix round=301 accuracy=77.889999
+********************************************************************************
+Round 301
+ROUND_ACCURACY method=InteractionFedPhoenix round=302 accuracy=67.529999
+********************************************************************************
+Round 302
+ROUND_ACCURACY method=InteractionFedPhoenix round=303 accuracy=77.470001
+********************************************************************************
+Round 303
+ROUND_ACCURACY method=InteractionFedPhoenix round=304 accuracy=72.739998
+********************************************************************************
+Round 304
+ROUND_ACCURACY method=InteractionFedPhoenix round=305 accuracy=77.480003
+********************************************************************************
+Round 305
+ROUND_ACCURACY method=InteractionFedPhoenix round=306 accuracy=71.589996
+********************************************************************************
+Round 306
+ROUND_ACCURACY method=InteractionFedPhoenix round=307 accuracy=74.900002
+********************************************************************************
+Round 307
+ROUND_ACCURACY method=InteractionFedPhoenix round=308 accuracy=73.559998
+********************************************************************************
+Round 308
+ROUND_ACCURACY method=InteractionFedPhoenix round=309 accuracy=75.949997
+********************************************************************************
+Round 309
+ROUND_ACCURACY method=InteractionFedPhoenix round=310 accuracy=77.690002
+********************************************************************************
+Round 310
+ROUND_ACCURACY method=InteractionFedPhoenix round=311 accuracy=76.730003
+********************************************************************************
+Round 311
+ROUND_ACCURACY method=InteractionFedPhoenix round=312 accuracy=75.870003
+********************************************************************************
+Round 312
+ROUND_ACCURACY method=InteractionFedPhoenix round=313 accuracy=73.860001
+********************************************************************************
+Round 313
+ROUND_ACCURACY method=InteractionFedPhoenix round=314 accuracy=75.709999
+********************************************************************************
+Round 314
+ROUND_ACCURACY method=InteractionFedPhoenix round=315 accuracy=74.599998
+********************************************************************************
+Round 315
+ROUND_ACCURACY method=InteractionFedPhoenix round=316 accuracy=69.690002
+********************************************************************************
+Round 316
+ROUND_ACCURACY method=InteractionFedPhoenix round=317 accuracy=71.879997
+********************************************************************************
+Round 317
+ROUND_ACCURACY method=InteractionFedPhoenix round=318 accuracy=68.440002
+********************************************************************************
+Round 318
+ROUND_ACCURACY method=InteractionFedPhoenix round=319 accuracy=66.250000
+********************************************************************************
+Round 319
+ROUND_ACCURACY method=InteractionFedPhoenix round=320 accuracy=72.970001
+********************************************************************************
+Round 320
+ROUND_ACCURACY method=InteractionFedPhoenix round=321 accuracy=68.129997
+********************************************************************************
+Round 321
+ROUND_ACCURACY method=InteractionFedPhoenix round=322 accuracy=74.489998
+********************************************************************************
+Round 322
+ROUND_ACCURACY method=InteractionFedPhoenix round=323 accuracy=73.919998
+********************************************************************************
+Round 323
+ROUND_ACCURACY method=InteractionFedPhoenix round=324 accuracy=73.410004
+********************************************************************************
+Round 324
+ROUND_ACCURACY method=InteractionFedPhoenix round=325 accuracy=77.029999
+********************************************************************************
+Round 325
+ROUND_ACCURACY method=InteractionFedPhoenix round=326 accuracy=73.639999
+********************************************************************************
+Round 326
+ROUND_ACCURACY method=InteractionFedPhoenix round=327 accuracy=76.309998
+********************************************************************************
+Round 327
+ROUND_ACCURACY method=InteractionFedPhoenix round=328 accuracy=74.870003
+********************************************************************************
+Round 328
+ROUND_ACCURACY method=InteractionFedPhoenix round=329 accuracy=78.720001
+********************************************************************************
+Round 329
+ROUND_ACCURACY method=InteractionFedPhoenix round=330 accuracy=75.269997
+********************************************************************************
+Round 330
+ROUND_ACCURACY method=InteractionFedPhoenix round=331 accuracy=57.860001
+********************************************************************************
+Round 331
+ROUND_ACCURACY method=InteractionFedPhoenix round=332 accuracy=72.910004
+********************************************************************************
+Round 332
+ROUND_ACCURACY method=InteractionFedPhoenix round=333 accuracy=74.970001
+********************************************************************************
+Round 333
+ROUND_ACCURACY method=InteractionFedPhoenix round=334 accuracy=75.209999
+********************************************************************************
+Round 334
+ROUND_ACCURACY method=InteractionFedPhoenix round=335 accuracy=77.519997
+********************************************************************************
+Round 335
+ROUND_ACCURACY method=InteractionFedPhoenix round=336 accuracy=77.660004
+********************************************************************************
+Round 336
+ROUND_ACCURACY method=InteractionFedPhoenix round=337 accuracy=75.180000
+********************************************************************************
+Round 337
+ROUND_ACCURACY method=InteractionFedPhoenix round=338 accuracy=79.209999
+********************************************************************************
+Round 338
+ROUND_ACCURACY method=InteractionFedPhoenix round=339 accuracy=72.309998
+********************************************************************************
+Round 339
+ROUND_ACCURACY method=InteractionFedPhoenix round=340 accuracy=77.019997
+********************************************************************************
+Round 340
+ROUND_ACCURACY method=InteractionFedPhoenix round=341 accuracy=68.099998
+********************************************************************************
+Round 341
+ROUND_ACCURACY method=InteractionFedPhoenix round=342 accuracy=76.269997
+********************************************************************************
+Round 342
+ROUND_ACCURACY method=InteractionFedPhoenix round=343 accuracy=63.730000
+********************************************************************************
+Round 343
+ROUND_ACCURACY method=InteractionFedPhoenix round=344 accuracy=73.739998
+********************************************************************************
+Round 344
+ROUND_ACCURACY method=InteractionFedPhoenix round=345 accuracy=74.169998
+********************************************************************************
+Round 345
+ROUND_ACCURACY method=InteractionFedPhoenix round=346 accuracy=76.620003
+********************************************************************************
+Round 346
+ROUND_ACCURACY method=InteractionFedPhoenix round=347 accuracy=67.120003
+********************************************************************************
+Round 347
+ROUND_ACCURACY method=InteractionFedPhoenix round=348 accuracy=68.330002
+********************************************************************************
+Round 348
+ROUND_ACCURACY method=InteractionFedPhoenix round=349 accuracy=78.650002
+********************************************************************************
+Round 349
+ROUND_ACCURACY method=InteractionFedPhoenix round=350 accuracy=76.709999
+********************************************************************************
+Round 350
+ROUND_ACCURACY method=InteractionFedPhoenix round=351 accuracy=75.050003
+********************************************************************************
+Round 351
+ROUND_ACCURACY method=InteractionFedPhoenix round=352 accuracy=79.000000
+********************************************************************************
+Round 352
+ROUND_ACCURACY method=InteractionFedPhoenix round=353 accuracy=70.589996
+********************************************************************************
+Round 353
+ROUND_ACCURACY method=InteractionFedPhoenix round=354 accuracy=69.110001
+********************************************************************************
+Round 354
+ROUND_ACCURACY method=InteractionFedPhoenix round=355 accuracy=56.459999
+********************************************************************************
+Round 355
+ROUND_ACCURACY method=InteractionFedPhoenix round=356 accuracy=66.750000
+********************************************************************************
+Round 356
+ROUND_ACCURACY method=InteractionFedPhoenix round=357 accuracy=77.440002
+********************************************************************************
+Round 357
+ROUND_ACCURACY method=InteractionFedPhoenix round=358 accuracy=77.930000
+********************************************************************************
+Round 358
+ROUND_ACCURACY method=InteractionFedPhoenix round=359 accuracy=72.440002
+********************************************************************************
+Round 359
+ROUND_ACCURACY method=InteractionFedPhoenix round=360 accuracy=74.250000
+********************************************************************************
+Round 360
+ROUND_ACCURACY method=InteractionFedPhoenix round=361 accuracy=68.849998
+********************************************************************************
+Round 361
+ROUND_ACCURACY method=InteractionFedPhoenix round=362 accuracy=68.019997
+********************************************************************************
+Round 362
+ROUND_ACCURACY method=InteractionFedPhoenix round=363 accuracy=65.540001
+********************************************************************************
+Round 363
+ROUND_ACCURACY method=InteractionFedPhoenix round=364 accuracy=66.080002
+********************************************************************************
+Round 364
+ROUND_ACCURACY method=InteractionFedPhoenix round=365 accuracy=66.970001
+********************************************************************************
+Round 365
+ROUND_ACCURACY method=InteractionFedPhoenix round=366 accuracy=75.589996
+********************************************************************************
+Round 366
+ROUND_ACCURACY method=InteractionFedPhoenix round=367 accuracy=73.849998
+********************************************************************************
+Round 367
+ROUND_ACCURACY method=InteractionFedPhoenix round=368 accuracy=73.160004
+********************************************************************************
+Round 368
+ROUND_ACCURACY method=InteractionFedPhoenix round=369 accuracy=75.169998
+********************************************************************************
+Round 369
+ROUND_ACCURACY method=InteractionFedPhoenix round=370 accuracy=65.919998
+********************************************************************************
+Round 370
+ROUND_ACCURACY method=InteractionFedPhoenix round=371 accuracy=79.459999
+********************************************************************************
+Round 371
+ROUND_ACCURACY method=InteractionFedPhoenix round=372 accuracy=69.510002
+********************************************************************************
+Round 372
+ROUND_ACCURACY method=InteractionFedPhoenix round=373 accuracy=68.680000
+********************************************************************************
+Round 373
+ROUND_ACCURACY method=InteractionFedPhoenix round=374 accuracy=76.139999
+********************************************************************************
+Round 374
+ROUND_ACCURACY method=InteractionFedPhoenix round=375 accuracy=73.790001
+********************************************************************************
+Round 375
+ROUND_ACCURACY method=InteractionFedPhoenix round=376 accuracy=76.809998
+********************************************************************************
+Round 376
+ROUND_ACCURACY method=InteractionFedPhoenix round=377 accuracy=62.880001
+********************************************************************************
+Round 377
+ROUND_ACCURACY method=InteractionFedPhoenix round=378 accuracy=75.529999
+********************************************************************************
+Round 378
+ROUND_ACCURACY method=InteractionFedPhoenix round=379 accuracy=76.180000
+********************************************************************************
+Round 379
+ROUND_ACCURACY method=InteractionFedPhoenix round=380 accuracy=78.500000
+********************************************************************************
+Round 380
+ROUND_ACCURACY method=InteractionFedPhoenix round=381 accuracy=71.739998
+********************************************************************************
+Round 381
+ROUND_ACCURACY method=InteractionFedPhoenix round=382 accuracy=77.320000
+********************************************************************************
+Round 382
+ROUND_ACCURACY method=InteractionFedPhoenix round=383 accuracy=67.580002
+********************************************************************************
+Round 383
+ROUND_ACCURACY method=InteractionFedPhoenix round=384 accuracy=75.250000
+********************************************************************************
+Round 384
+ROUND_ACCURACY method=InteractionFedPhoenix round=385 accuracy=72.110001
+********************************************************************************
+Round 385
+ROUND_ACCURACY method=InteractionFedPhoenix round=386 accuracy=76.470001
+********************************************************************************
+Round 386
+ROUND_ACCURACY method=InteractionFedPhoenix round=387 accuracy=78.099998
+********************************************************************************
+Round 387
+ROUND_ACCURACY method=InteractionFedPhoenix round=388 accuracy=74.970001
+********************************************************************************
+Round 388
+ROUND_ACCURACY method=InteractionFedPhoenix round=389 accuracy=79.029999
+********************************************************************************
+Round 389
+ROUND_ACCURACY method=InteractionFedPhoenix round=390 accuracy=69.669998
+********************************************************************************
+Round 390
+ROUND_ACCURACY method=InteractionFedPhoenix round=391 accuracy=73.120003
+********************************************************************************
+Round 391
+ROUND_ACCURACY method=InteractionFedPhoenix round=392 accuracy=71.900002
+********************************************************************************
+Round 392
+ROUND_ACCURACY method=InteractionFedPhoenix round=393 accuracy=78.680000
+********************************************************************************
+Round 393
+ROUND_ACCURACY method=InteractionFedPhoenix round=394 accuracy=69.150002
+********************************************************************************
+Round 394
+ROUND_ACCURACY method=InteractionFedPhoenix round=395 accuracy=66.529999
+********************************************************************************
+Round 395
+ROUND_ACCURACY method=InteractionFedPhoenix round=396 accuracy=68.760002
+********************************************************************************
+Round 396
+ROUND_ACCURACY method=InteractionFedPhoenix round=397 accuracy=78.629997
+********************************************************************************
+Round 397
+ROUND_ACCURACY method=InteractionFedPhoenix round=398 accuracy=75.010002
+********************************************************************************
+Round 398
+ROUND_ACCURACY method=InteractionFedPhoenix round=399 accuracy=72.510002
+********************************************************************************
+Round 399
+ROUND_ACCURACY method=InteractionFedPhoenix round=400 accuracy=74.870003
+********************************************************************************
+Round 400
+ROUND_ACCURACY method=InteractionFedPhoenix round=401 accuracy=77.779999
+********************************************************************************
+Round 401
+ROUND_ACCURACY method=InteractionFedPhoenix round=402 accuracy=68.330002
+********************************************************************************
+Round 402
+ROUND_ACCURACY method=InteractionFedPhoenix round=403 accuracy=71.070000
+********************************************************************************
+Round 403
+ROUND_ACCURACY method=InteractionFedPhoenix round=404 accuracy=73.309998
+********************************************************************************
+Round 404
+ROUND_ACCURACY method=InteractionFedPhoenix round=405 accuracy=73.070000
+********************************************************************************
+Round 405
+ROUND_ACCURACY method=InteractionFedPhoenix round=406 accuracy=78.739998
+********************************************************************************
+Round 406
+ROUND_ACCURACY method=InteractionFedPhoenix round=407 accuracy=75.910004
+********************************************************************************
+Round 407
+ROUND_ACCURACY method=InteractionFedPhoenix round=408 accuracy=75.470001
+********************************************************************************
+Round 408
+ROUND_ACCURACY method=InteractionFedPhoenix round=409 accuracy=77.830002
+********************************************************************************
+Round 409
+ROUND_ACCURACY method=InteractionFedPhoenix round=410 accuracy=67.669998
+********************************************************************************
+Round 410
+ROUND_ACCURACY method=InteractionFedPhoenix round=411 accuracy=69.650002
+********************************************************************************
+Round 411
+ROUND_ACCURACY method=InteractionFedPhoenix round=412 accuracy=62.950001
+********************************************************************************
+Round 412
+ROUND_ACCURACY method=InteractionFedPhoenix round=413 accuracy=73.660004
+********************************************************************************
+Round 413
+ROUND_ACCURACY method=InteractionFedPhoenix round=414 accuracy=76.400002
+********************************************************************************
+Round 414
+ROUND_ACCURACY method=InteractionFedPhoenix round=415 accuracy=76.809998
+********************************************************************************
+Round 415
+ROUND_ACCURACY method=InteractionFedPhoenix round=416 accuracy=75.480003
+********************************************************************************
+Round 416
+ROUND_ACCURACY method=InteractionFedPhoenix round=417 accuracy=78.000000
+********************************************************************************
+Round 417
+ROUND_ACCURACY method=InteractionFedPhoenix round=418 accuracy=68.639999
+********************************************************************************
+Round 418
+ROUND_ACCURACY method=InteractionFedPhoenix round=419 accuracy=70.650002
+********************************************************************************
+Round 419
+ROUND_ACCURACY method=InteractionFedPhoenix round=420 accuracy=78.919998
+********************************************************************************
+Round 420
+ROUND_ACCURACY method=InteractionFedPhoenix round=421 accuracy=77.790001
+********************************************************************************
+Round 421
+ROUND_ACCURACY method=InteractionFedPhoenix round=422 accuracy=72.459999
+********************************************************************************
+Round 422
+ROUND_ACCURACY method=InteractionFedPhoenix round=423 accuracy=73.500000
+********************************************************************************
+Round 423
+ROUND_ACCURACY method=InteractionFedPhoenix round=424 accuracy=71.220001
+********************************************************************************
+Round 424
+ROUND_ACCURACY method=InteractionFedPhoenix round=425 accuracy=78.330002
+********************************************************************************
+Round 425
+ROUND_ACCURACY method=InteractionFedPhoenix round=426 accuracy=70.470001
+********************************************************************************
+Round 426
+ROUND_ACCURACY method=InteractionFedPhoenix round=427 accuracy=73.779999
+********************************************************************************
+Round 427
+ROUND_ACCURACY method=InteractionFedPhoenix round=428 accuracy=72.269997
+********************************************************************************
+Round 428
+ROUND_ACCURACY method=InteractionFedPhoenix round=429 accuracy=72.639999
+********************************************************************************
+Round 429
+ROUND_ACCURACY method=InteractionFedPhoenix round=430 accuracy=75.830002
+********************************************************************************
+Round 430
+ROUND_ACCURACY method=InteractionFedPhoenix round=431 accuracy=76.849998
+********************************************************************************
+Round 431
+ROUND_ACCURACY method=InteractionFedPhoenix round=432 accuracy=76.010002
+********************************************************************************
+Round 432
+ROUND_ACCURACY method=InteractionFedPhoenix round=433 accuracy=77.300003
+********************************************************************************
+Round 433
+ROUND_ACCURACY method=InteractionFedPhoenix round=434 accuracy=80.379997
+********************************************************************************
+Round 434
+ROUND_ACCURACY method=InteractionFedPhoenix round=435 accuracy=74.860001
+********************************************************************************
+Round 435
+ROUND_ACCURACY method=InteractionFedPhoenix round=436 accuracy=73.199997
+********************************************************************************
+Round 436
+ROUND_ACCURACY method=InteractionFedPhoenix round=437 accuracy=69.849998
+********************************************************************************
+Round 437
+ROUND_ACCURACY method=InteractionFedPhoenix round=438 accuracy=72.419998
+********************************************************************************
+Round 438
+ROUND_ACCURACY method=InteractionFedPhoenix round=439 accuracy=73.550003
+********************************************************************************
+Round 439
+ROUND_ACCURACY method=InteractionFedPhoenix round=440 accuracy=68.410004
+********************************************************************************
+Round 440
+ROUND_ACCURACY method=InteractionFedPhoenix round=441 accuracy=78.730003
+********************************************************************************
+Round 441
+ROUND_ACCURACY method=InteractionFedPhoenix round=442 accuracy=77.519997
+********************************************************************************
+Round 442
+ROUND_ACCURACY method=InteractionFedPhoenix round=443 accuracy=74.949997
+********************************************************************************
+Round 443
+ROUND_ACCURACY method=InteractionFedPhoenix round=444 accuracy=70.430000
+********************************************************************************
+Round 444
+ROUND_ACCURACY method=InteractionFedPhoenix round=445 accuracy=76.620003
+********************************************************************************
+Round 445
+ROUND_ACCURACY method=InteractionFedPhoenix round=446 accuracy=76.120003
+********************************************************************************
+Round 446
+ROUND_ACCURACY method=InteractionFedPhoenix round=447 accuracy=75.500000
+********************************************************************************
+Round 447
+ROUND_ACCURACY method=InteractionFedPhoenix round=448 accuracy=74.830002
+********************************************************************************
+Round 448
+ROUND_ACCURACY method=InteractionFedPhoenix round=449 accuracy=68.669998
+********************************************************************************
+Round 449
+ROUND_ACCURACY method=InteractionFedPhoenix round=450 accuracy=74.550003
+********************************************************************************
+Round 450
+ROUND_ACCURACY method=InteractionFedPhoenix round=451 accuracy=69.400002
+********************************************************************************
+Round 451
+ROUND_ACCURACY method=InteractionFedPhoenix round=452 accuracy=79.470001
+********************************************************************************
+Round 452
+ROUND_ACCURACY method=InteractionFedPhoenix round=453 accuracy=77.919998
+********************************************************************************
+Round 453
+ROUND_ACCURACY method=InteractionFedPhoenix round=454 accuracy=75.000000
+********************************************************************************
+Round 454
+ROUND_ACCURACY method=InteractionFedPhoenix round=455 accuracy=76.169998
+********************************************************************************
+Round 455
+ROUND_ACCURACY method=InteractionFedPhoenix round=456 accuracy=76.190002
+********************************************************************************
+Round 456
+ROUND_ACCURACY method=InteractionFedPhoenix round=457 accuracy=77.919998
+********************************************************************************
+Round 457
+ROUND_ACCURACY method=InteractionFedPhoenix round=458 accuracy=69.519997
+********************************************************************************
+Round 458
+ROUND_ACCURACY method=InteractionFedPhoenix round=459 accuracy=76.540001
+********************************************************************************
+Round 459
+ROUND_ACCURACY method=InteractionFedPhoenix round=460 accuracy=69.720001
+********************************************************************************
+Round 460
+ROUND_ACCURACY method=InteractionFedPhoenix round=461 accuracy=79.889999
+********************************************************************************
+Round 461
+ROUND_ACCURACY method=InteractionFedPhoenix round=462 accuracy=76.849998
+********************************************************************************
+Round 462
+ROUND_ACCURACY method=InteractionFedPhoenix round=463 accuracy=79.080002
+********************************************************************************
+Round 463
+ROUND_ACCURACY method=InteractionFedPhoenix round=464 accuracy=71.360001
+********************************************************************************
+Round 464
+ROUND_ACCURACY method=InteractionFedPhoenix round=465 accuracy=74.160004
+********************************************************************************
+Round 465
+ROUND_ACCURACY method=InteractionFedPhoenix round=466 accuracy=79.110001
+********************************************************************************
+Round 466
+ROUND_ACCURACY method=InteractionFedPhoenix round=467 accuracy=70.699997
+********************************************************************************
+Round 467
+ROUND_ACCURACY method=InteractionFedPhoenix round=468 accuracy=77.820000
+********************************************************************************
+Round 468
+ROUND_ACCURACY method=InteractionFedPhoenix round=469 accuracy=75.320000
+********************************************************************************
+Round 469
+ROUND_ACCURACY method=InteractionFedPhoenix round=470 accuracy=72.150002
+********************************************************************************
+Round 470
+ROUND_ACCURACY method=InteractionFedPhoenix round=471 accuracy=48.330002
+********************************************************************************
+Round 471
+ROUND_ACCURACY method=InteractionFedPhoenix round=472 accuracy=76.900002
+********************************************************************************
+Round 472
+ROUND_ACCURACY method=InteractionFedPhoenix round=473 accuracy=72.300003
+********************************************************************************
+Round 473
+ROUND_ACCURACY method=InteractionFedPhoenix round=474 accuracy=67.150002
+********************************************************************************
+Round 474
+ROUND_ACCURACY method=InteractionFedPhoenix round=475 accuracy=71.870003
+********************************************************************************
+Round 475
+ROUND_ACCURACY method=InteractionFedPhoenix round=476 accuracy=72.110001
+********************************************************************************
+Round 476
+ROUND_ACCURACY method=InteractionFedPhoenix round=477 accuracy=72.129997
+********************************************************************************
+Round 477
+ROUND_ACCURACY method=InteractionFedPhoenix round=478 accuracy=68.589996
+********************************************************************************
+Round 478
+ROUND_ACCURACY method=InteractionFedPhoenix round=479 accuracy=78.629997
+********************************************************************************
+Round 479
+ROUND_ACCURACY method=InteractionFedPhoenix round=480 accuracy=78.029999
+********************************************************************************
+Round 480
+ROUND_ACCURACY method=InteractionFedPhoenix round=481 accuracy=78.169998
+********************************************************************************
+Round 481
+ROUND_ACCURACY method=InteractionFedPhoenix round=482 accuracy=77.550003
+********************************************************************************
+Round 482
+ROUND_ACCURACY method=InteractionFedPhoenix round=483 accuracy=76.360001
+********************************************************************************
+Round 483
+ROUND_ACCURACY method=InteractionFedPhoenix round=484 accuracy=71.209999
+********************************************************************************
+Round 484
+ROUND_ACCURACY method=InteractionFedPhoenix round=485 accuracy=72.919998
+********************************************************************************
+Round 485
+ROUND_ACCURACY method=InteractionFedPhoenix round=486 accuracy=67.139999
+********************************************************************************
+Round 486
+ROUND_ACCURACY method=InteractionFedPhoenix round=487 accuracy=75.629997
+********************************************************************************
+Round 487
+ROUND_ACCURACY method=InteractionFedPhoenix round=488 accuracy=78.610001
+********************************************************************************
+Round 488
+ROUND_ACCURACY method=InteractionFedPhoenix round=489 accuracy=78.209999
+********************************************************************************
+Round 489
+ROUND_ACCURACY method=InteractionFedPhoenix round=490 accuracy=77.360001
+********************************************************************************
+Round 490
+ROUND_ACCURACY method=InteractionFedPhoenix round=491 accuracy=70.510002
+********************************************************************************
+Round 491
+ROUND_ACCURACY method=InteractionFedPhoenix round=492 accuracy=76.190002
+********************************************************************************
+Round 492
+ROUND_ACCURACY method=InteractionFedPhoenix round=493 accuracy=75.290001
+********************************************************************************
+Round 493
+ROUND_ACCURACY method=InteractionFedPhoenix round=494 accuracy=75.330002
+********************************************************************************
+Round 494
+ROUND_ACCURACY method=InteractionFedPhoenix round=495 accuracy=72.199997
+********************************************************************************
+Round 495
+ROUND_ACCURACY method=InteractionFedPhoenix round=496 accuracy=70.029999
+********************************************************************************
+Round 496
+ROUND_ACCURACY method=InteractionFedPhoenix round=497 accuracy=73.879997
+********************************************************************************
+Round 497
+ROUND_ACCURACY method=InteractionFedPhoenix round=498 accuracy=80.139999
+********************************************************************************
+Round 498
+ROUND_ACCURACY method=InteractionFedPhoenix round=499 accuracy=65.660004
+********************************************************************************
+Round 499
+ROUND_ACCURACY method=InteractionFedPhoenix round=500 accuracy=80.010002
+********************************************************************************
+Round 500
+ROUND_ACCURACY method=InteractionFedPhoenix round=501 accuracy=75.660004
+********************************************************************************
+Round 501
+ROUND_ACCURACY method=InteractionFedPhoenix round=502 accuracy=77.889999
+********************************************************************************
+Round 502
+ROUND_ACCURACY method=InteractionFedPhoenix round=503 accuracy=74.059998
+********************************************************************************
+Round 503
+ROUND_ACCURACY method=InteractionFedPhoenix round=504 accuracy=77.879997
+********************************************************************************
+Round 504
+ROUND_ACCURACY method=InteractionFedPhoenix round=505 accuracy=78.910004
+********************************************************************************
+Round 505
+ROUND_ACCURACY method=InteractionFedPhoenix round=506 accuracy=61.060001
+********************************************************************************
+Round 506
+ROUND_ACCURACY method=InteractionFedPhoenix round=507 accuracy=71.059998
+********************************************************************************
+Round 507
+ROUND_ACCURACY method=InteractionFedPhoenix round=508 accuracy=62.090000
+********************************************************************************
+Round 508
+ROUND_ACCURACY method=InteractionFedPhoenix round=509 accuracy=72.879997
+********************************************************************************
+Round 509
+ROUND_ACCURACY method=InteractionFedPhoenix round=510 accuracy=73.970001
+********************************************************************************
+Round 510
+ROUND_ACCURACY method=InteractionFedPhoenix round=511 accuracy=72.150002
+********************************************************************************
+Round 511
+ROUND_ACCURACY method=InteractionFedPhoenix round=512 accuracy=68.459999
+********************************************************************************
+Round 512
+ROUND_ACCURACY method=InteractionFedPhoenix round=513 accuracy=68.099998
+********************************************************************************
+Round 513
+ROUND_ACCURACY method=InteractionFedPhoenix round=514 accuracy=71.639999
+********************************************************************************
+Round 514
+ROUND_ACCURACY method=InteractionFedPhoenix round=515 accuracy=76.599998
+********************************************************************************
+Round 515
+ROUND_ACCURACY method=InteractionFedPhoenix round=516 accuracy=79.000000
+********************************************************************************
+Round 516
+ROUND_ACCURACY method=InteractionFedPhoenix round=517 accuracy=77.730003
+********************************************************************************
+Round 517
+ROUND_ACCURACY method=InteractionFedPhoenix round=518 accuracy=73.930000
+********************************************************************************
+Round 518
+ROUND_ACCURACY method=InteractionFedPhoenix round=519 accuracy=75.309998
+********************************************************************************
+Round 519
+ROUND_ACCURACY method=InteractionFedPhoenix round=520 accuracy=75.169998
+********************************************************************************
+Round 520
+ROUND_ACCURACY method=InteractionFedPhoenix round=521 accuracy=71.230003
+********************************************************************************
+Round 521
+ROUND_ACCURACY method=InteractionFedPhoenix round=522 accuracy=71.440002
+********************************************************************************
+Round 522
+ROUND_ACCURACY method=InteractionFedPhoenix round=523 accuracy=43.470001
+********************************************************************************
+Round 523
+ROUND_ACCURACY method=InteractionFedPhoenix round=524 accuracy=75.279999
+********************************************************************************
+Round 524
+ROUND_ACCURACY method=InteractionFedPhoenix round=525 accuracy=72.440002
+********************************************************************************
+Round 525
+ROUND_ACCURACY method=InteractionFedPhoenix round=526 accuracy=74.150002
+********************************************************************************
+Round 526
+ROUND_ACCURACY method=InteractionFedPhoenix round=527 accuracy=74.089996
+********************************************************************************
+Round 527
+ROUND_ACCURACY method=InteractionFedPhoenix round=528 accuracy=73.339996
+********************************************************************************
+Round 528
+ROUND_ACCURACY method=InteractionFedPhoenix round=529 accuracy=78.779999
+********************************************************************************
+Round 529
+ROUND_ACCURACY method=InteractionFedPhoenix round=530 accuracy=78.699997
+********************************************************************************
+Round 530
+ROUND_ACCURACY method=InteractionFedPhoenix round=531 accuracy=71.820000
+********************************************************************************
+Round 531
+ROUND_ACCURACY method=InteractionFedPhoenix round=532 accuracy=74.019997
+********************************************************************************
+Round 532
+ROUND_ACCURACY method=InteractionFedPhoenix round=533 accuracy=77.900002
+********************************************************************************
+Round 533
+ROUND_ACCURACY method=InteractionFedPhoenix round=534 accuracy=77.510002
+********************************************************************************
+Round 534
+ROUND_ACCURACY method=InteractionFedPhoenix round=535 accuracy=74.059998
+********************************************************************************
+Round 535
+ROUND_ACCURACY method=InteractionFedPhoenix round=536 accuracy=79.419998
+********************************************************************************
+Round 536
+ROUND_ACCURACY method=InteractionFedPhoenix round=537 accuracy=79.019997
+********************************************************************************
+Round 537
+ROUND_ACCURACY method=InteractionFedPhoenix round=538 accuracy=79.190002
+********************************************************************************
+Round 538
+ROUND_ACCURACY method=InteractionFedPhoenix round=539 accuracy=77.870003
+********************************************************************************
+Round 539
+ROUND_ACCURACY method=InteractionFedPhoenix round=540 accuracy=69.459999
+********************************************************************************
+Round 540
+ROUND_ACCURACY method=InteractionFedPhoenix round=541 accuracy=68.199997
+********************************************************************************
+Round 541
+ROUND_ACCURACY method=InteractionFedPhoenix round=542 accuracy=69.589996
+********************************************************************************
+Round 542
+ROUND_ACCURACY method=InteractionFedPhoenix round=543 accuracy=70.089996
+********************************************************************************
+Round 543
+ROUND_ACCURACY method=InteractionFedPhoenix round=544 accuracy=73.830002
+********************************************************************************
+Round 544
+ROUND_ACCURACY method=InteractionFedPhoenix round=545 accuracy=74.949997
+********************************************************************************
+Round 545
+ROUND_ACCURACY method=InteractionFedPhoenix round=546 accuracy=76.050003
+********************************************************************************
+Round 546
+ROUND_ACCURACY method=InteractionFedPhoenix round=547 accuracy=71.769997
+********************************************************************************
+Round 547
+ROUND_ACCURACY method=InteractionFedPhoenix round=548 accuracy=67.449997
+********************************************************************************
+Round 548
+ROUND_ACCURACY method=InteractionFedPhoenix round=549 accuracy=62.889999
+********************************************************************************
+Round 549
+ROUND_ACCURACY method=InteractionFedPhoenix round=550 accuracy=77.059998
+********************************************************************************
+Round 550
+ROUND_ACCURACY method=InteractionFedPhoenix round=551 accuracy=75.839996
+********************************************************************************
+Round 551
+ROUND_ACCURACY method=InteractionFedPhoenix round=552 accuracy=74.629997
+********************************************************************************
+Round 552
+ROUND_ACCURACY method=InteractionFedPhoenix round=553 accuracy=74.550003
+********************************************************************************
+Round 553
+ROUND_ACCURACY method=InteractionFedPhoenix round=554 accuracy=72.620003
+********************************************************************************
+Round 554
+ROUND_ACCURACY method=InteractionFedPhoenix round=555 accuracy=75.320000
+********************************************************************************
+Round 555
+ROUND_ACCURACY method=InteractionFedPhoenix round=556 accuracy=76.680000
+********************************************************************************
+Round 556
+ROUND_ACCURACY method=InteractionFedPhoenix round=557 accuracy=72.989998
+********************************************************************************
+Round 557
+ROUND_ACCURACY method=InteractionFedPhoenix round=558 accuracy=79.970001
+********************************************************************************
+Round 558
+ROUND_ACCURACY method=InteractionFedPhoenix round=559 accuracy=78.940002
+********************************************************************************
+Round 559
+ROUND_ACCURACY method=InteractionFedPhoenix round=560 accuracy=77.949997
+********************************************************************************
+Round 560
+ROUND_ACCURACY method=InteractionFedPhoenix round=561 accuracy=80.900002
+********************************************************************************
+Round 561
+ROUND_ACCURACY method=InteractionFedPhoenix round=562 accuracy=76.760002
+********************************************************************************
+Round 562
+ROUND_ACCURACY method=InteractionFedPhoenix round=563 accuracy=72.669998
+********************************************************************************
+Round 563
+ROUND_ACCURACY method=InteractionFedPhoenix round=564 accuracy=78.239998
+********************************************************************************
+Round 564
+ROUND_ACCURACY method=InteractionFedPhoenix round=565 accuracy=69.040001
+********************************************************************************
+Round 565
+ROUND_ACCURACY method=InteractionFedPhoenix round=566 accuracy=71.820000
+********************************************************************************
+Round 566
+ROUND_ACCURACY method=InteractionFedPhoenix round=567 accuracy=72.790001
+********************************************************************************
+Round 567
+ROUND_ACCURACY method=InteractionFedPhoenix round=568 accuracy=62.959999
+********************************************************************************
+Round 568
+ROUND_ACCURACY method=InteractionFedPhoenix round=569 accuracy=64.220001
+********************************************************************************
+Round 569
+ROUND_ACCURACY method=InteractionFedPhoenix round=570 accuracy=79.050003
+********************************************************************************
+Round 570
+ROUND_ACCURACY method=InteractionFedPhoenix round=571 accuracy=72.779999
+********************************************************************************
+Round 571
+ROUND_ACCURACY method=InteractionFedPhoenix round=572 accuracy=77.169998
+********************************************************************************
+Round 572
+ROUND_ACCURACY method=InteractionFedPhoenix round=573 accuracy=79.430000
+********************************************************************************
+Round 573
+ROUND_ACCURACY method=InteractionFedPhoenix round=574 accuracy=81.190002
+********************************************************************************
+Round 574
+ROUND_ACCURACY method=InteractionFedPhoenix round=575 accuracy=68.639999
+********************************************************************************
+Round 575
+ROUND_ACCURACY method=InteractionFedPhoenix round=576 accuracy=76.019997
+********************************************************************************
+Round 576
+ROUND_ACCURACY method=InteractionFedPhoenix round=577 accuracy=80.629997
+********************************************************************************
+Round 577
+ROUND_ACCURACY method=InteractionFedPhoenix round=578 accuracy=72.699997
+********************************************************************************
+Round 578
+ROUND_ACCURACY method=InteractionFedPhoenix round=579 accuracy=59.290001
+********************************************************************************
+Round 579
+ROUND_ACCURACY method=InteractionFedPhoenix round=580 accuracy=78.510002
+********************************************************************************
+Round 580
+ROUND_ACCURACY method=InteractionFedPhoenix round=581 accuracy=80.349998
+********************************************************************************
+Round 581
+ROUND_ACCURACY method=InteractionFedPhoenix round=582 accuracy=78.830002
+********************************************************************************
+Round 582
+ROUND_ACCURACY method=InteractionFedPhoenix round=583 accuracy=74.599998
+********************************************************************************
+Round 583
+ROUND_ACCURACY method=InteractionFedPhoenix round=584 accuracy=75.419998
+********************************************************************************
+Round 584
+ROUND_ACCURACY method=InteractionFedPhoenix round=585 accuracy=77.570000
+********************************************************************************
+Round 585
+ROUND_ACCURACY method=InteractionFedPhoenix round=586 accuracy=74.930000
+********************************************************************************
+Round 586
+ROUND_ACCURACY method=InteractionFedPhoenix round=587 accuracy=69.040001
+********************************************************************************
+Round 587
+ROUND_ACCURACY method=InteractionFedPhoenix round=588 accuracy=66.519997
+********************************************************************************
+Round 588
+ROUND_ACCURACY method=InteractionFedPhoenix round=589 accuracy=74.809998
+********************************************************************************
+Round 589
+ROUND_ACCURACY method=InteractionFedPhoenix round=590 accuracy=76.709999
+********************************************************************************
+Round 590
+ROUND_ACCURACY method=InteractionFedPhoenix round=591 accuracy=62.380001
+********************************************************************************
+Round 591
+ROUND_ACCURACY method=InteractionFedPhoenix round=592 accuracy=66.099998
+********************************************************************************
+Round 592
+ROUND_ACCURACY method=InteractionFedPhoenix round=593 accuracy=79.519997
+********************************************************************************
+Round 593
+ROUND_ACCURACY method=InteractionFedPhoenix round=594 accuracy=74.870003
+********************************************************************************
+Round 594
+ROUND_ACCURACY method=InteractionFedPhoenix round=595 accuracy=78.050003
+********************************************************************************
+Round 595
+ROUND_ACCURACY method=InteractionFedPhoenix round=596 accuracy=77.059998
+********************************************************************************
+Round 596
+ROUND_ACCURACY method=InteractionFedPhoenix round=597 accuracy=78.209999
+********************************************************************************
+Round 597
+ROUND_ACCURACY method=InteractionFedPhoenix round=598 accuracy=61.259998
+********************************************************************************
+Round 598
+ROUND_ACCURACY method=InteractionFedPhoenix round=599 accuracy=73.470001
+********************************************************************************
+Round 599
+ROUND_ACCURACY method=InteractionFedPhoenix round=600 accuracy=77.160004
+********************************************************************************
+Round 600
+ROUND_ACCURACY method=InteractionFedPhoenix round=601 accuracy=77.820000
+********************************************************************************
+Round 601
+ROUND_ACCURACY method=InteractionFedPhoenix round=602 accuracy=79.529999
+********************************************************************************
+Round 602
+ROUND_ACCURACY method=InteractionFedPhoenix round=603 accuracy=78.540001
+********************************************************************************
+Round 603
+ROUND_ACCURACY method=InteractionFedPhoenix round=604 accuracy=78.300003
+********************************************************************************
+Round 604
+ROUND_ACCURACY method=InteractionFedPhoenix round=605 accuracy=76.879997
+********************************************************************************
+Round 605
+ROUND_ACCURACY method=InteractionFedPhoenix round=606 accuracy=79.769997
+********************************************************************************
+Round 606
+ROUND_ACCURACY method=InteractionFedPhoenix round=607 accuracy=69.190002
+********************************************************************************
+Round 607
+ROUND_ACCURACY method=InteractionFedPhoenix round=608 accuracy=75.690002
+********************************************************************************
+Round 608
+ROUND_ACCURACY method=InteractionFedPhoenix round=609 accuracy=80.860001
+********************************************************************************
+Round 609
+ROUND_ACCURACY method=InteractionFedPhoenix round=610 accuracy=71.120003
+********************************************************************************
+Round 610
+ROUND_ACCURACY method=InteractionFedPhoenix round=611 accuracy=80.629997
+********************************************************************************
+Round 611
+ROUND_ACCURACY method=InteractionFedPhoenix round=612 accuracy=79.400002
+********************************************************************************
+Round 612
+ROUND_ACCURACY method=InteractionFedPhoenix round=613 accuracy=78.129997
+********************************************************************************
+Round 613
+ROUND_ACCURACY method=InteractionFedPhoenix round=614 accuracy=71.449997
+********************************************************************************
+Round 614
+ROUND_ACCURACY method=InteractionFedPhoenix round=615 accuracy=63.580002
+********************************************************************************
+Round 615
+ROUND_ACCURACY method=InteractionFedPhoenix round=616 accuracy=76.639999
+********************************************************************************
+Round 616
+ROUND_ACCURACY method=InteractionFedPhoenix round=617 accuracy=78.910004
+********************************************************************************
+Round 617
+ROUND_ACCURACY method=InteractionFedPhoenix round=618 accuracy=77.500000
+********************************************************************************
+Round 618
+ROUND_ACCURACY method=InteractionFedPhoenix round=619 accuracy=75.010002
+********************************************************************************
+Round 619
+ROUND_ACCURACY method=InteractionFedPhoenix round=620 accuracy=68.750000
+********************************************************************************
+Round 620
+ROUND_ACCURACY method=InteractionFedPhoenix round=621 accuracy=70.120003
+********************************************************************************
+Round 621
+ROUND_ACCURACY method=InteractionFedPhoenix round=622 accuracy=78.709999
+********************************************************************************
+Round 622
+ROUND_ACCURACY method=InteractionFedPhoenix round=623 accuracy=74.709999
+********************************************************************************
+Round 623
+ROUND_ACCURACY method=InteractionFedPhoenix round=624 accuracy=76.620003
+********************************************************************************
+Round 624
+ROUND_ACCURACY method=InteractionFedPhoenix round=625 accuracy=80.410004
+********************************************************************************
+Round 625
+ROUND_ACCURACY method=InteractionFedPhoenix round=626 accuracy=70.209999
+********************************************************************************
+Round 626
+ROUND_ACCURACY method=InteractionFedPhoenix round=627 accuracy=74.339996
+********************************************************************************
+Round 627
+ROUND_ACCURACY method=InteractionFedPhoenix round=628 accuracy=76.400002
+********************************************************************************
+Round 628
+ROUND_ACCURACY method=InteractionFedPhoenix round=629 accuracy=78.320000
+********************************************************************************
+Round 629
+ROUND_ACCURACY method=InteractionFedPhoenix round=630 accuracy=80.730003
+********************************************************************************
+Round 630
+ROUND_ACCURACY method=InteractionFedPhoenix round=631 accuracy=80.190002
+********************************************************************************
+Round 631
+ROUND_ACCURACY method=InteractionFedPhoenix round=632 accuracy=77.309998
+********************************************************************************
+Round 632
+ROUND_ACCURACY method=InteractionFedPhoenix round=633 accuracy=72.800003
+********************************************************************************
+Round 633
+ROUND_ACCURACY method=InteractionFedPhoenix round=634 accuracy=79.220001
+********************************************************************************
+Round 634
+ROUND_ACCURACY method=InteractionFedPhoenix round=635 accuracy=74.800003
+********************************************************************************
+Round 635
+ROUND_ACCURACY method=InteractionFedPhoenix round=636 accuracy=79.910004
+********************************************************************************
+Round 636
+ROUND_ACCURACY method=InteractionFedPhoenix round=637 accuracy=80.309998
+********************************************************************************
+Round 637
+ROUND_ACCURACY method=InteractionFedPhoenix round=638 accuracy=77.919998
+********************************************************************************
+Round 638
+ROUND_ACCURACY method=InteractionFedPhoenix round=639 accuracy=66.410004
+********************************************************************************
+Round 639
+ROUND_ACCURACY method=InteractionFedPhoenix round=640 accuracy=79.839996
+********************************************************************************
+Round 640
+ROUND_ACCURACY method=InteractionFedPhoenix round=641 accuracy=75.680000
+********************************************************************************
+Round 641
+ROUND_ACCURACY method=InteractionFedPhoenix round=642 accuracy=74.720001
+********************************************************************************
+Round 642
+ROUND_ACCURACY method=InteractionFedPhoenix round=643 accuracy=74.250000
+********************************************************************************
+Round 643
+ROUND_ACCURACY method=InteractionFedPhoenix round=644 accuracy=75.029999
+********************************************************************************
+Round 644
+ROUND_ACCURACY method=InteractionFedPhoenix round=645 accuracy=73.540001
+********************************************************************************
+Round 645
+ROUND_ACCURACY method=InteractionFedPhoenix round=646 accuracy=72.459999
+********************************************************************************
+Round 646
+ROUND_ACCURACY method=InteractionFedPhoenix round=647 accuracy=80.739998
+********************************************************************************
+Round 647
+ROUND_ACCURACY method=InteractionFedPhoenix round=648 accuracy=79.110001
+********************************************************************************
+Round 648
+ROUND_ACCURACY method=InteractionFedPhoenix round=649 accuracy=77.089996
+********************************************************************************
+Round 649
+ROUND_ACCURACY method=InteractionFedPhoenix round=650 accuracy=78.910004
+********************************************************************************
+Round 650
+ROUND_ACCURACY method=InteractionFedPhoenix round=651 accuracy=79.930000
+********************************************************************************
+Round 651
+ROUND_ACCURACY method=InteractionFedPhoenix round=652 accuracy=75.610001
+********************************************************************************
+Round 652
+ROUND_ACCURACY method=InteractionFedPhoenix round=653 accuracy=74.540001
+********************************************************************************
+Round 653
+ROUND_ACCURACY method=InteractionFedPhoenix round=654 accuracy=80.010002
+********************************************************************************
+Round 654
+ROUND_ACCURACY method=InteractionFedPhoenix round=655 accuracy=80.779999
+********************************************************************************
+Round 655
+ROUND_ACCURACY method=InteractionFedPhoenix round=656 accuracy=74.309998
+********************************************************************************
+Round 656
+ROUND_ACCURACY method=InteractionFedPhoenix round=657 accuracy=80.650002
+********************************************************************************
+Round 657
+ROUND_ACCURACY method=InteractionFedPhoenix round=658 accuracy=78.349998
+********************************************************************************
+Round 658
+ROUND_ACCURACY method=InteractionFedPhoenix round=659 accuracy=75.610001
+********************************************************************************
+Round 659
+ROUND_ACCURACY method=InteractionFedPhoenix round=660 accuracy=71.940002
+********************************************************************************
+Round 660
+ROUND_ACCURACY method=InteractionFedPhoenix round=661 accuracy=74.690002
+********************************************************************************
+Round 661
+ROUND_ACCURACY method=InteractionFedPhoenix round=662 accuracy=76.930000
+********************************************************************************
+Round 662
+ROUND_ACCURACY method=InteractionFedPhoenix round=663 accuracy=79.500000
+********************************************************************************
+Round 663
+ROUND_ACCURACY method=InteractionFedPhoenix round=664 accuracy=81.519997
+********************************************************************************
+Round 664
+ROUND_ACCURACY method=InteractionFedPhoenix round=665 accuracy=80.160004
+********************************************************************************
+Round 665
+ROUND_ACCURACY method=InteractionFedPhoenix round=666 accuracy=78.940002
+********************************************************************************
+Round 666
+ROUND_ACCURACY method=InteractionFedPhoenix round=667 accuracy=80.620003
+********************************************************************************
+Round 667
+ROUND_ACCURACY method=InteractionFedPhoenix round=668 accuracy=79.080002
+********************************************************************************
+Round 668
+ROUND_ACCURACY method=InteractionFedPhoenix round=669 accuracy=81.790001
+********************************************************************************
+Round 669
+ROUND_ACCURACY method=InteractionFedPhoenix round=670 accuracy=68.290001
+********************************************************************************
+Round 670
+ROUND_ACCURACY method=InteractionFedPhoenix round=671 accuracy=68.010002
+********************************************************************************
+Round 671
+ROUND_ACCURACY method=InteractionFedPhoenix round=672 accuracy=71.209999
+********************************************************************************
+Round 672
+ROUND_ACCURACY method=InteractionFedPhoenix round=673 accuracy=75.540001
+********************************************************************************
+Round 673
+ROUND_ACCURACY method=InteractionFedPhoenix round=674 accuracy=74.220001
+********************************************************************************
+Round 674
+ROUND_ACCURACY method=InteractionFedPhoenix round=675 accuracy=79.720001
+********************************************************************************
+Round 675
+ROUND_ACCURACY method=InteractionFedPhoenix round=676 accuracy=79.639999
+********************************************************************************
+Round 676
+ROUND_ACCURACY method=InteractionFedPhoenix round=677 accuracy=77.470001
+********************************************************************************
+Round 677
+ROUND_ACCURACY method=InteractionFedPhoenix round=678 accuracy=75.260002
+********************************************************************************
+Round 678
+ROUND_ACCURACY method=InteractionFedPhoenix round=679 accuracy=66.760002
+********************************************************************************
+Round 679
+ROUND_ACCURACY method=InteractionFedPhoenix round=680 accuracy=70.419998
+********************************************************************************
+Round 680
+ROUND_ACCURACY method=InteractionFedPhoenix round=681 accuracy=72.290001
+********************************************************************************
+Round 681
+ROUND_ACCURACY method=InteractionFedPhoenix round=682 accuracy=74.330002
+********************************************************************************
+Round 682
+ROUND_ACCURACY method=InteractionFedPhoenix round=683 accuracy=80.480003
+********************************************************************************
+Round 683
+ROUND_ACCURACY method=InteractionFedPhoenix round=684 accuracy=80.529999
+********************************************************************************
+Round 684
+ROUND_ACCURACY method=InteractionFedPhoenix round=685 accuracy=73.519997
+********************************************************************************
+Round 685
+ROUND_ACCURACY method=InteractionFedPhoenix round=686 accuracy=79.220001
+********************************************************************************
+Round 686
+ROUND_ACCURACY method=InteractionFedPhoenix round=687 accuracy=76.120003
+********************************************************************************
+Round 687
+ROUND_ACCURACY method=InteractionFedPhoenix round=688 accuracy=73.709999
+********************************************************************************
+Round 688
+ROUND_ACCURACY method=InteractionFedPhoenix round=689 accuracy=77.540001
+********************************************************************************
+Round 689
+ROUND_ACCURACY method=InteractionFedPhoenix round=690 accuracy=75.250000
+********************************************************************************
+Round 690
+ROUND_ACCURACY method=InteractionFedPhoenix round=691 accuracy=73.739998
+********************************************************************************
+Round 691
+ROUND_ACCURACY method=InteractionFedPhoenix round=692 accuracy=69.580002
+********************************************************************************
+Round 692
+ROUND_ACCURACY method=InteractionFedPhoenix round=693 accuracy=78.239998
+********************************************************************************
+Round 693
+ROUND_ACCURACY method=InteractionFedPhoenix round=694 accuracy=78.529999
+********************************************************************************
+Round 694
+ROUND_ACCURACY method=InteractionFedPhoenix round=695 accuracy=79.699997
+********************************************************************************
+Round 695
+ROUND_ACCURACY method=InteractionFedPhoenix round=696 accuracy=78.910004
+********************************************************************************
+Round 696
+ROUND_ACCURACY method=InteractionFedPhoenix round=697 accuracy=76.980003
+********************************************************************************
+Round 697
+ROUND_ACCURACY method=InteractionFedPhoenix round=698 accuracy=81.910004
+********************************************************************************
+Round 698
+ROUND_ACCURACY method=InteractionFedPhoenix round=699 accuracy=77.910004
+********************************************************************************
+Round 699
+ROUND_ACCURACY method=InteractionFedPhoenix round=700 accuracy=80.750000
+********************************************************************************
+Round 700
+ROUND_ACCURACY method=InteractionFedPhoenix round=701 accuracy=70.970001
+********************************************************************************
+Round 701
+ROUND_ACCURACY method=InteractionFedPhoenix round=702 accuracy=69.230003
+********************************************************************************
+Round 702
+ROUND_ACCURACY method=InteractionFedPhoenix round=703 accuracy=71.050003
+********************************************************************************
+Round 703
+ROUND_ACCURACY method=InteractionFedPhoenix round=704 accuracy=81.320000
+********************************************************************************
+Round 704
+ROUND_ACCURACY method=InteractionFedPhoenix round=705 accuracy=81.139999
+********************************************************************************
+Round 705
+ROUND_ACCURACY method=InteractionFedPhoenix round=706 accuracy=81.589996
+********************************************************************************
+Round 706
+ROUND_ACCURACY method=InteractionFedPhoenix round=707 accuracy=81.430000
+********************************************************************************
+Round 707
+ROUND_ACCURACY method=InteractionFedPhoenix round=708 accuracy=79.500000
+********************************************************************************
+Round 708
+ROUND_ACCURACY method=InteractionFedPhoenix round=709 accuracy=79.669998
+********************************************************************************
+Round 709
+ROUND_ACCURACY method=InteractionFedPhoenix round=710 accuracy=81.449997
+********************************************************************************
+Round 710
+ROUND_ACCURACY method=InteractionFedPhoenix round=711 accuracy=81.320000
+********************************************************************************
+Round 711
+ROUND_ACCURACY method=InteractionFedPhoenix round=712 accuracy=69.779999
+********************************************************************************
+Round 712
+ROUND_ACCURACY method=InteractionFedPhoenix round=713 accuracy=71.860001
+********************************************************************************
+Round 713
+ROUND_ACCURACY method=InteractionFedPhoenix round=714 accuracy=74.169998
+********************************************************************************
+Round 714
+ROUND_ACCURACY method=InteractionFedPhoenix round=715 accuracy=74.449997
+********************************************************************************
+Round 715
+ROUND_ACCURACY method=InteractionFedPhoenix round=716 accuracy=79.830002
+********************************************************************************
+Round 716
+ROUND_ACCURACY method=InteractionFedPhoenix round=717 accuracy=77.589996
+********************************************************************************
+Round 717
+ROUND_ACCURACY method=InteractionFedPhoenix round=718 accuracy=78.489998
+********************************************************************************
+Round 718
+ROUND_ACCURACY method=InteractionFedPhoenix round=719 accuracy=79.029999
+********************************************************************************
+Round 719
+ROUND_ACCURACY method=InteractionFedPhoenix round=720 accuracy=79.730003
+********************************************************************************
+Round 720
+ROUND_ACCURACY method=InteractionFedPhoenix round=721 accuracy=77.349998
+********************************************************************************
+Round 721
+ROUND_ACCURACY method=InteractionFedPhoenix round=722 accuracy=72.250000
+********************************************************************************
+Round 722
+ROUND_ACCURACY method=InteractionFedPhoenix round=723 accuracy=80.699997
+********************************************************************************
+Round 723
+ROUND_ACCURACY method=InteractionFedPhoenix round=724 accuracy=78.360001
+********************************************************************************
+Round 724
+ROUND_ACCURACY method=InteractionFedPhoenix round=725 accuracy=73.709999
+********************************************************************************
+Round 725
+ROUND_ACCURACY method=InteractionFedPhoenix round=726 accuracy=73.750000
+********************************************************************************
+Round 726
+ROUND_ACCURACY method=InteractionFedPhoenix round=727 accuracy=80.300003
+********************************************************************************
+Round 727
+ROUND_ACCURACY method=InteractionFedPhoenix round=728 accuracy=81.589996
+********************************************************************************
+Round 728
+ROUND_ACCURACY method=InteractionFedPhoenix round=729 accuracy=78.620003
+********************************************************************************
+Round 729
+ROUND_ACCURACY method=InteractionFedPhoenix round=730 accuracy=78.940002
+********************************************************************************
+Round 730
+ROUND_ACCURACY method=InteractionFedPhoenix round=731 accuracy=78.830002
+********************************************************************************
+Round 731
+ROUND_ACCURACY method=InteractionFedPhoenix round=732 accuracy=75.190002
+********************************************************************************
+Round 732
+ROUND_ACCURACY method=InteractionFedPhoenix round=733 accuracy=63.779999
+********************************************************************************
+Round 733
+ROUND_ACCURACY method=InteractionFedPhoenix round=734 accuracy=71.930000
+********************************************************************************
+Round 734
+ROUND_ACCURACY method=InteractionFedPhoenix round=735 accuracy=73.650002
+********************************************************************************
+Round 735
+ROUND_ACCURACY method=InteractionFedPhoenix round=736 accuracy=73.370003
+********************************************************************************
+Round 736
+ROUND_ACCURACY method=InteractionFedPhoenix round=737 accuracy=76.510002
+********************************************************************************
+Round 737
+ROUND_ACCURACY method=InteractionFedPhoenix round=738 accuracy=72.680000
+********************************************************************************
+Round 738
+ROUND_ACCURACY method=InteractionFedPhoenix round=739 accuracy=80.800003
+********************************************************************************
+Round 739
+ROUND_ACCURACY method=InteractionFedPhoenix round=740 accuracy=61.860001
+********************************************************************************
+Round 740
+ROUND_ACCURACY method=InteractionFedPhoenix round=741 accuracy=68.089996
+********************************************************************************
+Round 741
+ROUND_ACCURACY method=InteractionFedPhoenix round=742 accuracy=65.629997
+********************************************************************************
+Round 742
+ROUND_ACCURACY method=InteractionFedPhoenix round=743 accuracy=73.040001
+********************************************************************************
+Round 743
+ROUND_ACCURACY method=InteractionFedPhoenix round=744 accuracy=81.750000
+********************************************************************************
+Round 744
+ROUND_ACCURACY method=InteractionFedPhoenix round=745 accuracy=80.690002
+********************************************************************************
+Round 745
+ROUND_ACCURACY method=InteractionFedPhoenix round=746 accuracy=73.959999
+********************************************************************************
+Round 746
+ROUND_ACCURACY method=InteractionFedPhoenix round=747 accuracy=77.139999
+********************************************************************************
+Round 747
+ROUND_ACCURACY method=InteractionFedPhoenix round=748 accuracy=78.029999
+********************************************************************************
+Round 748
+ROUND_ACCURACY method=InteractionFedPhoenix round=749 accuracy=78.120003
+********************************************************************************
+Round 749
+ROUND_ACCURACY method=InteractionFedPhoenix round=750 accuracy=80.809998
+********************************************************************************
+Round 750
+ROUND_ACCURACY method=InteractionFedPhoenix round=751 accuracy=80.980003
+********************************************************************************
+Round 751
+ROUND_ACCURACY method=InteractionFedPhoenix round=752 accuracy=78.510002
+********************************************************************************
+Round 752
+ROUND_ACCURACY method=InteractionFedPhoenix round=753 accuracy=81.089996
+********************************************************************************
+Round 753
+ROUND_ACCURACY method=InteractionFedPhoenix round=754 accuracy=79.129997
+********************************************************************************
+Round 754
+ROUND_ACCURACY method=InteractionFedPhoenix round=755 accuracy=81.019997
+********************************************************************************
+Round 755
+ROUND_ACCURACY method=InteractionFedPhoenix round=756 accuracy=82.150002
+********************************************************************************
+Round 756
+ROUND_ACCURACY method=InteractionFedPhoenix round=757 accuracy=81.389999
+********************************************************************************
+Round 757
+ROUND_ACCURACY method=InteractionFedPhoenix round=758 accuracy=79.620003
+********************************************************************************
+Round 758
+ROUND_ACCURACY method=InteractionFedPhoenix round=759 accuracy=75.250000
+********************************************************************************
+Round 759
+ROUND_ACCURACY method=InteractionFedPhoenix round=760 accuracy=79.199997
+********************************************************************************
+Round 760
+ROUND_ACCURACY method=InteractionFedPhoenix round=761 accuracy=78.430000
+********************************************************************************
+Round 761
+ROUND_ACCURACY method=InteractionFedPhoenix round=762 accuracy=78.389999
+********************************************************************************
+Round 762
+ROUND_ACCURACY method=InteractionFedPhoenix round=763 accuracy=80.550003
+********************************************************************************
+Round 763
+ROUND_ACCURACY method=InteractionFedPhoenix round=764 accuracy=81.139999
+********************************************************************************
+Round 764
+ROUND_ACCURACY method=InteractionFedPhoenix round=765 accuracy=81.309998
+********************************************************************************
+Round 765
+ROUND_ACCURACY method=InteractionFedPhoenix round=766 accuracy=76.639999
+********************************************************************************
+Round 766
+ROUND_ACCURACY method=InteractionFedPhoenix round=767 accuracy=77.690002
+********************************************************************************
+Round 767
+ROUND_ACCURACY method=InteractionFedPhoenix round=768 accuracy=81.339996
+********************************************************************************
+Round 768
+ROUND_ACCURACY method=InteractionFedPhoenix round=769 accuracy=57.439999
+********************************************************************************
+Round 769
+ROUND_ACCURACY method=InteractionFedPhoenix round=770 accuracy=74.269997
+********************************************************************************
+Round 770
+ROUND_ACCURACY method=InteractionFedPhoenix round=771 accuracy=78.779999
+********************************************************************************
+Round 771
+ROUND_ACCURACY method=InteractionFedPhoenix round=772 accuracy=79.129997
+********************************************************************************
+Round 772
+ROUND_ACCURACY method=InteractionFedPhoenix round=773 accuracy=75.650002
+********************************************************************************
+Round 773
+ROUND_ACCURACY method=InteractionFedPhoenix round=774 accuracy=77.690002
+********************************************************************************
+Round 774
+ROUND_ACCURACY method=InteractionFedPhoenix round=775 accuracy=76.029999
+********************************************************************************
+Round 775
+ROUND_ACCURACY method=InteractionFedPhoenix round=776 accuracy=71.800003
+********************************************************************************
+Round 776
+ROUND_ACCURACY method=InteractionFedPhoenix round=777 accuracy=80.190002
+********************************************************************************
+Round 777
+ROUND_ACCURACY method=InteractionFedPhoenix round=778 accuracy=72.419998
+********************************************************************************
+Round 778
+ROUND_ACCURACY method=InteractionFedPhoenix round=779 accuracy=69.449997
+********************************************************************************
+Round 779
+ROUND_ACCURACY method=InteractionFedPhoenix round=780 accuracy=78.900002
+********************************************************************************
+Round 780
+ROUND_ACCURACY method=InteractionFedPhoenix round=781 accuracy=75.190002
+********************************************************************************
+Round 781
+ROUND_ACCURACY method=InteractionFedPhoenix round=782 accuracy=81.110001
+********************************************************************************
+Round 782
+ROUND_ACCURACY method=InteractionFedPhoenix round=783 accuracy=81.889999
+********************************************************************************
+Round 783
+ROUND_ACCURACY method=InteractionFedPhoenix round=784 accuracy=77.339996
+********************************************************************************
+Round 784
+ROUND_ACCURACY method=InteractionFedPhoenix round=785 accuracy=74.059998
+********************************************************************************
+Round 785
+ROUND_ACCURACY method=InteractionFedPhoenix round=786 accuracy=71.129997
+********************************************************************************
+Round 786
+ROUND_ACCURACY method=InteractionFedPhoenix round=787 accuracy=80.150002
+********************************************************************************
+Round 787
+ROUND_ACCURACY method=InteractionFedPhoenix round=788 accuracy=80.980003
+********************************************************************************
+Round 788
+ROUND_ACCURACY method=InteractionFedPhoenix round=789 accuracy=80.360001
+********************************************************************************
+Round 789
+ROUND_ACCURACY method=InteractionFedPhoenix round=790 accuracy=80.540001
+********************************************************************************
+Round 790
+ROUND_ACCURACY method=InteractionFedPhoenix round=791 accuracy=80.550003
+********************************************************************************
+Round 791
+ROUND_ACCURACY method=InteractionFedPhoenix round=792 accuracy=77.410004
+********************************************************************************
+Round 792
+ROUND_ACCURACY method=InteractionFedPhoenix round=793 accuracy=80.199997
+********************************************************************************
+Round 793
+ROUND_ACCURACY method=InteractionFedPhoenix round=794 accuracy=78.940002
+********************************************************************************
+Round 794
+ROUND_ACCURACY method=InteractionFedPhoenix round=795 accuracy=80.650002
+********************************************************************************
+Round 795
+ROUND_ACCURACY method=InteractionFedPhoenix round=796 accuracy=79.330002
+********************************************************************************
+Round 796
+ROUND_ACCURACY method=InteractionFedPhoenix round=797 accuracy=77.930000
+********************************************************************************
+Round 797
+ROUND_ACCURACY method=InteractionFedPhoenix round=798 accuracy=81.110001
+********************************************************************************
+Round 798
+ROUND_ACCURACY method=InteractionFedPhoenix round=799 accuracy=81.320000
+********************************************************************************
+Round 799
+ROUND_ACCURACY method=InteractionFedPhoenix round=800 accuracy=79.580002
+********************************************************************************
+Round 800
+ROUND_ACCURACY method=InteractionFedPhoenix round=801 accuracy=80.279999
+********************************************************************************
+Round 801
+ROUND_ACCURACY method=InteractionFedPhoenix round=802 accuracy=78.339996
+********************************************************************************
+Round 802
+ROUND_ACCURACY method=InteractionFedPhoenix round=803 accuracy=81.410004
+********************************************************************************
+Round 803
+ROUND_ACCURACY method=InteractionFedPhoenix round=804 accuracy=77.180000
+********************************************************************************
+Round 804
+ROUND_ACCURACY method=InteractionFedPhoenix round=805 accuracy=68.540001
+********************************************************************************
+Round 805
+ROUND_ACCURACY method=InteractionFedPhoenix round=806 accuracy=75.720001
+********************************************************************************
+Round 806
+ROUND_ACCURACY method=InteractionFedPhoenix round=807 accuracy=75.820000
+********************************************************************************
+Round 807
+ROUND_ACCURACY method=InteractionFedPhoenix round=808 accuracy=66.400002
+********************************************************************************
+Round 808
+ROUND_ACCURACY method=InteractionFedPhoenix round=809 accuracy=77.459999
+********************************************************************************
+Round 809
+ROUND_ACCURACY method=InteractionFedPhoenix round=810 accuracy=80.480003
+********************************************************************************
+Round 810
+ROUND_ACCURACY method=InteractionFedPhoenix round=811 accuracy=76.970001
+********************************************************************************
+Round 811
+ROUND_ACCURACY method=InteractionFedPhoenix round=812 accuracy=73.099998
+********************************************************************************
+Round 812
+ROUND_ACCURACY method=InteractionFedPhoenix round=813 accuracy=76.379997
+********************************************************************************
+Round 813
+ROUND_ACCURACY method=InteractionFedPhoenix round=814 accuracy=73.150002
+********************************************************************************
+Round 814
+ROUND_ACCURACY method=InteractionFedPhoenix round=815 accuracy=78.589996
+********************************************************************************
+Round 815
+ROUND_ACCURACY method=InteractionFedPhoenix round=816 accuracy=79.790001
+********************************************************************************
+Round 816
+ROUND_ACCURACY method=InteractionFedPhoenix round=817 accuracy=80.029999
+********************************************************************************
+Round 817
+ROUND_ACCURACY method=InteractionFedPhoenix round=818 accuracy=80.199997
+********************************************************************************
+Round 818
+ROUND_ACCURACY method=InteractionFedPhoenix round=819 accuracy=79.489998
+********************************************************************************
+Round 819
+ROUND_ACCURACY method=InteractionFedPhoenix round=820 accuracy=71.330002
+********************************************************************************
+Round 820
+ROUND_ACCURACY method=InteractionFedPhoenix round=821 accuracy=78.750000
+********************************************************************************
+Round 821
+ROUND_ACCURACY method=InteractionFedPhoenix round=822 accuracy=78.910004
+********************************************************************************
+Round 822
+ROUND_ACCURACY method=InteractionFedPhoenix round=823 accuracy=63.990002
+********************************************************************************
+Round 823
+ROUND_ACCURACY method=InteractionFedPhoenix round=824 accuracy=34.299999
+********************************************************************************
+Round 824
+ROUND_ACCURACY method=InteractionFedPhoenix round=825 accuracy=76.870003
+********************************************************************************
+Round 825
+ROUND_ACCURACY method=InteractionFedPhoenix round=826 accuracy=75.480003
+********************************************************************************
+Round 826
+ROUND_ACCURACY method=InteractionFedPhoenix round=827 accuracy=63.970001
+********************************************************************************
+Round 827
+ROUND_ACCURACY method=InteractionFedPhoenix round=828 accuracy=66.099998
+********************************************************************************
+Round 828
+ROUND_ACCURACY method=InteractionFedPhoenix round=829 accuracy=78.650002
+********************************************************************************
+Round 829
+ROUND_ACCURACY method=InteractionFedPhoenix round=830 accuracy=69.480003
+********************************************************************************
+Round 830
+ROUND_ACCURACY method=InteractionFedPhoenix round=831 accuracy=74.699997
+********************************************************************************
+Round 831
+ROUND_ACCURACY method=InteractionFedPhoenix round=832 accuracy=80.040001
+********************************************************************************
+Round 832
+ROUND_ACCURACY method=InteractionFedPhoenix round=833 accuracy=77.150002
+********************************************************************************
+Round 833
+ROUND_ACCURACY method=InteractionFedPhoenix round=834 accuracy=79.910004
+********************************************************************************
+Round 834
+ROUND_ACCURACY method=InteractionFedPhoenix round=835 accuracy=81.129997
+********************************************************************************
+Round 835
+ROUND_ACCURACY method=InteractionFedPhoenix round=836 accuracy=80.889999
+********************************************************************************
+Round 836
+ROUND_ACCURACY method=InteractionFedPhoenix round=837 accuracy=81.959999
+********************************************************************************
+Round 837
+ROUND_ACCURACY method=InteractionFedPhoenix round=838 accuracy=80.980003
+********************************************************************************
+Round 838
+ROUND_ACCURACY method=InteractionFedPhoenix round=839 accuracy=79.830002
+********************************************************************************
+Round 839
+ROUND_ACCURACY method=InteractionFedPhoenix round=840 accuracy=69.220001
+********************************************************************************
+Round 840
+ROUND_ACCURACY method=InteractionFedPhoenix round=841 accuracy=78.300003
+********************************************************************************
+Round 841
+ROUND_ACCURACY method=InteractionFedPhoenix round=842 accuracy=60.770000
+********************************************************************************
+Round 842
+ROUND_ACCURACY method=InteractionFedPhoenix round=843 accuracy=79.599998
+********************************************************************************
+Round 843
+ROUND_ACCURACY method=InteractionFedPhoenix round=844 accuracy=79.940002
+********************************************************************************
+Round 844
+ROUND_ACCURACY method=InteractionFedPhoenix round=845 accuracy=80.500000
+********************************************************************************
+Round 845
+ROUND_ACCURACY method=InteractionFedPhoenix round=846 accuracy=72.510002
+********************************************************************************
+Round 846
+ROUND_ACCURACY method=InteractionFedPhoenix round=847 accuracy=76.180000
+********************************************************************************
+Round 847
+ROUND_ACCURACY method=InteractionFedPhoenix round=848 accuracy=82.330002
+********************************************************************************
+Round 848
+ROUND_ACCURACY method=InteractionFedPhoenix round=849 accuracy=80.360001
+********************************************************************************
+Round 849
+ROUND_ACCURACY method=InteractionFedPhoenix round=850 accuracy=82.089996
+********************************************************************************
+Round 850
+ROUND_ACCURACY method=InteractionFedPhoenix round=851 accuracy=78.949997
+********************************************************************************
+Round 851
+ROUND_ACCURACY method=InteractionFedPhoenix round=852 accuracy=76.199997
+********************************************************************************
+Round 852
+ROUND_ACCURACY method=InteractionFedPhoenix round=853 accuracy=79.900002
+********************************************************************************
+Round 853
+ROUND_ACCURACY method=InteractionFedPhoenix round=854 accuracy=75.250000
+********************************************************************************
+Round 854
+ROUND_ACCURACY method=InteractionFedPhoenix round=855 accuracy=70.000000
+********************************************************************************
+Round 855
+ROUND_ACCURACY method=InteractionFedPhoenix round=856 accuracy=73.110001
+********************************************************************************
+Round 856
+ROUND_ACCURACY method=InteractionFedPhoenix round=857 accuracy=75.980003
+********************************************************************************
+Round 857
+ROUND_ACCURACY method=InteractionFedPhoenix round=858 accuracy=80.849998
+********************************************************************************
+Round 858
+ROUND_ACCURACY method=InteractionFedPhoenix round=859 accuracy=80.870003
+********************************************************************************
+Round 859
+ROUND_ACCURACY method=InteractionFedPhoenix round=860 accuracy=74.470001
+********************************************************************************
+Round 860
+ROUND_ACCURACY method=InteractionFedPhoenix round=861 accuracy=76.300003
+********************************************************************************
+Round 861
+ROUND_ACCURACY method=InteractionFedPhoenix round=862 accuracy=77.580002
+********************************************************************************
+Round 862
+ROUND_ACCURACY method=InteractionFedPhoenix round=863 accuracy=73.470001
+********************************************************************************
+Round 863
+ROUND_ACCURACY method=InteractionFedPhoenix round=864 accuracy=74.790001
+********************************************************************************
+Round 864
+ROUND_ACCURACY method=InteractionFedPhoenix round=865 accuracy=80.180000
+********************************************************************************
+Round 865
+ROUND_ACCURACY method=InteractionFedPhoenix round=866 accuracy=73.839996
+********************************************************************************
+Round 866
+ROUND_ACCURACY method=InteractionFedPhoenix round=867 accuracy=80.570000
+********************************************************************************
+Round 867
+ROUND_ACCURACY method=InteractionFedPhoenix round=868 accuracy=74.550003
+********************************************************************************
+Round 868
+ROUND_ACCURACY method=InteractionFedPhoenix round=869 accuracy=82.169998
+********************************************************************************
+Round 869
+ROUND_ACCURACY method=InteractionFedPhoenix round=870 accuracy=80.860001
+********************************************************************************
+Round 870
+ROUND_ACCURACY method=InteractionFedPhoenix round=871 accuracy=81.599998
+********************************************************************************
+Round 871
+ROUND_ACCURACY method=InteractionFedPhoenix round=872 accuracy=81.389999
+********************************************************************************
+Round 872
+ROUND_ACCURACY method=InteractionFedPhoenix round=873 accuracy=80.889999
+********************************************************************************
+Round 873
+ROUND_ACCURACY method=InteractionFedPhoenix round=874 accuracy=76.220001
+********************************************************************************
+Round 874
+ROUND_ACCURACY method=InteractionFedPhoenix round=875 accuracy=78.120003
+********************************************************************************
+Round 875
+ROUND_ACCURACY method=InteractionFedPhoenix round=876 accuracy=81.410004
+********************************************************************************
+Round 876
+ROUND_ACCURACY method=InteractionFedPhoenix round=877 accuracy=76.279999
+********************************************************************************
+Round 877
+ROUND_ACCURACY method=InteractionFedPhoenix round=878 accuracy=73.070000
+********************************************************************************
+Round 878
+ROUND_ACCURACY method=InteractionFedPhoenix round=879 accuracy=66.730003
+********************************************************************************
+Round 879
+ROUND_ACCURACY method=InteractionFedPhoenix round=880 accuracy=81.269997
+********************************************************************************
+Round 880
+ROUND_ACCURACY method=InteractionFedPhoenix round=881 accuracy=76.309998
+********************************************************************************
+Round 881
+ROUND_ACCURACY method=InteractionFedPhoenix round=882 accuracy=61.730000
+********************************************************************************
+Round 882
+ROUND_ACCURACY method=InteractionFedPhoenix round=883 accuracy=69.150002
+********************************************************************************
+Round 883
+ROUND_ACCURACY method=InteractionFedPhoenix round=884 accuracy=75.449997
+********************************************************************************
+Round 884
+ROUND_ACCURACY method=InteractionFedPhoenix round=885 accuracy=71.580002
+********************************************************************************
+Round 885
+ROUND_ACCURACY method=InteractionFedPhoenix round=886 accuracy=72.739998
+********************************************************************************
+Round 886
+ROUND_ACCURACY method=InteractionFedPhoenix round=887 accuracy=70.709999
+********************************************************************************
+Round 887
+ROUND_ACCURACY method=InteractionFedPhoenix round=888 accuracy=76.510002
+********************************************************************************
+Round 888
+ROUND_ACCURACY method=InteractionFedPhoenix round=889 accuracy=81.709999
+********************************************************************************
+Round 889
+ROUND_ACCURACY method=InteractionFedPhoenix round=890 accuracy=79.529999
+********************************************************************************
+Round 890
+ROUND_ACCURACY method=InteractionFedPhoenix round=891 accuracy=81.209999
+********************************************************************************
+Round 891
+ROUND_ACCURACY method=InteractionFedPhoenix round=892 accuracy=78.070000
+********************************************************************************
+Round 892
+ROUND_ACCURACY method=InteractionFedPhoenix round=893 accuracy=78.970001
+********************************************************************************
+Round 893
+ROUND_ACCURACY method=InteractionFedPhoenix round=894 accuracy=79.070000
+********************************************************************************
+Round 894
+ROUND_ACCURACY method=InteractionFedPhoenix round=895 accuracy=79.260002
+********************************************************************************
+Round 895
+ROUND_ACCURACY method=InteractionFedPhoenix round=896 accuracy=73.370003
+********************************************************************************
+Round 896
+ROUND_ACCURACY method=InteractionFedPhoenix round=897 accuracy=78.129997
+********************************************************************************
+Round 897
+ROUND_ACCURACY method=InteractionFedPhoenix round=898 accuracy=79.209999
+********************************************************************************
+Round 898
+ROUND_ACCURACY method=InteractionFedPhoenix round=899 accuracy=79.250000
+********************************************************************************
+Round 899
+ROUND_ACCURACY method=InteractionFedPhoenix round=900 accuracy=78.849998
+********************************************************************************
+Round 900
+ROUND_ACCURACY method=InteractionFedPhoenix round=901 accuracy=78.449997
+********************************************************************************
+Round 901
+ROUND_ACCURACY method=InteractionFedPhoenix round=902 accuracy=81.980003
+********************************************************************************
+Round 902
+ROUND_ACCURACY method=InteractionFedPhoenix round=903 accuracy=80.949997
+********************************************************************************
+Round 903
+ROUND_ACCURACY method=InteractionFedPhoenix round=904 accuracy=81.970001
+********************************************************************************
+Round 904
+ROUND_ACCURACY method=InteractionFedPhoenix round=905 accuracy=81.769997
+********************************************************************************
+Round 905
+ROUND_ACCURACY method=InteractionFedPhoenix round=906 accuracy=81.370003
+********************************************************************************
+Round 906
+ROUND_ACCURACY method=InteractionFedPhoenix round=907 accuracy=81.379997
+********************************************************************************
+Round 907
+ROUND_ACCURACY method=InteractionFedPhoenix round=908 accuracy=81.949997
+********************************************************************************
+Round 908
+ROUND_ACCURACY method=InteractionFedPhoenix round=909 accuracy=55.939999
+********************************************************************************
+Round 909
+ROUND_ACCURACY method=InteractionFedPhoenix round=910 accuracy=73.150002
+********************************************************************************
+Round 910
+ROUND_ACCURACY method=InteractionFedPhoenix round=911 accuracy=76.199997
+********************************************************************************
+Round 911
+ROUND_ACCURACY method=InteractionFedPhoenix round=912 accuracy=72.750000
+********************************************************************************
+Round 912
+ROUND_ACCURACY method=InteractionFedPhoenix round=913 accuracy=69.889999
+********************************************************************************
+Round 913
+ROUND_ACCURACY method=InteractionFedPhoenix round=914 accuracy=71.959999
+********************************************************************************
+Round 914
+ROUND_ACCURACY method=InteractionFedPhoenix round=915 accuracy=78.599998
+********************************************************************************
+Round 915
+ROUND_ACCURACY method=InteractionFedPhoenix round=916 accuracy=79.120003
+********************************************************************************
+Round 916
+ROUND_ACCURACY method=InteractionFedPhoenix round=917 accuracy=81.040001
+********************************************************************************
+Round 917
+ROUND_ACCURACY method=InteractionFedPhoenix round=918 accuracy=81.080002
+********************************************************************************
+Round 918
+ROUND_ACCURACY method=InteractionFedPhoenix round=919 accuracy=79.839996
+********************************************************************************
+Round 919
+ROUND_ACCURACY method=InteractionFedPhoenix round=920 accuracy=62.029999
+********************************************************************************
+Round 920
+ROUND_ACCURACY method=InteractionFedPhoenix round=921 accuracy=74.190002
+********************************************************************************
+Round 921
+ROUND_ACCURACY method=InteractionFedPhoenix round=922 accuracy=78.529999
+********************************************************************************
+Round 922
+ROUND_ACCURACY method=InteractionFedPhoenix round=923 accuracy=72.419998
+********************************************************************************
+Round 923
+ROUND_ACCURACY method=InteractionFedPhoenix round=924 accuracy=45.529999
+********************************************************************************
+Round 924
+ROUND_ACCURACY method=InteractionFedPhoenix round=925 accuracy=75.860001
+********************************************************************************
+Round 925
+ROUND_ACCURACY method=InteractionFedPhoenix round=926 accuracy=75.040001
+********************************************************************************
+Round 926
+ROUND_ACCURACY method=InteractionFedPhoenix round=927 accuracy=81.389999
+********************************************************************************
+Round 927
+ROUND_ACCURACY method=InteractionFedPhoenix round=928 accuracy=56.439999
+********************************************************************************
+Round 928
+ROUND_ACCURACY method=InteractionFedPhoenix round=929 accuracy=73.779999
+********************************************************************************
+Round 929
+ROUND_ACCURACY method=InteractionFedPhoenix round=930 accuracy=80.389999
+********************************************************************************
+Round 930
+ROUND_ACCURACY method=InteractionFedPhoenix round=931 accuracy=80.269997
+********************************************************************************
+Round 931
+ROUND_ACCURACY method=InteractionFedPhoenix round=932 accuracy=81.070000
+********************************************************************************
+Round 932
+ROUND_ACCURACY method=InteractionFedPhoenix round=933 accuracy=80.320000
+********************************************************************************
+Round 933
+ROUND_ACCURACY method=InteractionFedPhoenix round=934 accuracy=79.010002
+********************************************************************************
+Round 934
+ROUND_ACCURACY method=InteractionFedPhoenix round=935 accuracy=80.059998
+********************************************************************************
+Round 935
+ROUND_ACCURACY method=InteractionFedPhoenix round=936 accuracy=80.699997
+********************************************************************************
+Round 936
+ROUND_ACCURACY method=InteractionFedPhoenix round=937 accuracy=78.779999
+********************************************************************************
+Round 937
+ROUND_ACCURACY method=InteractionFedPhoenix round=938 accuracy=80.389999
+********************************************************************************
+Round 938
+ROUND_ACCURACY method=InteractionFedPhoenix round=939 accuracy=80.029999
+********************************************************************************
+Round 939
+ROUND_ACCURACY method=InteractionFedPhoenix round=940 accuracy=77.019997
+********************************************************************************
+Round 940
+ROUND_ACCURACY method=InteractionFedPhoenix round=941 accuracy=80.139999
+********************************************************************************
+Round 941
+ROUND_ACCURACY method=InteractionFedPhoenix round=942 accuracy=79.129997
+********************************************************************************
+Round 942
+ROUND_ACCURACY method=InteractionFedPhoenix round=943 accuracy=80.629997
+********************************************************************************
+Round 943
+ROUND_ACCURACY method=InteractionFedPhoenix round=944 accuracy=72.500000
+********************************************************************************
+Round 944
+ROUND_ACCURACY method=InteractionFedPhoenix round=945 accuracy=81.769997
+********************************************************************************
+Round 945
+ROUND_ACCURACY method=InteractionFedPhoenix round=946 accuracy=79.720001
+********************************************************************************
+Round 946
+ROUND_ACCURACY method=InteractionFedPhoenix round=947 accuracy=77.279999
+********************************************************************************
+Round 947
+ROUND_ACCURACY method=InteractionFedPhoenix round=948 accuracy=80.690002
+********************************************************************************
+Round 948
+ROUND_ACCURACY method=InteractionFedPhoenix round=949 accuracy=66.839996
+********************************************************************************
+Round 949
+ROUND_ACCURACY method=InteractionFedPhoenix round=950 accuracy=75.690002
+********************************************************************************
+Round 950
+ROUND_ACCURACY method=InteractionFedPhoenix round=951 accuracy=71.489998
+********************************************************************************
+Round 951
+ROUND_ACCURACY method=InteractionFedPhoenix round=952 accuracy=79.669998
+********************************************************************************
+Round 952
+ROUND_ACCURACY method=InteractionFedPhoenix round=953 accuracy=59.650002
+********************************************************************************
+Round 953
+ROUND_ACCURACY method=InteractionFedPhoenix round=954 accuracy=70.540001
+********************************************************************************
+Round 954
+ROUND_ACCURACY method=InteractionFedPhoenix round=955 accuracy=70.839996
+********************************************************************************
+Round 955
+ROUND_ACCURACY method=InteractionFedPhoenix round=956 accuracy=69.699997
+********************************************************************************
+Round 956
+ROUND_ACCURACY method=InteractionFedPhoenix round=957 accuracy=75.650002
+********************************************************************************
+Round 957
+ROUND_ACCURACY method=InteractionFedPhoenix round=958 accuracy=79.570000
+********************************************************************************
+Round 958
+ROUND_ACCURACY method=InteractionFedPhoenix round=959 accuracy=77.269997
+********************************************************************************
+Round 959
+ROUND_ACCURACY method=InteractionFedPhoenix round=960 accuracy=72.849998
+********************************************************************************
+Round 960
+ROUND_ACCURACY method=InteractionFedPhoenix round=961 accuracy=80.930000
+********************************************************************************
+Round 961
+ROUND_ACCURACY method=InteractionFedPhoenix round=962 accuracy=80.820000
+********************************************************************************
+Round 962
+ROUND_ACCURACY method=InteractionFedPhoenix round=963 accuracy=81.739998
+********************************************************************************
+Round 963
+ROUND_ACCURACY method=InteractionFedPhoenix round=964 accuracy=80.779999
+********************************************************************************
+Round 964
+ROUND_ACCURACY method=InteractionFedPhoenix round=965 accuracy=81.250000
+********************************************************************************
+Round 965
+ROUND_ACCURACY method=InteractionFedPhoenix round=966 accuracy=81.919998
+********************************************************************************
+Round 966
+ROUND_ACCURACY method=InteractionFedPhoenix round=967 accuracy=82.180000
+********************************************************************************
+Round 967
+ROUND_ACCURACY method=InteractionFedPhoenix round=968 accuracy=80.949997
+********************************************************************************
+Round 968
+ROUND_ACCURACY method=InteractionFedPhoenix round=969 accuracy=81.860001
+********************************************************************************
+Round 969
+ROUND_ACCURACY method=InteractionFedPhoenix round=970 accuracy=80.830002
+********************************************************************************
+Round 970
+ROUND_ACCURACY method=InteractionFedPhoenix round=971 accuracy=81.519997
+********************************************************************************
+Round 971
+ROUND_ACCURACY method=InteractionFedPhoenix round=972 accuracy=80.989998
+********************************************************************************
+Round 972
+ROUND_ACCURACY method=InteractionFedPhoenix round=973 accuracy=81.699997
+********************************************************************************
+Round 973
+ROUND_ACCURACY method=InteractionFedPhoenix round=974 accuracy=72.870003
+********************************************************************************
+Round 974
+ROUND_ACCURACY method=InteractionFedPhoenix round=975 accuracy=79.480003
+********************************************************************************
+Round 975
+ROUND_ACCURACY method=InteractionFedPhoenix round=976 accuracy=81.360001
+********************************************************************************
+Round 976
+ROUND_ACCURACY method=InteractionFedPhoenix round=977 accuracy=81.010002
+********************************************************************************
+Round 977
+ROUND_ACCURACY method=InteractionFedPhoenix round=978 accuracy=77.019997
+********************************************************************************
+Round 978
+ROUND_ACCURACY method=InteractionFedPhoenix round=979 accuracy=81.639999
+********************************************************************************
+Round 979
+ROUND_ACCURACY method=InteractionFedPhoenix round=980 accuracy=80.620003
+********************************************************************************
+Round 980
+ROUND_ACCURACY method=InteractionFedPhoenix round=981 accuracy=64.739998
+********************************************************************************
+Round 981
+ROUND_ACCURACY method=InteractionFedPhoenix round=982 accuracy=75.309998
+********************************************************************************
+Round 982
+ROUND_ACCURACY method=InteractionFedPhoenix round=983 accuracy=80.489998
+********************************************************************************
+Round 983
+ROUND_ACCURACY method=InteractionFedPhoenix round=984 accuracy=81.489998
+********************************************************************************
+Round 984
+ROUND_ACCURACY method=InteractionFedPhoenix round=985 accuracy=81.070000
+********************************************************************************
+Round 985
+ROUND_ACCURACY method=InteractionFedPhoenix round=986 accuracy=77.660004
+********************************************************************************
+Round 986
+ROUND_ACCURACY method=InteractionFedPhoenix round=987 accuracy=80.879997
+********************************************************************************
+Round 987
+ROUND_ACCURACY method=InteractionFedPhoenix round=988 accuracy=80.650002
+********************************************************************************
+Round 988
+ROUND_ACCURACY method=InteractionFedPhoenix round=989 accuracy=82.320000
+********************************************************************************
+Round 989
+ROUND_ACCURACY method=InteractionFedPhoenix round=990 accuracy=82.269997
+********************************************************************************
+Round 990
+ROUND_ACCURACY method=InteractionFedPhoenix round=991 accuracy=82.000000
+********************************************************************************
+Round 991
+ROUND_ACCURACY method=InteractionFedPhoenix round=992 accuracy=81.919998
+********************************************************************************
+Round 992
+ROUND_ACCURACY method=InteractionFedPhoenix round=993 accuracy=81.900002
+********************************************************************************
+Round 993
+ROUND_ACCURACY method=InteractionFedPhoenix round=994 accuracy=82.339996
+********************************************************************************
+Round 994
+ROUND_ACCURACY method=InteractionFedPhoenix round=995 accuracy=77.059998
+********************************************************************************
+Round 995
+ROUND_ACCURACY method=InteractionFedPhoenix round=996 accuracy=77.269997
+********************************************************************************
+Round 996
+ROUND_ACCURACY method=InteractionFedPhoenix round=997 accuracy=82.250000
+********************************************************************************
+Round 997
+ROUND_ACCURACY method=InteractionFedPhoenix round=998 accuracy=81.690002
+********************************************************************************
+Round 998
+ROUND_ACCURACY method=InteractionFedPhoenix round=999 accuracy=81.550003
+********************************************************************************
+Round 999
+ROUND_ACCURACY method=InteractionFedPhoenix round=1000 accuracy=73.760002
+PEAK_ACCURACY method=InteractionFedPhoenix round=994 accuracy=82.339996
+Unified training metrics saved to C:\Users\admin\Desktop\need_do\new_paper_four\FedPhoenix-clean-finish\results\interaction_fedphoenix_v1\formal_reset_aware_1000\metrics\cifar10_vgg_InteractionFedPhoenix_seed1_ifp_reset_aware_1000.csv
