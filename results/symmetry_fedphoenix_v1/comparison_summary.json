@@ -1,0 +1,48 @@
+{
+  "rounds": 300,
+  "source_csv": {
+    "B0": "results\\history_identity_causal_ablation\\B0\\round_metrics.csv",
+    "Input-HFlip": "results\\symmetry_fedphoenix_v1\\input_hflip_300\\cifar10_vgg_FedPhoenix_seed1_input_hflip_300.csv",
+    "Model-alt": "results\\symmetry_fedphoenix_v1\\model_alt_300\\cifar10_vgg_SymmetryFedPhoenix_seed1_model_alt_300.csv"
+  },
+  "metrics": {
+    "B0": {
+      "peak_accuracy": 78.3499984741211,
+      "peak_round": 218,
+      "top10_mean": 77.55699920654297,
+      "rounds_251_300_mean": 70.7489994430542,
+      "round_300_accuracy": 73.93000030517578
+    },
+    "Input-HFlip": {
+      "peak_accuracy": 83.12000274658203,
+      "peak_round": 290,
+      "top10_mean": 82.3,
+      "rounds_251_300_mean": 75.77339958190917,
+      "round_300_accuracy": 77.08999633789062
+    },
+    "Model-alt": {
+      "peak_accuracy": 81.13999938964844,
+      "peak_round": 255,
+      "top10_mean": 80.53399963378907,
+      "rounds_251_300_mean": 73.639599609375,
+      "round_300_accuracy": 76.5
+    }
+  },
+  "protocol_checks": {
+    "Input-HFlip": {
+      "selected_clients_equal_B0": true,
+      "task_seeds_equal_B0": true
+    },
+    "Model-alt": {
+      "selected_clients_equal_B0": true,
+      "task_seeds_equal_B0": true
+    }
+  },
+  "model_alt": {
+    "f_view_count": 1502,
+    "participations": 3000,
+    "flip_fraction": 0.5006666666666667,
+    "reported_alt_violations": 0,
+    "independent_alt_violations": 0
+  }
+}

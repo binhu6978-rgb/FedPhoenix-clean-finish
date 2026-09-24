@@ -1,0 +1,971 @@
+CIFAR10 train transform: Compose(
+    ToTensor()
+    Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.201))
+)
+Client partition: 100 clients, min=30, max=1447, mean=500.00, std=220.72
+Evaluation protocol: full server test set evaluated every round (10000 samples).
+VGG16(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (7): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): ReLU(inplace=True)
+    (10): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (12): ReLU(inplace=True)
+    (13): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (14): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (16): ReLU(inplace=True)
+    (17): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (18): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (19): ReLU(inplace=True)
+    (20): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (21): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (22): ReLU(inplace=True)
+    (23): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (24): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (25): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (26): ReLU(inplace=True)
+    (27): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (28): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (31): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (32): ReLU(inplace=True)
+    (33): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (35): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (36): ReLU(inplace=True)
+    (37): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (38): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (39): ReLU(inplace=True)
+    (40): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (41): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (42): ReLU(inplace=True)
+    (43): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (44): AdaptiveAvgPool2d(output_size=(1, 1))
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=512, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+  )
+  (fc): Linear(in_features=4096, out_features=10, bias=True)
+)
+Horizontal-view equivariance max error: 4.23751771e-08
+CIFAR10 train transform: Compose(
+    ToTensor()
+    Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.201))
+)
+********************************************************************************
+Round   0
+ROUND_ACCURACY method=SymmetryFedPhoenix round=1 accuracy=10.000000
+********************************************************************************
+Round   1
+ROUND_ACCURACY method=SymmetryFedPhoenix round=2 accuracy=14.330000
+********************************************************************************
+Round   2
+ROUND_ACCURACY method=SymmetryFedPhoenix round=3 accuracy=11.520000
+********************************************************************************
+Round   3
+ROUND_ACCURACY method=SymmetryFedPhoenix round=4 accuracy=17.360001
+********************************************************************************
+Round   4
+ROUND_ACCURACY method=SymmetryFedPhoenix round=5 accuracy=30.610001
+********************************************************************************
+Round   5
+ROUND_ACCURACY method=SymmetryFedPhoenix round=6 accuracy=16.600000
+********************************************************************************
+Round   6
+ROUND_ACCURACY method=SymmetryFedPhoenix round=7 accuracy=22.110001
+********************************************************************************
+Round   7
+ROUND_ACCURACY method=SymmetryFedPhoenix round=8 accuracy=23.480000
+********************************************************************************
+Round   8
+ROUND_ACCURACY method=SymmetryFedPhoenix round=9 accuracy=30.340000
+********************************************************************************
+Round   9
+ROUND_ACCURACY method=SymmetryFedPhoenix round=10 accuracy=28.820000
+********************************************************************************
+Round  10
+ROUND_ACCURACY method=SymmetryFedPhoenix round=11 accuracy=40.209999
+********************************************************************************
+Round  11
+ROUND_ACCURACY method=SymmetryFedPhoenix round=12 accuracy=35.740002
+********************************************************************************
+Round  12
+ROUND_ACCURACY method=SymmetryFedPhoenix round=13 accuracy=34.590000
+********************************************************************************
+Round  13
+ROUND_ACCURACY method=SymmetryFedPhoenix round=14 accuracy=45.439999
+********************************************************************************
+Round  14
+ROUND_ACCURACY method=SymmetryFedPhoenix round=15 accuracy=46.110001
+********************************************************************************
+Round  15
+ROUND_ACCURACY method=SymmetryFedPhoenix round=16 accuracy=47.040001
+********************************************************************************
+Round  16
+ROUND_ACCURACY method=SymmetryFedPhoenix round=17 accuracy=48.410000
+********************************************************************************
+Round  17
+ROUND_ACCURACY method=SymmetryFedPhoenix round=18 accuracy=36.009998
+********************************************************************************
+Round  18
+ROUND_ACCURACY method=SymmetryFedPhoenix round=19 accuracy=44.860001
+********************************************************************************
+Round  19
+ROUND_ACCURACY method=SymmetryFedPhoenix round=20 accuracy=40.889999
+********************************************************************************
+Round  20
+ROUND_ACCURACY method=SymmetryFedPhoenix round=21 accuracy=52.490002
+********************************************************************************
+Round  21
+ROUND_ACCURACY method=SymmetryFedPhoenix round=22 accuracy=55.040001
+********************************************************************************
+Round  22
+ROUND_ACCURACY method=SymmetryFedPhoenix round=23 accuracy=50.700001
+********************************************************************************
+Round  23
+ROUND_ACCURACY method=SymmetryFedPhoenix round=24 accuracy=53.000000
+********************************************************************************
+Round  24
+ROUND_ACCURACY method=SymmetryFedPhoenix round=25 accuracy=57.029999
+********************************************************************************
+Round  25
+ROUND_ACCURACY method=SymmetryFedPhoenix round=26 accuracy=51.959999
+********************************************************************************
+Round  26
+ROUND_ACCURACY method=SymmetryFedPhoenix round=27 accuracy=53.860001
+********************************************************************************
+Round  27
+ROUND_ACCURACY method=SymmetryFedPhoenix round=28 accuracy=52.330002
+********************************************************************************
+Round  28
+ROUND_ACCURACY method=SymmetryFedPhoenix round=29 accuracy=48.770000
+********************************************************************************
+Round  29
+ROUND_ACCURACY method=SymmetryFedPhoenix round=30 accuracy=58.220001
+********************************************************************************
+Round  30
+ROUND_ACCURACY method=SymmetryFedPhoenix round=31 accuracy=58.250000
+********************************************************************************
+Round  31
+ROUND_ACCURACY method=SymmetryFedPhoenix round=32 accuracy=59.639999
+********************************************************************************
+Round  32
+ROUND_ACCURACY method=SymmetryFedPhoenix round=33 accuracy=58.480000
+********************************************************************************
+Round  33
+ROUND_ACCURACY method=SymmetryFedPhoenix round=34 accuracy=67.529999
+********************************************************************************
+Round  34
+ROUND_ACCURACY method=SymmetryFedPhoenix round=35 accuracy=57.119999
+********************************************************************************
+Round  35
+ROUND_ACCURACY method=SymmetryFedPhoenix round=36 accuracy=53.029999
+********************************************************************************
+Round  36
+ROUND_ACCURACY method=SymmetryFedPhoenix round=37 accuracy=64.250000
+********************************************************************************
+Round  37
+ROUND_ACCURACY method=SymmetryFedPhoenix round=38 accuracy=60.619999
+********************************************************************************
+Round  38
+ROUND_ACCURACY method=SymmetryFedPhoenix round=39 accuracy=60.349998
+********************************************************************************
+Round  39
+ROUND_ACCURACY method=SymmetryFedPhoenix round=40 accuracy=65.980003
+********************************************************************************
+Round  40
+ROUND_ACCURACY method=SymmetryFedPhoenix round=41 accuracy=67.779999
+********************************************************************************
+Round  41
+ROUND_ACCURACY method=SymmetryFedPhoenix round=42 accuracy=61.759998
+********************************************************************************
+Round  42
+ROUND_ACCURACY method=SymmetryFedPhoenix round=43 accuracy=62.150002
+********************************************************************************
+Round  43
+ROUND_ACCURACY method=SymmetryFedPhoenix round=44 accuracy=62.040001
+********************************************************************************
+Round  44
+ROUND_ACCURACY method=SymmetryFedPhoenix round=45 accuracy=56.650002
+********************************************************************************
+Round  45
+ROUND_ACCURACY method=SymmetryFedPhoenix round=46 accuracy=66.379997
+********************************************************************************
+Round  46
+ROUND_ACCURACY method=SymmetryFedPhoenix round=47 accuracy=63.599998
+********************************************************************************
+Round  47
+ROUND_ACCURACY method=SymmetryFedPhoenix round=48 accuracy=62.759998
+********************************************************************************
+Round  48
+ROUND_ACCURACY method=SymmetryFedPhoenix round=49 accuracy=59.250000
+********************************************************************************
+Round  49
+ROUND_ACCURACY method=SymmetryFedPhoenix round=50 accuracy=61.419998
+********************************************************************************
+Round  50
+ROUND_ACCURACY method=SymmetryFedPhoenix round=51 accuracy=56.270000
+********************************************************************************
+Round  51
+ROUND_ACCURACY method=SymmetryFedPhoenix round=52 accuracy=67.669998
+********************************************************************************
+Round  52
+ROUND_ACCURACY method=SymmetryFedPhoenix round=53 accuracy=60.660000
+********************************************************************************
+Round  53
+ROUND_ACCURACY method=SymmetryFedPhoenix round=54 accuracy=52.619999
+********************************************************************************
+Round  54
+ROUND_ACCURACY method=SymmetryFedPhoenix round=55 accuracy=68.239998
+********************************************************************************
+Round  55
+ROUND_ACCURACY method=SymmetryFedPhoenix round=56 accuracy=66.589996
+********************************************************************************
+Round  56
+ROUND_ACCURACY method=SymmetryFedPhoenix round=57 accuracy=61.169998
+********************************************************************************
+Round  57
+ROUND_ACCURACY method=SymmetryFedPhoenix round=58 accuracy=62.799999
+********************************************************************************
+Round  58
+ROUND_ACCURACY method=SymmetryFedPhoenix round=59 accuracy=66.190002
+********************************************************************************
+Round  59
+ROUND_ACCURACY method=SymmetryFedPhoenix round=60 accuracy=67.050003
+********************************************************************************
+Round  60
+ROUND_ACCURACY method=SymmetryFedPhoenix round=61 accuracy=69.000000
+********************************************************************************
+Round  61
+ROUND_ACCURACY method=SymmetryFedPhoenix round=62 accuracy=65.209999
+********************************************************************************
+Round  62
+ROUND_ACCURACY method=SymmetryFedPhoenix round=63 accuracy=67.599998
+********************************************************************************
+Round  63
+ROUND_ACCURACY method=SymmetryFedPhoenix round=64 accuracy=66.500000
+********************************************************************************
+Round  64
+ROUND_ACCURACY method=SymmetryFedPhoenix round=65 accuracy=67.010002
+********************************************************************************
+Round  65
+ROUND_ACCURACY method=SymmetryFedPhoenix round=66 accuracy=66.370003
+********************************************************************************
+Round  66
+ROUND_ACCURACY method=SymmetryFedPhoenix round=67 accuracy=63.610001
+********************************************************************************
+Round  67
+ROUND_ACCURACY method=SymmetryFedPhoenix round=68 accuracy=59.490002
+********************************************************************************
+Round  68
+ROUND_ACCURACY method=SymmetryFedPhoenix round=69 accuracy=72.800003
+********************************************************************************
+Round  69
+ROUND_ACCURACY method=SymmetryFedPhoenix round=70 accuracy=63.070000
+********************************************************************************
+Round  70
+ROUND_ACCURACY method=SymmetryFedPhoenix round=71 accuracy=59.840000
+********************************************************************************
+Round  71
+ROUND_ACCURACY method=SymmetryFedPhoenix round=72 accuracy=65.980003
+********************************************************************************
+Round  72
+ROUND_ACCURACY method=SymmetryFedPhoenix round=73 accuracy=70.279999
+********************************************************************************
+Round  73
+ROUND_ACCURACY method=SymmetryFedPhoenix round=74 accuracy=69.639999
+********************************************************************************
+Round  74
+ROUND_ACCURACY method=SymmetryFedPhoenix round=75 accuracy=73.989998
+********************************************************************************
+Round  75
+ROUND_ACCURACY method=SymmetryFedPhoenix round=76 accuracy=67.199997
+********************************************************************************
+Round  76
+ROUND_ACCURACY method=SymmetryFedPhoenix round=77 accuracy=67.919998
+********************************************************************************
+Round  77
+ROUND_ACCURACY method=SymmetryFedPhoenix round=78 accuracy=68.000000
+********************************************************************************
+Round  78
+ROUND_ACCURACY method=SymmetryFedPhoenix round=79 accuracy=69.349998
+********************************************************************************
+Round  79
+ROUND_ACCURACY method=SymmetryFedPhoenix round=80 accuracy=68.110001
+********************************************************************************
+Round  80
+ROUND_ACCURACY method=SymmetryFedPhoenix round=81 accuracy=65.760002
+********************************************************************************
+Round  81
+ROUND_ACCURACY method=SymmetryFedPhoenix round=82 accuracy=69.760002
+********************************************************************************
+Round  82
+ROUND_ACCURACY method=SymmetryFedPhoenix round=83 accuracy=73.449997
+********************************************************************************
+Round  83
+ROUND_ACCURACY method=SymmetryFedPhoenix round=84 accuracy=66.889999
+********************************************************************************
+Round  84
+ROUND_ACCURACY method=SymmetryFedPhoenix round=85 accuracy=70.360001
+********************************************************************************
+Round  85
+ROUND_ACCURACY method=SymmetryFedPhoenix round=86 accuracy=66.769997
+********************************************************************************
+Round  86
+ROUND_ACCURACY method=SymmetryFedPhoenix round=87 accuracy=73.160004
+********************************************************************************
+Round  87
+ROUND_ACCURACY method=SymmetryFedPhoenix round=88 accuracy=71.089996
+********************************************************************************
+Round  88
+ROUND_ACCURACY method=SymmetryFedPhoenix round=89 accuracy=72.760002
+********************************************************************************
+Round  89
+ROUND_ACCURACY method=SymmetryFedPhoenix round=90 accuracy=66.349998
+********************************************************************************
+Round  90
+ROUND_ACCURACY method=SymmetryFedPhoenix round=91 accuracy=72.190002
+********************************************************************************
+Round  91
+ROUND_ACCURACY method=SymmetryFedPhoenix round=92 accuracy=72.199997
+********************************************************************************
+Round  92
+ROUND_ACCURACY method=SymmetryFedPhoenix round=93 accuracy=68.110001
+********************************************************************************
+Round  93
+ROUND_ACCURACY method=SymmetryFedPhoenix round=94 accuracy=69.739998
+********************************************************************************
+Round  94
+ROUND_ACCURACY method=SymmetryFedPhoenix round=95 accuracy=73.699997
+********************************************************************************
+Round  95
+ROUND_ACCURACY method=SymmetryFedPhoenix round=96 accuracy=71.980003
+********************************************************************************
+Round  96
+ROUND_ACCURACY method=SymmetryFedPhoenix round=97 accuracy=66.139999
+********************************************************************************
+Round  97
+ROUND_ACCURACY method=SymmetryFedPhoenix round=98 accuracy=67.360001
+********************************************************************************
+Round  98
+ROUND_ACCURACY method=SymmetryFedPhoenix round=99 accuracy=64.949997
+********************************************************************************
+Round  99
+ROUND_ACCURACY method=SymmetryFedPhoenix round=100 accuracy=67.750000
+********************************************************************************
+Round 100
+ROUND_ACCURACY method=SymmetryFedPhoenix round=101 accuracy=71.870003
+********************************************************************************
+Round 101
+ROUND_ACCURACY method=SymmetryFedPhoenix round=102 accuracy=73.699997
+********************************************************************************
+Round 102
+ROUND_ACCURACY method=SymmetryFedPhoenix round=103 accuracy=75.309998
+********************************************************************************
+Round 103
+ROUND_ACCURACY method=SymmetryFedPhoenix round=104 accuracy=74.709999
+********************************************************************************
+Round 104
+ROUND_ACCURACY method=SymmetryFedPhoenix round=105 accuracy=73.620003
+********************************************************************************
+Round 105
+ROUND_ACCURACY method=SymmetryFedPhoenix round=106 accuracy=71.760002
+********************************************************************************
+Round 106
+ROUND_ACCURACY method=SymmetryFedPhoenix round=107 accuracy=56.009998
+********************************************************************************
+Round 107
+ROUND_ACCURACY method=SymmetryFedPhoenix round=108 accuracy=74.029999
+********************************************************************************
+Round 108
+ROUND_ACCURACY method=SymmetryFedPhoenix round=109 accuracy=75.910004
+********************************************************************************
+Round 109
+ROUND_ACCURACY method=SymmetryFedPhoenix round=110 accuracy=74.559998
+********************************************************************************
+Round 110
+ROUND_ACCURACY method=SymmetryFedPhoenix round=111 accuracy=76.169998
+********************************************************************************
+Round 111
+ROUND_ACCURACY method=SymmetryFedPhoenix round=112 accuracy=72.919998
+********************************************************************************
+Round 112
+ROUND_ACCURACY method=SymmetryFedPhoenix round=113 accuracy=69.459999
+********************************************************************************
+Round 113
+ROUND_ACCURACY method=SymmetryFedPhoenix round=114 accuracy=71.449997
+********************************************************************************
+Round 114
+ROUND_ACCURACY method=SymmetryFedPhoenix round=115 accuracy=66.989998
+********************************************************************************
+Round 115
+ROUND_ACCURACY method=SymmetryFedPhoenix round=116 accuracy=74.660004
+********************************************************************************
+Round 116
+ROUND_ACCURACY method=SymmetryFedPhoenix round=117 accuracy=68.860001
+********************************************************************************
+Round 117
+ROUND_ACCURACY method=SymmetryFedPhoenix round=118 accuracy=74.760002
+********************************************************************************
+Round 118
+ROUND_ACCURACY method=SymmetryFedPhoenix round=119 accuracy=64.959999
+********************************************************************************
+Round 119
+ROUND_ACCURACY method=SymmetryFedPhoenix round=120 accuracy=70.570000
+********************************************************************************
+Round 120
+ROUND_ACCURACY method=SymmetryFedPhoenix round=121 accuracy=74.339996
+********************************************************************************
+Round 121
+ROUND_ACCURACY method=SymmetryFedPhoenix round=122 accuracy=72.860001
+********************************************************************************
+Round 122
+ROUND_ACCURACY method=SymmetryFedPhoenix round=123 accuracy=72.459999
+********************************************************************************
+Round 123
+ROUND_ACCURACY method=SymmetryFedPhoenix round=124 accuracy=66.010002
+********************************************************************************
+Round 124
+ROUND_ACCURACY method=SymmetryFedPhoenix round=125 accuracy=68.080002
+********************************************************************************
+Round 125
+ROUND_ACCURACY method=SymmetryFedPhoenix round=126 accuracy=68.160004
+********************************************************************************
+Round 126
+ROUND_ACCURACY method=SymmetryFedPhoenix round=127 accuracy=74.580002
+********************************************************************************
+Round 127
+ROUND_ACCURACY method=SymmetryFedPhoenix round=128 accuracy=72.889999
+********************************************************************************
+Round 128
+ROUND_ACCURACY method=SymmetryFedPhoenix round=129 accuracy=77.760002
+********************************************************************************
+Round 129
+ROUND_ACCURACY method=SymmetryFedPhoenix round=130 accuracy=70.739998
+********************************************************************************
+Round 130
+ROUND_ACCURACY method=SymmetryFedPhoenix round=131 accuracy=70.349998
+********************************************************************************
+Round 131
+ROUND_ACCURACY method=SymmetryFedPhoenix round=132 accuracy=78.199997
+********************************************************************************
+Round 132
+ROUND_ACCURACY method=SymmetryFedPhoenix round=133 accuracy=70.309998
+********************************************************************************
+Round 133
+ROUND_ACCURACY method=SymmetryFedPhoenix round=134 accuracy=75.940002
+********************************************************************************
+Round 134
+ROUND_ACCURACY method=SymmetryFedPhoenix round=135 accuracy=70.730003
+********************************************************************************
+Round 135
+ROUND_ACCURACY method=SymmetryFedPhoenix round=136 accuracy=68.260002
+********************************************************************************
+Round 136
+ROUND_ACCURACY method=SymmetryFedPhoenix round=137 accuracy=73.190002
+********************************************************************************
+Round 137
+ROUND_ACCURACY method=SymmetryFedPhoenix round=138 accuracy=76.900002
+********************************************************************************
+Round 138
+ROUND_ACCURACY method=SymmetryFedPhoenix round=139 accuracy=73.589996
+********************************************************************************
+Round 139
+ROUND_ACCURACY method=SymmetryFedPhoenix round=140 accuracy=77.389999
+********************************************************************************
+Round 140
+ROUND_ACCURACY method=SymmetryFedPhoenix round=141 accuracy=76.919998
+********************************************************************************
+Round 141
+ROUND_ACCURACY method=SymmetryFedPhoenix round=142 accuracy=68.820000
+********************************************************************************
+Round 142
+ROUND_ACCURACY method=SymmetryFedPhoenix round=143 accuracy=67.389999
+********************************************************************************
+Round 143
+ROUND_ACCURACY method=SymmetryFedPhoenix round=144 accuracy=77.580002
+********************************************************************************
+Round 144
+ROUND_ACCURACY method=SymmetryFedPhoenix round=145 accuracy=70.529999
+********************************************************************************
+Round 145
+ROUND_ACCURACY method=SymmetryFedPhoenix round=146 accuracy=67.230003
+********************************************************************************
+Round 146
+ROUND_ACCURACY method=SymmetryFedPhoenix round=147 accuracy=73.099998
+********************************************************************************
+Round 147
+ROUND_ACCURACY method=SymmetryFedPhoenix round=148 accuracy=72.209999
+********************************************************************************
+Round 148
+ROUND_ACCURACY method=SymmetryFedPhoenix round=149 accuracy=72.709999
+********************************************************************************
+Round 149
+ROUND_ACCURACY method=SymmetryFedPhoenix round=150 accuracy=77.199997
+********************************************************************************
+Round 150
+ROUND_ACCURACY method=SymmetryFedPhoenix round=151 accuracy=61.910000
+********************************************************************************
+Round 151
+ROUND_ACCURACY method=SymmetryFedPhoenix round=152 accuracy=67.809998
+********************************************************************************
+Round 152
+ROUND_ACCURACY method=SymmetryFedPhoenix round=153 accuracy=76.709999
+********************************************************************************
+Round 153
+ROUND_ACCURACY method=SymmetryFedPhoenix round=154 accuracy=75.410004
+********************************************************************************
+Round 154
+ROUND_ACCURACY method=SymmetryFedPhoenix round=155 accuracy=74.099998
+********************************************************************************
+Round 155
+ROUND_ACCURACY method=SymmetryFedPhoenix round=156 accuracy=75.849998
+********************************************************************************
+Round 156
+ROUND_ACCURACY method=SymmetryFedPhoenix round=157 accuracy=68.089996
+********************************************************************************
+Round 157
+ROUND_ACCURACY method=SymmetryFedPhoenix round=158 accuracy=69.019997
+********************************************************************************
+Round 158
+ROUND_ACCURACY method=SymmetryFedPhoenix round=159 accuracy=73.480003
+********************************************************************************
+Round 159
+ROUND_ACCURACY method=SymmetryFedPhoenix round=160 accuracy=71.309998
+********************************************************************************
+Round 160
+ROUND_ACCURACY method=SymmetryFedPhoenix round=161 accuracy=77.830002
+********************************************************************************
+Round 161
+ROUND_ACCURACY method=SymmetryFedPhoenix round=162 accuracy=74.360001
+********************************************************************************
+Round 162
+ROUND_ACCURACY method=SymmetryFedPhoenix round=163 accuracy=72.589996
+********************************************************************************
+Round 163
+ROUND_ACCURACY method=SymmetryFedPhoenix round=164 accuracy=72.209999
+********************************************************************************
+Round 164
+ROUND_ACCURACY method=SymmetryFedPhoenix round=165 accuracy=76.610001
+********************************************************************************
+Round 165
+ROUND_ACCURACY method=SymmetryFedPhoenix round=166 accuracy=73.480003
+********************************************************************************
+Round 166
+ROUND_ACCURACY method=SymmetryFedPhoenix round=167 accuracy=71.459999
+********************************************************************************
+Round 167
+ROUND_ACCURACY method=SymmetryFedPhoenix round=168 accuracy=74.260002
+********************************************************************************
+Round 168
+ROUND_ACCURACY method=SymmetryFedPhoenix round=169 accuracy=74.220001
+********************************************************************************
+Round 169
+ROUND_ACCURACY method=SymmetryFedPhoenix round=170 accuracy=68.309998
+********************************************************************************
+Round 170
+ROUND_ACCURACY method=SymmetryFedPhoenix round=171 accuracy=69.139999
+********************************************************************************
+Round 171
+ROUND_ACCURACY method=SymmetryFedPhoenix round=172 accuracy=71.690002
+********************************************************************************
+Round 172
+ROUND_ACCURACY method=SymmetryFedPhoenix round=173 accuracy=62.360001
+********************************************************************************
+Round 173
+ROUND_ACCURACY method=SymmetryFedPhoenix round=174 accuracy=73.330002
+********************************************************************************
+Round 174
+ROUND_ACCURACY method=SymmetryFedPhoenix round=175 accuracy=77.239998
+********************************************************************************
+Round 175
+ROUND_ACCURACY method=SymmetryFedPhoenix round=176 accuracy=77.830002
+********************************************************************************
+Round 176
+ROUND_ACCURACY method=SymmetryFedPhoenix round=177 accuracy=72.400002
+********************************************************************************
+Round 177
+ROUND_ACCURACY method=SymmetryFedPhoenix round=178 accuracy=67.820000
+********************************************************************************
+Round 178
+ROUND_ACCURACY method=SymmetryFedPhoenix round=179 accuracy=77.699997
+********************************************************************************
+Round 179
+ROUND_ACCURACY method=SymmetryFedPhoenix round=180 accuracy=73.620003
+********************************************************************************
+Round 180
+ROUND_ACCURACY method=SymmetryFedPhoenix round=181 accuracy=77.360001
+********************************************************************************
+Round 181
+ROUND_ACCURACY method=SymmetryFedPhoenix round=182 accuracy=65.029999
+********************************************************************************
+Round 182
+ROUND_ACCURACY method=SymmetryFedPhoenix round=183 accuracy=79.080002
+********************************************************************************
+Round 183
+ROUND_ACCURACY method=SymmetryFedPhoenix round=184 accuracy=76.580002
+********************************************************************************
+Round 184
+ROUND_ACCURACY method=SymmetryFedPhoenix round=185 accuracy=78.400002
+********************************************************************************
+Round 185
+ROUND_ACCURACY method=SymmetryFedPhoenix round=186 accuracy=76.230003
+********************************************************************************
+Round 186
+ROUND_ACCURACY method=SymmetryFedPhoenix round=187 accuracy=68.690002
+********************************************************************************
+Round 187
+ROUND_ACCURACY method=SymmetryFedPhoenix round=188 accuracy=76.989998
+********************************************************************************
+Round 188
+ROUND_ACCURACY method=SymmetryFedPhoenix round=189 accuracy=71.879997
+********************************************************************************
+Round 189
+ROUND_ACCURACY method=SymmetryFedPhoenix round=190 accuracy=69.169998
+********************************************************************************
+Round 190
+ROUND_ACCURACY method=SymmetryFedPhoenix round=191 accuracy=63.730000
+********************************************************************************
+Round 191
+ROUND_ACCURACY method=SymmetryFedPhoenix round=192 accuracy=74.360001
+********************************************************************************
+Round 192
+ROUND_ACCURACY method=SymmetryFedPhoenix round=193 accuracy=76.010002
+********************************************************************************
+Round 193
+ROUND_ACCURACY method=SymmetryFedPhoenix round=194 accuracy=75.260002
+********************************************************************************
+Round 194
+ROUND_ACCURACY method=SymmetryFedPhoenix round=195 accuracy=75.379997
+********************************************************************************
+Round 195
+ROUND_ACCURACY method=SymmetryFedPhoenix round=196 accuracy=79.930000
+********************************************************************************
+Round 196
+ROUND_ACCURACY method=SymmetryFedPhoenix round=197 accuracy=71.889999
+********************************************************************************
+Round 197
+ROUND_ACCURACY method=SymmetryFedPhoenix round=198 accuracy=73.900002
+********************************************************************************
+Round 198
+ROUND_ACCURACY method=SymmetryFedPhoenix round=199 accuracy=66.529999
+********************************************************************************
+Round 199
+ROUND_ACCURACY method=SymmetryFedPhoenix round=200 accuracy=56.310001
+********************************************************************************
+Round 200
+ROUND_ACCURACY method=SymmetryFedPhoenix round=201 accuracy=70.400002
+********************************************************************************
+Round 201
+ROUND_ACCURACY method=SymmetryFedPhoenix round=202 accuracy=74.120003
+********************************************************************************
+Round 202
+ROUND_ACCURACY method=SymmetryFedPhoenix round=203 accuracy=65.760002
+********************************************************************************
+Round 203
+ROUND_ACCURACY method=SymmetryFedPhoenix round=204 accuracy=78.620003
+********************************************************************************
+Round 204
+ROUND_ACCURACY method=SymmetryFedPhoenix round=205 accuracy=73.129997
+********************************************************************************
+Round 205
+ROUND_ACCURACY method=SymmetryFedPhoenix round=206 accuracy=77.550003
+********************************************************************************
+Round 206
+ROUND_ACCURACY method=SymmetryFedPhoenix round=207 accuracy=76.769997
+********************************************************************************
+Round 207
+ROUND_ACCURACY method=SymmetryFedPhoenix round=208 accuracy=77.379997
+********************************************************************************
+Round 208
+ROUND_ACCURACY method=SymmetryFedPhoenix round=209 accuracy=73.370003
+********************************************************************************
+Round 209
+ROUND_ACCURACY method=SymmetryFedPhoenix round=210 accuracy=78.629997
+********************************************************************************
+Round 210
+ROUND_ACCURACY method=SymmetryFedPhoenix round=211 accuracy=64.080002
+********************************************************************************
+Round 211
+ROUND_ACCURACY method=SymmetryFedPhoenix round=212 accuracy=80.099998
+********************************************************************************
+Round 212
+ROUND_ACCURACY method=SymmetryFedPhoenix round=213 accuracy=75.940002
+********************************************************************************
+Round 213
+ROUND_ACCURACY method=SymmetryFedPhoenix round=214 accuracy=78.040001
+********************************************************************************
+Round 214
+ROUND_ACCURACY method=SymmetryFedPhoenix round=215 accuracy=76.379997
+********************************************************************************
+Round 215
+ROUND_ACCURACY method=SymmetryFedPhoenix round=216 accuracy=75.989998
+********************************************************************************
+Round 216
+ROUND_ACCURACY method=SymmetryFedPhoenix round=217 accuracy=66.419998
+********************************************************************************
+Round 217
+ROUND_ACCURACY method=SymmetryFedPhoenix round=218 accuracy=81.089996
+********************************************************************************
+Round 218
+ROUND_ACCURACY method=SymmetryFedPhoenix round=219 accuracy=74.099998
+********************************************************************************
+Round 219
+ROUND_ACCURACY method=SymmetryFedPhoenix round=220 accuracy=74.320000
+********************************************************************************
+Round 220
+ROUND_ACCURACY method=SymmetryFedPhoenix round=221 accuracy=73.879997
+********************************************************************************
+Round 221
+ROUND_ACCURACY method=SymmetryFedPhoenix round=222 accuracy=70.220001
+********************************************************************************
+Round 222
+ROUND_ACCURACY method=SymmetryFedPhoenix round=223 accuracy=76.970001
+********************************************************************************
+Round 223
+ROUND_ACCURACY method=SymmetryFedPhoenix round=224 accuracy=78.610001
+********************************************************************************
+Round 224
+ROUND_ACCURACY method=SymmetryFedPhoenix round=225 accuracy=77.419998
+********************************************************************************
+Round 225
+ROUND_ACCURACY method=SymmetryFedPhoenix round=226 accuracy=65.919998
+********************************************************************************
+Round 226
+ROUND_ACCURACY method=SymmetryFedPhoenix round=227 accuracy=77.309998
+********************************************************************************
+Round 227
+ROUND_ACCURACY method=SymmetryFedPhoenix round=228 accuracy=71.470001
+********************************************************************************
+Round 228
+ROUND_ACCURACY method=SymmetryFedPhoenix round=229 accuracy=64.459999
+********************************************************************************
+Round 229
+ROUND_ACCURACY method=SymmetryFedPhoenix round=230 accuracy=79.129997
+********************************************************************************
+Round 230
+ROUND_ACCURACY method=SymmetryFedPhoenix round=231 accuracy=78.589996
+********************************************************************************
+Round 231
+ROUND_ACCURACY method=SymmetryFedPhoenix round=232 accuracy=80.650002
+********************************************************************************
+Round 232
+ROUND_ACCURACY method=SymmetryFedPhoenix round=233 accuracy=74.250000
+********************************************************************************
+Round 233
+ROUND_ACCURACY method=SymmetryFedPhoenix round=234 accuracy=71.449997
+********************************************************************************
+Round 234
+ROUND_ACCURACY method=SymmetryFedPhoenix round=235 accuracy=65.309998
+********************************************************************************
+Round 235
+ROUND_ACCURACY method=SymmetryFedPhoenix round=236 accuracy=80.089996
+********************************************************************************
+Round 236
+ROUND_ACCURACY method=SymmetryFedPhoenix round=237 accuracy=72.989998
+********************************************************************************
+Round 237
+ROUND_ACCURACY method=SymmetryFedPhoenix round=238 accuracy=71.959999
+********************************************************************************
+Round 238
+ROUND_ACCURACY method=SymmetryFedPhoenix round=239 accuracy=78.629997
+********************************************************************************
+Round 239
+ROUND_ACCURACY method=SymmetryFedPhoenix round=240 accuracy=66.080002
+********************************************************************************
+Round 240
+ROUND_ACCURACY method=SymmetryFedPhoenix round=241 accuracy=77.870003
+********************************************************************************
+Round 241
+ROUND_ACCURACY method=SymmetryFedPhoenix round=242 accuracy=77.230003
+********************************************************************************
+Round 242
+ROUND_ACCURACY method=SymmetryFedPhoenix round=243 accuracy=76.970001
+********************************************************************************
+Round 243
+ROUND_ACCURACY method=SymmetryFedPhoenix round=244 accuracy=76.360001
+********************************************************************************
+Round 244
+ROUND_ACCURACY method=SymmetryFedPhoenix round=245 accuracy=78.110001
+********************************************************************************
+Round 245
+ROUND_ACCURACY method=SymmetryFedPhoenix round=246 accuracy=78.209999
+********************************************************************************
+Round 246
+ROUND_ACCURACY method=SymmetryFedPhoenix round=247 accuracy=57.770000
+********************************************************************************
+Round 247
+ROUND_ACCURACY method=SymmetryFedPhoenix round=248 accuracy=76.269997
+********************************************************************************
+Round 248
+ROUND_ACCURACY method=SymmetryFedPhoenix round=249 accuracy=70.639999
+********************************************************************************
+Round 249
+ROUND_ACCURACY method=SymmetryFedPhoenix round=250 accuracy=72.360001
+********************************************************************************
+Round 250
+ROUND_ACCURACY method=SymmetryFedPhoenix round=251 accuracy=79.160004
+********************************************************************************
+Round 251
+ROUND_ACCURACY method=SymmetryFedPhoenix round=252 accuracy=75.519997
+********************************************************************************
+Round 252
+ROUND_ACCURACY method=SymmetryFedPhoenix round=253 accuracy=72.269997
+********************************************************************************
+Round 253
+ROUND_ACCURACY method=SymmetryFedPhoenix round=254 accuracy=71.089996
+********************************************************************************
+Round 254
+ROUND_ACCURACY method=SymmetryFedPhoenix round=255 accuracy=81.139999
+********************************************************************************
+Round 255
+ROUND_ACCURACY method=SymmetryFedPhoenix round=256 accuracy=71.440002
+********************************************************************************
+Round 256
+ROUND_ACCURACY method=SymmetryFedPhoenix round=257 accuracy=77.839996
+********************************************************************************
+Round 257
+ROUND_ACCURACY method=SymmetryFedPhoenix round=258 accuracy=76.459999
+********************************************************************************
+Round 258
+ROUND_ACCURACY method=SymmetryFedPhoenix round=259 accuracy=76.260002
+********************************************************************************
+Round 259
+ROUND_ACCURACY method=SymmetryFedPhoenix round=260 accuracy=79.779999
+********************************************************************************
+Round 260
+ROUND_ACCURACY method=SymmetryFedPhoenix round=261 accuracy=79.339996
+********************************************************************************
+Round 261
+ROUND_ACCURACY method=SymmetryFedPhoenix round=262 accuracy=78.860001
+********************************************************************************
+Round 262
+ROUND_ACCURACY method=SymmetryFedPhoenix round=263 accuracy=68.889999
+********************************************************************************
+Round 263
+ROUND_ACCURACY method=SymmetryFedPhoenix round=264 accuracy=73.699997
+********************************************************************************
+Round 264
+ROUND_ACCURACY method=SymmetryFedPhoenix round=265 accuracy=76.720001
+********************************************************************************
+Round 265
+ROUND_ACCURACY method=SymmetryFedPhoenix round=266 accuracy=79.559998
+********************************************************************************
+Round 266
+ROUND_ACCURACY method=SymmetryFedPhoenix round=267 accuracy=64.169998
+********************************************************************************
+Round 267
+ROUND_ACCURACY method=SymmetryFedPhoenix round=268 accuracy=47.459999
+********************************************************************************
+Round 268
+ROUND_ACCURACY method=SymmetryFedPhoenix round=269 accuracy=75.500000
+********************************************************************************
+Round 269
+ROUND_ACCURACY method=SymmetryFedPhoenix round=270 accuracy=71.230003
+********************************************************************************
+Round 270
+ROUND_ACCURACY method=SymmetryFedPhoenix round=271 accuracy=74.900002
+********************************************************************************
+Round 271
+ROUND_ACCURACY method=SymmetryFedPhoenix round=272 accuracy=70.739998
+********************************************************************************
+Round 272
+ROUND_ACCURACY method=SymmetryFedPhoenix round=273 accuracy=67.379997
+********************************************************************************
+Round 273
+ROUND_ACCURACY method=SymmetryFedPhoenix round=274 accuracy=56.680000
+********************************************************************************
+Round 274
+ROUND_ACCURACY method=SymmetryFedPhoenix round=275 accuracy=78.919998
+********************************************************************************
+Round 275
+ROUND_ACCURACY method=SymmetryFedPhoenix round=276 accuracy=70.959999
+********************************************************************************
+Round 276
+ROUND_ACCURACY method=SymmetryFedPhoenix round=277 accuracy=80.180000
+********************************************************************************
+Round 277
+ROUND_ACCURACY method=SymmetryFedPhoenix round=278 accuracy=72.889999
+********************************************************************************
+Round 278
+ROUND_ACCURACY method=SymmetryFedPhoenix round=279 accuracy=80.910004
+********************************************************************************
+Round 279
+ROUND_ACCURACY method=SymmetryFedPhoenix round=280 accuracy=77.120003
+********************************************************************************
+Round 280
+ROUND_ACCURACY method=SymmetryFedPhoenix round=281 accuracy=73.089996
+********************************************************************************
+Round 281
+ROUND_ACCURACY method=SymmetryFedPhoenix round=282 accuracy=66.180000
+********************************************************************************
+Round 282
+ROUND_ACCURACY method=SymmetryFedPhoenix round=283 accuracy=77.849998
+********************************************************************************
+Round 283
+ROUND_ACCURACY method=SymmetryFedPhoenix round=284 accuracy=80.410004
+********************************************************************************
+Round 284
+ROUND_ACCURACY method=SymmetryFedPhoenix round=285 accuracy=76.220001
+********************************************************************************
+Round 285
+ROUND_ACCURACY method=SymmetryFedPhoenix round=286 accuracy=58.180000
+********************************************************************************
+Round 286
+ROUND_ACCURACY method=SymmetryFedPhoenix round=287 accuracy=75.389999
+********************************************************************************
+Round 287
+ROUND_ACCURACY method=SymmetryFedPhoenix round=288 accuracy=73.010002
+********************************************************************************
+Round 288
+ROUND_ACCURACY method=SymmetryFedPhoenix round=289 accuracy=73.849998
+********************************************************************************
+Round 289
+ROUND_ACCURACY method=SymmetryFedPhoenix round=290 accuracy=80.839996
+********************************************************************************
+Round 290
+ROUND_ACCURACY method=SymmetryFedPhoenix round=291 accuracy=78.209999
+********************************************************************************
+Round 291
+ROUND_ACCURACY method=SymmetryFedPhoenix round=292 accuracy=74.739998
+********************************************************************************
+Round 292
+ROUND_ACCURACY method=SymmetryFedPhoenix round=293 accuracy=77.360001
+********************************************************************************
+Round 293
+ROUND_ACCURACY method=SymmetryFedPhoenix round=294 accuracy=74.910004
+********************************************************************************
+Round 294
+ROUND_ACCURACY method=SymmetryFedPhoenix round=295 accuracy=70.610001
+********************************************************************************
+Round 295
+ROUND_ACCURACY method=SymmetryFedPhoenix round=296 accuracy=69.680000
+********************************************************************************
+Round 296
+ROUND_ACCURACY method=SymmetryFedPhoenix round=297 accuracy=77.949997
+********************************************************************************
+Round 297
+ROUND_ACCURACY method=SymmetryFedPhoenix round=298 accuracy=65.379997
+********************************************************************************
+Round 298
+ROUND_ACCURACY method=SymmetryFedPhoenix round=299 accuracy=74.550003
+********************************************************************************
+Round 299
+ROUND_ACCURACY method=SymmetryFedPhoenix round=300 accuracy=76.500000
+PEAK_ACCURACY method=SymmetryFedPhoenix round=255 accuracy=81.139999
+Unified training metrics saved to C:\Users\admin\Desktop\need_do\new_paper_four\FedPhoenix-clean-finish\results\symmetry_fedphoenix_v1\model_alt_300\cifar10_vgg_SymmetryFedPhoenix_seed1_model_alt_300.csv
