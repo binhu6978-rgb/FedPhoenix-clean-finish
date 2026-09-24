@@ -62,14 +62,18 @@ class ViewScheduler:
         self.seed = int(seed)
         self.private_rng = random.Random(self.seed + 710023) if mode == "rand" else None
         self.last = {}
+        self.participation_count = {}
 
     def choose(self, client_id, round_idx):
         client_id = int(client_id)
         round_idx = int(round_idx)
         if self.mode == "none":
+            self.participation_count[client_id] = self.participation_count.get(client_id, 0) + 1
             return "I", False
         if self.mode == "rand":
-            return ("F" if self.private_rng.getrandbits(1) else "I"), False
+            view = "F" if self.private_rng.getrandbits(1) else "I"
+            self.participation_count[client_id] = self.participation_count.get(client_id, 0) + 1
+            return view, False
         previous = self.last.get(client_id)
         if previous is None:
             digest = hashlib.sha256(f"{self.seed}:{client_id}".encode()).digest()
@@ -80,4 +84,5 @@ class ViewScheduler:
             view = "I" if previous[0] == "F" else "F"
         violation = previous is not None and view == previous[0]
         self.last[client_id] = (view, round_idx)
+        self.participation_count[client_id] = self.participation_count.get(client_id, 0) + 1
         return view, violation

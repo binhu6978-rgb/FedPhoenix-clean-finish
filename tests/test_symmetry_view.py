@@ -13,6 +13,7 @@ from Algorithm.SymmetryView import (
     ViewScheduler, apply_horizontal_view_, map_back_state,
     verify_flip_equivariance,
 )
+from Algorithm.SymmetryDiagnostics import reset_response_scalars
 from models.Nets import VGG16
 
 
@@ -71,12 +72,28 @@ class SymmetryViewTests(unittest.TestCase):
         second, violation = scheduler.choose(7, 5)
         self.assertNotEqual(first, second)
         self.assertFalse(violation)
+        self.assertEqual(scheduler.participation_count[7], 2)
+        self.assertEqual(scheduler.participation_count[8], 1)
         self.assertEqual(ViewScheduler("none", 1).choose(7, 0)[0], "I")
         random_views = [ViewScheduler("rand", 1).choose(7, 0)[0] for _ in range(2)]
         self.assertEqual(random_views[0], random_views[1])
         self.assertEqual(python_before, random.getstate())
         self.assertTrue(np.array_equal(numpy_before[1], np.random.get_state()[1]))
         self.assertTrue(torch.equal(torch_before, torch.get_rng_state()))
+
+    def test_reset_response_uses_only_traced_kernel(self):
+        key = "features.0.weight"
+        global_state = {key: torch.tensor([[[[0.0, 0.0]]], [[[0.0, 0.0]]]])}
+        task_state = {key: torch.tensor([[[[1.0, 0.0]]], [[[0.0, 0.0]]]])}
+        returned = {key: torch.tensor([[[[0.5, 0.0]]], [[[100.0, 0.0]]]])}
+        trace = {"layers": [{"name": "features.0", "reset_indices": [0]}]}
+        result = reset_response_scalars(global_state, task_state, returned, trace)
+        self.assertEqual(result["reset_kernel_count"], 1)
+        self.assertAlmostEqual(result["reset_action_norm"], 1.0)
+        self.assertAlmostEqual(result["reset_response_norm"], 0.5)
+        self.assertAlmostEqual(result["reset_recovery_coeff"], 0.5)
+        self.assertAlmostEqual(result["reset_recovery_cosine"], 1.0)
+        self.assertAlmostEqual(result["reset_residual_ratio"], 0.5)
 
 
 if __name__ == "__main__":
